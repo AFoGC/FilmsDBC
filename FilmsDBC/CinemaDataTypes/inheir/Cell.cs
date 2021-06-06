@@ -10,6 +10,8 @@ namespace FilmsDBC.CinemaDataTypes
 {
 	public class Cell
 	{
+		//
+		//
 		private int id = 0;
 		
 		public int ID
