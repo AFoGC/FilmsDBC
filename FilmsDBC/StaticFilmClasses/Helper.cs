@@ -9,6 +9,11 @@ namespace FilmsDBC.StaticFilmClasses
 {
     public static class Helper
     {
-        
+        /*
+         
+         
+         
+         
+         */
     }
 }
