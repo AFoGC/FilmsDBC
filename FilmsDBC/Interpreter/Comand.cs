@@ -27,7 +27,7 @@ namespace FilmsDBC.Interpreter
             get { return isComand; }
         }
 
-        Comand(String parametr, String argument, bool isComand)
+        public Comand(String parametr, String argument, bool isComand)
         {
             this.parametr = parametr;
             this.argument = argument;
