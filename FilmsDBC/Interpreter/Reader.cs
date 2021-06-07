@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Interpreter.ReaderClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
