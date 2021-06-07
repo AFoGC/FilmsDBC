@@ -15,10 +15,11 @@ namespace FilmsDBC
         public static FilmTable filmTable = new FilmTable();
         public static SerieTable serieTable = new SerieTable();
 
+        //private static List<> tables = new List<>();
+
 		public static string TablePath
 		{
 			get { return tablePath; }
-			set { }
 		}
 
         public static void saveTables()

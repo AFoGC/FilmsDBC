@@ -55,7 +55,9 @@
     <Compile Include="CinemaDataTypes\SerieTable.cs" />
     <Compile Include="Interpreter\Comand.cs" />
     <Compile Include="Interpreter\Reader.cs" />
+    <Compile Include="Interpreter\ReaderClasses\FilmReader.cs" />
     <Compile Include="Interpreter\ReaderClasses\ParamReader.cs" />
+    <Compile Include="Interpreter\ReaderClasses\SerieReader.cs" />
     <Compile Include="Interpreter\TestReader.cs" />
     <Compile Include="Interpreter\Writer.cs" />
     <Compile Include="MainInformation.cs" />
