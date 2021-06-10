@@ -12,15 +12,15 @@ namespace FilmsDBC.CinemaDataTypes
 	{
 		public String name = "";
 		public String genre = "";
-		public int realiseYear = 0;
+		public int realiseYear = -1;
 		public bool watched = false;
-		public int mark = 0;
+		public int mark = -1;
 		public String dateOfWatch = "";
 
 		public String comment = "";
 		public String sourceUrl = "";
 
-		public int countOfviews = 0;
+		public int countOfviews = -1;
 
 
 		public Film() : base()

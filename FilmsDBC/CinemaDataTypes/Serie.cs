@@ -10,9 +10,9 @@ namespace FilmsDBC.CinemaDataTypes
 {
     public class Serie : Cell
     {
-        public int filmId = 0;
+        public int filmId = -1;
         public String startWatchDate = "";
-        public int countOfWatchedSeries = 0;
+        public int countOfWatchedSeries = -1;
 
         public Serie() : base()
         {

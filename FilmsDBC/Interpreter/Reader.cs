@@ -12,7 +12,7 @@ namespace FilmsDBC.Interpreter
 	public static class Reader
 	{
 		
-		public static bool loadAll(FilmTable filmTable, SerieTable serieTable)
+		public static bool loadAll()
 		{
 			using (StreamReader sr = new StreamReader(MainInformation.TablePath, System.Text.Encoding.Default))
 			{

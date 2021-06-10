@@ -10,9 +10,9 @@ namespace FilmsDBC.CinemaDataTypes
 {
 	public class Table<Te> where Te : Cell, new()
 	{
-		private int id = 0;
+		protected int id = -1;
 		public String name = "";
-		private List<Te> items = new List<Te>();
+		protected List<Te> items = new List<Te>();
 
 		private static int count = 0;
 		private int lastId = 0;
@@ -25,7 +25,6 @@ namespace FilmsDBC.CinemaDataTypes
 
 		public List<Te> Items
 		{
-			set { }
 			get { return items; }
 		}
 		public int LastID
@@ -45,10 +44,16 @@ namespace FilmsDBC.CinemaDataTypes
 			this.name = name;
 		}
 
+		public Table(int id, String name)
+		{
+			this.id = id;
+			this.name = name;
+		}
+
 		public void addElement()
 		{
 			Te item = new Te();
-			item.ID = lastId++;
+			item.ID = ++lastId;
 			items.Add(item);
 		}
 
@@ -76,5 +81,17 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.WriteLine("<Table>");
 			streamWriter.WriteLine();
 		}
+
+		public Te getElemnt(int index)
+        {
+            foreach (Te item in items)
+            {
+                if (item.ID == index)
+                {
+					return item;
+                }
+            }
+			return null;
+        }
 	}
 }

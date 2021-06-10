@@ -17,5 +17,18 @@ namespace FilmsDBC.CinemaDataTypes
         {
              
         }
+
+        public Film getElemnt(String name)
+        {
+            foreach (Film item in items)
+            {
+                if (item.name == name)
+                {
+                    return item;
+                }
+            }
+
+            return null;
+        }
     }
 }
