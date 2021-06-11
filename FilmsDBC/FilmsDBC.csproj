@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CinemaDataTypes\DateOfFilm.cs" />
     <Compile Include="CinemaDataTypes\Franshise.cs" />
+    <Compile Include="CinemaDataTypes\FranshiseTable.cs" />
     <Compile Include="CinemaDataTypes\inheir\Cell.cs" />
     <Compile Include="CinemaDataTypes\Film.cs" />
     <Compile Include="CinemaDataTypes\FilmTable.cs" />

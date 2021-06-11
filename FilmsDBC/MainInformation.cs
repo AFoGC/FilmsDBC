@@ -12,6 +12,7 @@ namespace FilmsDBC
 	public class MainInformation
 	{
 		private static string tablePath = @"F:\filmsDirectory\Films.fdbc";
+		public static FranshiseTable franshiseTable = new FranshiseTable();
 		public static FilmTable filmTable = new FilmTable();
 		public static SerieTable serieTable = new SerieTable();
 
