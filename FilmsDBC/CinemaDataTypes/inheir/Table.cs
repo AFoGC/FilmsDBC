@@ -10,7 +10,7 @@ namespace FilmsDBC.CinemaDataTypes
 {
 	public class Table<Te> where Te : Cell, new()
 	{
-		protected int id = -1;
+		protected int id = 0;
 		public String name = "";
 		protected List<Te> items = new List<Te>();
 

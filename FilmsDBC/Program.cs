@@ -18,7 +18,6 @@ namespace FilmsDBC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //MainInformation.addTable(TestReader.loadTable());
             MainInformation.loadTables();
             MainInformation.saveTables();
             Application.Run(new MainForm());

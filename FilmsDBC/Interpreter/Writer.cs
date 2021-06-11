@@ -12,12 +12,30 @@ namespace FilmsDBC.Interpreter
 	{
 		public static String formatParam(String variableName, int item, int countOftabulations)
 		{
-			if (item == 0 || item == -1)
+			if (item == 0)
 			{
 				return "";
 			}
             else
             {
+				String export = "";
+				for (int i = 0; i < countOftabulations; i++)
+				{
+					export = export + "\t";
+				}
+
+				return export + "<" + variableName + ": " + item.ToString() + ">\n";
+			}
+		}
+
+		public static String formatParam(String variableName, sbyte item, int countOftabulations)
+        {
+			if (item == -1)
+			{
+				return "";
+			}
+			else
+			{
 				String export = "";
 				for (int i = 0; i < countOftabulations; i++)
 				{

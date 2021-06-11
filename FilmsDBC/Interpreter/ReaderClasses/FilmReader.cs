@@ -73,7 +73,7 @@ namespace FilmsDBC.Interpreter.ReaderClasses
 							film.watched = Convert.ToBoolean(comand.Argument);
 							break;
 						case "mark":
-							film.mark = Convert.ToInt32(comand.Argument);
+							film.mark = Convert.ToSByte(comand.Argument);
 							break;
 						case "dateOfWatch":
 							film.dateOfWatch = comand.Argument;
@@ -86,6 +86,9 @@ namespace FilmsDBC.Interpreter.ReaderClasses
 							break;
 						case "countOfviews":
 							film.countOfviews = Convert.ToInt32(comand.Argument);
+							break;
+						case "franshiseId":
+							film.franshiseId = Convert.ToInt32(comand.Argument);
 							break;
 						case "Film":
 							endReading = true;

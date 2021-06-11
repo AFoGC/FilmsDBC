@@ -12,7 +12,7 @@ namespace FilmsDBC.CinemaDataTypes
 	{
 		//
 		//
-		private int id = -1;
+		private int id = 0;
 		
 		public int ID
 		{

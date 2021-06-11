@@ -12,24 +12,29 @@ namespace FilmsDBC.CinemaDataTypes
 	{
 		public String name = "";
 		public String genre = "";
-		public int realiseYear = -1;
+		public int realiseYear = 0;
 		public bool watched = false;
-		public int mark = -1;
+		public sbyte mark = -1;
 		public String dateOfWatch = "";
 
 		public String comment = "";
 		public String sourceUrl = "";
 
-		public int countOfviews = -1;
-		public int franshiseId = -1;
+		public int countOfviews = 0;
+		public int franshiseId = 0;
 
 
 		public Film() : base()
 		{
 
 		}
+		
+		public Film(int id) : base(id)
+        {
 
-		public Film(int id, String name, String genre, int realiseYear, bool watched, int mark, String dateOfWatch, String comment, String sourceUrl, int countOfviews, int franshiseId) : base(id)
+        }
+		/*
+		public Film(int id, String name, String genre, int realiseYear, bool watched, sbyte mark, String dateOfWatch, String comment, String sourceUrl, int countOfviews, int franshiseId) : base(id)
 		{
 			this.name = name;
 			this.genre = genre;
@@ -42,7 +47,7 @@ namespace FilmsDBC.CinemaDataTypes
 			this.countOfviews = countOfviews;
 			this.franshiseId = franshiseId;
 		}
-
+		*/
         protected override void saveBody(StreamWriter streamWriter)
         {
             base.saveBody(streamWriter);

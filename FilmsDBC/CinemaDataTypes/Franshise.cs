@@ -11,8 +11,8 @@ namespace FilmsDBC.CinemaDataTypes
     public class Franshise : Cell
     {
         public String name = "";
-        public int mark = -1;
-        public int priority = -1;
+        public sbyte mark = -1;
+        public int priority = 0;
 
         public List<Film> films;
 
@@ -21,7 +21,7 @@ namespace FilmsDBC.CinemaDataTypes
 
         }
 
-        public Franshise(int id, String name, int mark, int priority) : base(id)
+        public Franshise(int id, String name, sbyte mark, int priority) : base(id)
         {
             this.name = name;
             this.mark = mark;
