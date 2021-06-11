@@ -21,6 +21,7 @@ namespace FilmsDBC.CinemaDataTypes
 		public String sourceUrl = "";
 
 		public int countOfviews = -1;
+		public int franshiseId = -1;
 
 
 		public Film() : base()
@@ -28,7 +29,7 @@ namespace FilmsDBC.CinemaDataTypes
 
 		}
 
-		public Film(int id, String name, String genre, int realiseYear, bool watched, int mark, String dateOfWatch, String comment, String sourceUrl, int countOfviews) : base(id)
+		public Film(int id, String name, String genre, int realiseYear, bool watched, int mark, String dateOfWatch, String comment, String sourceUrl, int countOfviews, int franshiseId) : base(id)
 		{
 			this.name = name;
 			this.genre = genre;
@@ -39,6 +40,7 @@ namespace FilmsDBC.CinemaDataTypes
 			this.comment = comment;
 			this.sourceUrl = sourceUrl;
 			this.countOfviews = countOfviews;
+			this.franshiseId = franshiseId;
 		}
 
         protected override void saveBody(StreamWriter streamWriter)
@@ -54,6 +56,7 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.Write(Writer.formatParam(nameof(comment), comment, 2));
 			streamWriter.Write(Writer.formatParam(nameof(sourceUrl), sourceUrl, 2));
 			streamWriter.Write(Writer.formatParam(nameof(countOfviews), countOfviews, 2));
+			streamWriter.Write(Writer.formatParam(nameof(franshiseId), franshiseId, 2));
 		}
     }
 }

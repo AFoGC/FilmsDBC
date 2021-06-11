@@ -60,7 +60,7 @@ namespace FilmsDBC.Interpreter
 			String comment = sr.ReadLine();
 			String sourceUrl = sr.ReadLine();
 			int views = Convert.ToInt32(sr.ReadLine());
-			Film film = new Film(id, name, genre, realiseYear, watched, mark, date, comment, sourceUrl, views);
+			Film film = new Film(id, name, genre, realiseYear, watched, mark, date, comment, sourceUrl, views, -1);
 			return film;
 		}
 

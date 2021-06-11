@@ -28,6 +28,7 @@ namespace FilmsDBC
 			using (StreamWriter sw = new StreamWriter(tablePath, false, System.Text.Encoding.Default))
 			{
 				sw.WriteLine("<DocStart>");
+				franshiseTable.saveTable(sw);
 				filmTable.saveTable(sw);
 				serieTable.saveTable(sw);
 				sw.WriteLine("<DocEnd>");
