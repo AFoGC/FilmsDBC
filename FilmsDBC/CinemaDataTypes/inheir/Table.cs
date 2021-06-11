@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.Interpreter;
+using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -69,9 +70,9 @@ namespace FilmsDBC.CinemaDataTypes
 
 		public void saveTable(StreamWriter streamWriter)
 		{
-			streamWriter.Write(Writer.tableDeclaration(typeof(Te), 0));
-			streamWriter.Write(Writer.formatParam(nameof(id), id, 1));
-			streamWriter.Write(Writer.formatParam(nameof(name), name, 1));
+			streamWriter.Write(Helper.tableDeclaration(typeof(Te), 0));
+			streamWriter.Write(Helper.formatParam(nameof(id), id, 1));
+			streamWriter.Write(Helper.formatParam(nameof(name), name, 1));
 
 			foreach (Te cell in this.items)
 			{

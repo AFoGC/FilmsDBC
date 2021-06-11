@@ -38,6 +38,10 @@ namespace FilmsDBC.Interpreter
 											MainInformation.serieTable = SerieReader.loadSerieTable(sr);
 											break;
 
+										case "Category":
+											MainInformation.categoryTable = CategoryReader.loadCategoryTable(sr);
+											break;
+
 										default:
 											break;
 									}

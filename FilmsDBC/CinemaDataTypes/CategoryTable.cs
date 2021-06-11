@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.CinemaDataTypes
 {
-	public class FranshiseTable : Table<Franshise>
+	public class CategoryTable : Table<Category>
 	{
-		public FranshiseTable() : base()
+		public CategoryTable() : base()
 		{
 
 		}
 
-		public FranshiseTable(String name) : base(name)
+		public CategoryTable(String name) : base(name)
 		{
 
 		}
 
-		new public List<Franshise> Items
+		new public List<Category> Items
         {
             get
             {
-				List<Franshise> export = new List<Franshise>();
-				List<Franshise> list = new List<Franshise>(); 
+				List<Category> export = new List<Category>();
+				List<Category> list = new List<Category>(); 
 
-                foreach (Franshise franshise in items)
+                foreach (Category franshise in items)
                 {
-                    if (franshise.priority != -1)
+                    if (franshise.priority != 0)
                     {
 						export.Add(franshise);
                     }
@@ -37,7 +37,7 @@ namespace FilmsDBC.CinemaDataTypes
                     }
                 }
 
-				foreach (Franshise franshise in list)
+				foreach (Category franshise in list)
 				{
 					export.Add(franshise);
 				}
@@ -48,15 +48,15 @@ namespace FilmsDBC.CinemaDataTypes
 
 		public void setFirstPriority(int id)
 		{
-			foreach (Franshise franshise in items)
+			foreach (Category franshise in items)
 			{
                 if (franshise.ID == id)
                 {
-					franshise.priority = 0;
+					franshise.priority = 1;
                 }
                 else
                 {
-                    if (franshise.priority != -1)
+                    if (franshise.priority != 0)
                     {
 						++franshise.priority;
                     }

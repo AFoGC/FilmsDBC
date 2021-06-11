@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.CinemaDataTypes
 {
-    class DateOfFilm
+    public class DateOfFilm
     {
         private int day = 0;
         private int month = 0;

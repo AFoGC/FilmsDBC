@@ -12,7 +12,7 @@ namespace FilmsDBC
 	public class MainInformation
 	{
 		private static string tablePath = @"F:\filmsDirectory\Films.fdbc";
-		public static FranshiseTable franshiseTable = new FranshiseTable();
+		public static CategoryTable categoryTable = new CategoryTable();
 		public static FilmTable filmTable = new FilmTable();
 		public static SerieTable serieTable = new SerieTable();
 
@@ -28,7 +28,7 @@ namespace FilmsDBC
 			using (StreamWriter sw = new StreamWriter(tablePath, false, System.Text.Encoding.Default))
 			{
 				sw.WriteLine("<DocStart>");
-				franshiseTable.saveTable(sw);
+				categoryTable.saveTable(sw);
 				filmTable.saveTable(sw);
 				serieTable.saveTable(sw);
 				sw.WriteLine("<DocEnd>");

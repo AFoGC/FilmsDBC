@@ -50,17 +50,18 @@ namespace FilmsDBC.Interpreter
 
 		private static Film loadFilm(StreamReader sr)
 		{
-			int id = Convert.ToInt32(sr.ReadLine());
-			String name = sr.ReadLine();
-			String genre = sr.ReadLine();
-			int realiseYear = Convert.ToInt32(sr.ReadLine());
-			bool watched = Convert.ToBoolean(sr.ReadLine());
-			int mark = Convert.ToInt32(sr.ReadLine());
-			String date = sr.ReadLine();
-			String comment = sr.ReadLine();
-			String sourceUrl = sr.ReadLine();
-			int views = Convert.ToInt32(sr.ReadLine());
-			Film film = new Film(id, name, genre, realiseYear, watched, mark, date, comment, sourceUrl, views, -1);
+			Film film = new Film();
+
+			film.ID = Convert.ToInt32(sr.ReadLine());
+			film.name = sr.ReadLine();
+			film.genre = sr.ReadLine();
+			film.realiseYear = Convert.ToInt32(sr.ReadLine());
+			film.watched = Convert.ToBoolean(sr.ReadLine());
+			film.mark = Convert.ToSByte(sr.ReadLine());
+			film.dateOfWatch = sr.ReadLine();
+			film.comment = sr.ReadLine();
+			film.sourceUrl = sr.ReadLine();
+			film.countOfviews = Convert.ToInt32(sr.ReadLine());
 			return film;
 		}
 
@@ -102,11 +103,12 @@ namespace FilmsDBC.Interpreter
 
 		private static Serie loadSerie(StreamReader sr)
 		{
-			return new Serie(
-				Convert.ToInt32(sr.ReadLine()),
-				sr.ReadLine(),
-				Convert.ToInt32(sr.ReadLine())
-				);
+			Serie serie = new Serie();
+			serie.filmId = Convert.ToInt32(sr.ReadLine());
+			serie.startWatchDate = sr.ReadLine();
+			serie.countOfWatchedSeries = Convert.ToInt32(sr.ReadLine());
+
+			return serie;
 		}
 	}
 }

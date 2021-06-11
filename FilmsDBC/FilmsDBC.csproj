@@ -47,8 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CinemaDataTypes\DateOfFilm.cs" />
-    <Compile Include="CinemaDataTypes\Franshise.cs" />
-    <Compile Include="CinemaDataTypes\FranshiseTable.cs" />
+    <Compile Include="CinemaDataTypes\Category.cs" />
+    <Compile Include="CinemaDataTypes\CategoryTable.cs" />
     <Compile Include="CinemaDataTypes\inheir\Cell.cs" />
     <Compile Include="CinemaDataTypes\Film.cs" />
     <Compile Include="CinemaDataTypes\FilmTable.cs" />
@@ -57,11 +57,11 @@
     <Compile Include="CinemaDataTypes\SerieTable.cs" />
     <Compile Include="Interpreter\Comand.cs" />
     <Compile Include="Interpreter\Reader.cs" />
+    <Compile Include="Interpreter\ReaderClasses\CategoryReader.cs" />
     <Compile Include="Interpreter\ReaderClasses\FilmReader.cs" />
     <Compile Include="Interpreter\ReaderClasses\ParamReader.cs" />
     <Compile Include="Interpreter\ReaderClasses\SerieReader.cs" />
     <Compile Include="Interpreter\TestReader.cs" />
-    <Compile Include="Interpreter\Writer.cs" />
     <Compile Include="MainInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

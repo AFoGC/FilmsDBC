@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.Interpreter;
+using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,40 +29,25 @@ namespace FilmsDBC.CinemaDataTypes
 		{
 
 		}
-		
-		public Film(int id) : base(id)
-        {
 
-        }
-		/*
-		public Film(int id, String name, String genre, int realiseYear, bool watched, sbyte mark, String dateOfWatch, String comment, String sourceUrl, int countOfviews, int franshiseId) : base(id)
+		public Film(int id) : base(id)
 		{
-			this.name = name;
-			this.genre = genre;
-			this.realiseYear = realiseYear;
-			this.watched = watched;
-			this.mark = mark;
-			this.dateOfWatch = dateOfWatch;
-			this.comment = comment;
-			this.sourceUrl = sourceUrl;
-			this.countOfviews = countOfviews;
-			this.franshiseId = franshiseId;
+
 		}
-		*/
         protected override void saveBody(StreamWriter streamWriter)
         {
             base.saveBody(streamWriter);
 
-			streamWriter.Write(Writer.formatParam(nameof(name), name, 2));
-			streamWriter.Write(Writer.formatParam(nameof(genre), genre, 2));
-			streamWriter.Write(Writer.formatParam(nameof(realiseYear), realiseYear, 2));
-			streamWriter.Write(Writer.formatParam(nameof(watched), watched, 2));
-			streamWriter.Write(Writer.formatParam(nameof(mark), mark, 2));
-			streamWriter.Write(Writer.formatParam(nameof(dateOfWatch), dateOfWatch, 2));
-			streamWriter.Write(Writer.formatParam(nameof(comment), comment, 2));
-			streamWriter.Write(Writer.formatParam(nameof(sourceUrl), sourceUrl, 2));
-			streamWriter.Write(Writer.formatParam(nameof(countOfviews), countOfviews, 2));
-			streamWriter.Write(Writer.formatParam(nameof(franshiseId), franshiseId, 2));
+			streamWriter.Write(Helper.formatParam(nameof(name), name, 2));
+			streamWriter.Write(Helper.formatParam(nameof(genre), genre, 2));
+			streamWriter.Write(Helper.formatParam(nameof(realiseYear), realiseYear, 2));
+			streamWriter.Write(Helper.formatParam(nameof(watched), watched, 2));
+			streamWriter.Write(Helper.formatParam(nameof(mark), mark, 2));
+			streamWriter.Write(Helper.formatParam(nameof(dateOfWatch), dateOfWatch, 2));
+			streamWriter.Write(Helper.formatParam(nameof(comment), comment, 2));
+			streamWriter.Write(Helper.formatParam(nameof(sourceUrl), sourceUrl, 2));
+			streamWriter.Write(Helper.formatParam(nameof(countOfviews), countOfviews, 2));
+			streamWriter.Write(Helper.formatParam(nameof(franshiseId), franshiseId, 2));
 		}
     }
 }

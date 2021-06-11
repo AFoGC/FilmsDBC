@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.Interpreter;
+using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,14 +33,14 @@ namespace FilmsDBC.CinemaDataTypes
 
 		protected virtual void saveBody(StreamWriter streamWriter)
         {
-			streamWriter.Write(Writer.formatParam(nameof(id), id, 2));
+			streamWriter.Write(Helper.formatParam(nameof(id), id, 2));
 		}
 
 		public void saveCell(StreamWriter streamWriter)
         {
-			streamWriter.Write(Writer.formatMark(this.GetType(), 1));
+			streamWriter.Write(Helper.formatMark(this.GetType(), 1));
 			this.saveBody(streamWriter);
-			streamWriter.Write(Writer.formatMark(this.GetType(), 1));
+			streamWriter.Write(Helper.formatMark(this.GetType(), 1));
         }
 	}
 }

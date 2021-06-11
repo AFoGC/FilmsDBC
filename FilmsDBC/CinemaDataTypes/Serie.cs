@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.Interpreter;
+using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,19 +20,17 @@ namespace FilmsDBC.CinemaDataTypes
 
         }
 
-        public Serie(int filmId, String startWatchDate, int countOfWatchedSeries) : base()
+        public Serie(int id) : base(id)
 		{
-			this.filmId = filmId;
-			this.startWatchDate = startWatchDate;
-			this.countOfWatchedSeries = countOfWatchedSeries;
+
 		}
 
         protected override void saveBody(StreamWriter streamWriter)
         {
             base.saveBody(streamWriter);
-            streamWriter.Write(Writer.formatParam(nameof(filmId), filmId, 2));
-            streamWriter.Write(Writer.formatParam(nameof(startWatchDate), startWatchDate, 2));
-            streamWriter.Write(Writer.formatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 2));
+            streamWriter.Write(Helper.formatParam(nameof(filmId), filmId, 2));
+            streamWriter.Write(Helper.formatParam(nameof(startWatchDate), startWatchDate, 2));
+            streamWriter.Write(Helper.formatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 2));
         }
     }
 }
