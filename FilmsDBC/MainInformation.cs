@@ -9,6 +9,16 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC
 {
+	public class AllCinemaTypes
+    {
+		private List<Type> types;
+
+        AllCinemaTypes()
+        {
+			types.Add(typeof(Film));
+        }
+    }
+
 	public class MainInformation
 	{
 		private static string tablePath = @"F:\filmsDirectory\Films.fdbc";

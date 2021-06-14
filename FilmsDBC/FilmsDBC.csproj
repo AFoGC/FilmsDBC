@@ -56,6 +56,7 @@
     <Compile Include="CinemaDataTypes\Serie.cs" />
     <Compile Include="CinemaDataTypes\SerieTable.cs" />
     <Compile Include="Interpreter\Comand.cs" />
+    <Compile Include="Interpreter\NewReader.cs" />
     <Compile Include="Interpreter\Reader.cs" />
     <Compile Include="Interpreter\ReaderClasses\CategoryReader.cs" />
     <Compile Include="Interpreter\ReaderClasses\FilmReader.cs" />
@@ -97,6 +98,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controls\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
