@@ -1,5 +1,4 @@
 ﻿using FilmsDBC.Interpreter;
-using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,28 +8,50 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.CinemaDataTypes
 {
-    public class Serie : Cell
-    {
-        public int filmId = 0;
-        public String startWatchDate = "";
-        public int countOfWatchedSeries = 0;
+	public class Serie : Cell
+	{
+		public int filmId = 0;
+		public String startWatchDate = "";
+		public int countOfWatchedSeries = 0;
 
-        public Serie() : base()
-        {
-
-        }
-
-        public Serie(int id) : base(id)
+		public Serie() : base()
 		{
 
 		}
 
-        protected override void saveBody(StreamWriter streamWriter)
-        {
-            base.saveBody(streamWriter);
-            streamWriter.Write(Helper.formatParam(nameof(filmId), filmId, 2));
-            streamWriter.Write(Helper.formatParam(nameof(startWatchDate), startWatchDate, 2));
-            streamWriter.Write(Helper.formatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 2));
-        }
-    }
+		public Serie(int id) : base(id)
+		{
+
+		}
+
+		protected override void saveBody(StreamWriter streamWriter)
+		{
+			base.saveBody(streamWriter);
+			streamWriter.Write(formatParam(nameof(filmId), filmId, 2));
+			streamWriter.Write(formatParam(nameof(startWatchDate), startWatchDate, 2));
+			streamWriter.Write(formatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 2));
+		}
+
+		protected override void loadBody(Comand comand)
+		{
+			switch (comand.Paramert)
+			{
+				case "id":
+					this.id = Convert.ToInt32(comand.Argument);
+					break;
+				case "filmId":
+					this.filmId = Convert.ToInt32(comand.Argument);
+					break;
+				case "startWatchDate":
+					this.startWatchDate = comand.Argument;
+					break;
+				case "countOfWatchedSeries":
+					this.countOfWatchedSeries = Convert.ToInt32(comand.Argument);
+					break;
+
+				default:
+					break;
+			}
+		}
+	}
 }

@@ -48,13 +48,11 @@
   <ItemGroup>
     <Compile Include="CinemaDataTypes\DateOfFilm.cs" />
     <Compile Include="CinemaDataTypes\Category.cs" />
-    <Compile Include="CinemaDataTypes\CategoryTable.cs" />
     <Compile Include="CinemaDataTypes\inheir\Cell.cs" />
     <Compile Include="CinemaDataTypes\Film.cs" />
-    <Compile Include="CinemaDataTypes\FilmTable.cs" />
     <Compile Include="CinemaDataTypes\inheir\Table.cs" />
+    <Compile Include="CinemaDataTypes\inheir\TableCollection.cs" />
     <Compile Include="CinemaDataTypes\Serie.cs" />
-    <Compile Include="CinemaDataTypes\SerieTable.cs" />
     <Compile Include="Interpreter\Comand.cs" />
     <Compile Include="Interpreter\NewReader.cs" />
     <Compile Include="Interpreter\Reader.cs" />
@@ -66,7 +64,6 @@
     <Compile Include="MainInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StaticFilmClasses\Helper.cs" />
     <Compile Include="Visual\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
+    <Folder Include="StaticFilmClasses\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,4 @@
 ﻿using FilmsDBC.Interpreter;
-using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -38,16 +37,59 @@ namespace FilmsDBC.CinemaDataTypes
         {
             base.saveBody(streamWriter);
 
-			streamWriter.Write(Helper.formatParam(nameof(name), name, 2));
-			streamWriter.Write(Helper.formatParam(nameof(genre), genre, 2));
-			streamWriter.Write(Helper.formatParam(nameof(realiseYear), realiseYear, 2));
-			streamWriter.Write(Helper.formatParam(nameof(watched), watched, 2));
-			streamWriter.Write(Helper.formatParam(nameof(mark), mark, 2));
-			streamWriter.Write(Helper.formatParam(nameof(dateOfWatch), dateOfWatch, 2));
-			streamWriter.Write(Helper.formatParam(nameof(comment), comment, 2));
-			streamWriter.Write(Helper.formatParam(nameof(sourceUrl), sourceUrl, 2));
-			streamWriter.Write(Helper.formatParam(nameof(countOfviews), countOfviews, 2));
-			streamWriter.Write(Helper.formatParam(nameof(franshiseId), franshiseId, 2));
+			streamWriter.Write(formatParam(nameof(name), name, 2));
+			streamWriter.Write(formatParam(nameof(genre), genre, 2));
+			streamWriter.Write(formatParam(nameof(realiseYear), realiseYear, 2));
+			streamWriter.Write(formatParam(nameof(watched), watched, 2));
+			streamWriter.Write(formatParam(nameof(mark), mark, 2));
+			streamWriter.Write(formatParam(nameof(dateOfWatch), dateOfWatch, 2));
+			streamWriter.Write(formatParam(nameof(comment), comment, 2));
+			streamWriter.Write(formatParam(nameof(sourceUrl), sourceUrl, 2));
+			streamWriter.Write(formatParam(nameof(countOfviews), countOfviews, 2));
+			streamWriter.Write(formatParam(nameof(franshiseId), franshiseId, 2));
 		}
+
+        protected override void loadBody(Comand comand)
+        {
+            switch (comand.Paramert)
+            {
+				case "id":
+					this.id = Convert.ToInt32(comand.Argument);
+					break;
+				case "name":
+					this.name = comand.Argument;
+					break;
+				case "genre":
+					this.genre = comand.Argument;
+					break;
+				case "realiseYear":
+					this.realiseYear = Convert.ToInt32(comand.Argument);
+					break;
+				case "watched":
+					this.watched = Convert.ToBoolean(comand.Argument);
+					break;
+				case "mark":
+					this.mark = Convert.ToSByte(comand.Argument);
+					break;
+				case "dateOfWatch":
+					this.dateOfWatch = comand.Argument;
+					break;
+				case "comment":
+					this.comment = comand.Argument;
+					break;
+				case "sourceUrl":
+					this.sourceUrl = comand.Argument;
+					break;
+				case "countOfviews":
+					this.countOfviews = Convert.ToInt32(comand.Argument);
+					break;
+				case "franshiseId":
+					this.franshiseId = Convert.ToInt32(comand.Argument);
+					break;
+
+				default:
+					break;
+            }
+        }
     }
 }

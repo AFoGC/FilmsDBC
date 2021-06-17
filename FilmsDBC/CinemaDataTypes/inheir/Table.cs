@@ -1,5 +1,5 @@
 ﻿using FilmsDBC.Interpreter;
-using FilmsDBC.StaticFilmClasses;
+using FilmsDBC.Interpreter.ReaderClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.CinemaDataTypes
 {
-	public class Table<Te> where Te : Cell, new()
+	public class Table//<Te> where Te : Cell, new()
 	{
 		protected int id = 0;
 		public String name = "";
-		protected List<Te> items = new List<Te>();
+		protected List<Cell> cells = new List<Cell>();
+		protected Type dataType = typeof(Cell);
 
-		private static int count = 0;
 		private int lastId = 0;
 
 		public int ID
@@ -24,9 +24,14 @@ namespace FilmsDBC.CinemaDataTypes
 			get { return id; }
 		}
 
-		public List<Te> Items
+		public Type DataType
+        {
+            get { return dataType; }
+        }
+
+		public List<Cell> Cells
 		{
-			get { return items; }
+			get { return cells; }
 		}
 		public int LastID
 		{
@@ -34,47 +39,41 @@ namespace FilmsDBC.CinemaDataTypes
 			get { return lastId; }
 		}
 
-		public Table()
+		public Table(Type type)
+        {
+			this.dataType = type;
+        }
+
+		public Table(int id, Type type)
 		{
-			this.id = ++count;
+			this.id = id;
+			this.dataType = type;
 		}
 
-		public Table(String name)
-		{
-			this.id = ++count;
-			this.name = name;
-		}
-
-		public Table(int id, String name)
+		public Table(int id, String name, Type type)
 		{
 			this.id = id;
 			this.name = name;
+			this.dataType = type;
 		}
 
-		public void addElement()
+		public bool addElement(Cell item)
 		{
-			Te item = new Te();
-			item.ID = ++lastId;
-			items.Add(item);
+            if (item.GetType() == dataType)
+            {
+				cells.Add(item);
+				return true;
+			}
+			return false;
 		}
-
-		public void addElement(Te item)
-		{
-			items.Add(item);
-		}
-
-		public Type getElementType()
-        {
-			return typeof(Te);
-        }
 
 		public void saveTable(StreamWriter streamWriter)
 		{
-			streamWriter.Write(Helper.tableDeclaration(typeof(Te), 0));
-			streamWriter.Write(Helper.formatParam(nameof(id), id, 1));
-			streamWriter.Write(Helper.formatParam(nameof(name), name, 1));
+			streamWriter.Write(this.tableDeclaration(0));
+			streamWriter.Write(Cell.formatParam(nameof(id), id, 1));
+			streamWriter.Write(Cell.formatParam(nameof(name), name, 1));
 
-			foreach (Te cell in this.items)
+			foreach (Cell cell in this.cells)
 			{
 				cell.saveCell(streamWriter);
 			}
@@ -83,9 +82,48 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.WriteLine();
 		}
 
-		public Te getElemnt(int index)
+		public void loadTable(StreamReader streamReader)
         {
-            foreach (Te item in items)
+			Comand comand = new Comand();
+			bool endReading = false;
+			String dataName = dataType.Name;
+
+			while(endReading == false)
+            {
+				comand.getComand(streamReader.ReadLine());
+				if (comand.IsComand)
+				{
+                    if (comand.Paramert == dataName)
+                    {
+						Cell cell = (Cell)Activator.CreateInstance(this.dataType);
+						cell.loadCell(streamReader);
+						cells.Add(cell);
+					}
+                    else
+                    {
+						switch (comand.Paramert)
+						{
+							case "id":
+								this.id = Convert.ToInt32(comand.Argument);
+								break;
+							case "name":
+								this.name = comand.Argument;
+								break;
+							case "Table":
+								endReading = true;
+								break;
+
+							default:
+								break;
+						}
+					}
+				}
+			}
+		}
+
+		public Cell getElemnt(int index)
+        {
+            foreach (Cell item in cells)
             {
                 if (item.ID == index)
                 {
@@ -94,5 +132,15 @@ namespace FilmsDBC.CinemaDataTypes
             }
 			return null;
         }
+
+		public String tableDeclaration(int countOfTabulations)
+		{
+			String export = "";
+			for (int i = 0; i < countOfTabulations; i++)
+			{
+				export = export + "\t";
+			}
+			return export + "<Table: " + dataType.Name + ">\n";
+		}
 	}
 }

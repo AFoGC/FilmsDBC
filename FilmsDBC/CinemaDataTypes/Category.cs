@@ -1,5 +1,4 @@
 ﻿using FilmsDBC.Interpreter;
-using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,9 +30,31 @@ namespace FilmsDBC.CinemaDataTypes
 		{
 			base.saveBody(streamWriter);
 
-			streamWriter.Write(Helper.formatParam(nameof(name), name, 2));
-			streamWriter.Write(Helper.formatParam(nameof(mark), mark, 2));
-			streamWriter.Write(Helper.formatParam(nameof(priority), priority, 2));
+			streamWriter.Write(formatParam(nameof(name), name, 2));
+			streamWriter.Write(formatParam(nameof(mark), mark, 2));
+			streamWriter.Write(formatParam(nameof(priority), priority, 2));
 		}
-	}
+
+        protected override void loadBody(Comand comand)
+        {
+			switch (comand.Paramert)
+			{
+				case "id":
+					this.id = Convert.ToInt32(comand.Argument);
+					break;
+				case "name":
+					this.name = comand.Argument;
+					break;
+				case "mark":
+					this.mark = Convert.ToSByte(comand.Argument);
+					break;
+				case "priority":
+					this.priority = Convert.ToInt32(comand.Argument);
+					break;
+
+				default:
+					break;
+			}
+		}
+    }
 }
