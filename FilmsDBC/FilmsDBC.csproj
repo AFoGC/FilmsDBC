@@ -48,19 +48,8 @@
   <ItemGroup>
     <Compile Include="CinemaDataTypes\DateOfFilm.cs" />
     <Compile Include="CinemaDataTypes\Category.cs" />
-    <Compile Include="CinemaDataTypes\inheir\Cell.cs" />
     <Compile Include="CinemaDataTypes\Film.cs" />
-    <Compile Include="CinemaDataTypes\inheir\Table.cs" />
-    <Compile Include="CinemaDataTypes\inheir\TableCollection.cs" />
     <Compile Include="CinemaDataTypes\Serie.cs" />
-    <Compile Include="Interpreter\Comand.cs" />
-    <Compile Include="Interpreter\NewReader.cs" />
-    <Compile Include="Interpreter\Reader.cs" />
-    <Compile Include="Interpreter\ReaderClasses\CategoryReader.cs" />
-    <Compile Include="Interpreter\ReaderClasses\FilmReader.cs" />
-    <Compile Include="Interpreter\ReaderClasses\ParamReader.cs" />
-    <Compile Include="Interpreter\ReaderClasses\SerieReader.cs" />
-    <Compile Include="Interpreter\TestReader.cs" />
     <Compile Include="MainInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +87,12 @@
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="StaticFilmClasses\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TablesLibrary\TablesLibrary\TablesLibrary.csproj">
+      <Project>{6389a55e-2582-4996-b0f4-eaa7f1078a84}</Project>
+      <Name>TablesLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

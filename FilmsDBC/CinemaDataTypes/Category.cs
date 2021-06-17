@@ -1,10 +1,10 @@
-﻿using FilmsDBC.Interpreter;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.CinemaDataTypes
 {
@@ -14,7 +14,7 @@ namespace FilmsDBC.CinemaDataTypes
 		public sbyte mark = -1;
 		public int priority = 0;
 
-		public List<Film> films;
+		public List<Film> films = new List<Film>();
 
 		public Category() : base()
 		{
