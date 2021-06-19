@@ -18,7 +18,7 @@ namespace FilmsDBC.CinemaDataTypes
 		public String dateOfWatch = "";
 
 		public String comment = "";
-		public String sourceUrl = "";
+		public List<String> sources = new List<String>();
 
 		public int countOfviews = 0;
 		public int franshiseId = 0;
@@ -44,7 +44,12 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.Write(formatParam(nameof(mark), mark, 2));
 			streamWriter.Write(formatParam(nameof(dateOfWatch), dateOfWatch, 2));
 			streamWriter.Write(formatParam(nameof(comment), comment, 2));
-			streamWriter.Write(formatParam(nameof(sourceUrl), sourceUrl, 2));
+
+            foreach (String sourceUrl in sources)
+            {
+				streamWriter.Write(formatParam(nameof(sourceUrl), sourceUrl, 2));
+			}
+			
 			streamWriter.Write(formatParam(nameof(countOfviews), countOfviews, 2));
 			streamWriter.Write(formatParam(nameof(franshiseId), franshiseId, 2));
 		}
@@ -78,7 +83,7 @@ namespace FilmsDBC.CinemaDataTypes
 					this.comment = comand.Argument;
 					break;
 				case "sourceUrl":
-					this.sourceUrl = comand.Argument;
+					this.sources.Add(comand.Argument);
 					break;
 				case "countOfviews":
 					this.countOfviews = Convert.ToInt32(comand.Argument);
