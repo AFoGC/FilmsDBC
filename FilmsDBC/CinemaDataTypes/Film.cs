@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmsDBC.CinemaDataTypes.CellDataClasses;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,10 +16,10 @@ namespace FilmsDBC.CinemaDataTypes
 		public int realiseYear = 0;
 		public bool watched = false;
 		public sbyte mark = -1;
-		public String dateOfWatch = "";
+        public DateTime dateOfWatch = new DateTime();
 
 		public String comment = "";
-		public List<String> sources = new List<String>();
+		public List<Source> sources = new List<Source>();
 
 		public int countOfviews = 0;
 		public int franshiseId = 0;
@@ -45,16 +46,31 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.Write(formatParam(nameof(dateOfWatch), dateOfWatch, 2));
 			streamWriter.Write(formatParam(nameof(comment), comment, 2));
 
-            foreach (String sourceUrl in sources)
+            foreach (Source source in sources)
             {
-				streamWriter.Write(formatParam(nameof(sourceUrl), sourceUrl, 2));
+				streamWriter.Write(formatParam(nameof(source.sourceUrl), source, 2));
 			}
 			
 			streamWriter.Write(formatParam(nameof(countOfviews), countOfviews, 2));
 			streamWriter.Write(formatParam(nameof(franshiseId), franshiseId, 2));
 		}
 
-        protected override void loadBody(Comand comand)
+		private String formatParam(String variableName, Source item, int countOfTabulations)
+        {
+			if (item.sourceUrl != "")
+			{
+				String export = "";
+				for (int i = 0; i < countOfTabulations; i++)
+				{
+					export = export + "\t";
+				}
+				return export + "<" + variableName + ": " + item.ToString() + ">\n";
+			}
+			return "";
+		}
+
+
+		protected override void loadBody(Comand comand)
         {
             switch (comand.Paramert)
             {
@@ -77,13 +93,13 @@ namespace FilmsDBC.CinemaDataTypes
 					this.mark = Convert.ToSByte(comand.Argument);
 					break;
 				case "dateOfWatch":
-					this.dateOfWatch = comand.Argument;
+					this.dateOfWatch = readDate(comand.Argument);
 					break;
 				case "comment":
 					this.comment = comand.Argument;
 					break;
 				case "sourceUrl":
-					this.sources.Add(comand.Argument);
+					this.sources.Add(Source.ToSource(comand.Argument));
 					break;
 				case "countOfviews":
 					this.countOfviews = Convert.ToInt32(comand.Argument);

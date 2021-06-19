@@ -1,5 +1,5 @@
-﻿using FilmsDBC.Interpreter;
-using FilmsDBC.Visual;
+﻿using FilmsDBC.Visual;
+using FilmsDBC.Visual.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +18,9 @@ namespace FilmsDBC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainInformation.loadTables();
-            MainInformation.saveTables();
+            MainInformation.TablesInitialize();
+            MainInformation.tableCollection.loadTables();
+            //MainInformation.saveTables();
             Application.Run(new MainForm());
         }
     }

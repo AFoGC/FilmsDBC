@@ -1,5 +1,5 @@
 ﻿
-namespace FilmsDBC.Visual
+namespace FilmsDBC.Visual.Forms
 {
     partial class MainForm
     {

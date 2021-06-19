@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual
+namespace FilmsDBC.Visual.Forms
 {
     public partial class MainForm : Form
     {

@@ -9,11 +9,11 @@ using TablesLibrary.Interpreter;
 
 namespace FilmsDBC
 {
-	public class MainInformation
+	public static class MainInformation
 	{
-		public TableCollection tableCollection = null;
+		public static TableCollection tableCollection = null;
 		
-		public void TablesInitialize()
+		public static void TablesInitialize()
         {
             if (tableCollection == null)
             {
