@@ -20,7 +20,7 @@ namespace FilmsDBC
             Application.SetCompatibleTextRenderingDefault(false);
             MainInformation.TablesInitialize();
             MainInformation.tableCollection.loadTables();
-            //MainInformation.saveTables();
+            MainInformation.tableCollection.saveTables();
             Application.Run(new MainForm());
         }
     }

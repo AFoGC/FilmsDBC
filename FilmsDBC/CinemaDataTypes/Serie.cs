@@ -11,7 +11,7 @@ namespace FilmsDBC.CinemaDataTypes
 	public class Serie : Cell
 	{
 		public int filmId = 0;
-		public String startWatchDate = "";
+		public DateTime startWatchDate = new DateTime();
 		public int countOfWatchedSeries = 0;
 
 		public Serie() : base()
@@ -43,7 +43,7 @@ namespace FilmsDBC.CinemaDataTypes
 					this.filmId = Convert.ToInt32(comand.Argument);
 					break;
 				case "startWatchDate":
-					this.startWatchDate = comand.Argument;
+					this.startWatchDate = readDate(comand.Argument);
 					break;
 				case "countOfWatchedSeries":
 					this.countOfWatchedSeries = Convert.ToInt32(comand.Argument);
