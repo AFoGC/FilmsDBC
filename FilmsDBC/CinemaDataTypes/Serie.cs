@@ -13,6 +13,7 @@ namespace FilmsDBC.CinemaDataTypes
 		public int filmId = 0;
 		public DateTime startWatchDate = new DateTime();
 		public int countOfWatchedSeries = 0;
+		public int totalSeries = 0;
 
 		public Serie() : base()
 		{
@@ -30,6 +31,7 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.Write(formatParam(nameof(filmId), filmId, 2));
 			streamWriter.Write(formatParam(nameof(startWatchDate), startWatchDate, 2));
 			streamWriter.Write(formatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 2));
+			streamWriter.Write(formatParam(nameof(totalSeries), totalSeries, 2));
 		}
 
 		protected override void loadBody(Comand comand)
@@ -47,6 +49,9 @@ namespace FilmsDBC.CinemaDataTypes
 					break;
 				case "countOfWatchedSeries":
 					this.countOfWatchedSeries = Convert.ToInt32(comand.Argument);
+					break;
+				case "totalSeries":
+					this.totalSeries = Convert.ToInt32(comand.Argument);
 					break;
 
 				default:
