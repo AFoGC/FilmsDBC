@@ -53,11 +53,23 @@
     <Compile Include="MainInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visual\Controls\CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Controls\CategoryControl.Designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Controls\FilmControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Visual\Controls\FilmControl.Designer.cs">
       <DependentUpon>FilmControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\Controls\SerieControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Controls\SerieControl.Designer.cs">
+      <DependentUpon>SerieControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\Forms\MainForm.cs">
       <SubType>Form</SubType>
