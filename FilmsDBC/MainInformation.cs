@@ -19,9 +19,9 @@ namespace FilmsDBC
 
 			tableCollection.tableFilePath = @"F:\filmsDirectory\Films.fdbc";
 
-			tableCollection.AddTable(new Category());
-			tableCollection.AddTable(new Film());
-			tableCollection.AddTable(new Serie());
+			tableCollection.AddTable(typeof(Category));
+			tableCollection.AddTable(typeof(Film));
+			tableCollection.AddTable(typeof(Serie));
 		}
 	}
 }
