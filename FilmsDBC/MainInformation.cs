@@ -13,18 +13,15 @@ namespace FilmsDBC
 	{
 		public static TableCollection tableCollection = null;
 		
-		public static void TablesInitialize()
+		static MainInformation()
         {
-            if (tableCollection == null)
-            {
-				tableCollection = new TableCollection();
+			tableCollection = new TableCollection();
 
-				tableCollection.tableFilePath = @"F:\filmsDirectory\Films.fdbc";
+			tableCollection.tableFilePath = @"F:\filmsDirectory\Films.fdbc";
 
-				tableCollection.AddTable(new Category());
-				tableCollection.AddTable(new Film());
-				tableCollection.AddTable(new Serie());
-            }
-        }
+			tableCollection.AddTable(new Category());
+			tableCollection.AddTable(new Film());
+			tableCollection.AddTable(new Serie());
+		}
 	}
 }
