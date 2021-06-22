@@ -27,7 +27,7 @@ namespace FilmsDBC.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			base.saveBody(streamWriter);
+			streamWriter.Write(formatParam(nameof(id), id, 2));
 			streamWriter.Write(formatParam(nameof(filmId), filmId, 2));
 			streamWriter.Write(formatParam(nameof(startWatchDate), startWatchDate, 2));
 			streamWriter.Write(formatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 2));

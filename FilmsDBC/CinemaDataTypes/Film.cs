@@ -36,8 +36,7 @@ namespace FilmsDBC.CinemaDataTypes
 		}
         protected override void saveBody(StreamWriter streamWriter)
         {
-            base.saveBody(streamWriter);
-
+			streamWriter.Write(formatParam(nameof(id), id, 2));
 			streamWriter.Write(formatParam(nameof(name), name, 2));
 			streamWriter.Write(formatParam(nameof(genre), genre, 2));
 			streamWriter.Write(formatParam(nameof(realiseYear), realiseYear, 2));
