@@ -38,7 +38,7 @@ namespace FilmsDBC.Visual.Forms
             this.flowLayoutPanel_main.Location = new System.Drawing.Point(35, 155);
             this.flowLayoutPanel_main.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel_main.Name = "flowLayoutPanel_main";
-            this.flowLayoutPanel_main.Size = new System.Drawing.Size(930, 374);
+            this.flowLayoutPanel_main.Size = new System.Drawing.Size(960, 374);
             this.flowLayoutPanel_main.TabIndex = 0;
             // 
             // MainForm

@@ -150,7 +150,7 @@ namespace FilmsDBC.Visual.Controls
             this.Controls.Add(this.textBox_id);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "FilmControl";
-            this.Size = new System.Drawing.Size(920, 20);
+            this.Size = new System.Drawing.Size(940, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 

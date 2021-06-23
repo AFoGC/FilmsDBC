@@ -90,6 +90,9 @@
     <EmbeddedResource Include="Visual\Controls\FilmControl.resx">
       <DependentUpon>FilmControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Controls\SerieControl.resx">
+      <DependentUpon>SerieControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
