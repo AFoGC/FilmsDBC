@@ -16,7 +16,7 @@ namespace FilmsDBC.CinemaDataTypes
 		public int realiseYear = 0;
 		public bool watched = false;
 		public sbyte mark = -1;
-        public DateTime dateOfWatch = new DateTime();
+		public DateTime dateOfWatch = new DateTime();
 
 		public String comment = "";
 		public List<Source> sources = new List<Source>();
@@ -34,8 +34,34 @@ namespace FilmsDBC.CinemaDataTypes
 		{
 
 		}
-        protected override void saveBody(StreamWriter streamWriter)
-        {
+
+		public override bool UpdateThis(Cell cell)
+		{
+            if (this.GetType() == cell.GetType())
+            {
+				Film film = (Film)cell;
+
+				this.name = film.name;
+				this.genre = film.genre;
+				this.realiseYear = film.realiseYear;
+				this.watched = film.watched;
+				this.mark = film.mark;
+				this.dateOfWatch = film.dateOfWatch;
+				this.comment = film.comment;
+				this.sources = film.sources;
+				this.countOfviews = film.countOfviews;
+				this.franshiseId = film.franshiseId;
+
+				return true;
+            }
+            else
+            {
+				return false;
+            }
+		}
+
+		protected override void saveBody(StreamWriter streamWriter)
+		{
 			streamWriter.Write(formatParam(nameof(id), id, 2));
 			streamWriter.Write(formatParam(nameof(name), name, 2));
 			streamWriter.Write(formatParam(nameof(genre), genre, 2));
@@ -45,8 +71,8 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.Write(formatParam(nameof(dateOfWatch), dateOfWatch, 2));
 			streamWriter.Write(formatParam(nameof(comment), comment, 2));
 
-            foreach (Source source in sources)
-            {
+			foreach (Source source in sources)
+			{
 				streamWriter.Write(formatParam(nameof(source.sourceUrl), source, 2));
 			}
 			
@@ -55,7 +81,7 @@ namespace FilmsDBC.CinemaDataTypes
 		}
 
 		private String formatParam(String variableName, Source item, int countOfTabulations)
-        {
+		{
 			if (item.sourceUrl != "")
 			{
 				String export = "";
@@ -70,9 +96,9 @@ namespace FilmsDBC.CinemaDataTypes
 
 
 		protected override void loadBody(Comand comand)
-        {
-            switch (comand.Paramert)
-            {
+		{
+			switch (comand.Paramert)
+			{
 				case "id":
 					this.id = Convert.ToInt32(comand.Argument);
 					break;
@@ -109,7 +135,7 @@ namespace FilmsDBC.CinemaDataTypes
 
 				default:
 					break;
-            }
-        }
-    }
+			}
+		}
+	}
 }

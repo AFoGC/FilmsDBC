@@ -26,6 +26,25 @@ namespace FilmsDBC.CinemaDataTypes
 			
 		}
 
+		public override bool UpdateThis(Cell cell)
+		{
+            if (this.GetType() == cell.GetType())
+            {
+				Category category = (Category)cell;
+
+				this.name = category.name;
+				this.mark = category.mark;
+				this.priority = category.priority;
+				this.films = category.films;
+
+				return true;
+            }
+            else
+            {
+				return false;
+            }
+		}
+
 		protected override void saveBody(StreamWriter streamWriter)
 		{
 			streamWriter.Write(formatParam(nameof(id), id, 2));
@@ -34,8 +53,8 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.Write(formatParam(nameof(priority), priority, 2));
 		}
 
-        protected override void loadBody(Comand comand)
-        {
+		protected override void loadBody(Comand comand)
+		{
 			switch (comand.Paramert)
 			{
 				case "id":
@@ -55,5 +74,5 @@ namespace FilmsDBC.CinemaDataTypes
 					break;
 			}
 		}
-    }
+	}
 }

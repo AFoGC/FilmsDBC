@@ -25,7 +25,27 @@ namespace FilmsDBC.CinemaDataTypes
 
 		}
 
-		protected override void saveBody(StreamWriter streamWriter)
+        public override bool UpdateThis(Cell cell)
+        {
+			if (this.GetType() == cell.GetType())
+			{
+				Serie serie = (Serie)cell;
+
+				this.filmId = serie.filmId;
+				this.startWatchDate = serie.startWatchDate;
+				this.countOfWatchedSeries = serie.countOfWatchedSeries;
+				this.totalSeries = serie.totalSeries;
+
+				return true;
+			}
+            else
+            {
+				return false;
+            }
+			
+        }
+
+        protected override void saveBody(StreamWriter streamWriter)
 		{
 			streamWriter.Write(formatParam(nameof(id), id, 2));
 			streamWriter.Write(formatParam(nameof(filmId), filmId, 2));
