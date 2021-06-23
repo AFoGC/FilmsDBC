@@ -11,18 +11,18 @@ namespace FilmsDBC.CinemaDataTypes
 {
 	public class Film : Cell
 	{
-		public String name = "";
-		public String genre = "";
-		public int realiseYear = 0;
-		public bool watched = false;
-		public sbyte mark = -1;
-		public DateTime dateOfWatch = new DateTime();
+		private String name = "";
+		private String genre = "";
+		private int realiseYear = 0;
+		private bool watched = false;
+		private sbyte mark = -1;
+		private DateTime dateOfWatch = new DateTime();
 
-		public String comment = "";
-		public List<Source> sources = new List<Source>();
+		private String comment = "";
+		private List<Source> sources = new List<Source>();
 
-		public int countOfviews = 0;
-		public int franshiseId = 0;
+		private int countOfviews = 0;
+		private int franshiseId = 0;
 
 
 		public Film() : base()
@@ -137,5 +137,65 @@ namespace FilmsDBC.CinemaDataTypes
 					break;
 			}
 		}
+
+		public String Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+		public String Genre
+        {
+            get { return genre; }
+			set { genre = value; }
+        }
+
+		public int RealiseYear
+        {
+            get { return realiseYear; }
+			set { realiseYear = value; }
+        }
+
+		public bool Watched
+        {
+			get { return watched; }
+			set { watched = value; }
+        }
+
+		public sbyte Mark
+        {
+            get { return mark; }
+			set { mark = value; }
+        }
+
+		public DateTime DateOfWatch
+        {
+            get { return dateOfWatch; }
+            set { dateOfWatch = value; }
+        }
+
+		public String Comment
+        {
+            get { return comment; }
+			set { comment = value; }
+        }
+
+		public List<Source> Sources
+        {
+            get { return sources; }
+            set { sources = value; }
+        }
+
+		public int CountOfViews
+        {
+            get { return countOfviews; }
+			set { countOfviews = value; }
+        }
+
+		public int FranshiseId
+        {
+            get { return franshiseId; }
+			set { franshiseId = value; }
+        }
 	}
 }

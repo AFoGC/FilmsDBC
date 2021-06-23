@@ -22,13 +22,13 @@ namespace FilmsDBC.Visual.Controls
 			this.filmInfo = film;
 
 			this.textBox_id.Text = filmInfo.ID.ToString();
-			this.textBox_name.Text = filmInfo.name;
-			this.textBox_genre.Text = filmInfo.genre;
-			this.textBox_realiseYear.Text = Film.formatToString(filmInfo.realiseYear);
-			this.checkBox_watched.Checked = filmInfo.watched;
-			this.textBox_watchDate.Text = Film.formatToString(filmInfo.dateOfWatch);
-			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.mark));
-			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.countOfviews);
+			this.textBox_name.Text = filmInfo.Name;
+			this.textBox_genre.Text = filmInfo.Genre;
+			this.textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
+			this.checkBox_watched.Checked = filmInfo.Watched;
+			this.textBox_watchDate.Text = Film.formatToString(filmInfo.DateOfWatch);
+			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
+			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
 		}
 	}
 }

@@ -10,11 +10,11 @@ namespace FilmsDBC.CinemaDataTypes
 {
 	public class Category : Cell
 	{
-		public String name = "";
-		public sbyte mark = -1;
-		public int priority = 0;
+		private String name = "";
+		private sbyte mark = -1;
+		private int priority = 0;
 
-		public List<Film> films = new List<Film>();
+		private List<Film> films = new List<Film>();
 
 		public Category() : base()
 		{
@@ -74,5 +74,29 @@ namespace FilmsDBC.CinemaDataTypes
 					break;
 			}
 		}
+
+		public String Name
+        {
+            get { return name; }
+			set { name = value; }
+        }
+
+		public sbyte Mark
+        {
+            get { return mark; }
+            set { mark = value; }
+        }
+
+		public int Priority
+        {
+            get { return priority; }
+            set { priority = value; }
+        }
+
+		public List<Film> Films
+        {
+            get { return films; }
+			set { films = value; }
+        }
 	}
 }

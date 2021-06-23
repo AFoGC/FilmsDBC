@@ -23,7 +23,7 @@ namespace FilmsDBC.Visual.Forms
 
 		private void loadFilmTable()
 		{
-			foreach (Film film in MainInformation.tableCollection.getTable(2).Cells)
+			foreach (Film film in MainInformation.tableCollection.GetTable(2).Cells)
 			{
 				flowLayoutPanel_main.Controls.Add(new FilmControl(film));
 			}

@@ -10,10 +10,10 @@ namespace FilmsDBC.CinemaDataTypes
 {
 	public class Serie : Cell
 	{
-		public int filmId = 0;
-		public DateTime startWatchDate = new DateTime();
-		public int countOfWatchedSeries = 0;
-		public int totalSeries = 0;
+		private int filmId = 0;
+		private DateTime startWatchDate = new DateTime();
+		private int countOfWatchedSeries = 0;
+		private int totalSeries = 0;
 
 		public Serie() : base()
 		{
@@ -78,5 +78,29 @@ namespace FilmsDBC.CinemaDataTypes
 					break;
 			}
 		}
+
+		public int FilmId
+        {
+            get { return filmId; }
+            set { filmId = value; }
+        }
+
+		public DateTime StartWatchDate
+        {
+            get { return startWatchDate; }
+			set { startWatchDate = value; }
+        }
+
+		public int CountOfWatchedSeries
+        {
+            get { return countOfWatchedSeries; }
+            set { countOfWatchedSeries = value; }
+        }
+
+		public int TotalSeries
+        {
+            get { return totalSeries; }
+            set { totalSeries = value; }
+        }
 	}
 }
