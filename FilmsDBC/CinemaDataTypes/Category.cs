@@ -26,23 +26,14 @@ namespace FilmsDBC.CinemaDataTypes
 			
 		}
 
-		public override bool UpdateThis(Cell cell)
+		protected override void updateThisBody(Cell cell)
 		{
-            if (this.GetType() == cell.GetType())
-            {
-				Category category = (Category)cell;
+			Category category = (Category)cell;
 
-				this.name = category.name;
-				this.mark = category.mark;
-				this.priority = category.priority;
-				this.films = category.films;
-
-				return true;
-            }
-            else
-            {
-				return false;
-            }
+			this.name = category.name;
+			this.mark = category.mark;
+			this.priority = category.priority;
+			this.films = category.films;
 		}
 
 		protected override void saveBody(StreamWriter streamWriter)
@@ -76,27 +67,27 @@ namespace FilmsDBC.CinemaDataTypes
 		}
 
 		public String Name
-        {
-            get { return name; }
+		{
+			get { return name; }
 			set { name = value; }
-        }
+		}
 
 		public sbyte Mark
-        {
-            get { return mark; }
-            set { mark = value; }
-        }
+		{
+			get { return mark; }
+			set { mark = value; }
+		}
 
 		public int Priority
-        {
-            get { return priority; }
-            set { priority = value; }
-        }
+		{
+			get { return priority; }
+			set { priority = value; }
+		}
 
 		public List<Film> Films
-        {
-            get { return films; }
+		{
+			get { return films; }
 			set { films = value; }
-        }
+		}
 	}
 }

@@ -35,29 +35,20 @@ namespace FilmsDBC.CinemaDataTypes
 
 		}
 
-		public override bool UpdateThis(Cell cell)
+		protected override void updateThisBody(Cell cell)
 		{
-            if (this.GetType() == cell.GetType())
-            {
-				Film film = (Film)cell;
+			Film film = (Film)cell;
 
-				this.name = film.name;
-				this.genre = film.genre;
-				this.realiseYear = film.realiseYear;
-				this.watched = film.watched;
-				this.mark = film.mark;
-				this.dateOfWatch = film.dateOfWatch;
-				this.comment = film.comment;
-				this.sources = film.sources;
-				this.countOfviews = film.countOfviews;
-				this.franshiseId = film.franshiseId;
-
-				return true;
-            }
-            else
-            {
-				return false;
-            }
+			this.name = film.name;
+			this.genre = film.genre;
+			this.realiseYear = film.realiseYear;
+			this.watched = film.watched;
+			this.mark = film.mark;
+			this.dateOfWatch = film.dateOfWatch;
+			this.comment = film.comment;
+			this.sources = film.sources;
+			this.countOfviews = film.countOfviews;
+			this.franshiseId = film.franshiseId;
 		}
 
 		protected override void saveBody(StreamWriter streamWriter)
@@ -79,21 +70,6 @@ namespace FilmsDBC.CinemaDataTypes
 			streamWriter.Write(formatParam(nameof(countOfviews), countOfviews, 2));
 			streamWriter.Write(formatParam(nameof(franshiseId), franshiseId, 2));
 		}
-
-		private String formatParam(String variableName, Source item, int countOfTabulations)
-		{
-			if (item.sourceUrl != "")
-			{
-				String export = "";
-				for (int i = 0; i < countOfTabulations; i++)
-				{
-					export = export + "\t";
-				}
-				return export + "<" + variableName + ": " + item.ToString() + ">\n";
-			}
-			return "";
-		}
-
 
 		protected override void loadBody(Comand comand)
 		{
@@ -138,64 +114,78 @@ namespace FilmsDBC.CinemaDataTypes
 			}
 		}
 
+		private String formatParam(String variableName, Source item, int countOfTabulations)
+		{
+			if (item.sourceUrl != "")
+			{
+				String export = "";
+				for (int i = 0; i < countOfTabulations; i++)
+				{
+					export = export + "\t";
+				}
+				return export + "<" + variableName + ": " + item.ToString() + ">\n";
+			}
+			return "";
+		}
+
 		public String Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+		{
+			get { return name; }
+			set { name = value; }
+		}
 
 		public String Genre
-        {
-            get { return genre; }
+		{
+			get { return genre; }
 			set { genre = value; }
-        }
+		}
 
 		public int RealiseYear
-        {
-            get { return realiseYear; }
+		{
+			get { return realiseYear; }
 			set { realiseYear = value; }
-        }
+		}
 
 		public bool Watched
-        {
+		{
 			get { return watched; }
 			set { watched = value; }
-        }
+		}
 
 		public sbyte Mark
-        {
-            get { return mark; }
+		{
+			get { return mark; }
 			set { mark = value; }
-        }
+		}
 
 		public DateTime DateOfWatch
-        {
-            get { return dateOfWatch; }
-            set { dateOfWatch = value; }
-        }
+		{
+			get { return dateOfWatch; }
+			set { dateOfWatch = value; }
+		}
 
 		public String Comment
-        {
-            get { return comment; }
+		{
+			get { return comment; }
 			set { comment = value; }
-        }
+		}
 
 		public List<Source> Sources
-        {
-            get { return sources; }
-            set { sources = value; }
-        }
+		{
+			get { return sources; }
+			set { sources = value; }
+		}
 
 		public int CountOfViews
-        {
-            get { return countOfviews; }
+		{
+			get { return countOfviews; }
 			set { countOfviews = value; }
-        }
+		}
 
 		public int FranshiseId
-        {
-            get { return franshiseId; }
+		{
+			get { return franshiseId; }
 			set { franshiseId = value; }
-        }
+		}
 	}
 }

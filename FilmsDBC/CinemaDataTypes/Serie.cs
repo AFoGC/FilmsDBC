@@ -25,27 +25,17 @@ namespace FilmsDBC.CinemaDataTypes
 
 		}
 
-        public override bool UpdateThis(Cell cell)
-        {
-			if (this.GetType() == cell.GetType())
-			{
-				Serie serie = (Serie)cell;
+		protected override void updateThisBody(Cell cell)
+		{
+			Serie serie = (Serie)cell;
 
-				this.filmId = serie.filmId;
-				this.startWatchDate = serie.startWatchDate;
-				this.countOfWatchedSeries = serie.countOfWatchedSeries;
-				this.totalSeries = serie.totalSeries;
+			this.filmId = serie.filmId;
+			this.startWatchDate = serie.startWatchDate;
+			this.countOfWatchedSeries = serie.countOfWatchedSeries;
+			this.totalSeries = serie.totalSeries;
+		}
 
-				return true;
-			}
-            else
-            {
-				return false;
-            }
-			
-        }
-
-        protected override void saveBody(StreamWriter streamWriter)
+		protected override void saveBody(StreamWriter streamWriter)
 		{
 			streamWriter.Write(formatParam(nameof(id), id, 2));
 			streamWriter.Write(formatParam(nameof(filmId), filmId, 2));
@@ -80,27 +70,27 @@ namespace FilmsDBC.CinemaDataTypes
 		}
 
 		public int FilmId
-        {
-            get { return filmId; }
-            set { filmId = value; }
-        }
+		{
+			get { return filmId; }
+			set { filmId = value; }
+		}
 
 		public DateTime StartWatchDate
-        {
-            get { return startWatchDate; }
+		{
+			get { return startWatchDate; }
 			set { startWatchDate = value; }
-        }
+		}
 
 		public int CountOfWatchedSeries
-        {
-            get { return countOfWatchedSeries; }
-            set { countOfWatchedSeries = value; }
-        }
+		{
+			get { return countOfWatchedSeries; }
+			set { countOfWatchedSeries = value; }
+		}
 
 		public int TotalSeries
-        {
-            get { return totalSeries; }
-            set { totalSeries = value; }
-        }
+		{
+			get { return totalSeries; }
+			set { totalSeries = value; }
+		}
 	}
 }
