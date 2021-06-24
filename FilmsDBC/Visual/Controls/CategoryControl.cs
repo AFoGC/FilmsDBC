@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Visual.StaticVisualClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,11 @@ namespace FilmsDBC.Visual.Controls
             InitializeComponent();
             this.categoryInfo = category;
 
+            this.textBox_id.Text = categoryInfo.ID.ToString();
+            this.textBox_name.Text = category.Name;
+            this.textBox_mark.Text = VisualHelper.markToText(Category.formatToString(category.Mark));
 
+            //Add controls to Control
         }
     }
 }

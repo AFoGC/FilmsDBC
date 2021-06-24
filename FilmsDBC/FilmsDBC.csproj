@@ -87,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Visual\Controls\CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\Controls\FilmControl.resx">
       <DependentUpon>FilmControl.cs</DependentUpon>
     </EmbeddedResource>
