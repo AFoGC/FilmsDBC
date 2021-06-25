@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
+using FilmsDBC.StaticFilmClasses;
 
 namespace FilmsDBC
 {
@@ -23,5 +24,11 @@ namespace FilmsDBC
 			tableCollection.AddTable(typeof(Film));
 			tableCollection.AddTable(typeof(Serie));
 		}
+
+		public static void LoadTables()
+        {
+			tableCollection.loadTables();
+			tableCollection.CategorySubload();
+        }
 	}
 }

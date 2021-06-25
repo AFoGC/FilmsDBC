@@ -20,7 +20,8 @@ namespace FilmsDBC.Visual.Forms
 			InitializeComponent();
 
 			//loadSimpleTable();
-			loadTable();
+			//loadTable();
+			loadCategories();
 		}
 
 		private void loadFilmTable()
@@ -53,6 +54,14 @@ namespace FilmsDBC.Visual.Forms
             foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
             {
 				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSimpleControl(film));
+            }
+        }
+
+		private void loadCategories()
+        {
+            foreach (Category category in MainInformation.tableCollection.GetTable(typeof(Category)).Cells)
+            {
+                flowLayoutPanel_main.Controls.Add(new CategoryControl(category));
             }
         }
 	}

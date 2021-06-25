@@ -33,7 +33,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_mark = new System.Windows.Forms.TextBox();
             this.label_update = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel_SimpleControls = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -68,18 +68,18 @@ namespace FilmsDBC.Visual.Controls
             this.label_update.Text = "update";
             this.label_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel_SimpleControls
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(30, 20);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(940, 25);
-            this.flowLayoutPanel1.TabIndex = 43;
+            this.flowLayoutPanel_SimpleControls.Location = new System.Drawing.Point(30, 20);
+            this.flowLayoutPanel_SimpleControls.Name = "flowLayoutPanel_SimpleControls";
+            this.flowLayoutPanel_SimpleControls.Size = new System.Drawing.Size(940, 25);
+            this.flowLayoutPanel_SimpleControls.TabIndex = 43;
             // 
             // CategoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanel_SimpleControls);
             this.Controls.Add(this.label_update);
             this.Controls.Add(this.textBox_mark);
             this.Controls.Add(this.textBox_name);
@@ -98,6 +98,6 @@ namespace FilmsDBC.Visual.Controls
         internal System.Windows.Forms.TextBox textBox_name;
         internal System.Windows.Forms.TextBox textBox_mark;
         private System.Windows.Forms.Label label_update;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_SimpleControls;
     }
 }

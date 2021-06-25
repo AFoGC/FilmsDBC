@@ -59,6 +59,24 @@ namespace FilmsDBC.CinemaDataTypes
 			}
 		}
 
+		public void FilmsSubload(Table table)
+		{
+			if (table.DataType == typeof(Film))
+			{
+				foreach (Film film in table.Cells)
+				{
+                    if (film.FranshiseId == this.ID)
+                    {
+						this.films.Add(film);
+                    }
+				}
+			}
+            else
+            {
+				throw new Exception("Wrong table DataType");
+            }
+		}
+
 		public String Name
 		{
 			get { return name; }
