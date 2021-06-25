@@ -15,15 +15,8 @@ namespace FilmsDBC.CinemaDataTypes
 		private int countOfWatchedSeries = 0;
 		private int totalSeries = 0;
 
-		public Serie() : base()
-		{
-
-		}
-
-		public Serie(int id) : base(id)
-		{
-
-		}
+		public Serie() : base() { }
+		public Serie(int id) : base(id) { }
 
 		protected override void updateThisBody(Cell cell)
 		{

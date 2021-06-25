@@ -1,8 +1,12 @@
-﻿using System;
+﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Visual.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.Visual.StaticVisualClasses
 {
@@ -22,5 +26,21 @@ namespace FilmsDBC.Visual.StaticVisualClasses
                     return mark + "/5";
             }
         }
+        /*
+        public static UserControl ChooseControl(Cell cell)
+        {
+            if (cell.GetType() == typeof(Film))
+            {
+                return new FilmControl((Film)cell);
+            }
+            if (cell.GetType() == typeof(Serie))
+            {
+                return new SerieControl((Serie)cell);
+            }
+
+            throw new Exception(" ");
+        }
+        */
+        
     }
 }

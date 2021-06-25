@@ -16,15 +16,8 @@ namespace FilmsDBC.CinemaDataTypes
 
 		private List<Film> films = new List<Film>();
 
-		public Category() : base()
-		{
-
-		}
-
-		public Category(int id) : base(id)
-		{
-			
-		}
+		public Category() : base() { }
+		public Category(int id) : base(id) { }
 
 		protected override void updateThisBody(Cell cell)
 		{

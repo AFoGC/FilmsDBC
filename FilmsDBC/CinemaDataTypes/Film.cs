@@ -25,15 +25,8 @@ namespace FilmsDBC.CinemaDataTypes
 		private int franshiseId = 0;
 
 
-		public Film() : base()
-		{
-
-		}
-
-		public Film(int id) : base(id)
-		{
-
-		}
+		public Film() : base() { }
+		public Film(int id) : base(id) { }
 
 		protected override void updateThisBody(Cell cell)
 		{
