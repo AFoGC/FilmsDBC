@@ -34,11 +34,13 @@ namespace FilmsDBC.Visual.Forms
             // 
             // flowLayoutPanel_main
             // 
+            this.flowLayoutPanel_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel_main.AutoScroll = true;
-            this.flowLayoutPanel_main.Location = new System.Drawing.Point(35, 155);
+            this.flowLayoutPanel_main.Location = new System.Drawing.Point(235, 78);
             this.flowLayoutPanel_main.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel_main.Name = "flowLayoutPanel_main";
-            this.flowLayoutPanel_main.Size = new System.Drawing.Size(960, 374);
+            this.flowLayoutPanel_main.Size = new System.Drawing.Size(960, 527);
             this.flowLayoutPanel_main.TabIndex = 0;
             // 
             // MainForm

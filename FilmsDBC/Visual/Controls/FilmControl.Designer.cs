@@ -100,7 +100,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_comment
             // 
-            this.label_comment.Location = new System.Drawing.Point(540, 0);
+            this.label_comment.Location = new System.Drawing.Point(750, 0);
             this.label_comment.Name = "label_comment";
             this.label_comment.Size = new System.Drawing.Size(80, 20);
             this.label_comment.TabIndex = 29;
@@ -126,7 +126,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_update
             // 
-            this.label_update.Location = new System.Drawing.Point(725, 0);
+            this.label_update.Location = new System.Drawing.Point(845, 0);
             this.label_update.Name = "label_update";
             this.label_update.Size = new System.Drawing.Size(80, 20);
             this.label_update.TabIndex = 32;

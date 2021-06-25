@@ -71,6 +71,12 @@
     <Compile Include="Visual\Controls\SerieControl.Designer.cs">
       <DependentUpon>SerieControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Controls\SimpleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Controls\SimpleControl.Designer.cs">
+      <DependentUpon>SimpleControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Controls\SerieControl.resx">
       <DependentUpon>SerieControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Controls\SimpleControl.resx">
+      <DependentUpon>SimpleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

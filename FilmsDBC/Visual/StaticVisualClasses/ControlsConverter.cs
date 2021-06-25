@@ -32,5 +32,10 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 
             return new SerieControl(film, (Serie)MainInformation.tableCollection.GetTable(typeof(Serie)).GetLastElement);
         }
+
+        public static SimpleControl ToSimpleControl(Film film)
+        {
+            return new SimpleControl(film);
+        }
     }
 }

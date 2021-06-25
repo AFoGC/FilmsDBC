@@ -34,8 +34,8 @@ namespace FilmsDBC.Visual.Controls
 
 
             this.textBox_startWatchDate.Text = Serie.formatToString(serieInfo.StartWatchDate);
-            this.textBox_countOfWatchedSeries.Text = serieInfo.CountOfWatchedSeries.ToString();
-            this.textBox_totalSeries.Text = serieInfo.TotalSeries.ToString();
+            this.textBox_countOfWatchedSeries.Text = Serie.formatToString(serieInfo.CountOfWatchedSeries);
+            this.textBox_totalSeries.Text = Serie.formatToString(serieInfo.TotalSeries);
         }
     }
 }

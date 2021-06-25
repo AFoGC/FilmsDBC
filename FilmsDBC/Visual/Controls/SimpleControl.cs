@@ -1,0 +1,29 @@
+﻿using FilmsDBC.CinemaDataTypes;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FilmsDBC.Visual.Controls
+{
+    public partial class SimpleControl : UserControl
+    {
+        public Film filmInfo;
+        public SimpleControl(Film film)
+        {
+            InitializeComponent();
+            this.filmInfo = film;
+
+            textBox_id.Text = filmInfo.ID.ToString();
+            textBox_name.Text = filmInfo.Name;
+            textBox_genre.Text = filmInfo.Genre;
+            textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
+            checkBox_watched.Checked = filmInfo.Watched;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 ﻿
 namespace FilmsDBC.Visual.Controls
 {
-    partial class CategoryControl
+    partial class SimpleControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -31,9 +31,10 @@ namespace FilmsDBC.Visual.Controls
         {
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
-            this.textBox_mark = new System.Windows.Forms.TextBox();
-            this.label_update = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox_genre = new System.Windows.Forms.TextBox();
+            this.textBox_realiseYear = new System.Windows.Forms.TextBox();
+            this.checkBox_watched = new System.Windows.Forms.CheckBox();
+            this.label_info = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -51,42 +52,53 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 16;
             // 
-            // textBox_mark
+            // textBox_genre
             // 
-            this.textBox_mark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_mark.Location = new System.Drawing.Point(210, 0);
-            this.textBox_mark.Name = "textBox_mark";
-            this.textBox_mark.Size = new System.Drawing.Size(45, 20);
-            this.textBox_mark.TabIndex = 36;
+            this.textBox_genre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_genre.Location = new System.Drawing.Point(210, 0);
+            this.textBox_genre.Name = "textBox_genre";
+            this.textBox_genre.Size = new System.Drawing.Size(100, 20);
+            this.textBox_genre.TabIndex = 26;
             // 
-            // label_update
+            // textBox_realiseYear
             // 
-            this.label_update.Location = new System.Drawing.Point(850, 0);
-            this.label_update.Name = "label_update";
-            this.label_update.Size = new System.Drawing.Size(80, 20);
-            this.label_update.TabIndex = 42;
-            this.label_update.Text = "update";
-            this.label_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox_realiseYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_realiseYear.Location = new System.Drawing.Point(310, 0);
+            this.textBox_realiseYear.Name = "textBox_realiseYear";
+            this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
+            this.textBox_realiseYear.TabIndex = 27;
             // 
-            // flowLayoutPanel1
+            // checkBox_watched
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(30, 20);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(940, 25);
-            this.flowLayoutPanel1.TabIndex = 43;
+            this.checkBox_watched.AutoSize = true;
+            this.checkBox_watched.Location = new System.Drawing.Point(360, 3);
+            this.checkBox_watched.Name = "checkBox_watched";
+            this.checkBox_watched.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_watched.TabIndex = 28;
+            this.checkBox_watched.UseVisualStyleBackColor = true;
             // 
-            // CategoryControl
+            // label_info
+            // 
+            this.label_info.Location = new System.Drawing.Point(395, 0);
+            this.label_info.Name = "label_info";
+            this.label_info.Size = new System.Drawing.Size(80, 20);
+            this.label_info.TabIndex = 40;
+            this.label_info.Text = "More Info";
+            this.label_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SimpleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.label_update);
-            this.Controls.Add(this.textBox_mark);
+            this.Controls.Add(this.label_info);
+            this.Controls.Add(this.checkBox_watched);
+            this.Controls.Add(this.textBox_realiseYear);
+            this.Controls.Add(this.textBox_genre);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "CategoryControl";
-            this.Size = new System.Drawing.Size(970, 45);
+            this.Name = "SimpleControl";
+            this.Size = new System.Drawing.Size(475, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,8 +108,9 @@ namespace FilmsDBC.Visual.Controls
 
         private System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.TextBox textBox_name;
-        internal System.Windows.Forms.TextBox textBox_mark;
-        private System.Windows.Forms.Label label_update;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        internal System.Windows.Forms.TextBox textBox_genre;
+        internal System.Windows.Forms.TextBox textBox_realiseYear;
+        internal System.Windows.Forms.CheckBox checkBox_watched;
+        private System.Windows.Forms.Label label_info;
     }
 }
