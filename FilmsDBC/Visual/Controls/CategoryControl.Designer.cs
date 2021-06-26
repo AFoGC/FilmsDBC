@@ -61,7 +61,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_update
             // 
-            this.label_update.Location = new System.Drawing.Point(850, 0);
+            this.label_update.Location = new System.Drawing.Point(750, 0);
             this.label_update.Name = "label_update";
             this.label_update.Size = new System.Drawing.Size(80, 20);
             this.label_update.TabIndex = 42;
@@ -72,7 +72,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             this.flowLayoutPanel_SimpleControls.Location = new System.Drawing.Point(30, 20);
             this.flowLayoutPanel_SimpleControls.Name = "flowLayoutPanel_SimpleControls";
-            this.flowLayoutPanel_SimpleControls.Size = new System.Drawing.Size(940, 5);
+            this.flowLayoutPanel_SimpleControls.Size = new System.Drawing.Size(800, 5);
             this.flowLayoutPanel_SimpleControls.TabIndex = 43;
             // 
             // CategoryControl
@@ -86,7 +86,7 @@ namespace FilmsDBC.Visual.Controls
             this.Controls.Add(this.textBox_id);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CategoryControl";
-            this.Size = new System.Drawing.Size(970, 25);
+            this.Size = new System.Drawing.Size(830, 25);
             this.ResumeLayout(false);
             this.PerformLayout();
 

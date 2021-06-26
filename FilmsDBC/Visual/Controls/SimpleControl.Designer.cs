@@ -81,7 +81,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             this.label_info.Location = new System.Drawing.Point(395, 0);
             this.label_info.Name = "label_info";
-            this.label_info.Size = new System.Drawing.Size(80, 20);
+            this.label_info.Size = new System.Drawing.Size(110, 20);
             this.label_info.TabIndex = 40;
             this.label_info.Text = "More Info";
             this.label_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,7 +98,7 @@ namespace FilmsDBC.Visual.Controls
             this.Controls.Add(this.textBox_id);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SimpleControl";
-            this.Size = new System.Drawing.Size(475, 20);
+            this.Size = new System.Drawing.Size(505, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -18,23 +18,22 @@ namespace FilmsDBC.Visual.Forms
 		public MainForm()
 		{
 			InitializeComponent();
-
-			//loadSimpleTable();
-			//loadTable();
 			loadCategories();
 		}
 
 		private void loadFilmTable()
 		{
-			foreach (Film film in MainInformation.tableCollection.GetTable(2).Cells)
+			flowLayoutPanel_main.Controls.Clear();
+			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
 			{
 				flowLayoutPanel_main.Controls.Add(new FilmControl(film));
 			}
 		}
 
-		private void loadTable()
+		private void loadSerieTable()
         {
-            foreach (Film film in MainInformation.tableCollection.GetTable(2).Cells)
+			flowLayoutPanel_main.Controls.Clear();
+			foreach (Film film in MainInformation.tableCollection.GetTable(2).Cells)
             {
                 if (film.Genre == "м/с" || 
 					film.Genre == "сериал"
@@ -42,27 +41,40 @@ namespace FilmsDBC.Visual.Forms
                 {
 					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
                 }
-                else
-                {
-					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToFilmControl(film));
-                }
-            }
-        }
-
-		private void loadSimpleTable()
-        {
-            foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
-            {
-				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSimpleControl(film));
             }
         }
 
 		private void loadCategories()
         {
+			flowLayoutPanel_main.Controls.Clear();
+
             foreach (Category category in MainInformation.tableCollection.GetTable(typeof(Category)).Cells)
             {
                 flowLayoutPanel_main.Controls.Add(new CategoryControl(category));
             }
+
+            foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
+            {
+                if (film.FranshiseId == 0)
+                {
+                    flowLayoutPanel_main.Controls.Add(new SimpleControl(film));
+                }
+            }
         }
-	}
+
+        private void button_ShowCategories_Click(object sender, EventArgs e)
+        {
+			loadCategories();
+        }
+
+        private void button_ShowFilms_Click(object sender, EventArgs e)
+        {
+            loadFilmTable();
+        }
+
+        private void button_ShowSeries_Click(object sender, EventArgs e)
+        {
+            loadSerieTable();
+        }
+    }
 }

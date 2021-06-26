@@ -30,6 +30,9 @@ namespace FilmsDBC.Visual.Forms
         private void InitializeComponent()
         {
             this.flowLayoutPanel_main = new System.Windows.Forms.FlowLayoutPanel();
+            this.button_ShowCategories = new System.Windows.Forms.Button();
+            this.button_ShowFilms = new System.Windows.Forms.Button();
+            this.button_ShowSeries = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_main
@@ -43,11 +46,44 @@ namespace FilmsDBC.Visual.Forms
             this.flowLayoutPanel_main.Size = new System.Drawing.Size(960, 527);
             this.flowLayoutPanel_main.TabIndex = 0;
             // 
+            // button_ShowCategories
+            // 
+            this.button_ShowCategories.Location = new System.Drawing.Point(1296, 96);
+            this.button_ShowCategories.Name = "button_ShowCategories";
+            this.button_ShowCategories.Size = new System.Drawing.Size(111, 23);
+            this.button_ShowCategories.TabIndex = 1;
+            this.button_ShowCategories.Text = "Show Categories";
+            this.button_ShowCategories.UseVisualStyleBackColor = true;
+            this.button_ShowCategories.Click += new System.EventHandler(this.button_ShowCategories_Click);
+            // 
+            // button_ShowFilms
+            // 
+            this.button_ShowFilms.Location = new System.Drawing.Point(1296, 125);
+            this.button_ShowFilms.Name = "button_ShowFilms";
+            this.button_ShowFilms.Size = new System.Drawing.Size(111, 23);
+            this.button_ShowFilms.TabIndex = 2;
+            this.button_ShowFilms.Text = "Show Films";
+            this.button_ShowFilms.UseVisualStyleBackColor = true;
+            this.button_ShowFilms.Click += new System.EventHandler(this.button_ShowFilms_Click);
+            // 
+            // button_ShowSeries
+            // 
+            this.button_ShowSeries.Location = new System.Drawing.Point(1296, 154);
+            this.button_ShowSeries.Name = "button_ShowSeries";
+            this.button_ShowSeries.Size = new System.Drawing.Size(111, 23);
+            this.button_ShowSeries.TabIndex = 3;
+            this.button_ShowSeries.Text = "Show Series";
+            this.button_ShowSeries.UseVisualStyleBackColor = true;
+            this.button_ShowSeries.Click += new System.EventHandler(this.button_ShowSeries_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1469, 608);
+            this.Controls.Add(this.button_ShowSeries);
+            this.Controls.Add(this.button_ShowFilms);
+            this.Controls.Add(this.button_ShowCategories);
             this.Controls.Add(this.flowLayoutPanel_main);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -58,5 +94,8 @@ namespace FilmsDBC.Visual.Forms
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
+        private System.Windows.Forms.Button button_ShowCategories;
+        private System.Windows.Forms.Button button_ShowFilms;
+        private System.Windows.Forms.Button button_ShowSeries;
     }
 }
