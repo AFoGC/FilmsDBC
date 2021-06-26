@@ -14,7 +14,18 @@ namespace FilmsDBC.Visual.Controls
 {
 	public partial class CategoryControl : UserControl
 	{
-		Category categoryInfo = null;
+		private Category categoryInfo = null;
+
+		public Category CategoryInfo
+        {
+            get { return categoryInfo; }
+        }
+
+		public ControlCollection SimpleControls
+        {
+            get { return flowLayoutPanel_SimpleControls.Controls; }
+        }
+
 		public CategoryControl(Category category)
 		{
 			InitializeComponent();

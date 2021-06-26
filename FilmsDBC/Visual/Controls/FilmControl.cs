@@ -14,7 +14,12 @@ namespace FilmsDBC.Visual.Controls
 {
 	public partial class FilmControl : UserControl
 	{
-		public Film filmInfo = null;
+		private Film filmInfo = null;
+
+		public Film FilmInfo
+		{
+			get { return filmInfo; }
+		}
 
 		public FilmControl(Film film)
 		{

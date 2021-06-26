@@ -13,7 +13,13 @@ namespace FilmsDBC.Visual.Controls
 {
     public partial class SimpleControl : UserControl
     {
-        public Film filmInfo;
+        private Film filmInfo;
+
+        public Film FilmInfo
+        {
+            get { return filmInfo; }
+        }
+
         public SimpleControl(Film film)
         {
             InitializeComponent();

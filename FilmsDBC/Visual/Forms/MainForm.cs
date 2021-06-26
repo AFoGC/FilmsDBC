@@ -66,22 +66,78 @@ namespace FilmsDBC.Visual.Forms
 
 		private void button_ShowCategories_Click(object sender, EventArgs e)
 		{
+			controlsCondition = 1;
 			loadCategories();
 		}
 
 		private void button_ShowFilms_Click(object sender, EventArgs e)
 		{
+			controlsCondition = 2;
 			loadFilmTable();
 		}
 
 		private void button_ShowSeries_Click(object sender, EventArgs e)
 		{
+			controlsCondition = 3;
 			loadSerieTable();
 		}
 
+		private int controlsCondition = 1;
 		private void button_Search_Click(object sender, EventArgs e)
 		{
+			Color searchedColor = Color.Blue;
 
+			switch (controlsCondition)
+            {
+				case 1:
+                    foreach (UserControl userControl in flowLayoutPanel_main.Controls)
+                    {
+                        if (userControl.GetType() == typeof(SimpleControl))
+                        {
+							SimpleControl simpleControl = (SimpleControl)userControl;
+                            if (simpleControl.FilmInfo.Name.Contains(textBox_Search.Text))
+                            {
+								userControl.BackColor = searchedColor;
+                            }
+							
+                        }
+                        else
+						{
+							CategoryControl categoryControl = (CategoryControl)userControl;
+                            foreach(SimpleControl simpleControl in categoryControl.SimpleControls)
+                            {
+                                if (simpleControl.FilmInfo.Name.Contains(textBox_Search.Text))
+                                {
+									simpleControl.BackColor = searchedColor;
+                                }
+                            }
+                        }
+                    }
+					break;
+
+				case 2:
+                    foreach (FilmControl filmControl in flowLayoutPanel_main.Controls)
+                    {
+                        if (filmControl.FilmInfo.Name.Contains(textBox_Search.Text))
+                        {
+							filmControl.BackColor = searchedColor;
+						}
+                    }
+					break;
+
+				case 3:
+					foreach (SerieControl serieControl in flowLayoutPanel_main.Controls)
+					{
+                        if (serieControl.FilmInfo.Name.Contains(textBox_Search.Text))
+                        {
+							serieControl.BackColor = searchedColor;
+                        }
+					}
+					break;
+
+				default:
+					break;
+            }
 		}
 	}
 }
