@@ -33,6 +33,8 @@ namespace FilmsDBC.Visual.Forms
             this.button_ShowCategories = new System.Windows.Forms.Button();
             this.button_ShowFilms = new System.Windows.Forms.Button();
             this.button_ShowSeries = new System.Windows.Forms.Button();
+            this.textBox_Search = new System.Windows.Forms.TextBox();
+            this.button_Search = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_main
@@ -76,11 +78,30 @@ namespace FilmsDBC.Visual.Forms
             this.button_ShowSeries.UseVisualStyleBackColor = true;
             this.button_ShowSeries.Click += new System.EventHandler(this.button_ShowSeries_Click);
             // 
+            // textBox_Search
+            // 
+            this.textBox_Search.Location = new System.Drawing.Point(235, 55);
+            this.textBox_Search.Name = "textBox_Search";
+            this.textBox_Search.Size = new System.Drawing.Size(154, 20);
+            this.textBox_Search.TabIndex = 4;
+            // 
+            // button_Search
+            // 
+            this.button_Search.Location = new System.Drawing.Point(395, 55);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(75, 20);
+            this.button_Search.TabIndex = 5;
+            this.button_Search.Text = "Search";
+            this.button_Search.UseVisualStyleBackColor = true;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1469, 608);
+            this.Controls.Add(this.button_Search);
+            this.Controls.Add(this.textBox_Search);
             this.Controls.Add(this.button_ShowSeries);
             this.Controls.Add(this.button_ShowFilms);
             this.Controls.Add(this.button_ShowCategories);
@@ -88,6 +109,7 @@ namespace FilmsDBC.Visual.Forms
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -97,5 +119,7 @@ namespace FilmsDBC.Visual.Forms
         private System.Windows.Forms.Button button_ShowCategories;
         private System.Windows.Forms.Button button_ShowFilms;
         private System.Windows.Forms.Button button_ShowSeries;
+        private System.Windows.Forms.TextBox textBox_Search;
+        private System.Windows.Forms.Button button_Search;
     }
 }
