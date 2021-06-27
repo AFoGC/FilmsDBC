@@ -85,6 +85,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_info.TabIndex = 40;
             this.label_info.Text = "More Info";
             this.label_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_info.Click += new System.EventHandler(this.label_info_Click);
             // 
             // SimpleControl
             // 

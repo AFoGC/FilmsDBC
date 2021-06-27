@@ -100,7 +100,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_comment
             // 
-            this.label_comment.Location = new System.Drawing.Point(750, 0);
+            this.label_comment.Location = new System.Drawing.Point(660, 0);
             this.label_comment.Name = "label_comment";
             this.label_comment.Size = new System.Drawing.Size(80, 20);
             this.label_comment.TabIndex = 29;
@@ -109,7 +109,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_copyUrl
             // 
-            this.label_copyUrl.Location = new System.Drawing.Point(630, 0);
+            this.label_copyUrl.Location = new System.Drawing.Point(750, 0);
             this.label_copyUrl.Name = "label_copyUrl";
             this.label_copyUrl.Size = new System.Drawing.Size(80, 20);
             this.label_copyUrl.TabIndex = 30;

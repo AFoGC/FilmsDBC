@@ -14,6 +14,9 @@ namespace FilmsDBC
 	{
 		public static TableCollection tableCollection = null;
 		
+		//Надо добавить список жанров где будут помечены сериальные жанры
+		//не исключено, что нужно будет изменить библиотеку и настроить там запись конфигураций в файле с данными
+
 		static MainInformation()
         {
 			tableCollection = new TableCollection();

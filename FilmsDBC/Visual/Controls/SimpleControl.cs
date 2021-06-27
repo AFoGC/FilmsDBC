@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Visual.MoreInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,11 @@ namespace FilmsDBC.Visual.Controls
             textBox_genre.Text = filmInfo.Genre;
             textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
             checkBox_watched.Checked = filmInfo.Watched;
+        }
+
+        private void label_info_Click(object sender, EventArgs e)
+        {
+            FormVisualizer.OpenMoreInfoForm(FilmInfo);
         }
     }
 }
