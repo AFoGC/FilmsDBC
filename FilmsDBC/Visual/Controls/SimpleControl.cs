@@ -12,30 +12,30 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.Controls
 {
-    public partial class SimpleControl : UserControl
-    {
-        private Film filmInfo;
+	public partial class SimpleControl : UserControl
+	{
+		private Film filmInfo;
 
-        public Film FilmInfo
-        {
-            get { return filmInfo; }
-        }
+		public Film FilmInfo
+		{
+			get { return filmInfo; }
+		}
 
-        public SimpleControl(Film film)
-        {
-            InitializeComponent();
-            this.filmInfo = film;
+		public SimpleControl(Film film)
+		{
+			InitializeComponent();
+			this.filmInfo = film;
 
-            textBox_id.Text = filmInfo.ID.ToString();
-            textBox_name.Text = filmInfo.Name;
-            textBox_genre.Text = filmInfo.Genre;
-            textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
-            checkBox_watched.Checked = filmInfo.Watched;
-        }
+			textBox_id.Text = filmInfo.ID.ToString();
+			textBox_name.Text = filmInfo.Name;
+			textBox_genre.Text = filmInfo.Genre;
+			textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
+			checkBox_watched.Checked = filmInfo.Watched;
+		}
 
-        private void label_info_Click(object sender, EventArgs e)
-        {
-            FormVisualizer.OpenMoreInfoForm(FilmInfo);
-        }
-    }
+		private void label_info_Click(object sender, EventArgs e)
+		{
+			FormVisualizer.OpenMoreInfoForm(FilmInfo);
+		}
+	}
 }

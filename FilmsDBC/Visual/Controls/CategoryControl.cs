@@ -17,14 +17,14 @@ namespace FilmsDBC.Visual.Controls
 		private Category categoryInfo = null;
 
 		public Category CategoryInfo
-        {
-            get { return categoryInfo; }
-        }
+		{
+			get { return categoryInfo; }
+		}
 
 		public ControlCollection SimpleControls
-        {
-            get { return flowLayoutPanel_SimpleControls.Controls; }
-        }
+		{
+			get { return flowLayoutPanel_SimpleControls.Controls; }
+		}
 
 		public CategoryControl(Category category)
 		{
@@ -48,13 +48,13 @@ namespace FilmsDBC.Visual.Controls
 			Size controlSize = this.Size;
 
 			foreach (Film film in categoryInfo.Films)
-            {
+			{
 				panelSize.Height += 20;
 				controlSize.Height += 20;
 				this.Size = controlSize;
 				flowLayoutPanel_SimpleControls.Size = panelSize;
 				flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
-            }
+			}
 		}
 	}
 }

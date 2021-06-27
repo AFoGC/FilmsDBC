@@ -18,7 +18,7 @@ namespace FilmsDBC
 		//не исключено, что нужно будет изменить библиотеку и настроить там запись конфигураций в файле с данными
 
 		static MainInformation()
-        {
+		{
 			tableCollection = new TableCollection();
 
 			tableCollection.tableFilePath = @"F:\filmsDirectory\Films.fdbc";
@@ -29,9 +29,9 @@ namespace FilmsDBC
 		}
 
 		public static void LoadTables()
-        {
+		{
 			tableCollection.loadTables();
 			tableCollection.CategorySubload();
-        }
+		}
 	}
 }

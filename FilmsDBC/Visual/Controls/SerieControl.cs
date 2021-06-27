@@ -18,14 +18,14 @@ namespace FilmsDBC.Visual.Controls
 		private Film filmInfo = null;
 
 		public Serie SerieInfo
-        {
-            get { return serieInfo; }
-        }
+		{
+			get { return serieInfo; }
+		}
 
 		public Film FilmInfo
-        {
+		{
 			get { return filmInfo; }
-        }
+		}
 
 		public SerieControl(Film film, Serie serie)
 		{
