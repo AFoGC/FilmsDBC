@@ -13,9 +13,6 @@ namespace FilmsDBC
 	public static class MainInformation
 	{
 		public static TableCollection tableCollection = null;
-		
-		//Надо добавить список жанров где будут помечены сериальные жанры
-		//не исключено, что нужно будет изменить библиотеку и настроить там запись конфигураций в файле с данными
 
 		static MainInformation()
 		{
@@ -26,6 +23,7 @@ namespace FilmsDBC
 			tableCollection.AddTable(typeof(Category));
 			tableCollection.AddTable(typeof(Film));
 			tableCollection.AddTable(typeof(Serie));
+			tableCollection.AddTable(typeof(Genre));
 		}
 
 		public static void LoadTables()

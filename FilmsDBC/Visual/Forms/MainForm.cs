@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.Controls;
 using FilmsDBC.Visual.StaticVisualClasses;
 using System;
@@ -35,9 +36,7 @@ namespace FilmsDBC.Visual.Forms
 			flowLayoutPanel_main.Controls.Clear();
 			foreach (Film film in MainInformation.tableCollection.GetTable(2).Cells)
 			{
-				if (film.Genre == "м/с" || 
-					film.Genre == "сериал"
-					)
+				if (GenreMethods.IsSerialGenre(film.Genre))
 				{
 					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
 				}
@@ -53,12 +52,10 @@ namespace FilmsDBC.Visual.Forms
 				flowLayoutPanel_main.Controls.Add(new CategoryControl(category));
 			}
 
-			//CategoryControl categoryControl = new CategoryControl(new Category());
 			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
 			{
 				if (film.FranshiseId == 0)
 				{
-					//categoryControl.
 					flowLayoutPanel_main.Controls.Add(new SimpleControl(film));
 				}
 			}

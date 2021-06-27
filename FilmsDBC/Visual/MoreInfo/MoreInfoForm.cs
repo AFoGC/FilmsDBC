@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.StaticVisualClasses;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace FilmsDBC.Visual.MoreInfo
 		public void Reinitialize(Film film)
 		{
 			flowLayoutPanel1.Controls.Clear();
-			if (film.Genre == "м/с" || film.Genre == "сериал")
+			if (GenreMethods.IsSerialGenre(film.Genre))
 			{
 				flowLayoutPanel1.Controls.Add(ControlsConverter.ToSerieControl(film));
 			}
