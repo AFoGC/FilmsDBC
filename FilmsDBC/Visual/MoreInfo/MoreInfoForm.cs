@@ -22,14 +22,35 @@ namespace FilmsDBC.Visual.MoreInfo
 
 		public void Reinitialize(Film film)
 		{
-			flowLayoutPanel1.Controls.Clear();
+			flowLayoutPanel_main.Controls.Clear();
 			if (GenreMethods.IsSerialGenre(film.Genre))
 			{
-				flowLayoutPanel1.Controls.Add(ControlsConverter.ToSerieControl(film));
+				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
 			}
 			else
 			{
-				flowLayoutPanel1.Controls.Add(ControlsConverter.ToFilmControl(film));
+				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToFilmControl(film));
+			}
+		}
+
+		private void pictureBox_Close_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
+
+
+		private Point lastPoint;
+		private void panel_main_MouseDown(object sender, MouseEventArgs e)
+		{
+			lastPoint = new Point(e.X, e.Y);
+		}
+
+		private void panel_main_MouseMove(object sender, MouseEventArgs e)
+		{
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+				this.Left += e.X - lastPoint.X;
+				this.Top += e.Y - lastPoint.Y;
 			}
 		}
 	}
