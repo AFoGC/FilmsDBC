@@ -15,9 +15,6 @@ namespace FilmsDBC.Visual.MoreInfo
 		{
 			infoForm.Reinitialize(film);
 			infoForm.Show();
-
-			//Надо сделать собственую реализацию дизайна формы, в особености кнопки закрытия,
-			//которая реализовывала бы метод infoForm.Hide();
 		}
 	}
 }

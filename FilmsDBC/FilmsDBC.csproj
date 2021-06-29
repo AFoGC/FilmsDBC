@@ -95,6 +95,30 @@
     <Compile Include="Visual\StaticVisualClasses\ControlsConverter.cs" />
     <Compile Include="Visual\MoreInfo\FormVisualizer.cs" />
     <Compile Include="Visual\StaticVisualClasses\VisualHelper.cs" />
+    <Compile Include="Visual\UpdateElements\UpdateControls\CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\CategoryControl.Designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.Designer.cs">
+      <DependentUpon>FilmUpdateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.Designer.cs">
+      <DependentUpon>SerieUpdateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,6 +146,9 @@
     <EmbeddedResource Include="Visual\MoreInfo\MoreInfoForm.resx">
       <DependentUpon>MoreInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\UpdateElements\UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,10 +162,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Visual\UpdateElements\UpdateControls\" />
-    <Folder Include="Visual\UpdateElements\UpdateForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\TablesLibrary\TablesLibrary\TablesLibrary.csproj">
       <Project>{6389a55e-2582-4996-b0f4-eaa7f1078a84}</Project>
