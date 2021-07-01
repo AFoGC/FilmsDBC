@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes.CellDataClasses;
+using FilmsDBC.StaticFilmClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +13,7 @@ namespace FilmsDBC.CinemaDataTypes
 	public class Film : Cell
 	{
 		private String name = "";
-		private String genre = "";
+		private Genre genre = null;
 		private int realiseYear = 0;
 		private bool watched = false;
 		private sbyte mark = -1;
@@ -48,7 +49,7 @@ namespace FilmsDBC.CinemaDataTypes
 		{
 			streamWriter.Write(formatParam(nameof(id), id, 2));
 			streamWriter.Write(formatParam(nameof(name), name, 2));
-			streamWriter.Write(formatParam(nameof(genre), genre, 2));
+			streamWriter.Write(formatParam(nameof(genre), genre.ID, 2));
 			streamWriter.Write(formatParam(nameof(realiseYear), realiseYear, 2));
 			streamWriter.Write(formatParam(nameof(watched), watched, 2));
 			streamWriter.Write(formatParam(nameof(mark), mark, 2));
@@ -75,7 +76,7 @@ namespace FilmsDBC.CinemaDataTypes
 					this.name = comand.Argument;
 					break;
 				case "genre":
-					this.genre = comand.Argument;
+					this.genre = (Genre)MainInformation.tableCollection.GetTable(typeof(Genre)).GetElement(Convert.ToInt32(comand.Argument));
 					break;
 				case "realiseYear":
 					this.realiseYear = Convert.ToInt32(comand.Argument);
@@ -127,7 +128,7 @@ namespace FilmsDBC.CinemaDataTypes
 			set { name = value; }
 		}
 
-		public String Genre
+		public Genre Genre
 		{
 			get { return genre; }
 			set { genre = value; }

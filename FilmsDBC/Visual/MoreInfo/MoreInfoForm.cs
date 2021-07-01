@@ -23,7 +23,7 @@ namespace FilmsDBC.Visual.MoreInfo
 		public void Reinitialize(Film film)
 		{
 			flowLayoutPanel_main.Controls.Clear();
-			if (GenreMethods.IsSerialGenre(film.Genre))
+			if (film.Genre.IsSerialGenre)
 			{
 				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
 			}

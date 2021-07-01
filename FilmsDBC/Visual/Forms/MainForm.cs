@@ -36,7 +36,7 @@ namespace FilmsDBC.Visual.Forms
 			flowLayoutPanel_main.Controls.Clear();
 			foreach (Film film in MainInformation.tableCollection.GetTable(2).Cells)
 			{
-				if (GenreMethods.IsSerialGenre(film.Genre))
+				if (film.Genre.IsSerialGenre)
 				{
 					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
 				}
@@ -136,5 +136,10 @@ namespace FilmsDBC.Visual.Forms
 					break;
 			}
 		}
-	}
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+			MainInformation.tableCollection.saveTables();
+        }
+    }
 }

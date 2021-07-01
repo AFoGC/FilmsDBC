@@ -29,19 +29,75 @@ namespace FilmsDBC.Visual.UpdateElements
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateForm));
+            this.panel_main = new System.Windows.Forms.Panel();
+            this.pictureBox_Close = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel_main = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel_main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel_main
+            // 
+            this.panel_main.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_main.Controls.Add(this.button1);
+            this.panel_main.Controls.Add(this.pictureBox_Close);
+            this.panel_main.Controls.Add(this.flowLayoutPanel_main);
+            this.panel_main.Location = new System.Drawing.Point(1, 1);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(940, 80);
+            this.panel_main.TabIndex = 3;
+            // 
+            // pictureBox_Close
+            // 
+            this.pictureBox_Close.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Close.Image")));
+            this.pictureBox_Close.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Close.InitialImage")));
+            this.pictureBox_Close.Location = new System.Drawing.Point(917, 3);
+            this.pictureBox_Close.Name = "pictureBox_Close";
+            this.pictureBox_Close.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_Close.TabIndex = 1;
+            this.pictureBox_Close.TabStop = false;
+            // 
+            // flowLayoutPanel_main
+            // 
+            this.flowLayoutPanel_main.Location = new System.Drawing.Point(0, 30);
+            this.flowLayoutPanel_main.Name = "flowLayoutPanel_main";
+            this.flowLayoutPanel_main.Size = new System.Drawing.Size(940, 50);
+            this.flowLayoutPanel_main.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 20);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Подтвердить";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // UpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 118);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(942, 82);
+            this.Controls.Add(this.panel_main);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateForm";
+            this.panel_main.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel_main;
+        private System.Windows.Forms.PictureBox pictureBox_Close;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -21,5 +21,17 @@ namespace FilmsDBC.StaticFilmClasses
 
             return false;
         }
+
+        public static Genre GetByName(String name)
+        {
+            foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
+            {
+                if (name == genre.Name)
+                {
+                    return genre;
+                }
+            }
+            return null;
+        }
 	}
 }

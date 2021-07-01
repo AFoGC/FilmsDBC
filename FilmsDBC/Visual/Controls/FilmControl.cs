@@ -28,7 +28,7 @@ namespace FilmsDBC.Visual.Controls
 
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
-			this.textBox_genre.Text = filmInfo.Genre;
+			this.textBox_genre.Text = filmInfo.Genre.Name;
 			this.textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
 			this.checkBox_watched.Checked = filmInfo.Watched;
 			this.textBox_watchDate.Text = Film.formatToString(filmInfo.DateOfWatch);

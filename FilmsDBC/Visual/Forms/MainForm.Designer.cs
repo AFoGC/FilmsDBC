@@ -35,6 +35,7 @@ namespace FilmsDBC.Visual.Forms
             this.button_ShowSeries = new System.Windows.Forms.Button();
             this.textBox_Search = new System.Windows.Forms.TextBox();
             this.button_Search = new System.Windows.Forms.Button();
+            this.button_save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_main
@@ -95,11 +96,22 @@ namespace FilmsDBC.Visual.Forms
             this.button_Search.UseVisualStyleBackColor = true;
             this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
+            // button_save
+            // 
+            this.button_save.Location = new System.Drawing.Point(1296, 55);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(111, 23);
+            this.button_save.TabIndex = 6;
+            this.button_save.Text = "Save Tables";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1469, 608);
+            this.Controls.Add(this.button_save);
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.textBox_Search);
             this.Controls.Add(this.button_ShowSeries);
@@ -121,5 +133,6 @@ namespace FilmsDBC.Visual.Forms
         private System.Windows.Forms.Button button_ShowSeries;
         private System.Windows.Forms.TextBox textBox_Search;
         private System.Windows.Forms.Button button_Search;
+        private System.Windows.Forms.Button button_save;
     }
 }
