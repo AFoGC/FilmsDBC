@@ -123,14 +123,13 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.TextBox textBox_name;
-        private System.Windows.Forms.ComboBox comboBox_genre;
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_watched;
         internal System.Windows.Forms.TextBox textBox_watchDate;
-        private System.Windows.Forms.ComboBox comboBox_mark;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
+        internal System.Windows.Forms.TextBox textBox_id;
+        internal System.Windows.Forms.ComboBox comboBox_genre;
+        internal System.Windows.Forms.ComboBox comboBox_mark;
     }
 }

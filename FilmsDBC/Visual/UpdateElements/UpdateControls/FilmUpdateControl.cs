@@ -43,17 +43,8 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 
 		public void UpdateElement()
 		{
-			toFilm();
+			ControlsConverter.SetFilmValues(this, film);
 			filmControl.RefreshData();
-		}
-
-		private void toFilm()
-		{
-			film.Name = textBox_name.Text;
-			film.Genre = GenreMethods.GetByName(comboBox_genre.Text);
-			film.RealiseYear = VisualHelper.TextToInt32(textBox_realiseYear.Text);
-			film.Watched = checkBox_watched.Checked;
-			//film.DateOfWatch = 
 		}
 	}
 }

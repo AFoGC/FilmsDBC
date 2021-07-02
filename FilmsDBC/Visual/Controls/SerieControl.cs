@@ -33,7 +33,11 @@ namespace FilmsDBC.Visual.Controls
 			this.serieInfo = serie;
 			this.filmInfo = film;
 
-			
+			RefreshData();
+		}
+
+		public void RefreshData()
+        {
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
 			this.textBox_genre.Text = filmInfo.Genre.Name;
@@ -42,7 +46,6 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_watchDate.Text = Film.formatToString(filmInfo.DateOfWatch);
 			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
-
 
 			this.textBox_startWatchDate.Text = Serie.formatToString(serieInfo.StartWatchDate);
 			this.textBox_countOfWatchedSeries.Text = Serie.formatToString(serieInfo.CountOfWatchedSeries);

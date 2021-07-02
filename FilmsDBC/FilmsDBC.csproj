@@ -151,6 +151,9 @@
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.resx">
       <DependentUpon>FilmUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.resx">
+      <DependentUpon>SerieUpdateControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>

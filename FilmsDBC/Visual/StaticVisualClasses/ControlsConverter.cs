@@ -1,5 +1,7 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.Controls;
+using FilmsDBC.Visual.UpdateElements.UpdateControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +38,37 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 		public static SimpleControl ToSimpleControl(Film film)
 		{
 			return new SimpleControl(film);
+		}
+
+		//---------------------------------------------
+
+		public static void SetFilmValues(FilmUpdateControl control, Film film)
+		{
+			film.Name = control.textBox_name.Text;
+			film.Genre = GenreMethods.GetByName(control.comboBox_genre.Text);
+			film.RealiseYear = VisualHelper.TextToInt32(control.textBox_realiseYear.Text);
+			film.Watched = control.checkBox_watched.Checked;
+			film.DateOfWatch = Film.readDate(control.textBox_watchDate.Text);   //Переделать с тремя текстбоксами для дня, месяца и года и добавть возможность автозаполнения.
+			film.Mark = VisualHelper.TextToMark(control.comboBox_mark.Text);
+			film.CountOfViews = VisualHelper.TextToInt32(control.textBox_countOfviews.Text);
+		}
+
+		public static void SetFilmValues(SerieUpdateControl control, Film film)
+		{
+			film.Name = control.textBox_name.Text;
+			film.Genre = GenreMethods.GetByName(control.comboBox_genre.Text);
+			film.RealiseYear = VisualHelper.TextToInt32(control.textBox_realiseYear.Text);
+			film.Watched = control.checkBox_watched.Checked;
+			film.DateOfWatch = Film.readDate(control.textBox_watchDate.Text);   //Переделать с тремя текстбоксами для дня, месяца и года и добавть возможность автозаполнения.
+			film.Mark = VisualHelper.TextToMark(control.comboBox_mark.Text);
+			film.CountOfViews = VisualHelper.TextToInt32(control.textBox_countOfviews.Text);
+		}
+
+		public static void SetSerieValues(SerieUpdateControl control, Serie serie)
+		{
+			serie.StartWatchDate = Serie.readDate(control.textBox_startWatchDate.Text);
+			serie.CountOfWatchedSeries = VisualHelper.TextToInt32(control.textBox_countOfWatchedSeries.Text);
+			serie.TotalSeries = VisualHelper.TextToInt32(control.textBox_totalSeries.Text);
 		}
 	}
 }

@@ -28,27 +28,39 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 		}
 
 		public static int TextToInt32(String str)
-        {
-            if (str == "")
-            {
+		{
+			if (str == "")
+			{
 				return 0;
-            }
-            else
-            {
+			}
+			else
+			{
 				return Convert.ToInt32(str);
-            }
-        }
+			}
+		}
+
+		public static sbyte TextToMark(String str)
+		{
+			if (str == "")
+			{
+				return -1;
+			}
+			else
+			{
+				return Convert.ToSByte(str.Substring(0, str.IndexOf('/')));
+			}
+		}
 
 		public static sbyte TextToSbyte(String str)
-        {
-            if (str == "")
-            {
+		{
+			if (str == "")
+			{
 				return -1;
-            }
-            else
-            {
+			}
+			else
+			{
 				return Convert.ToSByte(str);
-            }
-        }
+			}
+		}
 	}
 }
