@@ -16,5 +16,10 @@ namespace FilmsDBC.Visual.UpdateElements
         {
             InitializeComponent();
         }
+
+        private void button_update_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

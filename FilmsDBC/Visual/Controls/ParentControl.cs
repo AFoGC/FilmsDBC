@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual.UpdateElements.UpdateControls
+namespace FilmsDBC.Visual.Controls
 {
-    public partial class FilmUpdateControl : UserControl
+    public abstract partial class ParentControl : UserControl
     {
-        UserControl userControl = null;
-        public FilmUpdateControl(UserControl userControl)
+        public ParentControl()
         {
             InitializeComponent();
-            this.userControl = userControl;
         }
     }
 }

@@ -68,6 +68,13 @@
     <Compile Include="Visual\Controls\FilmControl.Designer.cs">
       <DependentUpon>FilmControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Controls\IRefresher.cs" />
+    <Compile Include="Visual\Controls\ParentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Controls\ParentControl.Designer.cs">
+      <DependentUpon>ParentControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Controls\SerieControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

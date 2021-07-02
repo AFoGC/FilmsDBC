@@ -31,9 +31,9 @@ namespace FilmsDBC.Visual.UpdateElements
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateForm));
             this.panel_main = new System.Windows.Forms.Panel();
+            this.button_update = new System.Windows.Forms.Button();
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel_main = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
             this.SuspendLayout();
@@ -41,13 +41,23 @@ namespace FilmsDBC.Visual.UpdateElements
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_main.Controls.Add(this.button1);
+            this.panel_main.Controls.Add(this.button_update);
             this.panel_main.Controls.Add(this.pictureBox_Close);
             this.panel_main.Controls.Add(this.flowLayoutPanel_main);
             this.panel_main.Location = new System.Drawing.Point(1, 1);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(940, 80);
             this.panel_main.TabIndex = 3;
+            // 
+            // button_update
+            // 
+            this.button_update.Location = new System.Drawing.Point(3, 3);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(90, 20);
+            this.button_update.TabIndex = 2;
+            this.button_update.Text = "Подтвердить";
+            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // pictureBox_Close
             // 
@@ -66,15 +76,6 @@ namespace FilmsDBC.Visual.UpdateElements
             this.flowLayoutPanel_main.Name = "flowLayoutPanel_main";
             this.flowLayoutPanel_main.Size = new System.Drawing.Size(940, 50);
             this.flowLayoutPanel_main.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 20);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Подтвердить";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // UpdateForm
             // 
@@ -98,6 +99,6 @@ namespace FilmsDBC.Visual.UpdateElements
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.PictureBox pictureBox_Close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_update;
     }
 }
