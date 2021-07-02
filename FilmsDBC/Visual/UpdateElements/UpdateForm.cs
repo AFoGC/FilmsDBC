@@ -44,18 +44,18 @@ namespace FilmsDBC.Visual.UpdateElements
         private void button_update_Click(object sender, EventArgs e)
         {
             UserControl userControl = (FilmUpdateControl)flowLayoutPanel_main.Controls[0];
-            if (userControl.GetType() == typeof(FilmControl))
+            if (userControl.GetType() == typeof(FilmUpdateControl))
             {
                 FilmUpdateControl control = (FilmUpdateControl)userControl;
                 control.UpdateElement();
                 return;
             }
-            if (flowLayoutPanel_main.Controls[0].GetType() == typeof(SerieControl))
+            if (flowLayoutPanel_main.Controls[0].GetType() == typeof(SerieUpdateControl))
             {
 
                 return;
             }
-            if (flowLayoutPanel_main.Controls[0].GetType() == typeof(CategoryControl))
+            if (flowLayoutPanel_main.Controls[0].GetType() == typeof(CategoryUpdateControl))
             {
 
                 return;
