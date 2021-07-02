@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.Visual.MoreInfo
 {
-	static class FormVisualizer
+	static class MoreInfoFormVisualizer
 	{
 		private static MoreInfoForm infoForm = new MoreInfoForm();
 		public static void OpenMoreInfoForm(Film film)

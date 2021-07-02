@@ -35,7 +35,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_realiseYear = new System.Windows.Forms.TextBox();
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
             this.textBox_watchDate = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -87,13 +87,13 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_watchDate.Size = new System.Drawing.Size(60, 20);
             this.textBox_watchDate.TabIndex = 28;
             // 
-            // comboBox1
+            // comboBox_mark
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(455, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(45, 21);
-            this.comboBox1.TabIndex = 29;
+            this.comboBox_mark.FormattingEnabled = true;
+            this.comboBox_mark.Location = new System.Drawing.Point(455, 0);
+            this.comboBox_mark.Name = "comboBox_mark";
+            this.comboBox_mark.Size = new System.Drawing.Size(45, 21);
+            this.comboBox_mark.TabIndex = 29;
             // 
             // textBox_countOfviews
             // 
@@ -108,7 +108,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox_countOfviews);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_mark);
             this.Controls.Add(this.textBox_watchDate);
             this.Controls.Add(this.checkBox_watched);
             this.Controls.Add(this.textBox_realiseYear);
@@ -130,7 +130,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_watched;
         internal System.Windows.Forms.TextBox textBox_watchDate;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_mark;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
     }
 }

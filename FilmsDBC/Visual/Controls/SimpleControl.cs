@@ -35,7 +35,7 @@ namespace FilmsDBC.Visual.Controls
 
 		private void label_info_Click(object sender, EventArgs e)
 		{
-			FormVisualizer.OpenMoreInfoForm(FilmInfo);
+			MoreInfoFormVisualizer.OpenMoreInfoForm(FilmInfo);
 		}
 	}
 }

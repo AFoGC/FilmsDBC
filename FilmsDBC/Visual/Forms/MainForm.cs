@@ -34,7 +34,7 @@ namespace FilmsDBC.Visual.Forms
 		private void loadSerieTable()
 		{
 			flowLayoutPanel_main.Controls.Clear();
-			foreach (Film film in MainInformation.tableCollection.GetTable(2).Cells)
+			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
 			{
 				if (film.Genre.IsSerialGenre)
 				{

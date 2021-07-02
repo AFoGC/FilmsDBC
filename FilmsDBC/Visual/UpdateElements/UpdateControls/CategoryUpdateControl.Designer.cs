@@ -1,7 +1,7 @@
 ﻿
-namespace FilmsDBC.Visual.Controls
+namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 {
-    partial class ParentControl
+    partial class CategoryUpdateControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

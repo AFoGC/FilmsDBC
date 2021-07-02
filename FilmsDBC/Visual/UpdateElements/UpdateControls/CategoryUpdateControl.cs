@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 {
-    public partial class CategoryControl : UserControl
+    public partial class CategoryUpdateControl : UserControl
     {
-        public CategoryControl()
+        public CategoryUpdateControl()
         {
             InitializeComponent();
         }

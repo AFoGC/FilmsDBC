@@ -1,5 +1,6 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.StaticVisualClasses;
+using FilmsDBC.Visual.UpdateElements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,11 @@ namespace FilmsDBC.Visual.Controls
 			InitializeComponent();
 			this.filmInfo = film;
 
+			RefreshData();
+		}
+
+		public void RefreshData()
+        {
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
 			this.textBox_genre.Text = filmInfo.Genre.Name;
@@ -35,5 +41,10 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
 		}
-	}
+
+        private void label_update_Click(object sender, EventArgs e)
+        {
+			UpdateFormVisualizer.OpenMoreInfoForm(this);
+        }
+    }
 }

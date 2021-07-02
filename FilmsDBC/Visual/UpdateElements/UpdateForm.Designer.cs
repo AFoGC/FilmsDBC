@@ -48,6 +48,8 @@ namespace FilmsDBC.Visual.UpdateElements
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(940, 80);
             this.panel_main.TabIndex = 3;
+            this.panel_main.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_main_MouseDown);
+            this.panel_main.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_main_MouseMove);
             // 
             // button_update
             // 
@@ -69,6 +71,7 @@ namespace FilmsDBC.Visual.UpdateElements
             this.pictureBox_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_Close.TabIndex = 1;
             this.pictureBox_Close.TabStop = false;
+            this.pictureBox_Close.Click += new System.EventHandler(this.pictureBox_Close_Click);
             // 
             // flowLayoutPanel_main
             // 

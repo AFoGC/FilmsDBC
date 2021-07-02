@@ -10,28 +10,38 @@ namespace FilmsDBC.StaticFilmClasses
 	public static class GenreMethods
 	{
 		public static bool IsSerialGenre(String genreName)
-        {
-            foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
-            {
-                if (genreName == genre.Name)
-                {
-                    return genre.IsSerialGenre;
-                }
-            }
+		{
+			foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
+			{
+				if (genreName == genre.Name)
+				{
+					return genre.IsSerialGenre;
+				}
+			}
 
-            return false;
-        }
+			return false;
+		}
 
-        public static Genre GetByName(String name)
-        {
-            foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
-            {
-                if (name == genre.Name)
-                {
-                    return genre;
-                }
-            }
-            return null;
-        }
+		public static Genre GetByName(String name)
+		{
+			foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
+			{
+				if (name == genre.Name)
+				{
+					return genre;
+				}
+			}
+			return null;
+		}
+
+		public static List<String> GetAllGenresNames()
+		{
+			List<String> export = new List<String>();
+			foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
+			{
+				export.Add(genre.Name);
+			}
+			return export;
+		}
 	}
 }
