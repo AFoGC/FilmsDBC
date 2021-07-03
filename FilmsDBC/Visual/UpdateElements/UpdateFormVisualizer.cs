@@ -10,8 +10,9 @@ namespace FilmsDBC.Visual.UpdateElements
 	static class UpdateFormVisualizer
 	{
 		private static UpdateForm updateForm = new UpdateForm();
+		public static UpdateForm UpdateForm { get { return updateForm; } }
 
-		public static void OpenMoreInfoForm(UserControl userControl)
+		public static void OpenUpdateForm(UserControl userControl)
 		{
 			updateForm.Reinitialize(userControl);
 			updateForm.Show();

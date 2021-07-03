@@ -44,7 +44,7 @@ namespace FilmsDBC.Visual.Controls
 
         private void label_update_Click(object sender, EventArgs e)
         {
-			UpdateFormVisualizer.OpenMoreInfoForm(this);
+			UpdateFormVisualizer.OpenUpdateForm(this);
         }
     }
 }

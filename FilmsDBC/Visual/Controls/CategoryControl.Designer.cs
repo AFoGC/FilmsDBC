@@ -67,6 +67,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_update.TabIndex = 42;
             this.label_update.Text = "update";
             this.label_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_update.Click += new System.EventHandler(this.label_update_Click);
             // 
             // flowLayoutPanel_SimpleControls
             // 
@@ -96,7 +97,7 @@ namespace FilmsDBC.Visual.Controls
         internal System.Windows.Forms.TextBox textBox_name;
         internal System.Windows.Forms.TextBox textBox_mark;
         private System.Windows.Forms.Label label_update;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_SimpleControls;
         internal System.Windows.Forms.TextBox textBox_id;
+        internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_SimpleControls;
     }
 }

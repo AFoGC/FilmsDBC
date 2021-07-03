@@ -56,6 +56,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.Controls.Add(this.textBox_id);
             this.Name = "CategoryElementUpdateControl";
             this.Size = new System.Drawing.Size(500, 20);
+            this.Click += new System.EventHandler(this.CategoryElementUpdateControl_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

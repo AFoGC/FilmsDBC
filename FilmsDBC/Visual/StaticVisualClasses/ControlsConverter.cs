@@ -70,5 +70,10 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 			serie.CountOfWatchedSeries = VisualHelper.TextToInt32(control.textBox_countOfWatchedSeries.Text);
 			serie.TotalSeries = VisualHelper.TextToInt32(control.textBox_totalSeries.Text);
 		}
+
+		public static void SetCategoryValues(CategoryUpdateControl control, Category category)
+        {
+			category.Name = control.textBox_name.Text;
+        }
 	}
 }

@@ -46,7 +46,7 @@ namespace FilmsDBC.Visual.UpdateElements
             this.panel_main.Controls.Add(this.flowLayoutPanel_main);
             this.panel_main.Location = new System.Drawing.Point(1, 1);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(940, 80);
+            this.panel_main.Size = new System.Drawing.Size(940, 90);
             this.panel_main.TabIndex = 3;
             this.panel_main.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_main_MouseDown);
             this.panel_main.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_main_MouseMove);
@@ -77,7 +77,7 @@ namespace FilmsDBC.Visual.UpdateElements
             // 
             this.flowLayoutPanel_main.Location = new System.Drawing.Point(0, 30);
             this.flowLayoutPanel_main.Name = "flowLayoutPanel_main";
-            this.flowLayoutPanel_main.Size = new System.Drawing.Size(940, 50);
+            this.flowLayoutPanel_main.Size = new System.Drawing.Size(940, 60);
             this.flowLayoutPanel_main.TabIndex = 0;
             // 
             // UpdateForm
@@ -85,7 +85,7 @@ namespace FilmsDBC.Visual.UpdateElements
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(942, 82);
+            this.ClientSize = new System.Drawing.Size(942, 92);
             this.Controls.Add(this.panel_main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateForm";

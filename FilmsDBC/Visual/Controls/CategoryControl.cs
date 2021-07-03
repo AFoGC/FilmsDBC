@@ -1,5 +1,6 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.StaticVisualClasses;
+using FilmsDBC.Visual.UpdateElements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,21 +32,30 @@ namespace FilmsDBC.Visual.Controls
 			InitializeComponent();
 			this.categoryInfo = category;
 
-			this.textBox_id.Text = categoryInfo.ID.ToString();
-			this.textBox_name.Text = category.Name;
-			this.textBox_mark.Text = VisualHelper.markToText(Category.formatToString(category.Mark));
+			RefreshData();
+		}
 
-			categoryInfo.Films = category.Films;
+		public void RefreshData()
+		{
+			this.textBox_id.Text = categoryInfo.ID.ToString();
+			this.textBox_name.Text = categoryInfo.Name;
+			this.textBox_mark.Text = VisualHelper.markToText(Category.formatToString(categoryInfo.Mark));
 
 			categoryFilms();
 		}
+
+		private Point controlPoint = new Point(830, 25);
+		private Point panelPoint = new Point(800, 5);
 
 		private void categoryFilms()
 		{
 			this.flowLayoutPanel_SimpleControls.Controls.Clear();
 
-			Size panelSize = flowLayoutPanel_SimpleControls.Size;
-			Size controlSize = this.Size;
+			Size panelSize = new Size(panelPoint);
+			Size controlSize = new Size(controlPoint);
+
+			this.Size = new Size(controlPoint);
+			flowLayoutPanel_SimpleControls.Size = new Size(panelPoint);
 
 			foreach (Film film in categoryInfo.Films)
 			{
@@ -55,6 +65,11 @@ namespace FilmsDBC.Visual.Controls
 				flowLayoutPanel_SimpleControls.Size = panelSize;
 				flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
 			}
+		}
+
+		private void label_update_Click(object sender, EventArgs e)
+		{
+			UpdateFormVisualizer.OpenUpdateForm(this);
 		}
 	}
 }

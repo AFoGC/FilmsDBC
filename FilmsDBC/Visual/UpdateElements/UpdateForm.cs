@@ -34,7 +34,7 @@ namespace FilmsDBC.Visual.UpdateElements
 			}
 			if (control.GetType() == typeof(CategoryControl))
 			{
-
+				flowLayoutPanel_main.Controls.Add(new CategoryUpdateControl((CategoryControl)control));
 				return;
 			}
 
