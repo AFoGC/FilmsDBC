@@ -25,6 +25,7 @@ namespace FilmsDBC.CinemaDataTypes
 
 		private int countOfviews = 0;
 		private int franshiseId = 0;
+		private sbyte franshiseListIndex = -1;
 
 
 		public Film() : base() { }
@@ -44,6 +45,7 @@ namespace FilmsDBC.CinemaDataTypes
 			this.sources = film.sources;
 			this.countOfviews = film.countOfviews;
 			this.franshiseId = film.franshiseId;
+			this.franshiseListIndex = film.franshiseListIndex;
 		}
 
 		protected override void saveBody(StreamWriter streamWriter)
@@ -64,6 +66,7 @@ namespace FilmsDBC.CinemaDataTypes
 			
 			streamWriter.Write(formatParam(nameof(countOfviews), countOfviews, 2));
 			streamWriter.Write(formatParam(nameof(franshiseId), franshiseId, 2));
+			streamWriter.Write(formatParam(nameof(franshiseListIndex), franshiseListIndex, 2));
 		}
 
 		protected override void loadBody(Comand comand)
@@ -102,6 +105,9 @@ namespace FilmsDBC.CinemaDataTypes
 					break;
 				case "franshiseId":
 					this.franshiseId = Convert.ToInt32(comand.Argument);
+					break;
+				case "franshiseListIndex":
+					this.franshiseListIndex = Convert.ToSByte(comand.Argument);
 					break;
 
 				default:
@@ -182,5 +188,11 @@ namespace FilmsDBC.CinemaDataTypes
 			get { return franshiseId; }
 			set { franshiseId = value; }
 		}
+
+		public sbyte FranshiseListIndex
+        {
+            get { return franshiseListIndex; }
+			set { franshiseListIndex = value; }
+        }
 	}
 }

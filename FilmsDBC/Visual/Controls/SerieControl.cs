@@ -1,5 +1,6 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.StaticVisualClasses;
+using FilmsDBC.Visual.UpdateElements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,5 +52,10 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_countOfWatchedSeries.Text = Serie.formatToString(serieInfo.CountOfWatchedSeries);
 			this.textBox_totalSeries.Text = Serie.formatToString(serieInfo.TotalSeries);
 		}
-	}
+
+        private void label_update_Click(object sender, EventArgs e)
+        {
+			UpdateFormVisualizer.OpenMoreInfoForm(this);
+		}
+    }
 }

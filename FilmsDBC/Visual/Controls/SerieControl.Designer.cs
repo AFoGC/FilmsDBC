@@ -141,6 +141,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_update.TabIndex = 39;
             this.label_update.Text = "update";
             this.label_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_update.Click += new System.EventHandler(this.label_update_Click);
             // 
             // label_copyUrl
             // 

@@ -29,10 +29,41 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.textBox_id = new System.Windows.Forms.TextBox();
+            this.textBox_name = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // textBox_id
+            // 
+            this.textBox_id.Location = new System.Drawing.Point(0, 0);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(30, 20);
+            this.textBox_id.TabIndex = 3;
+            // 
+            // textBox_name
+            // 
+            this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_name.Location = new System.Drawing.Point(30, 0);
+            this.textBox_name.Name = "textBox_name";
+            this.textBox_name.Size = new System.Drawing.Size(180, 20);
+            this.textBox_name.TabIndex = 17;
+            // 
+            // CategoryUpdateControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox_name);
+            this.Controls.Add(this.textBox_id);
+            this.Name = "CategoryUpdateControl";
+            this.Size = new System.Drawing.Size(830, 20);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox_id;
+        internal System.Windows.Forms.TextBox textBox_name;
     }
 }
