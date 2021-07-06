@@ -137,7 +137,17 @@ namespace FilmsDBC.CinemaDataTypes
 
 		public Genre Genre
 		{
-			get { return genre; }
+			get
+            {
+                if (genre != null)
+                {
+					return genre;
+                }
+                else
+                {
+					return new Genre(0);
+                }
+            }
 			set { genre = value; }
 		}
 

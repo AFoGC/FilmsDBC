@@ -141,5 +141,33 @@ namespace FilmsDBC.Visual.Forms
         {
 			MainInformation.tableCollection.saveTables();
         }
+
+        private void button_addCategory_Click(object sender, EventArgs e)
+        {
+            if (controlsCondition == 1)
+            {
+				MainInformation.tableCollection.GetTable(typeof(Category)).addElement();
+				flowLayoutPanel_main.Controls.Add(new CategoryControl((Category)MainInformation.tableCollection.GetTable(typeof(Category)).GetLastElement));
+			}
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            switch (controlsCondition)
+            {
+				case 2:
+					MainInformation.tableCollection.GetTable(typeof(Film)).addElement();
+					flowLayoutPanel_main.Controls.Add(new FilmControl((Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetLastElement));
+					break;
+				case 3:
+					MainInformation.tableCollection.GetTable(typeof(Film)).addElement();
+					Film film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetLastElement;
+					film.Genre = (Genre)MainInformation.tableCollection.GetTable(typeof(Genre)).GetElement(2);
+					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
+					break;
+				default:
+					break;
+            }
+        }
     }
 }
