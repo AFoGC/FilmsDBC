@@ -51,7 +51,7 @@ namespace FilmsDBC.Visual.Forms
             // 
             // button_ShowCategories
             // 
-            this.button_ShowCategories.Location = new System.Drawing.Point(1296, 96);
+            this.button_ShowCategories.Location = new System.Drawing.Point(1346, 96);
             this.button_ShowCategories.Name = "button_ShowCategories";
             this.button_ShowCategories.Size = new System.Drawing.Size(111, 23);
             this.button_ShowCategories.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace FilmsDBC.Visual.Forms
             // 
             // button_ShowFilms
             // 
-            this.button_ShowFilms.Location = new System.Drawing.Point(1296, 125);
+            this.button_ShowFilms.Location = new System.Drawing.Point(1346, 125);
             this.button_ShowFilms.Name = "button_ShowFilms";
             this.button_ShowFilms.Size = new System.Drawing.Size(111, 23);
             this.button_ShowFilms.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace FilmsDBC.Visual.Forms
             // 
             // button_ShowSeries
             // 
-            this.button_ShowSeries.Location = new System.Drawing.Point(1296, 154);
+            this.button_ShowSeries.Location = new System.Drawing.Point(1346, 154);
             this.button_ShowSeries.Name = "button_ShowSeries";
             this.button_ShowSeries.Size = new System.Drawing.Size(111, 23);
             this.button_ShowSeries.TabIndex = 3;
@@ -98,7 +98,7 @@ namespace FilmsDBC.Visual.Forms
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(1296, 55);
+            this.button_save.Location = new System.Drawing.Point(1346, 55);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(111, 23);
             this.button_save.TabIndex = 6;

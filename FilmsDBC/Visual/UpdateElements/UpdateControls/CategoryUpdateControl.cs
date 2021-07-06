@@ -55,22 +55,22 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			int result = 0;
 			if (int.TryParse(textBox_addElement.Text, out result))
 			{
-                foreach (Film film in category.Films)
-                {
-                    if (film.ID == result)
-                    {
+				foreach (Film film in category.Films)
+				{
+					if (film.ID == result)
+					{
 						return;
-                    }
-                }
+					}
+				}
 				foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
-                {
-                    if (film.ID == result)
-                    {
+				{
+					if (film.ID == result)
+					{
 						category.Films.Add(film);
 						categoryControl.RefreshData();
 						return;
-                    }
-                }
+					}
+				}
 			}
 		}
 	}

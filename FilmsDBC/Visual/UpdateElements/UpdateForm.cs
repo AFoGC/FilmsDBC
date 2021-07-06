@@ -58,7 +58,8 @@ namespace FilmsDBC.Visual.UpdateElements
 			}
 			if (userControl.GetType() == typeof(CategoryUpdateControl))
 			{
-
+				CategoryUpdateControl control = (CategoryUpdateControl)userControl;
+				control.UpdateElement();
 				return;
 			}
 		}
