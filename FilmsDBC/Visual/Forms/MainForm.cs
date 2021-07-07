@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.Visual.Forms
 {
@@ -61,6 +62,7 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 
+		private int controlsCondition = 1;
 		private void button_ShowCategories_Click(object sender, EventArgs e)
 		{
 			controlsCondition = 1;
@@ -79,7 +81,6 @@ namespace FilmsDBC.Visual.Forms
 			loadSerieTable();
 		}
 
-		private int controlsCondition = 1;
 		private void button_Search_Click(object sender, EventArgs e)
 		{
 			Color searchedColor = Color.Blue;
@@ -137,37 +138,42 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 
-        private void button_save_Click(object sender, EventArgs e)
-        {
+		private void button_save_Click(object sender, EventArgs e)
+		{
 			MainInformation.tableCollection.saveTables();
-        }
+		}
 
-        private void button_addCategory_Click(object sender, EventArgs e)
-        {
-            if (controlsCondition == 1)
-            {
-				MainInformation.tableCollection.GetTable(typeof(Category)).addElement();
-				flowLayoutPanel_main.Controls.Add(new CategoryControl((Category)MainInformation.tableCollection.GetTable(typeof(Category)).GetLastElement));
+		private void button_addCategory_Click(object sender, EventArgs e)
+		{
+			if (controlsCondition == 1)
+			{
+				Table categoryTable = MainInformation.tableCollection.GetTable(typeof(Category));
+				categoryTable.addElement();
+				CategoryControl categoryControl = new CategoryControl((Category)categoryTable.GetLastElement);
+				flowLayoutPanel_main.Controls.Add(categoryControl);
+				flowLayoutPanel_main.Controls.SetChildIndex(categoryControl, categoryTable.Cells.Count - 1);
 			}
-        }
+		}
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            switch (controlsCondition)
-            {
+		private void button_addFilm_Click(object sender, EventArgs e)
+		{
+			MainInformation.tableCollection.GetTable(typeof(Film)).addElement();
+			Film film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetLastElement;
+			switch (controlsCondition)
+			{
+				case 1:
+					flowLayoutPanel_main.Controls.Add(new SimpleControl(film));
+					break;
 				case 2:
-					MainInformation.tableCollection.GetTable(typeof(Film)).addElement();
-					flowLayoutPanel_main.Controls.Add(new FilmControl((Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetLastElement));
+					flowLayoutPanel_main.Controls.Add(new FilmControl(film));
 					break;
 				case 3:
-					MainInformation.tableCollection.GetTable(typeof(Film)).addElement();
-					Film film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetLastElement;
 					film.Genre = (Genre)MainInformation.tableCollection.GetTable(typeof(Genre)).GetElement(2);
 					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
 					break;
 				default:
 					break;
-            }
-        }
-    }
+			}
+		}
+	}
 }

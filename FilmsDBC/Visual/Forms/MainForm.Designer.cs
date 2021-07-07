@@ -37,7 +37,7 @@ namespace FilmsDBC.Visual.Forms
             this.button_Search = new System.Windows.Forms.Button();
             this.button_save = new System.Windows.Forms.Button();
             this.button_addCategory = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_addFilm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_main
@@ -118,22 +118,22 @@ namespace FilmsDBC.Visual.Forms
             this.button_addCategory.UseVisualStyleBackColor = true;
             this.button_addCategory.Click += new System.EventHandler(this.button_addCategory_Click);
             // 
-            // button2
+            // button_addFilm
             // 
-            this.button2.Location = new System.Drawing.Point(1198, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Add Film";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_addFilm.Location = new System.Drawing.Point(1198, 125);
+            this.button_addFilm.Name = "button_addFilm";
+            this.button_addFilm.Size = new System.Drawing.Size(111, 23);
+            this.button_addFilm.TabIndex = 8;
+            this.button_addFilm.Text = "Add Film";
+            this.button_addFilm.UseVisualStyleBackColor = true;
+            this.button_addFilm.Click += new System.EventHandler(this.button_addFilm_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1469, 608);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_addFilm);
             this.Controls.Add(this.button_addCategory);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.button_Search);
@@ -159,6 +159,6 @@ namespace FilmsDBC.Visual.Forms
         private System.Windows.Forms.Button button_Search;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_addCategory;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_addFilm;
     }
 }
