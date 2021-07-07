@@ -66,8 +66,25 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 				{
 					if (film.ID == result)
 					{
+						film.FranshiseId = category.ID;
 						category.Films.Add(film);
 						categoryControl.RefreshData();
+
+                        if (MainInformation.MainForm.ControlsCondition == 1)
+                        {
+                            foreach (UserControl userControl in MainInformation.MainForm.flowLayoutPanel_main.Controls)
+                            {
+                                if (userControl.GetType() == typeof(SimpleControl))
+                                {
+									SimpleControl simpleControl = (SimpleControl)userControl;
+                                    if (simpleControl.FilmInfo == film)
+                                    {
+										MainInformation.MainForm.flowLayoutPanel_main.Controls.Remove(simpleControl);
+                                    }
+                                }
+                            }
+                        }
+
 						return;
 					}
 				}

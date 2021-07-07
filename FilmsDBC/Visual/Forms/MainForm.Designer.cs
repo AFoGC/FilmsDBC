@@ -150,8 +150,6 @@ namespace FilmsDBC.Visual.Forms
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
         private System.Windows.Forms.Button button_ShowCategories;
         private System.Windows.Forms.Button button_ShowFilms;
         private System.Windows.Forms.Button button_ShowSeries;
@@ -160,5 +158,6 @@ namespace FilmsDBC.Visual.Forms
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_addCategory;
         private System.Windows.Forms.Button button_addFilm;
+        internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
     }
 }

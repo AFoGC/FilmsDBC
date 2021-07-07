@@ -20,10 +20,9 @@ namespace FilmsDBC.Visual.Forms
 		public MainForm()
 		{
 			InitializeComponent();
-			loadCategories();
 		}
 
-		private void loadFilmTable()
+		public void loadFilmTable()
 		{
 			flowLayoutPanel_main.Controls.Clear();
 			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
@@ -32,7 +31,7 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 
-		private void loadSerieTable()
+		public void loadSerieTable()
 		{
 			flowLayoutPanel_main.Controls.Clear();
 			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
@@ -44,7 +43,7 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 
-		private void loadCategories()
+		public void loadCategories()
 		{
 			flowLayoutPanel_main.Controls.Clear();
 
@@ -63,6 +62,7 @@ namespace FilmsDBC.Visual.Forms
 		}
 
 		private int controlsCondition = 1;
+		public int ControlsCondition { get { return controlsCondition; } }
 		private void button_ShowCategories_Click(object sender, EventArgs e)
 		{
 			controlsCondition = 1;

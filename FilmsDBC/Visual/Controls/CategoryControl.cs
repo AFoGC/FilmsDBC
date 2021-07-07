@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Visual.Forms;
 using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements;
 using System;

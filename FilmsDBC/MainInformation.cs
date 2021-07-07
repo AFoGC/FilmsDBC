@@ -7,12 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
 using FilmsDBC.StaticFilmClasses;
+using FilmsDBC.Visual.Forms;
 
 namespace FilmsDBC
 {
 	public static class MainInformation
 	{
 		public static TableCollection tableCollection = null;
+
+		private static MainForm mainForm = null;
+		public static MainForm MainForm
+        {
+            get { return mainForm; }
+        }
 
 		static MainInformation()
 		{
@@ -24,6 +31,8 @@ namespace FilmsDBC
 			tableCollection.AddTable(typeof(Genre));
 			tableCollection.AddTable(typeof(Film));
 			tableCollection.AddTable(typeof(Serie));
+
+			mainForm = new MainForm();
 		}
 
 		public static void LoadTables()
