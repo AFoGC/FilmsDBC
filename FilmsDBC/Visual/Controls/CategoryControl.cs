@@ -68,6 +68,20 @@ namespace FilmsDBC.Visual.Controls
 			}
 		}
 
+		public void AddSimpleCotrol(Film film)
+        {
+			Size controlSize = this.Size;
+			Size panelSize = this.flowLayoutPanel_SimpleControls.Size;
+			panelSize.Height += 20;
+			controlSize.Height += 20;
+			this.Size = controlSize;
+			flowLayoutPanel_SimpleControls.Size = panelSize;
+
+			this.flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
+
+			film.FranshiseListIndex = Convert.ToSByte(flowLayoutPanel_SimpleControls.Controls.Count - 1);
+        }
+
 		private void label_update_Click(object sender, EventArgs e)
 		{
 			UpdateFormVisualizer.OpenUpdateForm(this);

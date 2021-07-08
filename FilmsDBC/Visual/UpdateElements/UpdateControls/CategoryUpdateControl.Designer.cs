@@ -31,7 +31,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         {
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel_controls = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox_addElement = new System.Windows.Forms.TextBox();
             this.button_addElement = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -50,15 +49,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 17;
-            // 
-            // flowLayoutPanel_controls
-            // 
-            this.flowLayoutPanel_controls.AutoScroll = true;
-            this.flowLayoutPanel_controls.Location = new System.Drawing.Point(30, 20);
-            this.flowLayoutPanel_controls.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel_controls.Name = "flowLayoutPanel_controls";
-            this.flowLayoutPanel_controls.Size = new System.Drawing.Size(500, 40);
-            this.flowLayoutPanel_controls.TabIndex = 18;
             // 
             // textBox_addElement
             // 
@@ -83,7 +73,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button_addElement);
             this.Controls.Add(this.textBox_addElement);
-            this.Controls.Add(this.flowLayoutPanel_controls);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
             this.Name = "CategoryUpdateControl";
@@ -97,7 +86,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 
         private System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.TextBox textBox_name;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_controls;
         private System.Windows.Forms.TextBox textBox_addElement;
         private System.Windows.Forms.Button button_addElement;
     }

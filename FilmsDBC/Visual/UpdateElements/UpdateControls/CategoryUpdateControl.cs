@@ -31,18 +31,8 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			this.textBox_id.Text = category.ID.ToString();
 			this.textBox_name.Text = category.Name;
 
-			categoryFilms();
 		}
 
-		private void categoryFilms()
-		{
-			this.flowLayoutPanel_controls.Controls.Clear();
-
-			foreach (Film film in category.Films)
-			{
-				flowLayoutPanel_controls.Controls.Add(new CategoryElementUpdateControl(film));
-			}
-		}
 
 		public void UpdateElement()
 		{
@@ -62,31 +52,35 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 						return;
 					}
 				}
+				int i = 0;
 				foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
 				{
 					if (film.ID == result)
 					{
 						film.FranshiseId = category.ID;
 						category.Films.Add(film);
-						categoryControl.RefreshData();
+						//categoryControl.RefreshData();
+						categoryControl.AddSimpleCotrol(film);
+						//categoryControl.flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
 
-                        if (MainInformation.MainForm.ControlsCondition == 1)
-                        {
-                            foreach (UserControl userControl in MainInformation.MainForm.flowLayoutPanel_main.Controls)
-                            {
-                                if (userControl.GetType() == typeof(SimpleControl))
-                                {
+						if (MainInformation.MainForm.ControlsCondition == 1)
+						{
+							foreach (UserControl userControl in MainInformation.MainForm.flowLayoutPanel_main.Controls)
+							{
+								if (userControl.GetType() == typeof(SimpleControl))
+								{
 									SimpleControl simpleControl = (SimpleControl)userControl;
-                                    if (simpleControl.FilmInfo == film)
-                                    {
+									if (simpleControl.FilmInfo == film)
+									{
 										MainInformation.MainForm.flowLayoutPanel_main.Controls.Remove(simpleControl);
-                                    }
-                                }
-                            }
-                        }
+									}
+								}
+							}
+						}
 
 						return;
 					}
+					++i;
 				}
 			}
 		}
