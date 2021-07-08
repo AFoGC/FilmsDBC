@@ -66,6 +66,11 @@ namespace FilmsDBC.Visual.Controls
 				flowLayoutPanel_SimpleControls.Size = panelSize;
 				flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
 			}
+
+            foreach (SimpleControl simpleControl in flowLayoutPanel_SimpleControls.Controls)
+            {
+				flowLayoutPanel_SimpleControls.Controls.SetChildIndex(simpleControl, simpleControl.FilmInfo.FranshiseListIndex);
+            }
 		}
 
 		public void AddSimpleCotrol(Film film)
