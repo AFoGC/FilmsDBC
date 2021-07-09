@@ -84,58 +84,84 @@ namespace FilmsDBC.Visual.Forms
 		private void button_Search_Click(object sender, EventArgs e)
 		{
 			Color searchedColor = Color.Blue;
-
-			switch (controlsCondition)
+			Color defaultColor = SystemColors.Control;
+			if (textBox_Search.Text != "")
 			{
-				case 1:
-					foreach (UserControl userControl in flowLayoutPanel_main.Controls)
-					{
-						if (userControl.GetType() == typeof(SimpleControl))
+				switch (controlsCondition)
+				{
+					case 1:
+						foreach (UserControl userControl in flowLayoutPanel_main.Controls)
 						{
-							SimpleControl simpleControl = (SimpleControl)userControl;
-							if (simpleControl.FilmInfo.Name.Contains(textBox_Search.Text))
+							if (userControl.GetType() == typeof(SimpleControl))
 							{
-								userControl.BackColor = searchedColor;
-							}
-							
-						}
-						else
-						{
-							CategoryControl categoryControl = (CategoryControl)userControl;
-							foreach(SimpleControl simpleControl in categoryControl.SimpleControls)
-							{
+								SimpleControl simpleControl = (SimpleControl)userControl;
 								if (simpleControl.FilmInfo.Name.Contains(textBox_Search.Text))
 								{
-									simpleControl.BackColor = searchedColor;
+									userControl.BackColor = searchedColor;
+								}
+
+							}
+							else
+							{
+								CategoryControl categoryControl = (CategoryControl)userControl;
+                                if (categoryControl.CategoryInfo.Name.Contains(textBox_Search.Text))
+                                {
+									categoryControl.BackColor = searchedColor;
+								}
+								foreach (SimpleControl simpleControl in categoryControl.SimpleControls)
+								{
+									if (simpleControl.FilmInfo.Name.Contains(textBox_Search.Text))
+									{
+										simpleControl.BackColor = searchedColor;
+									}
 								}
 							}
 						}
-					}
-					break;
+						break;
 
-				case 2:
-					foreach (FilmControl filmControl in flowLayoutPanel_main.Controls)
-					{
-						if (filmControl.FilmInfo.Name.Contains(textBox_Search.Text))
+					case 2:
+						foreach (FilmControl filmControl in flowLayoutPanel_main.Controls)
 						{
-							filmControl.BackColor = searchedColor;
+							if (filmControl.FilmInfo.Name.Contains(textBox_Search.Text))
+							{
+								filmControl.BackColor = searchedColor;
+							}
 						}
-					}
-					break;
+						break;
 
-				case 3:
-					foreach (SerieControl serieControl in flowLayoutPanel_main.Controls)
-					{
-						if (serieControl.FilmInfo.Name.Contains(textBox_Search.Text))
+					case 3:
+						foreach (SerieControl serieControl in flowLayoutPanel_main.Controls)
 						{
-							serieControl.BackColor = searchedColor;
+							if (serieControl.FilmInfo.Name.Contains(textBox_Search.Text))
+							{
+								serieControl.BackColor = searchedColor;
+							}
 						}
-					}
-					break;
+						break;
 
-				default:
-					break;
+					default:
+						break;
+				}
 			}
+            else
+            {
+                foreach (UserControl userControl in flowLayoutPanel_main.Controls)
+                {
+                    if (userControl.GetType() == typeof(CategoryControl))
+                    {
+						CategoryControl categoryControl = (CategoryControl)userControl;
+						categoryControl.BackColor = defaultColor;
+                        foreach (SimpleControl simpleControl in categoryControl.flowLayoutPanel_SimpleControls.Controls)
+                        {
+							simpleControl.BackColor = defaultColor;
+                        }
+                    }
+                    else
+                    {
+						userControl.BackColor = defaultColor;
+					}
+                }
+            }
 		}
 
 		private void button_save_Click(object sender, EventArgs e)
