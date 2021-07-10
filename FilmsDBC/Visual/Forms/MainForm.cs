@@ -22,6 +22,28 @@ namespace FilmsDBC.Visual.Forms
 			InitializeComponent();
 		}
 
+		Color searchColor = Color.Blue;
+		Color defaultColor = SystemColors.Control;
+		Color selectColor = Color.Green;
+
+		private UserControl controlInBuffer = null;
+		public UserControl ControlInBuffer
+		{
+            get { return controlInBuffer; }
+			set 
+			{
+                if (controlInBuffer != null)
+                {
+					controlInBuffer.BackColor = defaultColor;
+                }
+				controlInBuffer = value;
+				if (value != null)
+                {
+					controlInBuffer.BackColor = selectColor;
+				}
+			}
+        }
+
 		public void loadFilmTable()
 		{
 			flowLayoutPanel_main.Controls.Clear();
@@ -82,9 +104,7 @@ namespace FilmsDBC.Visual.Forms
 		}
 
 		private void button_Search_Click(object sender, EventArgs e)
-		{
-			Color searchedColor = Color.Blue;
-			Color defaultColor = SystemColors.Control;
+		{ 
 			if (textBox_Search.Text != "")
 			{
 				switch (controlsCondition)
@@ -97,7 +117,7 @@ namespace FilmsDBC.Visual.Forms
 								SimpleControl simpleControl = (SimpleControl)userControl;
 								if (simpleControl.FilmInfo.Name.Contains(textBox_Search.Text))
 								{
-									userControl.BackColor = searchedColor;
+									userControl.BackColor = searchColor;
 								}
 
 							}
@@ -106,13 +126,13 @@ namespace FilmsDBC.Visual.Forms
 								CategoryControl categoryControl = (CategoryControl)userControl;
                                 if (categoryControl.CategoryInfo.Name.Contains(textBox_Search.Text))
                                 {
-									categoryControl.BackColor = searchedColor;
+									categoryControl.BackColor = searchColor;
 								}
 								foreach (SimpleControl simpleControl in categoryControl.SimpleControls)
 								{
 									if (simpleControl.FilmInfo.Name.Contains(textBox_Search.Text))
 									{
-										simpleControl.BackColor = searchedColor;
+										simpleControl.BackColor = searchColor;
 									}
 								}
 							}
@@ -124,7 +144,7 @@ namespace FilmsDBC.Visual.Forms
 						{
 							if (filmControl.FilmInfo.Name.Contains(textBox_Search.Text))
 							{
-								filmControl.BackColor = searchedColor;
+								filmControl.BackColor = searchColor;
 							}
 						}
 						break;
@@ -134,7 +154,7 @@ namespace FilmsDBC.Visual.Forms
 						{
 							if (serieControl.FilmInfo.Name.Contains(textBox_Search.Text))
 							{
-								serieControl.BackColor = searchedColor;
+								serieControl.BackColor = searchColor;
 							}
 						}
 						break;

@@ -42,45 +42,20 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 
 		private void button_addElement_Click(object sender, EventArgs e)
 		{
-			int result = 0;
-			if (int.TryParse(textBox_addElement.Text, out result))
+			if (MainInformation.MainForm.ControlInBuffer != null)
 			{
-				foreach (Film film in category.Films)
+				if (MainInformation.MainForm.ControlInBuffer.GetType() == typeof(SimpleControl))
 				{
-					if (film.ID == result)
-					{
-						return;
-					}
-				}
-				int i = 0;
-				foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
-				{
-					if (film.ID == result)
+					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.ControlInBuffer;
+					Film film = simpleControl.FilmInfo;
+					if (film.FranshiseId == 0)
 					{
 						film.FranshiseId = category.ID;
 						category.Films.Add(film);
-						//categoryControl.RefreshData();
 						categoryControl.AddSimpleCotrol(film);
-						//categoryControl.flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
-
-						if (MainInformation.MainForm.ControlsCondition == 1)
-						{
-							foreach (UserControl userControl in MainInformation.MainForm.flowLayoutPanel_main.Controls)
-							{
-								if (userControl.GetType() == typeof(SimpleControl))
-								{
-									SimpleControl simpleControl = (SimpleControl)userControl;
-									if (simpleControl.FilmInfo == film)
-									{
-										MainInformation.MainForm.flowLayoutPanel_main.Controls.Remove(simpleControl);
-									}
-								}
-							}
-						}
-
-						return;
+						MainInformation.MainForm.flowLayoutPanel_main.Controls.Remove(simpleControl);
+						MainInformation.MainForm.ControlInBuffer = null;
 					}
-					++i;
 				}
 			}
 		}

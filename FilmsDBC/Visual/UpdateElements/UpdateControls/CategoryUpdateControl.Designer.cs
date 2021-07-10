@@ -31,7 +31,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         {
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
-            this.textBox_addElement = new System.Windows.Forms.TextBox();
             this.button_addElement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -50,20 +49,13 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 17;
             // 
-            // textBox_addElement
-            // 
-            this.textBox_addElement.Location = new System.Drawing.Point(646, 0);
-            this.textBox_addElement.Name = "textBox_addElement";
-            this.textBox_addElement.Size = new System.Drawing.Size(38, 20);
-            this.textBox_addElement.TabIndex = 19;
-            // 
             // button_addElement
             // 
             this.button_addElement.Location = new System.Drawing.Point(690, 0);
             this.button_addElement.Name = "button_addElement";
-            this.button_addElement.Size = new System.Drawing.Size(75, 20);
+            this.button_addElement.Size = new System.Drawing.Size(90, 20);
             this.button_addElement.TabIndex = 20;
-            this.button_addElement.Text = "Add by Id";
+            this.button_addElement.Text = "Add Selected";
             this.button_addElement.UseVisualStyleBackColor = true;
             this.button_addElement.Click += new System.EventHandler(this.button_addElement_Click);
             // 
@@ -72,7 +64,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button_addElement);
-            this.Controls.Add(this.textBox_addElement);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
             this.Name = "CategoryUpdateControl";
@@ -86,7 +77,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 
         private System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.TextBox textBox_name;
-        private System.Windows.Forms.TextBox textBox_addElement;
         private System.Windows.Forms.Button button_addElement;
     }
 }
