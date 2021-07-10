@@ -22,9 +22,10 @@ namespace FilmsDBC.Visual.Forms
 			InitializeComponent();
 		}
 
-		Color searchColor = Color.Blue;
-		Color defaultColor = SystemColors.Control;
-		Color selectColor = Color.Green;
+		private Color searchColor = Color.Blue;
+		private Color defaultColor = SystemColors.Control;
+		private Color selectColor = Color.Green;
+		public Color SelectColor { get { return selectColor; } }
 
 		private UserControl controlInBuffer = null;
 		public UserControl ControlInBuffer
