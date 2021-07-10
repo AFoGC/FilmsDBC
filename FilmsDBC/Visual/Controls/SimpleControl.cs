@@ -37,5 +37,10 @@ namespace FilmsDBC.Visual.Controls
 		{
 			MoreInfoFormVisualizer.OpenMoreInfoForm(FilmInfo);
 		}
-	}
+
+        private void checkBox_watched_Click(object sender, EventArgs e)
+        {
+			checkBox_watched.Checked = !checkBox_watched.Checked;
+        }
+    }
 }

@@ -80,6 +80,7 @@ namespace FilmsDBC.Visual.Controls
             this.checkBox_watched.Size = new System.Drawing.Size(15, 14);
             this.checkBox_watched.TabIndex = 28;
             this.checkBox_watched.UseVisualStyleBackColor = true;
+            this.checkBox_watched.Click += new System.EventHandler(this.checkBox_watched_Click);
             // 
             // label_info
             // 

@@ -46,5 +46,10 @@ namespace FilmsDBC.Visual.Controls
         {
 			UpdateFormVisualizer.OpenUpdateForm(this);
         }
+
+        private void checkBox_watched_Click(object sender, EventArgs e)
+        {
+			checkBox_watched.Checked = !checkBox_watched.Checked;
+		}
     }
 }
