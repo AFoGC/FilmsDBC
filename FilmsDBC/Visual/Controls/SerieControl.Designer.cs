@@ -49,6 +49,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             this.textBox_id.Location = new System.Drawing.Point(0, 0);
             this.textBox_id.Name = "textBox_id";
+            this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 1;
             // 
@@ -57,6 +58,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_name.Location = new System.Drawing.Point(30, 0);
             this.textBox_name.Name = "textBox_name";
+            this.textBox_name.ReadOnly = true;
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 15;
             // 
@@ -65,6 +67,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_genre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_genre.Location = new System.Drawing.Point(210, 0);
             this.textBox_genre.Name = "textBox_genre";
+            this.textBox_genre.ReadOnly = true;
             this.textBox_genre.Size = new System.Drawing.Size(100, 20);
             this.textBox_genre.TabIndex = 25;
             // 
@@ -73,6 +76,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_realiseYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_realiseYear.Location = new System.Drawing.Point(310, 0);
             this.textBox_realiseYear.Name = "textBox_realiseYear";
+            this.textBox_realiseYear.ReadOnly = true;
             this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
             this.textBox_realiseYear.TabIndex = 26;
             // 
@@ -90,6 +94,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_startWatchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_startWatchDate.Location = new System.Drawing.Point(395, 0);
             this.textBox_startWatchDate.Name = "textBox_startWatchDate";
+            this.textBox_startWatchDate.ReadOnly = true;
             this.textBox_startWatchDate.Size = new System.Drawing.Size(60, 20);
             this.textBox_startWatchDate.TabIndex = 28;
             // 
@@ -98,6 +103,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_countOfWatchedSeries.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_countOfWatchedSeries.Location = new System.Drawing.Point(455, 0);
             this.textBox_countOfWatchedSeries.Name = "textBox_countOfWatchedSeries";
+            this.textBox_countOfWatchedSeries.ReadOnly = true;
             this.textBox_countOfWatchedSeries.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfWatchedSeries.TabIndex = 32;
             // 
@@ -106,6 +112,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_watchDate.Location = new System.Drawing.Point(485, 0);
             this.textBox_watchDate.Name = "textBox_watchDate";
+            this.textBox_watchDate.ReadOnly = true;
             this.textBox_watchDate.Size = new System.Drawing.Size(60, 20);
             this.textBox_watchDate.TabIndex = 33;
             // 
@@ -114,6 +121,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_totalSeries.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_totalSeries.Location = new System.Drawing.Point(545, 0);
             this.textBox_totalSeries.Name = "textBox_totalSeries";
+            this.textBox_totalSeries.ReadOnly = true;
             this.textBox_totalSeries.Size = new System.Drawing.Size(30, 20);
             this.textBox_totalSeries.TabIndex = 34;
             // 
@@ -122,6 +130,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_mark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_mark.Location = new System.Drawing.Point(575, 0);
             this.textBox_mark.Name = "textBox_mark";
+            this.textBox_mark.ReadOnly = true;
             this.textBox_mark.Size = new System.Drawing.Size(45, 20);
             this.textBox_mark.TabIndex = 35;
             // 
@@ -130,6 +139,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_countOfviews.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_countOfviews.Location = new System.Drawing.Point(620, 0);
             this.textBox_countOfviews.Name = "textBox_countOfviews";
+            this.textBox_countOfviews.ReadOnly = true;
             this.textBox_countOfviews.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfviews.TabIndex = 36;
             // 

@@ -41,6 +41,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             this.textBox_id.Location = new System.Drawing.Point(0, 0);
             this.textBox_id.Name = "textBox_id";
+            this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 2;
             // 
@@ -49,6 +50,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_name.Location = new System.Drawing.Point(30, 0);
             this.textBox_name.Name = "textBox_name";
+            this.textBox_name.ReadOnly = true;
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 16;
             // 
@@ -57,6 +59,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_genre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_genre.Location = new System.Drawing.Point(210, 0);
             this.textBox_genre.Name = "textBox_genre";
+            this.textBox_genre.ReadOnly = true;
             this.textBox_genre.Size = new System.Drawing.Size(100, 20);
             this.textBox_genre.TabIndex = 26;
             // 
@@ -65,6 +68,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_realiseYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_realiseYear.Location = new System.Drawing.Point(310, 0);
             this.textBox_realiseYear.Name = "textBox_realiseYear";
+            this.textBox_realiseYear.ReadOnly = true;
             this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
             this.textBox_realiseYear.TabIndex = 27;
             // 

@@ -40,6 +40,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             this.textBox_id.Location = new System.Drawing.Point(0, 0);
             this.textBox_id.Name = "textBox_id";
+            this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 2;
             // 
@@ -48,6 +49,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_name.Location = new System.Drawing.Point(30, 0);
             this.textBox_name.Name = "textBox_name";
+            this.textBox_name.ReadOnly = true;
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 16;
             // 
@@ -56,6 +58,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_mark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_mark.Location = new System.Drawing.Point(210, 0);
             this.textBox_mark.Name = "textBox_mark";
+            this.textBox_mark.ReadOnly = true;
             this.textBox_mark.Size = new System.Drawing.Size(45, 20);
             this.textBox_mark.TabIndex = 36;
             // 
