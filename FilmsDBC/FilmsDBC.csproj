@@ -57,6 +57,9 @@
     <Compile Include="StaticFilmClasses\FilmMethods.cs" />
     <Compile Include="StaticFilmClasses\GenreMethods.cs" />
     <Compile Include="StaticFilmClasses\Subloads.cs" />
+    <Compile Include="Visual\Controls\Interface\AElementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Visual\Controls\CategoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +72,7 @@
     <Compile Include="Visual\Controls\FilmControl.Designer.cs">
       <DependentUpon>FilmControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Controls\Interface\IControls.cs" />
     <Compile Include="Visual\Controls\SerieControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
