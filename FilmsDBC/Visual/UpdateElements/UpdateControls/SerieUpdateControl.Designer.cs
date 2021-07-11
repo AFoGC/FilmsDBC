@@ -40,6 +40,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_totalSeries = new System.Windows.Forms.TextBox();
             this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
+            this.label_sources = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -130,10 +131,21 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_countOfviews.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfviews.TabIndex = 37;
             // 
+            // label_sources
+            // 
+            this.label_sources.Location = new System.Drawing.Point(690, 0);
+            this.label_sources.Name = "label_sources";
+            this.label_sources.Size = new System.Drawing.Size(100, 20);
+            this.label_sources.TabIndex = 38;
+            this.label_sources.Text = "update source";
+            this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
+            // 
             // SerieUpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label_sources);
             this.Controls.Add(this.textBox_countOfviews);
             this.Controls.Add(this.comboBox_mark);
             this.Controls.Add(this.textBox_totalSeries);
@@ -165,5 +177,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         internal System.Windows.Forms.ComboBox comboBox_genre;
         internal System.Windows.Forms.ComboBox comboBox_mark;
+        private System.Windows.Forms.Label label_sources;
     }
 }

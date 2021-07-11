@@ -36,13 +36,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
 		private void pictureBox_prioritize_Click(object sender, EventArgs e)
 		{
 			SourcesVisualizer.SourcesForm.FlowLayoutPanel_sources.Controls.SetChildIndex(this, 0);
-
-			/*
-			Source tmp = SourcesVisualizer.SourcesForm.FilmInfo.Sources[0];
-			int index = SourcesVisualizer.SourcesForm.FilmInfo.Sources.IndexOf(source);
-			SourcesVisualizer.SourcesForm.FilmInfo.Sources[0] = source;
-			SourcesVisualizer.SourcesForm.FilmInfo.Sources[index] = tmp;
-			*/
 		}
 	}
 }
