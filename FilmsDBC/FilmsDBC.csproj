@@ -124,6 +124,19 @@
     <Compile Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.Designer.cs">
       <DependentUpon>SerieUpdateControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.Designer.cs">
+      <DependentUpon>SourceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesForm.Designer.cs">
+      <DependentUpon>SourcesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesVisualizer.cs" />
     <Compile Include="Visual\UpdateElements\UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.resx">
       <DependentUpon>SerieUpdateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.resx">
+      <DependentUpon>SourceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesForm.resx">
+      <DependentUpon>SourcesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>

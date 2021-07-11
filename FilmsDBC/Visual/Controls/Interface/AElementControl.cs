@@ -18,8 +18,5 @@ namespace FilmsDBC.Visual.Controls
 
         public abstract void ChangeColorToSearch();
         public abstract void ChangeColorToSelect();
-
-        //public abstract void ChangeColorToSearch();
-        //public abstract void ChangeColorToSelect();
     }
 }

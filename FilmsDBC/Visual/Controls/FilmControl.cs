@@ -40,7 +40,27 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_watchDate.Text = Film.formatToString(filmInfo.DateOfWatch);
 			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
+			this.refreshSourceLabel();
 		}
+
+		private void refreshSourceLabel()
+        {
+            if (filmInfo.Sources.Count == 0)
+            {
+				label_copyUrl.Text = "no url";
+            }
+            else
+            {
+                if (filmInfo.Sources[0].name != "")
+                {
+					label_copyUrl.Text = "url: " + filmInfo.Sources[0].name;
+				}
+                else
+                {
+					label_copyUrl.Text = "copy url";
+                }
+            }
+        }
 
         private void label_update_Click(object sender, EventArgs e)
         {
@@ -51,5 +71,13 @@ namespace FilmsDBC.Visual.Controls
         {
 			checkBox_watched.Checked = !checkBox_watched.Checked;
 		}
+
+        private void label_copyUrl_Click(object sender, EventArgs e)
+        {
+            if (filmInfo.Sources.Count != 0)
+            {
+				Clipboard.SetText(filmInfo.Sources[0].sourceUrl);
+            }
+        }
     }
 }

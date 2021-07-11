@@ -1,5 +1,6 @@
 ﻿using FilmsDBC.Visual.Controls;
 using FilmsDBC.Visual.UpdateElements.UpdateControls;
+using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,6 +68,7 @@ namespace FilmsDBC.Visual.UpdateElements
 		private void pictureBox_Close_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+			SourcesVisualizer.SourcesForm.Hide();
 		}
 
 		Point lastPoint = new Point();

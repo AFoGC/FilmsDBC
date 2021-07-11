@@ -2,6 +2,7 @@
 using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.Controls;
 using FilmsDBC.Visual.StaticVisualClasses;
+using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,5 +47,10 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			ControlsConverter.SetFilmValues(this, film);
 			filmControl.RefreshData();
 		}
-	}
+
+        private void label_sources_Click(object sender, EventArgs e)
+        {
+			SourcesVisualizer.OpenSourceForm(this.film);
+		}
+    }
 }
