@@ -87,6 +87,38 @@ namespace FilmsDBC.Visual.Controls
 			film.FranshiseListIndex = Convert.ToSByte(flowLayoutPanel_SimpleControls.Controls.Count - 1);
         }
 
+		public bool RemoveFilmFromCategory(SimpleControl simpleControl)
+        {
+            if (simpleControl.FilmInfo.FranshiseId == this.categoryInfo.ID)
+            {
+				flowLayoutPanel_SimpleControls.Controls.Remove(simpleControl);
+
+				Size controlSize = this.Size;
+				Size panelSize = this.flowLayoutPanel_SimpleControls.Size;
+				panelSize.Height -= 20;
+				controlSize.Height -= 20;
+				this.Size = controlSize;
+				flowLayoutPanel_SimpleControls.Size = panelSize;
+
+				simpleControl.FilmInfo.FranshiseId = 0;
+				simpleControl.FilmInfo.FranshiseListIndex = 0;
+
+                foreach (Film film in categoryInfo.Films)
+                {
+                    if (simpleControl.FilmInfo.FranshiseListIndex < film.FranshiseListIndex)
+                    {
+						--film.FranshiseListIndex;
+                    }
+                }
+
+				return categoryInfo.Films.Remove(simpleControl.FilmInfo);
+			}
+            else
+            {
+				return false;
+            }
+		}
+
 		private void label_update_Click(object sender, EventArgs e)
 		{
 			UpdateFormVisualizer.OpenUpdateForm(this);

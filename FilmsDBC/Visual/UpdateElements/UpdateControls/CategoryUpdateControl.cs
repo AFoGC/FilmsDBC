@@ -59,5 +59,42 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 				}
 			}
 		}
+
+		private void button_removeElement_Click(object sender, EventArgs e)
+		{
+			if (MainInformation.MainForm.ControlInBuffer != null)
+			{
+				if (MainInformation.MainForm.ControlInBuffer.GetType() == typeof(SimpleControl))
+				{
+					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.ControlInBuffer;
+					Film film = simpleControl.FilmInfo;
+
+					if (categoryControl.RemoveFilmFromCategory(simpleControl))
+					{
+						//this.categoryControl.flowLayoutPanel_SimpleControls.Controls.Remove(simpleControl);
+						//this.categoryControl.RemoveSimpleControl();
+
+						if (MainInformation.MainForm.ControlsCondition == 1)
+						{
+							int i = 0;
+							foreach (UserControl userControl in MainInformation.MainForm.flowLayoutPanel_main.Controls)
+							{
+								if (userControl.GetType() == typeof(SimpleControl))
+								{
+									SimpleControl sControl = (SimpleControl)userControl;
+									if (sControl.FilmInfo.ID > film.ID)
+									{
+										MainInformation.MainForm.flowLayoutPanel_main.Controls.Add(simpleControl);
+										MainInformation.MainForm.flowLayoutPanel_main.Controls.SetChildIndex(simpleControl, i);
+										break;
+									}
+								}
+								++i;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
