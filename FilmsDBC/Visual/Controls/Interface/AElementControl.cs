@@ -17,8 +17,7 @@ namespace FilmsDBC.Visual.Controls
         {
             get { return filmInfo; }
         }
-
-        public abstract void ChangeColorToSearch();
-        public abstract void ChangeColorToSelect();
+        public abstract void SetFindedElement();
+        public abstract void SetSelectedElement();
     }
 }

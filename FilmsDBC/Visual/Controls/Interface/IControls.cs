@@ -8,7 +8,7 @@ namespace FilmsDBC.Visual.Controls
 {
     public interface IControls
     {
-        void ChangeColorToSelect();
-        void ChangeColorToSearch();
+        void SetSelectedElement();
+        void SetFindedElement();
     }
 }
