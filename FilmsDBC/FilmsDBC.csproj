@@ -101,12 +101,6 @@
     <Compile Include="Visual\StaticVisualClasses\ControlsConverter.cs" />
     <Compile Include="Visual\MoreInfo\MoreInfoFormVisualizer.cs" />
     <Compile Include="Visual\StaticVisualClasses\VisualHelper.cs" />
-    <Compile Include="Visual\UpdateElements\UpdateControls\CategoryElementUpdateControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\CategoryElementUpdateControl.Designer.cs">
-      <DependentUpon>CategoryElementUpdateControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,9 +166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MoreInfo\MoreInfoForm.resx">
       <DependentUpon>MoreInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\CategoryElementUpdateControl.resx">
-      <DependentUpon>CategoryElementUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.resx">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>
