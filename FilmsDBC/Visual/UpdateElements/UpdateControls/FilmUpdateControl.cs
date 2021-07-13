@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 {
-	public partial class FilmUpdateControl : UserControl
+	public partial class FilmUpdateControl : UserControl, IUpdateControl
 	{
 		private FilmControl filmControl = null;
 		private Film film = null;

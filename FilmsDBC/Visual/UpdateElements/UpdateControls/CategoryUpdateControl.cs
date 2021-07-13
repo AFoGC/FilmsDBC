@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 {
-	public partial class CategoryUpdateControl : UserControl
+	public partial class CategoryUpdateControl : UserControl, IUpdateControl
 	{
 		private CategoryControl categoryControl = null;
 		private Category category = null;

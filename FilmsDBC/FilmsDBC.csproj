@@ -119,6 +119,7 @@
     <Compile Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.Designer.cs">
       <DependentUpon>FilmUpdateControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\IUpdateControl.cs" />
     <Compile Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

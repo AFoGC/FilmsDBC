@@ -17,6 +17,13 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 			return new FilmControl(film);
 		}
 
+		public static FilmControl ToFilmControl(Film film, SimpleControl simpleControl)
+        {
+			FilmControl filmControl = new FilmControl(film);
+			filmControl.simpleControl = simpleControl;
+			return filmControl;
+        }
+
 		public static SerieControl ToSerieControl(Film film)
 		{
 			foreach(Serie serie in MainInformation.tableCollection.GetTable(typeof(Serie)).Cells)
@@ -34,6 +41,13 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 
 			return new SerieControl(film, (Serie)MainInformation.tableCollection.GetTable(typeof(Serie)).GetLastElement);
 		}
+
+		public static SerieControl ToSerieControl(Film film, SimpleControl simpleControl)
+        {
+			SerieControl serieControl = ToSerieControl(film);
+			serieControl.simpleControl = simpleControl;
+			return serieControl;
+        }
 
 		public static SimpleControl ToSimpleControl(Film film)
 		{

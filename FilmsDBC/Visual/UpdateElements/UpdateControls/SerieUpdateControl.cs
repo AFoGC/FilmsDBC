@@ -15,20 +15,48 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 {
-    public partial class SerieUpdateControl : UserControl
+    public partial class SerieUpdateControl : UserControl, IUpdateControl
     {
-        private SerieControl serieControl = null;
+        private AElementControl control = null;
         private Serie serie = null;
         private Film film = null;
 
         public SerieUpdateControl(SerieControl serieControl)
         {
             InitializeComponent();
-            this.serieControl = serieControl;
+            this.control = serieControl;
 
             this.serie = serieControl.SerieInfo;
             this.film = serieControl.FilmInfo;
 
+            comboBox_genre.Items.AddRange(GenreMethods.GetAllGenresNames().ToArray());
+            comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
+
+            refresh();
+        }
+
+        public SerieUpdateControl(FilmControl filmControl)
+        {
+            InitializeComponent();
+            this.control = filmControl;
+
+            this.film = filmControl.FilmInfo;
+
+            foreach (Serie serie in MainInformation.tableCollection.GetTable(typeof(Serie)).Cells)
+            {
+                if (serie.FilmId == film.ID)
+                {
+                    this.serie = serie;
+                    goto cont;
+                }
+            }
+
+            Serie ser = new Serie();
+            ser.FilmId = film.ID;
+
+            MainInformation.tableCollection.GetTable(typeof(Serie)).addElement(ser);
+
+            cont:
             comboBox_genre.Items.AddRange(GenreMethods.GetAllGenresNames().ToArray());
             comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
 
@@ -55,7 +83,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         {
             ControlsConverter.SetFilmValues(this, film);
             ControlsConverter.SetSerieValues(this, serie);
-            serieControl.RefreshData();
+            control.RefreshData();
         }
 
         private void label_sources_Click(object sender, EventArgs e)

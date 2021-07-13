@@ -15,6 +15,8 @@ namespace FilmsDBC.Visual.Controls
 {
 	public partial class FilmControl : AElementControl
 	{
+		public SimpleControl simpleControl = null;
+
 		public FilmControl(Film film)
 		{
 			InitializeComponent();
@@ -34,6 +36,11 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
 			this.refreshSourceLabel();
+
+            if (simpleControl != null)
+            {
+				simpleControl.RefreshData();
+            }
 		}
 
 		private void refreshSourceLabel()

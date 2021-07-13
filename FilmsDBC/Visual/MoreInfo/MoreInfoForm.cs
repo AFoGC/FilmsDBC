@@ -1,5 +1,6 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.StaticFilmClasses;
+using FilmsDBC.Visual.Controls;
 using FilmsDBC.Visual.StaticVisualClasses;
 using System;
 using System.Collections.Generic;
@@ -20,16 +21,16 @@ namespace FilmsDBC.Visual.MoreInfo
 			InitializeComponent();
 		}
 
-		public void Reinitialize(Film film)
+		public void Reinitialize(Film film, SimpleControl simpleContol)
 		{
 			flowLayoutPanel_main.Controls.Clear();
 			if (film.Genre.IsSerialGenre)
 			{
-				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
+				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film, simpleContol));
 			}
 			else
 			{
-				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToFilmControl(film));
+				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToFilmControl(film, simpleContol));
 			}
 		}
 

@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.Visual.Controls;
+using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements.UpdateControls;
 using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
@@ -20,12 +21,20 @@ namespace FilmsDBC.Visual.UpdateElements
 			InitializeComponent();
 		}
 
-		public void Reinitialize(UserControl control)
+		public void Reinitialize(IControls control)
 		{
 			flowLayoutPanel_main.Controls.Clear();
 			if (control.GetType() == typeof(FilmControl))
 			{
-				flowLayoutPanel_main.Controls.Add(new FilmUpdateControl((FilmControl)control));
+				FilmControl filmControl = (FilmControl)control;
+				if (filmControl.FilmInfo.Genre.IsSerialGenre)
+				{
+					flowLayoutPanel_main.Controls.Add(new SerieUpdateControl(filmControl));
+				}
+				else
+				{
+					flowLayoutPanel_main.Controls.Add(new FilmUpdateControl(filmControl));
+				}
 				return;
 			}
 			if (control.GetType() == typeof(SerieControl))
@@ -44,25 +53,8 @@ namespace FilmsDBC.Visual.UpdateElements
 
 		private void button_update_Click(object sender, EventArgs e)
 		{
-			Control userControl = flowLayoutPanel_main.Controls[0];
-			if (userControl.GetType() == typeof(FilmUpdateControl))
-			{
-				FilmUpdateControl control = (FilmUpdateControl)userControl;
-				control.UpdateElement();
-				return;
-			}
-			if (userControl.GetType() == typeof(SerieUpdateControl))
-			{
-				SerieUpdateControl control = (SerieUpdateControl)userControl;
-				control.UpdateElement();
-				return;
-			}
-			if (userControl.GetType() == typeof(CategoryUpdateControl))
-			{
-				CategoryUpdateControl control = (CategoryUpdateControl)userControl;
-				control.UpdateElement();
-				return;
-			}
+			IUpdateControl control = (IUpdateControl)flowLayoutPanel_main.Controls[0];
+			control.UpdateElement();
 		}
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)

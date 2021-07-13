@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmsDBC.Visual.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace FilmsDBC.Visual.UpdateElements
 		private static UpdateForm updateForm = new UpdateForm();
 		public static UpdateForm UpdateForm { get { return updateForm; } }
 
-		public static void OpenUpdateForm(UserControl userControl)
+		public static void OpenUpdateForm(IControls userControl)
 		{
 			updateForm.Reinitialize(userControl);
 			updateForm.Show();
