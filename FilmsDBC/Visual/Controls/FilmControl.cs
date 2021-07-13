@@ -87,5 +87,10 @@ namespace FilmsDBC.Visual.Controls
 		{
 			this.BackColor = SystemColors.Control;
 		}
+
+		private void textBox_id_Click(object sender, EventArgs e)
+		{
+			SetSelectedElement(MainInformation.MainForm.ControlInBuffer);
+		}
 	}
 }

@@ -148,7 +148,12 @@ namespace FilmsDBC.Visual.Controls
 
         public void SetDefaultVisualCondition()
         {
-            throw new NotImplementedException();
-        }
+			this.BackColor = SystemColors.Control;
+
+            foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
+            {
+				control.SetDefaultVisualCondition();
+            }
+		}
     }
 }

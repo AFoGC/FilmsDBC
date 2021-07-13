@@ -59,7 +59,7 @@ namespace FilmsDBC.Visual.Controls
 
 		private void textBox_id_Click(object sender, EventArgs e)
 		{
-			MainInformation.MainForm.ControlInBuffer = this;
+			SetSelectedElement(MainInformation.MainForm.ControlInBuffer);
 		}
 	}
 }

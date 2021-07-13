@@ -52,6 +52,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 1;
+            this.textBox_id.Click += new System.EventHandler(this.textBox_id_Click);
             // 
             // textBox_name
             // 

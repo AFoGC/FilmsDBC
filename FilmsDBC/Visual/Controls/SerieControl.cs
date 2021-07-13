@@ -71,5 +71,10 @@ namespace FilmsDBC.Visual.Controls
 		{
 			checkBox_watched.Checked = !checkBox_watched.Checked;
 		}
+
+		private void textBox_id_Click(object sender, EventArgs e)
+		{
+			SetSelectedElement(MainInformation.MainForm.ControlInBuffer);
+		}
 	}
 }
