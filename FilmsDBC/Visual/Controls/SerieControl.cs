@@ -13,19 +13,13 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.Controls
 {
-	public partial class SerieControl : UserControl
+	public partial class SerieControl : AElementControl
 	{
 		private Serie serieInfo = null;
-		private Film filmInfo = null;
 
 		public Serie SerieInfo
 		{
 			get { return serieInfo; }
-		}
-
-		public Film FilmInfo
-		{
-			get { return filmInfo; }
 		}
 
 		public SerieControl(Film film, Serie serie)
@@ -37,8 +31,8 @@ namespace FilmsDBC.Visual.Controls
 			RefreshData();
 		}
 
-		public void RefreshData()
-        {
+		public override void RefreshData()
+		{
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
 			this.textBox_genre.Text = filmInfo.Genre.Name;
@@ -53,14 +47,29 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_totalSeries.Text = Serie.formatToString(serieInfo.TotalSeries);
 		}
 
-        private void label_update_Click(object sender, EventArgs e)
-        {
+		internal override void setVisualFinded()
+		{
+			this.BackColor = Color.Blue;
+		}
+
+		public override void SetDefaultVisualCondition()
+		{
+			this.BackColor = SystemColors.Control;
+		}
+
+		internal override void setVisualSelected()
+		{
+			this.BackColor = Color.Green;
+		}
+
+		private void label_update_Click(object sender, EventArgs e)
+		{
 			UpdateFormVisualizer.OpenUpdateForm(this);
 		}
 
-        private void checkBox_watched_Click(object sender, EventArgs e)
-        {
+		private void checkBox_watched_Click(object sender, EventArgs e)
+		{
 			checkBox_watched.Checked = !checkBox_watched.Checked;
 		}
-    }
+	}
 }

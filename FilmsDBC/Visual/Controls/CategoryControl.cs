@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.Controls
 {
-	public partial class CategoryControl : UserControl
+	public partial class CategoryControl : UserControl, IControls
 	{
 		private Category categoryInfo = null;
 
@@ -123,5 +123,32 @@ namespace FilmsDBC.Visual.Controls
 		{
 			UpdateFormVisualizer.OpenUpdateForm(this);
 		}
-	}
+
+        public bool SetFindedElement(string search)
+        {
+			bool export = false;
+			if (this.CategoryInfo.Name.Contains(search))
+			{
+				setVisualFinded();
+			}
+
+            foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
+            {
+				control.SetFindedElement(search);
+            }
+
+			return export;
+        }
+
+		private void setVisualFinded()
+        {
+			this.BackColor = Color.Blue;
+			this.flowLayoutPanel_SimpleControls.BackColor = SystemColors.Control;
+		}
+
+        public void SetDefaultVisualCondition()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

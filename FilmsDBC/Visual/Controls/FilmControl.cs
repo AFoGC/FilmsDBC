@@ -13,15 +13,8 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.Controls
 {
-	public partial class FilmControl : UserControl
+	public partial class FilmControl : AElementControl
 	{
-		private Film filmInfo = null;
-
-		public Film FilmInfo
-		{
-			get { return filmInfo; }
-		}
-
 		public FilmControl(Film film)
 		{
 			InitializeComponent();
@@ -30,8 +23,8 @@ namespace FilmsDBC.Visual.Controls
 			RefreshData();
 		}
 
-		public void RefreshData()
-        {
+		public override void RefreshData()
+		{
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
 			this.textBox_genre.Text = filmInfo.Genre.Name;
@@ -44,40 +37,55 @@ namespace FilmsDBC.Visual.Controls
 		}
 
 		private void refreshSourceLabel()
-        {
-            if (filmInfo.Sources.Count == 0)
-            {
+		{
+			if (filmInfo.Sources.Count == 0)
+			{
 				label_copyUrl.Text = "no url";
-            }
-            else
-            {
-                if (filmInfo.Sources[0].name != "")
-                {
+			}
+			else
+			{
+				if (filmInfo.Sources[0].name != "")
+				{
 					label_copyUrl.Text = "url: " + filmInfo.Sources[0].name;
 				}
-                else
-                {
+				else
+				{
 					label_copyUrl.Text = "copy url";
-                }
-            }
-        }
+				}
+			}
+		}
 
-        private void label_update_Click(object sender, EventArgs e)
-        {
+		private void label_update_Click(object sender, EventArgs e)
+		{
 			UpdateFormVisualizer.OpenUpdateForm(this);
-        }
+		}
 
-        private void checkBox_watched_Click(object sender, EventArgs e)
-        {
+		private void checkBox_watched_Click(object sender, EventArgs e)
+		{
 			checkBox_watched.Checked = !checkBox_watched.Checked;
 		}
 
-        private void label_copyUrl_Click(object sender, EventArgs e)
-        {
-            if (filmInfo.Sources.Count != 0)
-            {
+		private void label_copyUrl_Click(object sender, EventArgs e)
+		{
+			if (filmInfo.Sources.Count != 0)
+			{
 				Clipboard.SetText(filmInfo.Sources[0].sourceUrl);
-            }
-        }
-    }
+			}
+		}
+
+		internal override void setVisualFinded()
+		{
+			this.BackColor = Color.Blue;
+		}
+
+		internal override void setVisualSelected()
+		{
+			this.BackColor = Color.Green;
+		}
+
+		public override void SetDefaultVisualCondition()
+		{
+			this.BackColor = SystemColors.Control;
+		}
+	}
 }

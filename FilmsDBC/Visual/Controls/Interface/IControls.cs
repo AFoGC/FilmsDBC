@@ -8,7 +8,8 @@ namespace FilmsDBC.Visual.Controls
 {
     public interface IControls
     {
-        void SetSelectedElement();
-        void SetFindedElement();
+        bool SetFindedElement(String search);
+        void SetDefaultVisualCondition();
+        void RefreshData();
     }
 }
