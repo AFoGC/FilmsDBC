@@ -72,6 +72,8 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SourcesForm";
             this.Text = "SourcesForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SourcesForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SourcesForm_MouseMove);
             this.ResumeLayout(false);
 
         }

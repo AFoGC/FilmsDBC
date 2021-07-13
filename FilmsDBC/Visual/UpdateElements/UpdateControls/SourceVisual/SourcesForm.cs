@@ -16,9 +16,9 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
 	{
 		private Film film = null;
 		public Film FilmInfo
-        {
-            get { return film; }
-        }
+		{
+			get { return film; }
+		}
 		public SourcesForm()
 		{
 			InitializeComponent();
@@ -57,9 +57,9 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
 		}
 
 		public FlowLayoutPanel FlowLayoutPanel_sources
-        {
-            get { return flowLayoutPanel_sources; }
-        }
+		{
+			get { return flowLayoutPanel_sources; }
+		}
 
 		private void button_update_Click(object sender, EventArgs e)
 		{
@@ -74,6 +74,21 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
 		private void button_addElement_Click(object sender, EventArgs e)
 		{
 			addElement(new Source());
+		}
+
+		Point lastPoint = new Point();
+		private void SourcesForm_MouseDown(object sender, MouseEventArgs e)
+		{
+			lastPoint = new Point(e.X, e.Y);
+		}
+
+		private void SourcesForm_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (e.Button == System.Windows.Forms.MouseButtons.Left)
+			{
+				this.Left += e.X - lastPoint.X;
+				this.Top += e.Y - lastPoint.Y;
+			}
 		}
 	}
 }
