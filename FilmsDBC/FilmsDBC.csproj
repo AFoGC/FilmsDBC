@@ -107,6 +107,12 @@
     <Compile Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.Designer.cs">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\DateUpdateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControls\DateUpdateControl.Designer.cs">
+      <DependentUpon>DateUpdateControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.resx">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\DateUpdateControl.resx">
+      <DependentUpon>DateUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.resx">
       <DependentUpon>FilmUpdateControl.cs</DependentUpon>
