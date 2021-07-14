@@ -34,13 +34,13 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.comboBox_genre = new System.Windows.Forms.ComboBox();
             this.textBox_realiseYear = new System.Windows.Forms.TextBox();
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
-            this.textBox_startWatchDate = new System.Windows.Forms.TextBox();
             this.textBox_countOfWatchedSeries = new System.Windows.Forms.TextBox();
-            this.textBox_watchDate = new System.Windows.Forms.TextBox();
             this.textBox_totalSeries = new System.Windows.Forms.TextBox();
             this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.label_sources = new System.Windows.Forms.Label();
+            this.dateUpdateControl_watchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
+            this.dateUpdateControl_startWatchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -83,14 +83,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.checkBox_watched.TabIndex = 28;
             this.checkBox_watched.UseVisualStyleBackColor = true;
             // 
-            // textBox_startWatchDate
-            // 
-            this.textBox_startWatchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_startWatchDate.Location = new System.Drawing.Point(395, 0);
-            this.textBox_startWatchDate.Name = "textBox_startWatchDate";
-            this.textBox_startWatchDate.Size = new System.Drawing.Size(60, 20);
-            this.textBox_startWatchDate.TabIndex = 29;
-            // 
             // textBox_countOfWatchedSeries
             // 
             this.textBox_countOfWatchedSeries.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -98,14 +90,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_countOfWatchedSeries.Name = "textBox_countOfWatchedSeries";
             this.textBox_countOfWatchedSeries.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfWatchedSeries.TabIndex = 33;
-            // 
-            // textBox_watchDate
-            // 
-            this.textBox_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_watchDate.Location = new System.Drawing.Point(485, 0);
-            this.textBox_watchDate.Name = "textBox_watchDate";
-            this.textBox_watchDate.Size = new System.Drawing.Size(60, 20);
-            this.textBox_watchDate.TabIndex = 34;
             // 
             // textBox_totalSeries
             // 
@@ -141,17 +125,37 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
+            // dateUpdateControl_watchDate
+            // 
+            this.dateUpdateControl_watchDate.BackColor = System.Drawing.SystemColors.Window;
+            this.dateUpdateControl_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dateUpdateControl_watchDate.Date = new System.DateTime(((long)(0)));
+            this.dateUpdateControl_watchDate.Location = new System.Drawing.Point(485, 0);
+            this.dateUpdateControl_watchDate.Name = "dateUpdateControl_watchDate";
+            this.dateUpdateControl_watchDate.Size = new System.Drawing.Size(60, 20);
+            this.dateUpdateControl_watchDate.TabIndex = 39;
+            // 
+            // dateUpdateControl_startWatchDate
+            // 
+            this.dateUpdateControl_startWatchDate.BackColor = System.Drawing.SystemColors.Window;
+            this.dateUpdateControl_startWatchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dateUpdateControl_startWatchDate.Date = new System.DateTime(((long)(0)));
+            this.dateUpdateControl_startWatchDate.Location = new System.Drawing.Point(395, 0);
+            this.dateUpdateControl_startWatchDate.Name = "dateUpdateControl_startWatchDate";
+            this.dateUpdateControl_startWatchDate.Size = new System.Drawing.Size(60, 20);
+            this.dateUpdateControl_startWatchDate.TabIndex = 40;
+            // 
             // SerieUpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dateUpdateControl_startWatchDate);
+            this.Controls.Add(this.dateUpdateControl_watchDate);
             this.Controls.Add(this.label_sources);
             this.Controls.Add(this.textBox_countOfviews);
             this.Controls.Add(this.comboBox_mark);
             this.Controls.Add(this.textBox_totalSeries);
-            this.Controls.Add(this.textBox_watchDate);
             this.Controls.Add(this.textBox_countOfWatchedSeries);
-            this.Controls.Add(this.textBox_startWatchDate);
             this.Controls.Add(this.checkBox_watched);
             this.Controls.Add(this.textBox_realiseYear);
             this.Controls.Add(this.comboBox_genre);
@@ -170,13 +174,13 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal System.Windows.Forms.TextBox textBox_name;
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_watched;
-        internal System.Windows.Forms.TextBox textBox_startWatchDate;
         internal System.Windows.Forms.TextBox textBox_countOfWatchedSeries;
-        internal System.Windows.Forms.TextBox textBox_watchDate;
         internal System.Windows.Forms.TextBox textBox_totalSeries;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         internal System.Windows.Forms.ComboBox comboBox_genre;
         internal System.Windows.Forms.ComboBox comboBox_mark;
         private System.Windows.Forms.Label label_sources;
+        internal DateUpdateControl dateUpdateControl_watchDate;
+        internal DateUpdateControl dateUpdateControl_startWatchDate;
     }
 }

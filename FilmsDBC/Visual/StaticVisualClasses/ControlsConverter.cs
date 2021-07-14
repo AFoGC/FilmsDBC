@@ -62,7 +62,6 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 			film.Genre = GenreMethods.GetByName(control.comboBox_genre.Text);
 			film.RealiseYear = VisualHelper.TextToInt32(control.textBox_realiseYear.Text);
 			film.Watched = control.checkBox_watched.Checked;
-			//film.DateOfWatch = Film.readDate(control.textBox_watchDate.Text);   //Переделать с тремя текстбоксами для дня, месяца и года и добавть возможность автозаполнения.
 			film.Mark = VisualHelper.TextToMark(control.comboBox_mark.Text);
 			film.CountOfViews = VisualHelper.TextToInt32(control.textBox_countOfviews.Text);
 			film.DateOfWatch = control.dateUpdateControl_watchDate.Date;
@@ -74,14 +73,14 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 			film.Genre = GenreMethods.GetByName(control.comboBox_genre.Text);
 			film.RealiseYear = VisualHelper.TextToInt32(control.textBox_realiseYear.Text);
 			film.Watched = control.checkBox_watched.Checked;
-			film.DateOfWatch = Film.readDate(control.textBox_watchDate.Text);   //Переделать с тремя текстбоксами для дня, месяца и года и добавть возможность автозаполнения.
+			film.DateOfWatch = control.dateUpdateControl_watchDate.Date;
 			film.Mark = VisualHelper.TextToMark(control.comboBox_mark.Text);
 			film.CountOfViews = VisualHelper.TextToInt32(control.textBox_countOfviews.Text);
 		}
 
 		public static void SetSerieValues(SerieUpdateControl control, Serie serie)
 		{
-			serie.StartWatchDate = Serie.readDate(control.textBox_startWatchDate.Text);
+			serie.StartWatchDate = control.dateUpdateControl_startWatchDate.Date;
 			serie.CountOfWatchedSeries = VisualHelper.TextToInt32(control.textBox_countOfWatchedSeries.Text);
 			serie.TotalSeries = VisualHelper.TextToInt32(control.textBox_totalSeries.Text);
 		}
