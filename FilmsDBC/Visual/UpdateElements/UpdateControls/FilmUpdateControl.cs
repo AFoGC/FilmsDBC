@@ -37,7 +37,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			this.comboBox_genre.Text = film.Genre.Name;
 			this.textBox_realiseYear.Text = Film.formatToString(film.RealiseYear);
 			this.checkBox_watched.Checked = film.Watched;
-			this.textBox_watchDate.Text = Film.formatToString(film.DateOfWatch);
+			//this.textBox_watchDate.Text = Film.formatToString(film.DateOfWatch);
 			this.comboBox_mark.Text = VisualHelper.markToText(Film.formatToString(film.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(film.CountOfViews);
 			this.dateUpdateControl_watchDate.Date = film.DateOfWatch;

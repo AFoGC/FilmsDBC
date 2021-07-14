@@ -34,7 +34,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.comboBox_genre = new System.Windows.Forms.ComboBox();
             this.textBox_realiseYear = new System.Windows.Forms.TextBox();
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
-            this.textBox_watchDate = new System.Windows.Forms.TextBox();
             this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.label_sources = new System.Windows.Forms.Label();
@@ -81,14 +80,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.checkBox_watched.TabIndex = 27;
             this.checkBox_watched.UseVisualStyleBackColor = true;
             // 
-            // textBox_watchDate
-            // 
-            this.textBox_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_watchDate.Location = new System.Drawing.Point(695, 0);
-            this.textBox_watchDate.Name = "textBox_watchDate";
-            this.textBox_watchDate.Size = new System.Drawing.Size(60, 20);
-            this.textBox_watchDate.TabIndex = 28;
-            // 
             // comboBox_mark
             // 
             this.comboBox_mark.FormattingEnabled = true;
@@ -119,6 +110,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             // 
             this.dateUpdateControl_watchDate.BackColor = System.Drawing.SystemColors.Window;
             this.dateUpdateControl_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dateUpdateControl_watchDate.Date = new System.DateTime(((long)(0)));
             this.dateUpdateControl_watchDate.Location = new System.Drawing.Point(395, 0);
             this.dateUpdateControl_watchDate.Name = "dateUpdateControl_watchDate";
             this.dateUpdateControl_watchDate.Size = new System.Drawing.Size(60, 20);
@@ -132,7 +124,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.Controls.Add(this.label_sources);
             this.Controls.Add(this.textBox_countOfviews);
             this.Controls.Add(this.comboBox_mark);
-            this.Controls.Add(this.textBox_watchDate);
             this.Controls.Add(this.checkBox_watched);
             this.Controls.Add(this.textBox_realiseYear);
             this.Controls.Add(this.comboBox_genre);
@@ -149,7 +140,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal System.Windows.Forms.TextBox textBox_name;
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_watched;
-        internal System.Windows.Forms.TextBox textBox_watchDate;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         internal System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.ComboBox comboBox_genre;
