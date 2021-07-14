@@ -98,7 +98,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             // 
             // label_sources
             // 
-            this.label_sources.Location = new System.Drawing.Point(571, 0);
+            this.label_sources.Location = new System.Drawing.Point(570, 0);
             this.label_sources.Name = "label_sources";
             this.label_sources.Size = new System.Drawing.Size(100, 20);
             this.label_sources.TabIndex = 33;
