@@ -40,6 +40,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			this.textBox_watchDate.Text = Film.formatToString(film.DateOfWatch);
 			this.comboBox_mark.Text = VisualHelper.markToText(Film.formatToString(film.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(film.CountOfViews);
+			this.dateUpdateControl_watchDate.Date = film.DateOfWatch;
 		}
 
 		public void UpdateElement()

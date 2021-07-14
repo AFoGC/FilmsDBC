@@ -43,7 +43,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_day.Name = "textBox_day";
             this.textBox_day.Size = new System.Drawing.Size(15, 13);
             this.textBox_day.TabIndex = 0;
-            this.textBox_day.Text = "29";
             this.textBox_day.Click += new System.EventHandler(this.textBox_date_Click);
             // 
             // label1
@@ -63,7 +62,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_month.Name = "textBox_month";
             this.textBox_month.Size = new System.Drawing.Size(13, 13);
             this.textBox_month.TabIndex = 2;
-            this.textBox_month.Text = "12";
             this.textBox_month.Click += new System.EventHandler(this.textBox_date_Click);
             // 
             // label2
@@ -82,7 +80,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_year.Name = "textBox_year";
             this.textBox_year.Size = new System.Drawing.Size(24, 13);
             this.textBox_year.TabIndex = 4;
-            this.textBox_year.Text = "2000";
             this.textBox_year.Click += new System.EventHandler(this.textBox_date_Click);
             // 
             // DateUpdateControl

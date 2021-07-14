@@ -62,9 +62,10 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 			film.Genre = GenreMethods.GetByName(control.comboBox_genre.Text);
 			film.RealiseYear = VisualHelper.TextToInt32(control.textBox_realiseYear.Text);
 			film.Watched = control.checkBox_watched.Checked;
-			film.DateOfWatch = Film.readDate(control.textBox_watchDate.Text);   //Переделать с тремя текстбоксами для дня, месяца и года и добавть возможность автозаполнения.
+			//film.DateOfWatch = Film.readDate(control.textBox_watchDate.Text);   //Переделать с тремя текстбоксами для дня, месяца и года и добавть возможность автозаполнения.
 			film.Mark = VisualHelper.TextToMark(control.comboBox_mark.Text);
 			film.CountOfViews = VisualHelper.TextToInt32(control.textBox_countOfviews.Text);
+			film.DateOfWatch = control.dateUpdateControl_watchDate.Date;
 		}
 
 		public static void SetFilmValues(SerieUpdateControl control, Film film)

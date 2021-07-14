@@ -38,6 +38,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.label_sources = new System.Windows.Forms.Label();
+            this.dateUpdateControl_watchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -83,7 +84,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             // textBox_watchDate
             // 
             this.textBox_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_watchDate.Location = new System.Drawing.Point(395, 0);
+            this.textBox_watchDate.Location = new System.Drawing.Point(695, 0);
             this.textBox_watchDate.Name = "textBox_watchDate";
             this.textBox_watchDate.Size = new System.Drawing.Size(60, 20);
             this.textBox_watchDate.TabIndex = 28;
@@ -114,10 +115,20 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
+            // dateUpdateControl_watchDate
+            // 
+            this.dateUpdateControl_watchDate.BackColor = System.Drawing.SystemColors.Window;
+            this.dateUpdateControl_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dateUpdateControl_watchDate.Location = new System.Drawing.Point(395, 0);
+            this.dateUpdateControl_watchDate.Name = "dateUpdateControl_watchDate";
+            this.dateUpdateControl_watchDate.Size = new System.Drawing.Size(60, 20);
+            this.dateUpdateControl_watchDate.TabIndex = 34;
+            // 
             // FilmUpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dateUpdateControl_watchDate);
             this.Controls.Add(this.label_sources);
             this.Controls.Add(this.textBox_countOfviews);
             this.Controls.Add(this.comboBox_mark);
@@ -144,5 +155,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal System.Windows.Forms.ComboBox comboBox_genre;
         internal System.Windows.Forms.ComboBox comboBox_mark;
         private System.Windows.Forms.Label label_sources;
+        internal DateUpdateControl dateUpdateControl_watchDate;
     }
 }
