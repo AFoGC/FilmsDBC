@@ -166,7 +166,7 @@ namespace FilmsDBC.Visual.Forms
             // 
             this.flowLayoutPanel_requestsGenres.Location = new System.Drawing.Point(1198, 218);
             this.flowLayoutPanel_requestsGenres.Name = "flowLayoutPanel_requestsGenres";
-            this.flowLayoutPanel_requestsGenres.Size = new System.Drawing.Size(259, 100);
+            this.flowLayoutPanel_requestsGenres.Size = new System.Drawing.Size(260, 100);
             this.flowLayoutPanel_requestsGenres.TabIndex = 10;
             // 
             // MainForm

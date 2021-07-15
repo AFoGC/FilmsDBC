@@ -17,30 +17,24 @@ namespace FilmsDBC.Visual.Forms
 {
 	public partial class MainForm : Form
 	{
+
+		TableCollection tables = MainInformation.tableCollection;
 		public MainForm()
 		{
 			InitializeComponent();
 		}
-
-		private Color searchColor = Color.Blue;
-		private Color defaultColor = SystemColors.Control;
-		private Color selectColor = Color.Green;
-		public Color SelectColor { get { return selectColor; } }
-
+		
 		private AElementControl controlInBuffer = null;
 		public AElementControl ControlInBuffer
 		{
 			get { return controlInBuffer; }
-			set 
-			{
-				controlInBuffer = value;
-			}
+			set { controlInBuffer = value; }
 		}
 
 		public void loadFilmTable()
 		{
 			flowLayoutPanel_main.Controls.Clear();
-			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
+			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
 			{
 				flowLayoutPanel_main.Controls.Add(new FilmControl(film));
 			}
@@ -49,7 +43,7 @@ namespace FilmsDBC.Visual.Forms
 		public void loadSerieTable()
 		{
 			flowLayoutPanel_main.Controls.Clear();
-			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
+			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
 			{
 				if (film.Genre.IsSerialGenre)
 				{
@@ -58,16 +52,25 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 
+		public void loadGenres()
+		{
+			flowLayoutPanel_requestsGenres.Controls.Clear();
+			foreach (Genre genre in tables.GetTable(typeof(Genre)).Cells)
+			{
+				flowLayoutPanel_requestsGenres.Controls.Add(new GenreRequestControl(genre));
+			}
+		}
+
 		public void loadCategories()
 		{
 			flowLayoutPanel_main.Controls.Clear();
 
-			foreach (Category category in MainInformation.tableCollection.GetTable(typeof(Category)).Cells)
+			foreach (Category category in tables.GetTable(typeof(Category)).Cells)
 			{
 				flowLayoutPanel_main.Controls.Add(new CategoryControl(category));
 			}
 
-			foreach (Film film in MainInformation.tableCollection.GetTable(typeof(Film)).Cells)
+			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
 			{
 				if (film.FranshiseId == 0)
 				{
@@ -124,7 +127,7 @@ namespace FilmsDBC.Visual.Forms
 		{
 			if (controlsCondition == 1)
 			{
-				Table categoryTable = MainInformation.tableCollection.GetTable(typeof(Category));
+				Table categoryTable = tables.GetTable(typeof(Category));
 				categoryTable.addElement();
 				CategoryControl categoryControl = new CategoryControl((Category)categoryTable.GetLastElement);
 				flowLayoutPanel_main.Controls.Add(categoryControl);
@@ -134,8 +137,8 @@ namespace FilmsDBC.Visual.Forms
 
 		private void button_addFilm_Click(object sender, EventArgs e)
 		{
-			MainInformation.tableCollection.GetTable(typeof(Film)).addElement();
-			Film film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetLastElement;
+			tables.GetTable(typeof(Film)).addElement();
+			Film film = (Film)tables.GetTable(typeof(Film)).GetLastElement;
 			switch (controlsCondition)
 			{
 				case 1:
@@ -145,7 +148,7 @@ namespace FilmsDBC.Visual.Forms
 					flowLayoutPanel_main.Controls.Add(new FilmControl(film));
 					break;
 				case 3:
-					film.Genre = (Genre)MainInformation.tableCollection.GetTable(typeof(Genre)).GetElement(2);
+					film.Genre = (Genre)tables.GetTable(typeof(Genre)).GetElement(2);
 					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
 					break;
 				default:

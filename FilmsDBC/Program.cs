@@ -20,6 +20,7 @@ namespace FilmsDBC
 			Application.SetCompatibleTextRenderingDefault(false);
 			MainInformation.LoadTables();
 			MainInformation.MainForm.loadCategories();
+			MainInformation.MainForm.loadGenres();
 			Application.Run(MainInformation.MainForm);
 		}
 	}
