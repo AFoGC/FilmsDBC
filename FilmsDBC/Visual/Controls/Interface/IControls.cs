@@ -13,5 +13,6 @@ namespace FilmsDBC.Visual.Controls
         void SetDefaultVisualCondition();
         void RefreshData();
         bool HasSelectedGenre(Genre[] selectedGenres);
+        bool HasWatchedProperty(bool isWached);
     }
 }

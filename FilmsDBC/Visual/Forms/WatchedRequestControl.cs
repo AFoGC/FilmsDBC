@@ -18,7 +18,7 @@ namespace FilmsDBC.Visual.Forms
 		}
 
 		private bool watchedIncluded = true;
-		public bool WatchedIncluded
+		public bool IsWatched
 		{
 			get { return watchedIncluded; }
 			set
@@ -35,7 +35,7 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 		private bool unwatchedIncluded = true;
-		public bool UnwatchedIncluded
+		public bool IsUnwatched
 		{
 			get { return unwatchedIncluded; }
 			set
@@ -52,15 +52,30 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 
+		public bool IsAllIncluded
+        {
+            get
+            {
+                if (watchedIncluded && unwatchedIncluded)
+                {
+					return true;
+                }
+                else
+                {
+					return false;
+				}
+            }
+        }
+
 
 		private void label_requestWatched_Click(object sender, EventArgs e)
 		{
-			WatchedIncluded = !watchedIncluded;
+			IsWatched = !watchedIncluded;
 		}
 
 		private void label_requestUnwatched_Click(object sender, EventArgs e)
 		{
-			UnwatchedIncluded = !unwatchedIncluded;
+			IsUnwatched = !unwatchedIncluded;
 		}
 	}
 }

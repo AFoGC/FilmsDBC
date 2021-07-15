@@ -42,7 +42,7 @@ namespace FilmsDBC.Visual.Forms
 		}
 
 		private void clearControls()
-        {
+		{
 			flowLayoutPanel_main.Controls.Clear();
 			tableControls.Clear();
 		}
@@ -154,48 +154,61 @@ namespace FilmsDBC.Visual.Forms
 		{
 			tables.GetTable(typeof(Film)).addElement();
 			Film film = (Film)tables.GetTable(typeof(Film)).GetLastElement;
+			IControls control = new SimpleControl(film);
 			switch (controlsCondition)
 			{
 				case 1:
-					flowLayoutPanel_main.Controls.Add(new SimpleControl(film));
 					break;
 				case 2:
-					flowLayoutPanel_main.Controls.Add(new FilmControl(film));
+					control = new FilmControl(film);
 					break;
 				case 3:
 					film.Genre = (Genre)tables.GetTable(typeof(Genre)).GetElement(2);
-					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
+					control = ControlsConverter.ToSerieControl(film);
 					break;
 				default:
-					break;
+					return;
 			}
+
+			tableControls.Add((UserControl)control);
+			flowLayoutPanel_main.Controls.Add((UserControl)control);
 		}
 
-        private void button_filter_Click(object sender, EventArgs e)
-        {
+		private void button_filter_Click(object sender, EventArgs e)
+		{
 			flowLayoutPanel_main.Controls.Clear();
 			Genre[] genres = getSelectedGenres();
 
-            foreach (IControls control in tableControls)
-            {
-                if (control.HasSelectedGenre(genres))
+			foreach (IControls control in tableControls)
+			{
+				if (watchedRequestControl.IsAllIncluded)
+				{
+					if (control.HasSelectedGenre(genres))
+					{
+						flowLayoutPanel_main.Controls.Add((UserControl)control);
+					}
+				}
+                else
                 {
-					flowLayoutPanel_main.Controls.Add((UserControl)control);
-                }
-            }
-        }
+					if (control.HasSelectedGenre(genres) && control.HasWatchedProperty(watchedRequestControl.IsWatched))
+					{
+						flowLayoutPanel_main.Controls.Add((UserControl)control);
+					}
+				}
+			}
+		}
 
 		private Genre[] getSelectedGenres()
-        {
+		{
 			List<Genre> genres = new List<Genre>();
-            foreach (GenreRequestControl requestControl in flowLayoutPanel_requestsGenres.Controls)
-            {
-                if (requestControl.Included)
-                {
+			foreach (GenreRequestControl requestControl in flowLayoutPanel_requestsGenres.Controls)
+			{
+				if (requestControl.Included)
+				{
 					genres.Add(requestControl.Genre);
-                }
-            }
+				}
+			}
 			return genres.ToArray();
-        }
-    }
+		}
+	}
 }

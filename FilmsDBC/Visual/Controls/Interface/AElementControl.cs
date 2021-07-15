@@ -45,7 +45,7 @@ namespace FilmsDBC.Visual.Controls
 		internal abstract void setVisualFinded();
 		public abstract void RefreshData();
 		public bool HasSelectedGenre(Genre[] selectedGenres)
-        {
+		{
 			foreach (Genre genre in selectedGenres)
 			{
 				if (genre == filmInfo.Genre)
@@ -54,6 +54,18 @@ namespace FilmsDBC.Visual.Controls
 				}
 			}
 			return false;
+		}
+
+		public bool HasWatchedProperty(bool isWached)
+		{
+            if (isWached == FilmInfo.Watched)
+            {
+				return true;
+            }
+            else
+            {
+				return false;
+			}
 		}
 	}
 }

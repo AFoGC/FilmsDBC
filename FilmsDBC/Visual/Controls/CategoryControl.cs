@@ -160,10 +160,23 @@ namespace FilmsDBC.Visual.Controls
 		{
 			foreach (SimpleControl control in flowLayoutPanel_SimpleControls.Controls)
 			{
-                if (control.HasSelectedGenre(selectedGenres))
-                {
+				if (control.HasSelectedGenre(selectedGenres))
+				{
 					return true;
-                }
+				}
+			}
+
+			return false;
+		}
+
+		public bool HasWatchedProperty(bool isWached)
+		{
+			foreach (SimpleControl control in flowLayoutPanel_SimpleControls.Controls)
+			{
+				if (control.HasWatchedProperty(isWached))
+				{
+					return true;
+				}
 			}
 
 			return false;
