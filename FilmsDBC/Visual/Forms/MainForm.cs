@@ -17,8 +17,9 @@ namespace FilmsDBC.Visual.Forms
 {
 	public partial class MainForm : Form
 	{
-
 		TableCollection tables = MainInformation.tableCollection;
+		List<UserControl> tableControls = new List<UserControl>();
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -31,27 +32,6 @@ namespace FilmsDBC.Visual.Forms
 			set { controlInBuffer = value; }
 		}
 
-		public void loadFilmTable()
-		{
-			flowLayoutPanel_main.Controls.Clear();
-			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
-			{
-				flowLayoutPanel_main.Controls.Add(new FilmControl(film));
-			}
-		}
-
-		public void loadSerieTable()
-		{
-			flowLayoutPanel_main.Controls.Clear();
-			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
-			{
-				if (film.Genre.IsSerialGenre)
-				{
-					flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
-				}
-			}
-		}
-
 		public void loadGenres()
 		{
 			flowLayoutPanel_requestsGenres.Controls.Clear();
@@ -61,22 +41,57 @@ namespace FilmsDBC.Visual.Forms
 			}
 		}
 
+		private void clearControls()
+        {
+			flowLayoutPanel_main.Controls.Clear();
+			tableControls.Clear();
+		}
+
+		public void loadFilmTable()
+		{
+			clearControls();
+			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
+			{
+				//flowLayoutPanel_main.Controls.Add(new FilmControl(film));
+				tableControls.Add(new FilmControl(film));
+			}
+			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
+		}
+
+		public void loadSerieTable()
+		{
+			clearControls();
+			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
+			{
+				if (film.Genre.IsSerialGenre)
+				{
+					//flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
+					tableControls.Add(ControlsConverter.ToSerieControl(film));
+				}
+			}
+			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
+		}
+
 		public void loadCategories()
 		{
-			flowLayoutPanel_main.Controls.Clear();
+			clearControls();
 
 			foreach (Category category in tables.GetTable(typeof(Category)).Cells)
 			{
-				flowLayoutPanel_main.Controls.Add(new CategoryControl(category));
+				//flowLayoutPanel_main.Controls.Add(new CategoryControl(category));
+				tableControls.Add(new CategoryControl(category));
 			}
 
 			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
 			{
 				if (film.FranshiseId == 0)
 				{
-					flowLayoutPanel_main.Controls.Add(new SimpleControl(film));
+					//flowLayoutPanel_main.Controls.Add(new SimpleControl(film));
+					tableControls.Add(new SimpleControl(film));
 				}
 			}
+
+			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
 		}
 
 		private int controlsCondition = 1;
@@ -155,5 +170,32 @@ namespace FilmsDBC.Visual.Forms
 					break;
 			}
 		}
-	}
+
+        private void button_filter_Click(object sender, EventArgs e)
+        {
+			flowLayoutPanel_main.Controls.Clear();
+			Genre[] genres = getSelectedGenres();
+
+            foreach (IControls control in tableControls)
+            {
+                if (control.HasSelectedGenre(genres))
+                {
+					flowLayoutPanel_main.Controls.Add((UserControl)control);
+                }
+            }
+        }
+
+		private Genre[] getSelectedGenres()
+        {
+			List<Genre> genres = new List<Genre>();
+            foreach (GenreRequestControl requestControl in flowLayoutPanel_requestsGenres.Controls)
+            {
+                if (requestControl.Included)
+                {
+					genres.Add(requestControl.Genre);
+                }
+            }
+			return genres.ToArray();
+        }
+    }
 }

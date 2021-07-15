@@ -67,14 +67,14 @@ namespace FilmsDBC.Visual.Controls
 				flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
 			}
 
-            foreach (SimpleControl simpleControl in flowLayoutPanel_SimpleControls.Controls)
-            {
+			foreach (SimpleControl simpleControl in flowLayoutPanel_SimpleControls.Controls)
+			{
 				flowLayoutPanel_SimpleControls.Controls.SetChildIndex(simpleControl, simpleControl.FilmInfo.FranshiseListIndex);
-            }
+			}
 		}
 
 		public void AddSimpleCotrol(Film film)
-        {
+		{
 			Size controlSize = this.Size;
 			Size panelSize = this.flowLayoutPanel_SimpleControls.Size;
 			panelSize.Height += 20;
@@ -85,12 +85,12 @@ namespace FilmsDBC.Visual.Controls
 			this.flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
 
 			film.FranshiseListIndex = Convert.ToSByte(flowLayoutPanel_SimpleControls.Controls.Count - 1);
-        }
+		}
 
 		public bool RemoveFilmFromCategory(SimpleControl simpleControl)
-        {
-            if (simpleControl.FilmInfo.FranshiseId == this.categoryInfo.ID)
-            {
+		{
+			if (simpleControl.FilmInfo.FranshiseId == this.categoryInfo.ID)
+			{
 				flowLayoutPanel_SimpleControls.Controls.Remove(simpleControl);
 
 				Size controlSize = this.Size;
@@ -103,20 +103,20 @@ namespace FilmsDBC.Visual.Controls
 				simpleControl.FilmInfo.FranshiseId = 0;
 				simpleControl.FilmInfo.FranshiseListIndex = 0;
 
-                foreach (Film film in categoryInfo.Films)
-                {
-                    if (simpleControl.FilmInfo.FranshiseListIndex < film.FranshiseListIndex)
-                    {
+				foreach (Film film in categoryInfo.Films)
+				{
+					if (simpleControl.FilmInfo.FranshiseListIndex < film.FranshiseListIndex)
+					{
 						--film.FranshiseListIndex;
-                    }
-                }
+					}
+				}
 
 				return categoryInfo.Films.Remove(simpleControl.FilmInfo);
 			}
-            else
-            {
+			else
+			{
 				return false;
-            }
+			}
 		}
 
 		private void label_update_Click(object sender, EventArgs e)
@@ -124,36 +124,49 @@ namespace FilmsDBC.Visual.Controls
 			UpdateFormVisualizer.OpenUpdateForm(this);
 		}
 
-        public bool SetFindedElement(string search)
-        {
+		public bool SetFindedElement(string search)
+		{
 			bool export = false;
 			if (this.CategoryInfo.Name.Contains(search))
 			{
 				setVisualFinded();
 			}
 
-            foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
-            {
+			foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
+			{
 				control.SetFindedElement(search);
-            }
+			}
 
 			return export;
-        }
+		}
 
 		private void setVisualFinded()
-        {
+		{
 			this.BackColor = Color.Blue;
 			this.flowLayoutPanel_SimpleControls.BackColor = SystemColors.Control;
 		}
 
-        public void SetDefaultVisualCondition()
-        {
+		public void SetDefaultVisualCondition()
+		{
 			this.BackColor = SystemColors.Control;
 
-            foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
-            {
+			foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
+			{
 				control.SetDefaultVisualCondition();
-            }
+			}
 		}
-    }
+
+		public bool HasSelectedGenre(Genre[] selectedGenres)
+		{
+			foreach (SimpleControl control in flowLayoutPanel_SimpleControls.Controls)
+			{
+                if (control.HasSelectedGenre(selectedGenres))
+                {
+					return true;
+                }
+			}
+
+			return false;
+		}
+	}
 }

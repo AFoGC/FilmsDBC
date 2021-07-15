@@ -19,7 +19,7 @@ namespace FilmsDBC.Visual.Controls
 		}
 
 		internal void SetSelectedElement(AElementControl controlInBuffer)
-        {
+		{
 			if (controlInBuffer != null)
 			{
 				controlInBuffer.SetDefaultVisualCondition();
@@ -30,7 +30,7 @@ namespace FilmsDBC.Visual.Controls
 		}
 
 		public bool SetFindedElement(String searchLine)
-        {
+		{
 			if (this.FilmInfo.Name.Contains(searchLine))
 			{
 				setVisualFinded();
@@ -44,5 +44,16 @@ namespace FilmsDBC.Visual.Controls
 		internal abstract void setVisualSelected();
 		internal abstract void setVisualFinded();
 		public abstract void RefreshData();
-    }
+		public bool HasSelectedGenre(Genre[] selectedGenres)
+        {
+			foreach (Genre genre in selectedGenres)
+			{
+				if (genre == filmInfo.Genre)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+	}
 }

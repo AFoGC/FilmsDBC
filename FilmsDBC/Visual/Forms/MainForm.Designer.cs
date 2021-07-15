@@ -39,9 +39,10 @@ namespace FilmsDBC.Visual.Forms
             this.button_addCategory = new System.Windows.Forms.Button();
             this.button_addFilm = new System.Windows.Forms.Button();
             this.panel_requests = new System.Windows.Forms.Panel();
-            this.label_requestWatched = new System.Windows.Forms.Label();
             this.label_requestUnwatched = new System.Windows.Forms.Label();
+            this.label_requestWatched = new System.Windows.Forms.Label();
             this.flowLayoutPanel_requestsGenres = new System.Windows.Forms.FlowLayoutPanel();
+            this.button_filter = new System.Windows.Forms.Button();
             this.panel_requests.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,20 +138,10 @@ namespace FilmsDBC.Visual.Forms
             // 
             this.panel_requests.Controls.Add(this.label_requestUnwatched);
             this.panel_requests.Controls.Add(this.label_requestWatched);
-            this.panel_requests.Location = new System.Drawing.Point(1198, 192);
+            this.panel_requests.Location = new System.Drawing.Point(1198, 242);
             this.panel_requests.Name = "panel_requests";
             this.panel_requests.Size = new System.Drawing.Size(259, 20);
             this.panel_requests.TabIndex = 9;
-            // 
-            // label_requestWatched
-            // 
-            this.label_requestWatched.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label_requestWatched.Location = new System.Drawing.Point(0, 0);
-            this.label_requestWatched.Name = "label_requestWatched";
-            this.label_requestWatched.Size = new System.Drawing.Size(129, 20);
-            this.label_requestWatched.TabIndex = 10;
-            this.label_requestWatched.Text = "Watched";
-            this.label_requestWatched.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_requestUnwatched
             // 
@@ -162,18 +153,39 @@ namespace FilmsDBC.Visual.Forms
             this.label_requestUnwatched.Text = "Unwatched";
             this.label_requestUnwatched.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label_requestWatched
+            // 
+            this.label_requestWatched.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label_requestWatched.Location = new System.Drawing.Point(0, 0);
+            this.label_requestWatched.Name = "label_requestWatched";
+            this.label_requestWatched.Size = new System.Drawing.Size(129, 20);
+            this.label_requestWatched.TabIndex = 10;
+            this.label_requestWatched.Text = "Watched";
+            this.label_requestWatched.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // flowLayoutPanel_requestsGenres
             // 
-            this.flowLayoutPanel_requestsGenres.Location = new System.Drawing.Point(1198, 218);
+            this.flowLayoutPanel_requestsGenres.Location = new System.Drawing.Point(1198, 268);
             this.flowLayoutPanel_requestsGenres.Name = "flowLayoutPanel_requestsGenres";
             this.flowLayoutPanel_requestsGenres.Size = new System.Drawing.Size(260, 100);
             this.flowLayoutPanel_requestsGenres.TabIndex = 10;
+            // 
+            // button_filter
+            // 
+            this.button_filter.Location = new System.Drawing.Point(1346, 213);
+            this.button_filter.Name = "button_filter";
+            this.button_filter.Size = new System.Drawing.Size(111, 23);
+            this.button_filter.TabIndex = 11;
+            this.button_filter.Text = "Search";
+            this.button_filter.UseVisualStyleBackColor = true;
+            this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1469, 608);
+            this.Controls.Add(this.button_filter);
             this.Controls.Add(this.flowLayoutPanel_requestsGenres);
             this.Controls.Add(this.panel_requests);
             this.Controls.Add(this.button_addFilm);
@@ -207,5 +219,6 @@ namespace FilmsDBC.Visual.Forms
         private System.Windows.Forms.Label label_requestUnwatched;
         private System.Windows.Forms.Label label_requestWatched;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_requestsGenres;
+        private System.Windows.Forms.Button button_filter;
     }
 }

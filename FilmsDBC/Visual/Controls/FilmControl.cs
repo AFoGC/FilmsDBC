@@ -37,10 +37,10 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
 			this.refreshSourceLabel();
 
-            if (simpleControl != null)
-            {
+			if (simpleControl != null)
+			{
 				simpleControl.RefreshData();
-            }
+			}
 		}
 
 		private void refreshSourceLabel()

@@ -98,6 +98,12 @@
     <Compile Include="Visual\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Forms\WatchedRequestControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Forms\WatchedRequestControl.Designer.cs">
+      <DependentUpon>WatchedRequestControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\MoreInfo\MoreInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Forms\WatchedRequestControl.resx">
+      <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MoreInfo\MoreInfoForm.resx">
       <DependentUpon>MoreInfoForm.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmsDBC.CinemaDataTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace FilmsDBC.Visual.Controls
         bool SetFindedElement(String search);
         void SetDefaultVisualCondition();
         void RefreshData();
+        bool HasSelectedGenre(Genre[] selectedGenres);
     }
 }

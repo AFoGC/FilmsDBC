@@ -18,10 +18,22 @@ namespace FilmsDBC.Visual.Forms
 		{
 			get { return genre; }
 		}
-		private bool clicked = false;
-		public bool Clicked
+		private bool included = true;
+		public bool Included
 		{
-			get { return clicked; }
+			get { return included; }
+            set
+            {
+                if (value)
+                {
+					this.label_genre.BackColor = SystemColors.ControlDark;
+				}
+                else
+                {
+					this.label_genre.BackColor = SystemColors.Control;
+				}
+				included = value;
+            }
 		}
 		public GenreRequestControl(Genre genre)
 		{
@@ -32,15 +44,7 @@ namespace FilmsDBC.Visual.Forms
 
         private void label_genre_Click(object sender, EventArgs e)
         {
-            if (clicked)
-            {
-				this.label_genre.BackColor = SystemColors.ControlDark;
-			}
-            else
-            {
-				this.label_genre.BackColor = SystemColors.Control;
-			}
-			clicked = !clicked;
+			Included = !included;
         }
     }
 }

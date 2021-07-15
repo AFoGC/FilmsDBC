@@ -48,10 +48,10 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_countOfWatchedSeries.Text = Serie.formatToString(serieInfo.CountOfWatchedSeries);
 			this.textBox_totalSeries.Text = Serie.formatToString(serieInfo.TotalSeries);
 
-            if (simpleControl != null)
-            {
+			if (simpleControl != null)
+			{
 				simpleControl.RefreshData();
-            }
+			}
 		}
 
 		internal override void setVisualFinded()
