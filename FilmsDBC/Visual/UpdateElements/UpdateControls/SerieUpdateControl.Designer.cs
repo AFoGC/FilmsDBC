@@ -41,6 +41,8 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.label_sources = new System.Windows.Forms.Label();
             this.dateUpdateControl_watchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
             this.dateUpdateControl_startWatchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
+            this.label_comment = new System.Windows.Forms.Label();
+            this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -117,7 +119,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             // 
             // label_sources
             // 
-            this.label_sources.Location = new System.Drawing.Point(690, 0);
+            this.label_sources.Location = new System.Drawing.Point(770, 0);
             this.label_sources.Name = "label_sources";
             this.label_sources.Size = new System.Drawing.Size(100, 20);
             this.label_sources.TabIndex = 38;
@@ -145,10 +147,29 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.dateUpdateControl_startWatchDate.Size = new System.Drawing.Size(60, 20);
             this.dateUpdateControl_startWatchDate.TabIndex = 40;
             // 
+            // label_comment
+            // 
+            this.label_comment.Location = new System.Drawing.Point(670, 0);
+            this.label_comment.Name = "label_comment";
+            this.label_comment.Size = new System.Drawing.Size(100, 20);
+            this.label_comment.TabIndex = 41;
+            this.label_comment.Text = "comment";
+            this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_comment.Click += new System.EventHandler(this.label_comment_Click);
+            // 
+            // textBox_comment
+            // 
+            this.textBox_comment.Location = new System.Drawing.Point(30, 20);
+            this.textBox_comment.Name = "textBox_comment";
+            this.textBox_comment.Size = new System.Drawing.Size(620, 20);
+            this.textBox_comment.TabIndex = 42;
+            // 
             // SerieUpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox_comment);
+            this.Controls.Add(this.label_comment);
             this.Controls.Add(this.dateUpdateControl_startWatchDate);
             this.Controls.Add(this.dateUpdateControl_watchDate);
             this.Controls.Add(this.label_sources);
@@ -182,5 +203,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         private System.Windows.Forms.Label label_sources;
         internal DateUpdateControl dateUpdateControl_watchDate;
         internal DateUpdateControl dateUpdateControl_startWatchDate;
+        private System.Windows.Forms.Label label_comment;
+        internal System.Windows.Forms.TextBox textBox_comment;
     }
 }

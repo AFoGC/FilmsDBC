@@ -73,6 +73,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			this.dateUpdateControl_watchDate.Date = film.DateOfWatch;
 			this.comboBox_mark.Text = VisualHelper.markToText(Film.formatToString(film.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(film.CountOfViews);
+			this.textBox_comment.Text = film.Comment;
 
 			this.dateUpdateControl_startWatchDate.Date = serie.StartWatchDate;
 			this.textBox_countOfWatchedSeries.Text = Serie.formatToString(serie.CountOfWatchedSeries);
@@ -90,5 +91,17 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 		{
 			SourcesVisualizer.OpenSourceForm(this.film);
 		}
-	}
+
+		private bool commentIsOpen = false;
+		private void label_comment_Click(object sender, EventArgs e)
+        {
+			Size controlSize = this.Size;
+
+			if (commentIsOpen) { controlSize.Height -= 20; }
+			else { controlSize.Height += 20; }
+
+			this.Size = controlSize;
+			commentIsOpen = !commentIsOpen;
+		}
+    }
 }

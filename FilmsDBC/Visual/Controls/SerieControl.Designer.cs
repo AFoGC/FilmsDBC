@@ -43,6 +43,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_update = new System.Windows.Forms.Label();
             this.label_copyUrl = new System.Windows.Forms.Label();
             this.label_comment = new System.Windows.Forms.Label();
+            this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -172,11 +173,21 @@ namespace FilmsDBC.Visual.Controls
             this.label_comment.TabIndex = 37;
             this.label_comment.Text = "comment";
             this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_comment.Click += new System.EventHandler(this.label_comment_Click);
+            // 
+            // textBox_comment
+            // 
+            this.textBox_comment.Location = new System.Drawing.Point(30, 20);
+            this.textBox_comment.Name = "textBox_comment";
+            this.textBox_comment.ReadOnly = true;
+            this.textBox_comment.Size = new System.Drawing.Size(620, 20);
+            this.textBox_comment.TabIndex = 40;
             // 
             // SerieControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox_comment);
             this.Controls.Add(this.label_update);
             this.Controls.Add(this.label_copyUrl);
             this.Controls.Add(this.label_comment);
@@ -215,5 +226,6 @@ namespace FilmsDBC.Visual.Controls
         private System.Windows.Forms.Label label_update;
         private System.Windows.Forms.Label label_copyUrl;
         private System.Windows.Forms.Label label_comment;
+        private System.Windows.Forms.TextBox textBox_comment;
     }
 }

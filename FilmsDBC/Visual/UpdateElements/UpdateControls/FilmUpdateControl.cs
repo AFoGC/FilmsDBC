@@ -37,10 +37,10 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			this.comboBox_genre.Text = film.Genre.Name;
 			this.textBox_realiseYear.Text = Film.formatToString(film.RealiseYear);
 			this.checkBox_watched.Checked = film.Watched;
-			//this.textBox_watchDate.Text = Film.formatToString(film.DateOfWatch);
 			this.comboBox_mark.Text = VisualHelper.markToText(Film.formatToString(film.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(film.CountOfViews);
 			this.dateUpdateControl_watchDate.Date = film.DateOfWatch;
+			this.textBox_comment.Text = film.Comment;
 		}
 
 		public void UpdateElement()
@@ -52,6 +52,18 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         private void label_sources_Click(object sender, EventArgs e)
         {
 			SourcesVisualizer.OpenSourceForm(this.film);
+		}
+
+		private bool commentIsOpen = false;
+		private void label_comment_Click(object sender, EventArgs e)
+        {
+			Size controlSize = this.Size;
+
+			if (commentIsOpen) { controlSize.Height -= 20; }
+			else { controlSize.Height += 20; }
+
+			this.Size = controlSize;
+			commentIsOpen = !commentIsOpen;
 		}
     }
 }

@@ -24,14 +24,10 @@ namespace FilmsDBC
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 
-            if (!IsAssociated())
-            {
-
-            }
-            else
+            if (IsAssociated())
             {
 				Associate();
-            }
+			}
 
             if (args.Length != 0)
             {

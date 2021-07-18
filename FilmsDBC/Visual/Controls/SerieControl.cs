@@ -83,5 +83,18 @@ namespace FilmsDBC.Visual.Controls
 		{
 			SetSelectedElement(MainInformation.MainForm.ControlInBuffer);
 		}
+
+		private bool commentIsOpen = false;
+		private void label_comment_Click(object sender, EventArgs e)
+		{
+			textBox_comment.Text = filmInfo.Comment;
+			Size controlSize = this.Size;
+
+			if (commentIsOpen) { controlSize.Height -= 20; }
+			else { controlSize.Height += 20; }
+
+			this.Size = controlSize;
+			commentIsOpen = !commentIsOpen;
+		}
 	}
 }

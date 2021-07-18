@@ -65,6 +65,7 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 			film.Mark = VisualHelper.TextToMark(control.comboBox_mark.Text);
 			film.CountOfViews = VisualHelper.TextToInt32(control.textBox_countOfviews.Text);
 			film.DateOfWatch = control.dateUpdateControl_watchDate.Date;
+			film.Comment = control.textBox_comment.Text;
 		}
 
 		public static void SetFilmValues(SerieUpdateControl control, Film film)
@@ -76,6 +77,7 @@ namespace FilmsDBC.Visual.StaticVisualClasses
 			film.DateOfWatch = control.dateUpdateControl_watchDate.Date;
 			film.Mark = VisualHelper.TextToMark(control.comboBox_mark.Text);
 			film.CountOfViews = VisualHelper.TextToInt32(control.textBox_countOfviews.Text);
+			film.Comment = control.textBox_comment.Text;
 		}
 
 		public static void SetSerieValues(SerieUpdateControl control, Serie serie)

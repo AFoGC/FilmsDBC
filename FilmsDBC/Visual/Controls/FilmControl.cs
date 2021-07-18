@@ -35,6 +35,7 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_watchDate.Text = Film.formatToString(filmInfo.DateOfWatch);
 			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
 			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
+			this.textBox_comment.Text = filmInfo.Comment;
 			this.refreshSourceLabel();
 
 			if (simpleControl != null)
@@ -98,6 +99,19 @@ namespace FilmsDBC.Visual.Controls
 		private void textBox_id_Click(object sender, EventArgs e)
 		{
 			SetSelectedElement(MainInformation.MainForm.ControlInBuffer);
+		}
+
+		private bool commentIsOpen = false;
+		private void label_comment_Click(object sender, EventArgs e)
+		{
+			textBox_comment.Text = filmInfo.Comment;
+			Size controlSize = this.Size;
+
+			if (commentIsOpen) { controlSize.Height -= 20; }
+			else { controlSize.Height += 20; }
+
+			this.Size = controlSize;
+			commentIsOpen = !commentIsOpen;
 		}
 	}
 }

@@ -40,6 +40,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_copyUrl = new System.Windows.Forms.Label();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.label_update = new System.Windows.Forms.Label();
+            this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -114,6 +115,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_comment.TabIndex = 29;
             this.label_comment.Text = "comment";
             this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_comment.Click += new System.EventHandler(this.label_comment_Click);
             // 
             // label_copyUrl
             // 
@@ -144,10 +146,19 @@ namespace FilmsDBC.Visual.Controls
             this.label_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_update.Click += new System.EventHandler(this.label_update_Click);
             // 
+            // textBox_comment
+            // 
+            this.textBox_comment.Location = new System.Drawing.Point(30, 20);
+            this.textBox_comment.Name = "textBox_comment";
+            this.textBox_comment.ReadOnly = true;
+            this.textBox_comment.Size = new System.Drawing.Size(500, 20);
+            this.textBox_comment.TabIndex = 33;
+            // 
             // FilmControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox_comment);
             this.Controls.Add(this.label_update);
             this.Controls.Add(this.textBox_countOfviews);
             this.Controls.Add(this.label_copyUrl);
@@ -180,5 +191,6 @@ namespace FilmsDBC.Visual.Controls
         private System.Windows.Forms.Label label_copyUrl;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         private System.Windows.Forms.Label label_update;
+        private System.Windows.Forms.TextBox textBox_comment;
     }
 }
