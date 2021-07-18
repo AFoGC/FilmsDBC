@@ -52,7 +52,6 @@ namespace FilmsDBC.Visual.Forms
 			clearControls();
 			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
 			{
-				//flowLayoutPanel_main.Controls.Add(new FilmControl(film));
 				tableControls.Add(new FilmControl(film));
 			}
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
@@ -65,7 +64,6 @@ namespace FilmsDBC.Visual.Forms
 			{
 				if (film.Genre.IsSerialGenre)
 				{
-					//flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film));
 					tableControls.Add(ControlsConverter.ToSerieControl(film));
 				}
 			}
@@ -78,7 +76,6 @@ namespace FilmsDBC.Visual.Forms
 
 			foreach (Category category in tables.GetTable(typeof(Category)).Cells)
 			{
-				//flowLayoutPanel_main.Controls.Add(new CategoryControl(category));
 				tableControls.Add(new CategoryControl(category));
 			}
 
@@ -86,7 +83,6 @@ namespace FilmsDBC.Visual.Forms
 			{
 				if (film.FranshiseId == 0)
 				{
-					//flowLayoutPanel_main.Controls.Add(new SimpleControl(film));
 					tableControls.Add(new SimpleControl(film));
 				}
 			}
