@@ -164,6 +164,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_copyUrl.TabIndex = 38;
             this.label_copyUrl.Text = "copy url";
             this.label_copyUrl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_copyUrl.Click += new System.EventHandler(this.label_copyUrl_Click);
             // 
             // label_comment
             // 

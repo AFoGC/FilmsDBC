@@ -47,10 +47,30 @@ namespace FilmsDBC.Visual.Controls
 			this.textBox_startWatchDate.Text = Serie.formatToString(serieInfo.StartWatchDate);
 			this.textBox_countOfWatchedSeries.Text = Serie.formatToString(serieInfo.CountOfWatchedSeries);
 			this.textBox_totalSeries.Text = Serie.formatToString(serieInfo.TotalSeries);
+			this.refreshSourceLabel();
 
 			if (simpleControl != null)
 			{
 				simpleControl.RefreshData();
+			}
+		}
+
+		public void refreshSourceLabel()
+		{
+			if (filmInfo.Sources.Count == 0)
+			{
+				label_copyUrl.Text = "no url";
+			}
+			else
+			{
+				if (filmInfo.Sources[0].name != "")
+				{
+					label_copyUrl.Text = "url: " + filmInfo.Sources[0].name;
+				}
+				else
+				{
+					label_copyUrl.Text = "copy url";
+				}
 			}
 		}
 
@@ -72,6 +92,14 @@ namespace FilmsDBC.Visual.Controls
 		private void label_update_Click(object sender, EventArgs e)
 		{
 			UpdateFormVisualizer.OpenUpdateForm(this);
+		}
+
+		private void label_copyUrl_Click(object sender, EventArgs e)
+		{
+			if (filmInfo.Sources.Count != 0)
+			{
+				Clipboard.SetText(filmInfo.Sources[0].sourceUrl);
+			}
 		}
 
 		private void checkBox_watched_Click(object sender, EventArgs e)

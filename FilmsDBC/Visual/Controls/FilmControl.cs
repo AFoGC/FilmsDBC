@@ -44,7 +44,7 @@ namespace FilmsDBC.Visual.Controls
 			}
 		}
 
-		private void refreshSourceLabel()
+		public void refreshSourceLabel()
 		{
 			if (filmInfo.Sources.Count == 0)
 			{
