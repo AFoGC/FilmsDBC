@@ -93,6 +93,12 @@
     <Compile Include="Visual\Forms\GenreRequestControl.Designer.cs">
       <DependentUpon>GenreRequestControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GenreRequestControl.resx">
       <DependentUpon>GenreRequestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Forms\GlobalControls\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
