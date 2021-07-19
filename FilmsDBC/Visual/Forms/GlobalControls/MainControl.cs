@@ -207,4 +207,3 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 		}
 	}
 }
-}
