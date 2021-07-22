@@ -25,7 +25,7 @@ namespace FilmsDBC.Visual.Controls
 				controlInBuffer.SetDefaultVisualCondition();
 			}
 
-			MainInformation.MainForm.ControlInBuffer = this;
+			MainInformation.MainForm.MainControl.ControlInBuffer = this;
 			setVisualSelected();
 		}
 

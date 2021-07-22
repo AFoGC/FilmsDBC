@@ -42,19 +42,19 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 
 		private void button_addElement_Click(object sender, EventArgs e)
 		{
-			if (MainInformation.MainForm.ControlInBuffer != null)
+			if (MainInformation.MainForm.MainControl.ControlInBuffer != null)
 			{
-				if (MainInformation.MainForm.ControlInBuffer.GetType() == typeof(SimpleControl))
+				if (MainInformation.MainForm.MainControl.ControlInBuffer.GetType() == typeof(SimpleControl))
 				{
-					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.ControlInBuffer;
+					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.MainControl.ControlInBuffer;
 					Film film = simpleControl.FilmInfo;
 					if (film.FranshiseId == 0)
 					{
 						film.FranshiseId = category.ID;
 						category.Films.Add(film);
 						categoryControl.AddSimpleCotrol(film);
-						MainInformation.MainForm.flowLayoutPanel_main.Controls.Remove(simpleControl);
-						MainInformation.MainForm.ControlInBuffer = null;
+						MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls.Remove(simpleControl);
+						MainInformation.MainForm.MainControl.ControlInBuffer = null;
 					}
 				}
 			}
@@ -62,11 +62,11 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 
 		private void button_removeElement_Click(object sender, EventArgs e)
 		{
-			if (MainInformation.MainForm.ControlInBuffer != null)
+			if (MainInformation.MainForm.MainControl.ControlInBuffer != null)
 			{
-				if (MainInformation.MainForm.ControlInBuffer.GetType() == typeof(SimpleControl))
+				if (MainInformation.MainForm.MainControl.ControlInBuffer.GetType() == typeof(SimpleControl))
 				{
-					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.ControlInBuffer;
+					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.MainControl.ControlInBuffer;
 					Film film = simpleControl.FilmInfo;
 
 					if (categoryControl.RemoveFilmFromCategory(simpleControl))
@@ -74,18 +74,18 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 						//this.categoryControl.flowLayoutPanel_SimpleControls.Controls.Remove(simpleControl);
 						//this.categoryControl.RemoveSimpleControl();
 
-						if (MainInformation.MainForm.ControlsCondition == 1)
+						if (MainInformation.MainForm.MainControl.ControlsCondition == 1)
 						{
 							int i = 0;
-							foreach (UserControl userControl in MainInformation.MainForm.flowLayoutPanel_main.Controls)
+							foreach (UserControl userControl in MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls)
 							{
 								if (userControl.GetType() == typeof(SimpleControl))
 								{
 									SimpleControl sControl = (SimpleControl)userControl;
 									if (sControl.FilmInfo.ID > film.ID)
 									{
-										MainInformation.MainForm.flowLayoutPanel_main.Controls.Add(simpleControl);
-										MainInformation.MainForm.flowLayoutPanel_main.Controls.SetChildIndex(simpleControl, i);
+										MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls.Add(simpleControl);
+										MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls.SetChildIndex(simpleControl, i);
 										break;
 									}
 								}

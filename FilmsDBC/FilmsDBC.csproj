@@ -57,6 +57,7 @@
     <Compile Include="StaticFilmClasses\FilmMethods.cs" />
     <Compile Include="StaticFilmClasses\GenreMethods.cs" />
     <Compile Include="StaticFilmClasses\Subloads.cs" />
+    <Compile Include="Visual\ButtonStaticClass.cs" />
     <Compile Include="Visual\Controls\EventsMethods.cs" />
     <Compile Include="Visual\Controls\Interface\AbstractControlDescriptionProvider.cs" />
     <Compile Include="Visual\Controls\Interface\AElementControl.cs">

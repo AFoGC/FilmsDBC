@@ -98,7 +98,7 @@ namespace FilmsDBC.Visual.Controls
 
 		private void textBox_id_Click(object sender, EventArgs e)
 		{
-			SetSelectedElement(MainInformation.MainForm.ControlInBuffer);
+			SetSelectedElement(MainInformation.MainForm.MainControl.ControlInBuffer);
 		}
 
 		private bool commentIsOpen = false;
