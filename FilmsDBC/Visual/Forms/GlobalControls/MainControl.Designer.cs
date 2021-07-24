@@ -29,7 +29,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
             this.flowLayoutPanel_main = new System.Windows.Forms.FlowLayoutPanel();
             this.button_ShowCategories = new System.Windows.Forms.Button();
             this.button_ShowFilms = new System.Windows.Forms.Button();
@@ -42,11 +41,13 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.flowLayoutPanel_requestsGenres = new System.Windows.Forms.FlowLayoutPanel();
             this.button_filter = new System.Windows.Forms.Button();
             this.watchedRequestControl = new FilmsDBC.Visual.Forms.WatchedRequestControl();
+            this.clickButton = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.pressButton = new FilmsDBC.Visual.Buttons.PressButton();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_main
             // 
-            this.flowLayoutPanel_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.flowLayoutPanel_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel_main.AutoScroll = true;
             this.flowLayoutPanel_main.Location = new System.Drawing.Point(235, 78);
@@ -151,9 +152,47 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             // 
             // watchedRequestControl
             // 
+            this.watchedRequestControl.IsUnwatched = true;
+            this.watchedRequestControl.IsWatched = true;
             this.watchedRequestControl.Location = new System.Drawing.Point(1198, 242);
             this.watchedRequestControl.Name = "watchedRequestControl";
+            this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
             this.watchedRequestControl.TabIndex = 12;
+            // 
+            // clickButton
+            // 
+            this.clickButton.BackColor = System.Drawing.Color.Gray;
+            this.clickButton.DefaultColor = System.Drawing.Color.Gray;
+            this.clickButton.Location = new System.Drawing.Point(10, 10);
+            this.clickButton.Margin = new System.Windows.Forms.Padding(0);
+            this.clickButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(118)))), ((int)(((byte)(118)))));
+            this.clickButton.MouseEnterColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
+            this.clickButton.Name = "clickButton";
+            this.clickButton.Size = new System.Drawing.Size(129, 20);
+            this.clickButton.TabIndex = 13;
+            this.clickButton.Text = "Button";
+            this.clickButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pressButton
+            // 
+            this.pressButton.BackColor = System.Drawing.SystemColors.Control;
+            this.pressButton.ClickLocked = false;
+            this.pressButton.DefaultColor = System.Drawing.SystemColors.Control;
+            this.pressButton.Included = false;
+            this.pressButton.Included_DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.pressButton.Included_MouseDownColor = System.Drawing.Color.Empty;
+            this.pressButton.Included_MouseEnterColor = System.Drawing.Color.Empty;
+            this.pressButton.Location = new System.Drawing.Point(30, 30);
+            this.pressButton.Margin = new System.Windows.Forms.Padding(0);
+            this.pressButton.MouseDownColor = System.Drawing.Color.Empty;
+            this.pressButton.MouseEnterColor = System.Drawing.Color.Empty;
+            this.pressButton.Name = "pressButton";
+            this.pressButton.Size = new System.Drawing.Size(129, 20);
+            this.pressButton.TabIndex = 14;
+            this.pressButton.Text = "Butt";
+            this.pressButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pressButton.SetDefaultButtonBlink();
+            this.pressButton.SetDefaultIncludedButtonBlink();
             // 
             // MainControl
             // 
@@ -171,9 +210,12 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.Controls.Add(this.button_ShowCategories);
             this.Controls.Add(this.flowLayoutPanel_main);
             this.Controls.Add(this.watchedRequestControl);
+            this.Controls.Add(this.clickButton);
+            this.Controls.Add(this.pressButton);
             this.Name = "MainControl";
             this.Size = new System.Drawing.Size(1485, 647);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,5 +232,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_requestsGenres;
         private System.Windows.Forms.Button button_filter;
         private FilmsDBC.Visual.Forms.WatchedRequestControl watchedRequestControl;
+        private FilmsDBC.Visual.Buttons.ClickButton clickButton;
+        private FilmsDBC.Visual.Buttons.PressButton pressButton;
     }
 }

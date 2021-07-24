@@ -64,6 +64,12 @@
     <Compile Include="Visual\Buttons\ClickButton.Designer.cs">
       <DependentUpon>ClickButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Buttons\PressButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Visual\Buttons\PressButton.Designer.cs">
+      <DependentUpon>PressButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Controls\EventsMethods.cs" />
     <Compile Include="Visual\Controls\Interface\AbstractControlDescriptionProvider.cs" />
     <Compile Include="Visual\Controls\Interface\AElementControl.cs">

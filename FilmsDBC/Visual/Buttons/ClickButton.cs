@@ -34,6 +34,11 @@ namespace FilmsDBC.Visual.Buttons
             get { return mouseDownColor; }
             set { mouseDownColor = value; }
         }
+        public void SetDefaultButtonBlink()
+        {
+            mouseEnterColor = Color.FromArgb(defaultColor.R + 15, defaultColor.G + 15, defaultColor.B + 15);
+            mouseDownColor = Color.FromArgb(defaultColor.R - 10, defaultColor.G - 10, defaultColor.B - 10);
+        }
 
         private void this_mouseEnter(object sender, EventArgs e)
         {

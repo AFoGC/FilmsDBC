@@ -1,7 +1,7 @@
 ﻿
 namespace FilmsDBC.Visual.Buttons
 {
-    partial class ClickButton
+    partial class PressButton
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,10 +30,6 @@ namespace FilmsDBC.Visual.Buttons
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.MouseEnter += new System.EventHandler(this.this_mouseEnter);
-            this.MouseLeave += new System.EventHandler(this.this_mouseLeave);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.this_mouseDown);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.this_mouseUp);
         }
 
         #endregion
