@@ -36,7 +36,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 			flowLayoutPanel_requestsGenres.Controls.Clear();
 			foreach (Genre genre in tables.GetTable(typeof(Genre)).Cells)
 			{
-				flowLayoutPanel_requestsGenres.Controls.Add(new GenreRequestControl(genre));
+				flowLayoutPanel_requestsGenres.Controls.Add(new GenrePressButton(genre));
 			}
 		}
 
@@ -196,7 +196,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 		private Genre[] getSelectedGenres()
 		{
 			List<Genre> genres = new List<Genre>();
-			foreach (GenreRequestControl requestControl in flowLayoutPanel_requestsGenres.Controls)
+			foreach (GenrePressButton requestControl in flowLayoutPanel_requestsGenres.Controls)
 			{
 				if (requestControl.Included)
 				{

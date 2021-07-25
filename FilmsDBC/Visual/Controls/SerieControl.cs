@@ -30,6 +30,10 @@ namespace FilmsDBC.Visual.Controls
 			this.serieInfo = serie;
 			this.filmInfo = film;
 
+			this.label_comment.SetDefaultButtonBlink();
+			this.label_copyUrl.SetDefaultButtonBlink();
+			this.label_update.SetDefaultButtonBlink();
+
 			RefreshData();
 		}
 

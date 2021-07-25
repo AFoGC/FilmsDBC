@@ -33,6 +33,7 @@ namespace FilmsDBC.Visual.Controls
 			InitializeComponent();
 			this.categoryInfo = category;
 
+			this.label_update.SetDefaultButtonBlink();
 			RefreshData();
 		}
 

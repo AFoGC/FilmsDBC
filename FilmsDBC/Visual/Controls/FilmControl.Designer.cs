@@ -36,10 +36,10 @@ namespace FilmsDBC.Visual.Controls
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
             this.textBox_watchDate = new System.Windows.Forms.TextBox();
             this.textBox_mark = new System.Windows.Forms.TextBox();
-            this.label_comment = new System.Windows.Forms.Label();
-            this.label_copyUrl = new System.Windows.Forms.Label();
+            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_copyUrl = new FilmsDBC.Visual.Buttons.ClickButton();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
-            this.label_update = new System.Windows.Forms.Label();
+            this.label_update = new FilmsDBC.Visual.Buttons.ClickButton();
             this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -109,6 +109,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_comment
             // 
+            this.label_comment.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_comment.Location = new System.Drawing.Point(660, 0);
             this.label_comment.Name = "label_comment";
             this.label_comment.Size = new System.Drawing.Size(80, 20);
@@ -119,6 +120,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_copyUrl
             // 
+            this.label_copyUrl.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_copyUrl.Location = new System.Drawing.Point(750, 0);
             this.label_copyUrl.Name = "label_copyUrl";
             this.label_copyUrl.Size = new System.Drawing.Size(80, 20);
@@ -138,6 +140,7 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_update
             // 
+            this.label_update.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_update.Location = new System.Drawing.Point(845, 0);
             this.label_update.Name = "label_update";
             this.label_update.Size = new System.Drawing.Size(80, 20);
@@ -187,10 +190,10 @@ namespace FilmsDBC.Visual.Controls
         internal System.Windows.Forms.CheckBox checkBox_watched;
         internal System.Windows.Forms.TextBox textBox_watchDate;
         internal System.Windows.Forms.TextBox textBox_mark;
-        private System.Windows.Forms.Label label_comment;
-        private System.Windows.Forms.Label label_copyUrl;
+        private FilmsDBC.Visual.Buttons.ClickButton label_comment;
+        private FilmsDBC.Visual.Buttons.ClickButton label_copyUrl;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
-        private System.Windows.Forms.Label label_update;
+        private FilmsDBC.Visual.Buttons.ClickButton label_update;
         private System.Windows.Forms.TextBox textBox_comment;
     }
 }

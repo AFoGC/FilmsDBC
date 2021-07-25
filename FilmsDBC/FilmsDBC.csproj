@@ -57,7 +57,6 @@
     <Compile Include="StaticFilmClasses\FilmMethods.cs" />
     <Compile Include="StaticFilmClasses\GenreMethods.cs" />
     <Compile Include="StaticFilmClasses\Subloads.cs" />
-    <Compile Include="Visual\ButtonStaticClass.cs" />
     <Compile Include="Visual\Buttons\ClickButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -70,7 +69,6 @@
     <Compile Include="Visual\Buttons\PressButton.Designer.cs">
       <DependentUpon>PressButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Controls\EventsMethods.cs" />
     <Compile Include="Visual\Controls\Interface\AbstractControlDescriptionProvider.cs" />
     <Compile Include="Visual\Controls\Interface\AElementControl.cs">
       <SubType>UserControl</SubType>
@@ -100,11 +98,8 @@
     <Compile Include="Visual\Controls\SimpleControl.Designer.cs">
       <DependentUpon>SimpleControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Forms\GenreRequestControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GenreRequestControl.Designer.cs">
-      <DependentUpon>GenreRequestControl.cs</DependentUpon>
+    <Compile Include="Visual\Forms\GenrePressButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Visual\Forms\GlobalControls\MainControl.cs">
       <SubType>UserControl</SubType>
@@ -204,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Controls\SimpleControl.resx">
       <DependentUpon>SimpleControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GenreRequestControl.resx">
-      <DependentUpon>GenreRequestControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>

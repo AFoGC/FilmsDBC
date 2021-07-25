@@ -20,6 +20,7 @@ namespace FilmsDBC.Visual.Controls
 			InitializeComponent();
 			this.filmInfo = film;
 
+			this.label_info.SetDefaultButtonBlink();
 			RefreshData();
 		}
 

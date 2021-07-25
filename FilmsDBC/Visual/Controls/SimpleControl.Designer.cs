@@ -34,7 +34,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_genre = new System.Windows.Forms.TextBox();
             this.textBox_realiseYear = new System.Windows.Forms.TextBox();
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
-            this.label_info = new System.Windows.Forms.Label();
+            this.label_info = new FilmsDBC.Visual.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -85,7 +85,10 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_info
             // 
+            this.label_info.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_info.Location = new System.Drawing.Point(395, 0);
+            this.label_info.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_info.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_info.Name = "label_info";
             this.label_info.Size = new System.Drawing.Size(110, 20);
             this.label_info.TabIndex = 40;
@@ -118,6 +121,6 @@ namespace FilmsDBC.Visual.Controls
         internal System.Windows.Forms.TextBox textBox_genre;
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_watched;
-        private System.Windows.Forms.Label label_info;
+        private FilmsDBC.Visual.Buttons.ClickButton label_info;
     }
 }

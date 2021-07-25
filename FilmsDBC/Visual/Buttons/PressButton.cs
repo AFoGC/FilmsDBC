@@ -39,6 +39,7 @@ namespace FilmsDBC.Visual.Buttons
                 included = value;
                 if (included)
                 {
+                    BackColor = included_defaultColor;
                     this.MouseEnter += new EventHandler(this.this_Included_mouseEnter);
                     this.MouseLeave += new EventHandler(this.this_Included_mouseLeave);
                     this.MouseDown += new MouseEventHandler(this.this_Included_mouseDown);
@@ -46,6 +47,7 @@ namespace FilmsDBC.Visual.Buttons
                 }
                 else
                 {
+                    BackColor = defaultColor;
                     this.MouseEnter += new EventHandler(this.this_NotIncluded_mouseEnter);
                     this.MouseLeave += new EventHandler(this.this_NotIncluded_mouseLeave);
                     this.MouseDown += new MouseEventHandler(this.this_NotIncluded_mouseDown);

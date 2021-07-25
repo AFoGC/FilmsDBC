@@ -27,7 +27,7 @@ namespace FilmsDBC.Visual.Buttons
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
-        private void InitializeComponent()
+        protected void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.MouseEnter += new System.EventHandler(this.this_mouseEnter);

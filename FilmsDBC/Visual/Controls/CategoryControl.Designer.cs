@@ -32,7 +32,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_mark = new System.Windows.Forms.TextBox();
-            this.label_update = new System.Windows.Forms.Label();
+            this.label_update = new FilmsDBC.Visual.Buttons.ClickButton();
             this.flowLayoutPanel_SimpleControls = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
@@ -64,7 +64,10 @@ namespace FilmsDBC.Visual.Controls
             // 
             // label_update
             // 
+            this.label_update.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_update.Location = new System.Drawing.Point(750, 0);
+            this.label_update.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_update.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_update.Name = "label_update";
             this.label_update.Size = new System.Drawing.Size(80, 20);
             this.label_update.TabIndex = 42;
@@ -99,7 +102,7 @@ namespace FilmsDBC.Visual.Controls
         #endregion
         internal System.Windows.Forms.TextBox textBox_name;
         internal System.Windows.Forms.TextBox textBox_mark;
-        private System.Windows.Forms.Label label_update;
+        private FilmsDBC.Visual.Buttons.ClickButton label_update;
         internal System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_SimpleControls;
     }
