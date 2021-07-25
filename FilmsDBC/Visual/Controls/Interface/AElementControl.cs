@@ -31,7 +31,7 @@ namespace FilmsDBC.Visual.Controls
 
 		public bool SetFindedElement(String searchLine)
 		{
-			if (this.FilmInfo.Name.Contains(searchLine))
+			if (this.FilmInfo.Name.ToLowerInvariant().Contains(searchLine))
 			{
 				setVisualFinded();
 				return true;

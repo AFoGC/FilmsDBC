@@ -128,7 +128,7 @@ namespace FilmsDBC.Visual.Controls
 		public bool SetFindedElement(string search)
 		{
 			bool export = false;
-			if (this.CategoryInfo.Name.Contains(search))
+			if (this.CategoryInfo.Name.ToLowerInvariant().Contains(search))
 			{
 				setVisualFinded();
 			}

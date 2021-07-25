@@ -96,6 +96,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 			controlsCondition = 1;
 			loadCategories();
 			controlInBuffer = null;
+			unLockGenreButtons();
 		}
 
 		private void button_ShowFilms_Click(object sender, EventArgs e)
@@ -103,6 +104,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 			controlsCondition = 2;
 			loadFilmTable();
 			controlInBuffer = null;
+			unLockGenreButtons();
 		}
 
 		private void button_ShowSeries_Click(object sender, EventArgs e)
@@ -110,6 +112,27 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 			controlsCondition = 3;
 			loadSerieTable();
 			controlInBuffer = null;
+			lockNotSerialGenreButtons();
+		}
+
+		private void lockNotSerialGenreButtons()
+        {
+            foreach (GenrePressButton button in flowLayoutPanel_requestsGenres.Controls)
+            {
+                if (!button.Genre.IsSerialGenre)
+                {
+					button.Included = false;
+					button.ClickLocked = true;
+                }
+            }
+        }
+		private void unLockGenreButtons()
+		{
+			foreach (GenrePressButton button in flowLayoutPanel_requestsGenres.Controls)
+			{
+				button.ClickLocked = false;
+				button.Included = true;
+			}
 		}
 
 		private void button_Search_Click(object sender, EventArgs e)
@@ -121,9 +144,11 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 
 			if (textBox_Search.Text != "")
 			{
+				String searchStr = textBox_Search.Text.ToLowerInvariant();
+
 				foreach (IControls control in flowLayoutPanel_main.Controls)
 				{
-					control.SetFindedElement(textBox_Search.Text);
+					control.SetFindedElement(searchStr);
 				}
 			}
 		}

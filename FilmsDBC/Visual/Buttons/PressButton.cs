@@ -13,6 +13,7 @@ namespace FilmsDBC.Visual.Buttons
         public PressButton()
         {
             InitializeComponent();
+            this.MouseClick += new MouseEventHandler(this.this_Click);
         }
 
         private bool included = false;
@@ -62,6 +63,11 @@ namespace FilmsDBC.Visual.Buttons
             get { return clickLocked; }
             set
             {
+                if (!clickLocked)
+                {
+                    this.MouseClick -= new MouseEventHandler(this.this_Click);
+                }
+
                 clickLocked = value;
 
                 if (clickLocked)
