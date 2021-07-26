@@ -139,7 +139,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 		{
 			foreach (IControls control in flowLayoutPanel_main.Controls)
 			{
-				control.SetDefaultVisualCondition();
+				control.SetVisualDefault();
 			}
 
 			if (textBox_Search.Text != "")

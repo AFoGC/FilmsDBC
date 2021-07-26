@@ -22,7 +22,7 @@ namespace FilmsDBC.Visual.Controls
 		{
 			if (controlInBuffer != null)
 			{
-				controlInBuffer.SetDefaultVisualCondition();
+				controlInBuffer.SetVisualDefault();
 			}
 
 			MainInformation.MainForm.MainControl.ControlInBuffer = this;
@@ -40,7 +40,7 @@ namespace FilmsDBC.Visual.Controls
 			return false;
 		}
 
-		public abstract void SetDefaultVisualCondition();
+		public abstract void SetVisualDefault();
 		internal abstract void setVisualSelected();
 		internal abstract void setVisualFinded();
 		public abstract void RefreshData();

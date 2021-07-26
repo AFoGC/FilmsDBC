@@ -33,9 +33,12 @@ namespace FilmsDBC.Visual.Controls
 			checkBox_watched.Checked = filmInfo.Watched;
 		}
 
-		public override void SetDefaultVisualCondition()
+		public override void SetVisualDefault()
 		{
 			this.BackColor = SystemColors.Control;
+
+			this.label_info.DefaultColor = SystemColors.Control;
+			this.label_info.SetDefaultButtonBlink();
 		}
 
 		internal override void setVisualSelected()

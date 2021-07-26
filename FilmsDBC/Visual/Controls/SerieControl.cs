@@ -83,7 +83,7 @@ namespace FilmsDBC.Visual.Controls
 			this.BackColor = Color.Blue;
 		}
 
-		public override void SetDefaultVisualCondition()
+		public override void SetVisualDefault()
 		{
 			this.BackColor = SystemColors.Control;
 		}

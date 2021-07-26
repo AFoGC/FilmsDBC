@@ -10,7 +10,7 @@ namespace FilmsDBC.Visual.Controls
     public interface IControls
     {
         bool SetFindedElement(String search);
-        void SetDefaultVisualCondition();
+        void SetVisualDefault();
         void RefreshData();
         bool HasSelectedGenre(Genre[] selectedGenres);
         bool HasWatchedProperty(bool isWached);

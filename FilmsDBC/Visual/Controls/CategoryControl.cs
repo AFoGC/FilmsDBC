@@ -143,17 +143,27 @@ namespace FilmsDBC.Visual.Controls
 
 		private void setVisualFinded()
 		{
-			this.BackColor = Color.Blue;
+			Color color = Color.FromArgb(0, 0 , 220);
+
+			this.BackColor = color;
+			this.label_update.DefaultColor = color;
+
+			this.label_update.MouseEnterColor = Color.FromArgb(0, 0, 255);
+			this.label_update.MouseDownColor = Color.FromArgb(0, 0, 200);
+
 			this.flowLayoutPanel_SimpleControls.BackColor = SystemColors.Control;
 		}
 
-		public void SetDefaultVisualCondition()
+		public void SetVisualDefault()
 		{
 			this.BackColor = SystemColors.Control;
 
+			this.label_update.DefaultColor = SystemColors.Control;
+			this.label_update.SetDefaultButtonBlink();
+
 			foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
 			{
-				control.SetDefaultVisualCondition();
+				control.SetVisualDefault();
 			}
 		}
 
