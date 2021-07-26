@@ -29,14 +29,19 @@ namespace FilmsDBC.Visual.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainControl = new GlobalControls.MainControl();
+            this.mainControl = new FilmsDBC.Visual.Forms.GlobalControls.MainControl();
             this.SuspendLayout();
-            //
+            // 
             // mainControl
-            //
-            this.Location = new System.Drawing.Point(0, 0);
+            // 
+            this.mainControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainControl.ControlInBuffer = null;
+            this.mainControl.Location = new System.Drawing.Point(0, 0);
             this.mainControl.Margin = new System.Windows.Forms.Padding(0);
             this.mainControl.Name = "mainControl";
+            this.mainControl.Size = new System.Drawing.Size(1485, 647);
             this.mainControl.TabIndex = 0;
             // 
             // MainForm
@@ -48,7 +53,6 @@ namespace FilmsDBC.Visual.Forms
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

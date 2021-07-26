@@ -21,11 +21,18 @@ namespace FilmsDBC
             get { return mainForm; }
         }
 
+		private static ProgramSettings settings = null;
+		public static ProgramSettings Settings
+        {
+			get { return settings; }
+        }
+
 		static MainInformation()
 		{
 			tableCollection = new TableCollection();
+			settings = loadSettings();
 
-			tableCollection.tableFilePath = @"F:\filmsDirectory\Films.fdbc";
+			tableCollection.tableFilePath = settings.TablePath;
 
 			tableCollection.AddTable(typeof(Category));
 			tableCollection.AddTable(typeof(Genre));
@@ -40,5 +47,23 @@ namespace FilmsDBC
 			tableCollection.loadTables();
 			tableCollection.CategorySubload();
 		}
+
+		private static ProgramSettings loadSettings()
+        {
+			ProgramSettings settings = new ProgramSettings();
+			String settingPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Program.properties";
+
+			Comand comand = new Comand();
+			using (StreamReader sr = new StreamReader(settingPath, System.Text.Encoding.Default))
+			{
+				comand.getComand(sr.ReadLine());
+				if (comand.Paramert == "ProgramSettings")
+                {
+					settings.loadCell(sr, comand);
+                }
+			}
+
+			return settings;
+        }
 	}
 }
