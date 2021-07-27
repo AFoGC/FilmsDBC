@@ -27,7 +27,11 @@ namespace FilmsDBC.Visual.Buttons
         public Color DefaultColor
         {
             get { return defaultColor; }
-            set { defaultColor = value; }
+            set 
+            {
+                defaultColor = value;
+                BackColor = value;
+            }
         }
         public Color MouseDownColor
         {

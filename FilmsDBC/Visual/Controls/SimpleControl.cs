@@ -43,12 +43,24 @@ namespace FilmsDBC.Visual.Controls
 
 		internal override void setVisualSelected()
 		{
-			this.BackColor = Color.Green;
+			Color color = Color.FromArgb(0, 220, 0);
+
+			this.BackColor = color;
+			this.label_info.DefaultColor = color;
+
+			this.label_info.MouseEnterColor = Color.FromArgb(0, 255, 0);
+			this.label_info.MouseDownColor = Color.FromArgb(0, 200, 0);
 		}
 
 		internal override void setVisualFinded()
 		{
-			this.BackColor = Color.Blue;
+			Color color = Color.FromArgb(0, 0, 220);
+
+			this.BackColor = color;
+			this.label_info.DefaultColor = color;
+
+			this.label_info.MouseEnterColor = Color.FromArgb(0, 0, 255);
+			this.label_info.MouseDownColor = Color.FromArgb(0, 0, 200);
 		}
 
 		private void label_info_Click(object sender, EventArgs e)

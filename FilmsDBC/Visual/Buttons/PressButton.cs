@@ -107,7 +107,10 @@ namespace FilmsDBC.Visual.Buttons
         public Color Included_DefaultColor
         {
             get { return included_defaultColor; }
-            set { included_defaultColor = value; }
+            set 
+            {
+                included_defaultColor = value;
+            }
         }
         public Color Included_MouseDownColor
         {
@@ -123,7 +126,11 @@ namespace FilmsDBC.Visual.Buttons
         public Color DefaultColor
         {
             get { return defaultColor; }
-            set { defaultColor = value; }
+            set 
+            {
+                defaultColor = value;
+                BackColor = value;
+            }
         }
         public Color MouseDownColor
         {
