@@ -92,6 +92,14 @@ namespace FilmsDBC.Visual.Controls
 			this.label_comment.DefaultColor = color;
 			this.label_copyUrl.DefaultColor = color;
 			this.label_update.DefaultColor = color;
+			this.textBox_id.BackColor = color;
+			this.textBox_name.BackColor = color;
+			this.textBox_genre.BackColor = color;
+			this.textBox_realiseYear.BackColor = color;
+			this.textBox_watchDate.BackColor = color;
+			this.textBox_mark.BackColor = color;
+			this.textBox_countOfviews.BackColor = color;
+			this.textBox_comment.BackColor = color;
 
 			Color colorMouseEnter = Color.FromArgb(0, 0, 255);
 			this.label_comment.MouseEnterColor = colorMouseEnter;
@@ -111,6 +119,14 @@ namespace FilmsDBC.Visual.Controls
 			this.label_comment.DefaultColor = color;
 			this.label_copyUrl.DefaultColor = color;
 			this.label_update.DefaultColor = color;
+			this.textBox_id.BackColor = color;
+			this.textBox_name.BackColor = color;
+			this.textBox_genre.BackColor = color;
+			this.textBox_realiseYear.BackColor = color;
+			this.textBox_watchDate.BackColor = color;
+			this.textBox_mark.BackColor = color;
+			this.textBox_countOfviews.BackColor = color;
+			this.textBox_comment.BackColor = color;
 
 			Color colorMouseEnter = Color.FromArgb(0, 255, 0);
 			this.label_comment.MouseEnterColor = colorMouseEnter;
@@ -130,6 +146,14 @@ namespace FilmsDBC.Visual.Controls
 			this.label_comment.DefaultColor = color;
 			this.label_copyUrl.DefaultColor = color;
 			this.label_update.DefaultColor = color;
+			this.textBox_id.BackColor = color;
+			this.textBox_name.BackColor = color;
+			this.textBox_genre.BackColor = color;
+			this.textBox_realiseYear.BackColor = color;
+			this.textBox_watchDate.BackColor = color;
+			this.textBox_mark.BackColor = color;
+			this.textBox_countOfviews.BackColor = color;
+			this.textBox_comment.BackColor = color;
 
 			this.label_comment.SetDefaultButtonBlink();
 			this.label_copyUrl.SetDefaultButtonBlink();

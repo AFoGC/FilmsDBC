@@ -35,9 +35,15 @@ namespace FilmsDBC.Visual.Controls
 
 		public override void SetVisualDefault()
 		{
-			this.BackColor = SystemColors.Control;
+			Color color = SystemColors.Control;
 
-			this.label_info.DefaultColor = SystemColors.Control;
+			this.BackColor = color;
+			this.label_info.DefaultColor = color;
+			this.textBox_id.BackColor = color;
+			this.textBox_name.BackColor = color;
+			this.textBox_genre.BackColor = color;
+			this.textBox_realiseYear.BackColor = color;
+
 			this.label_info.SetDefaultButtonBlink();
 		}
 
@@ -47,6 +53,10 @@ namespace FilmsDBC.Visual.Controls
 
 			this.BackColor = color;
 			this.label_info.DefaultColor = color;
+			this.textBox_id.BackColor = color;
+			this.textBox_name.BackColor = color;
+			this.textBox_genre.BackColor = color;
+			this.textBox_realiseYear.BackColor = color;
 
 			this.label_info.MouseEnterColor = Color.FromArgb(0, 255, 0);
 			this.label_info.MouseDownColor = Color.FromArgb(0, 200, 0);
@@ -58,6 +68,10 @@ namespace FilmsDBC.Visual.Controls
 
 			this.BackColor = color;
 			this.label_info.DefaultColor = color;
+			this.textBox_id.BackColor = color;
+			this.textBox_name.BackColor = color;
+			this.textBox_genre.BackColor = color;
+			this.textBox_realiseYear.BackColor = color;
 
 			this.label_info.MouseEnterColor = Color.FromArgb(0, 0, 255);
 			this.label_info.MouseDownColor = Color.FromArgb(0, 0, 200);
