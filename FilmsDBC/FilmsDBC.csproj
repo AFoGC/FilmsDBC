@@ -50,6 +50,7 @@
     <Compile Include="CinemaDataTypes\CellDataClasses\Source.cs" />
     <Compile Include="CinemaDataTypes\Film.cs" />
     <Compile Include="CinemaDataTypes\Genre.cs" />
+    <Compile Include="CinemaDataTypes\PriorityFilm.cs" />
     <Compile Include="CinemaDataTypes\Serie.cs" />
     <Compile Include="MainInformation.cs" />
     <Compile Include="Program.cs" />

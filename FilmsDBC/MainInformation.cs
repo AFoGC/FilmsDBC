@@ -1,7 +1,6 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +37,7 @@ namespace FilmsDBC
 			tableCollection.AddTable(typeof(Genre));
 			tableCollection.AddTable(typeof(Film));
 			tableCollection.AddTable(typeof(Serie));
+			tableCollection.AddTable(typeof(PriorityFilm));
 
 			mainForm = new MainForm();
 		}
@@ -54,7 +54,7 @@ namespace FilmsDBC
 			String settingPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Program.properties";
 
 			Comand comand = new Comand();
-			using (StreamReader sr = new StreamReader(settingPath, System.Text.Encoding.Default))
+			using (System.IO.StreamReader sr = new System.IO.StreamReader(settingPath, System.Text.Encoding.Default))
 			{
 				comand.getComand(sr.ReadLine());
 				if (comand.Paramert == "ProgramSettings")

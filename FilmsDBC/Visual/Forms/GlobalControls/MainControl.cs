@@ -14,12 +14,12 @@ using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.Visual.Forms.GlobalControls
 {
-    public partial class MainControl : UserControl
-    {
-        public MainControl()
-        {
-            InitializeComponent();
-        }
+	public partial class MainControl : UserControl
+	{
+		public MainControl()
+		{
+			InitializeComponent();
+		}
 
 		TableCollection tables = MainInformation.tableCollection;
 		List<UserControl> tableControls = new List<UserControl>();
@@ -89,6 +89,18 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
 		}
 
+		public void loadPriorityTable()
+		{
+			clearControls();
+
+			foreach (PriorityFilm film in tables.GetTable(typeof(PriorityFilm)).Cells)
+			{
+				tableControls.Add(new SimpleControl(film.Film));
+			}
+
+			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
+		}
+
 		private int controlsCondition = 1;
 		public int ControlsCondition { get { return controlsCondition; } }
 		private void button_ShowCategories_Click(object sender, EventArgs e)
@@ -115,17 +127,25 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 			lockNotSerialGenreButtons();
 		}
 
+		private void button_ShowPriorityFilms_Click(object sender, EventArgs e)
+		{
+			controlsCondition = 4;
+			loadPriorityTable();
+			controlInBuffer = null;
+			unLockGenreButtons();
+		}
+
 		private void lockNotSerialGenreButtons()
-        {
-            foreach (GenrePressButton button in flowLayoutPanel_requestsGenres.Controls)
-            {
-                if (!button.Genre.IsSerialGenre)
-                {
+		{
+			foreach (GenrePressButton button in flowLayoutPanel_requestsGenres.Controls)
+			{
+				if (!button.Genre.IsSerialGenre)
+				{
 					button.Included = false;
 					button.ClickLocked = true;
-                }
-            }
-        }
+				}
+			}
+		}
 		private void unLockGenreButtons()
 		{
 			foreach (GenrePressButton button in flowLayoutPanel_requestsGenres.Controls)
@@ -192,6 +212,13 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 
 			tableControls.Add((UserControl)control);
 			flowLayoutPanel_main.Controls.Add((UserControl)control);
+		}
+
+		private void button_AddToPriority_Click(object sender, EventArgs e)
+		{
+			tables.GetTable(typeof(PriorityFilm)).addElement();
+			PriorityFilm priorityFilm = (PriorityFilm)tables.GetTable(typeof(PriorityFilm)).GetLastElement;
+			priorityFilm.Film = controlInBuffer.FilmInfo;
 		}
 
 		private void button_filter_Click(object sender, EventArgs e)
