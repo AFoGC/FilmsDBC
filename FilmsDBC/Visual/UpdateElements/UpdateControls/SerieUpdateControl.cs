@@ -32,6 +32,9 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			comboBox_genre.Items.AddRange(GenreMethods.GetAllGenresNames().ToArray());
 			comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
 
+			label_comment.SetDefaultButtonBlink();
+			label_sources.SetDefaultButtonBlink();
+
 			refresh();
 		}
 

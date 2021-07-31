@@ -38,10 +38,10 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_totalSeries = new System.Windows.Forms.TextBox();
             this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
-            this.label_sources = new System.Windows.Forms.Label();
+            this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
             this.dateUpdateControl_watchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
             this.dateUpdateControl_startWatchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
-            this.label_comment = new System.Windows.Forms.Label();
+            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -119,7 +119,11 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             // 
             // label_sources
             // 
+            this.label_sources.BackColor = System.Drawing.SystemColors.Control;
+            this.label_sources.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_sources.Location = new System.Drawing.Point(770, 0);
+            this.label_sources.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_sources.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_sources.Name = "label_sources";
             this.label_sources.Size = new System.Drawing.Size(100, 20);
             this.label_sources.TabIndex = 38;
@@ -149,7 +153,11 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             // 
             // label_comment
             // 
+            this.label_comment.BackColor = System.Drawing.SystemColors.Control;
+            this.label_comment.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_comment.Location = new System.Drawing.Point(670, 0);
+            this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_comment.Name = "label_comment";
             this.label_comment.Size = new System.Drawing.Size(100, 20);
             this.label_comment.TabIndex = 41;
@@ -200,10 +208,10 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         internal System.Windows.Forms.ComboBox comboBox_genre;
         internal System.Windows.Forms.ComboBox comboBox_mark;
-        private System.Windows.Forms.Label label_sources;
+        private FilmsDBC.Visual.Buttons.ClickButton label_sources;
         internal DateUpdateControl dateUpdateControl_watchDate;
         internal DateUpdateControl dateUpdateControl_startWatchDate;
-        private System.Windows.Forms.Label label_comment;
+        private FilmsDBC.Visual.Buttons.ClickButton label_comment;
         internal System.Windows.Forms.TextBox textBox_comment;
     }
 }
