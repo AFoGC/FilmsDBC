@@ -93,9 +93,20 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 		{
 			clearControls();
 
-			foreach (PriorityFilm film in tables.GetTable(typeof(PriorityFilm)).Cells)
+			Table priTable = tables.GetTable(typeof(PriorityFilm));
+			PriorityFilm film;
+			for (int i = 0; i < tables.GetTable(typeof(PriorityFilm)).Cells.Count; i++)
 			{
-				tableControls.Add(new SimpleControl(film.Film));
+				film = (PriorityFilm)priTable.Cells[i];
+
+				if (film.Film.Watched)
+                {
+					tables.GetTable(typeof(PriorityFilm)).Cells.Remove(film);
+				}
+                else
+                {
+					tableControls.Add(new SimpleControl(film.Film));
+				}
 			}
 
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
