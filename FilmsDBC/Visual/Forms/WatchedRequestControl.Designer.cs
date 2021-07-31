@@ -29,31 +29,45 @@ namespace FilmsDBC.Visual.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_requestWatched = new System.Windows.Forms.Label();
-            this.label_requestUnwatched = new System.Windows.Forms.Label();
+            this.label_requestWatched = new FilmsDBC.Visual.Buttons.PressButton();
+            this.label_requestUnwatched = new FilmsDBC.Visual.Buttons.PressButton();
             this.SuspendLayout();
             // 
             // label_requestWatched
             // 
-            this.label_requestWatched.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label_requestWatched.BackColor = System.Drawing.SystemColors.Control;
+            this.label_requestWatched.ClickLocked = false;
+            this.label_requestWatched.DefaultColor = System.Drawing.SystemColors.Control;
+            this.label_requestWatched.Included = false;
+            this.label_requestWatched.Included_DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.label_requestWatched.Included_MouseDownColor = System.Drawing.Color.Empty;
+            this.label_requestWatched.Included_MouseEnterColor = System.Drawing.Color.Empty;
             this.label_requestWatched.Location = new System.Drawing.Point(0, 0);
+            this.label_requestWatched.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_requestWatched.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_requestWatched.Name = "label_requestWatched";
             this.label_requestWatched.Size = new System.Drawing.Size(129, 20);
             this.label_requestWatched.TabIndex = 11;
             this.label_requestWatched.Text = "Watched";
             this.label_requestWatched.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_requestWatched.Click += new System.EventHandler(this.label_requestWatched_Click);
             // 
             // label_requestUnwatched
             // 
-            this.label_requestUnwatched.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label_requestUnwatched.BackColor = System.Drawing.SystemColors.Control;
+            this.label_requestUnwatched.ClickLocked = false;
+            this.label_requestUnwatched.DefaultColor = System.Drawing.SystemColors.Control;
+            this.label_requestUnwatched.Included = false;
+            this.label_requestUnwatched.Included_DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.label_requestUnwatched.Included_MouseDownColor = System.Drawing.Color.Empty;
+            this.label_requestUnwatched.Included_MouseEnterColor = System.Drawing.Color.Empty;
             this.label_requestUnwatched.Location = new System.Drawing.Point(130, 0);
+            this.label_requestUnwatched.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_requestUnwatched.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_requestUnwatched.Name = "label_requestUnwatched";
             this.label_requestUnwatched.Size = new System.Drawing.Size(129, 20);
             this.label_requestUnwatched.TabIndex = 12;
             this.label_requestUnwatched.Text = "Unwatched";
             this.label_requestUnwatched.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_requestUnwatched.Click += new System.EventHandler(this.label_requestUnwatched_Click);
             // 
             // WatchedRequestControl
             // 
@@ -69,7 +83,7 @@ namespace FilmsDBC.Visual.Forms
 
         #endregion
 
-        private System.Windows.Forms.Label label_requestWatched;
-        private System.Windows.Forms.Label label_requestUnwatched;
+        private FilmsDBC.Visual.Buttons.PressButton label_requestWatched;
+        private FilmsDBC.Visual.Buttons.PressButton label_requestUnwatched;
     }
 }

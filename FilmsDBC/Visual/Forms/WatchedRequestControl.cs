@@ -15,8 +15,13 @@ namespace FilmsDBC.Visual.Forms
 		public WatchedRequestControl()
 		{
 			InitializeComponent();
+			label_requestUnwatched.SetDefaultButtonBlink();
+			label_requestUnwatched.SetDefaultIncludedButtonBlink();
+			label_requestWatched.SetDefaultButtonBlink();
+			label_requestWatched.SetDefaultIncludedButtonBlink();
 		}
 
+		/*
 		private bool watchedIncluded = true;
 		public bool IsWatched
 		{
@@ -51,12 +56,25 @@ namespace FilmsDBC.Visual.Forms
 				unwatchedIncluded = value;
 			}
 		}
+		*/
+
+		public bool IsWatched
+		{
+            get { return label_requestWatched.Included; }
+			set { label_requestWatched.Included = value; }
+		}
+
+		public bool IsUnwatched
+        {
+            get { return label_requestUnwatched.Included; }
+            set { label_requestUnwatched.Included = value; }
+        }
 
 		public bool IsAllIncluded
         {
             get
             {
-                if (watchedIncluded && unwatchedIncluded)
+                if (label_requestWatched.Included && label_requestUnwatched.Included)
                 {
 					return true;
                 }
@@ -67,15 +85,17 @@ namespace FilmsDBC.Visual.Forms
             }
         }
 
-
+		/*
 		private void label_requestWatched_Click(object sender, EventArgs e)
 		{
 			IsWatched = !watchedIncluded;
+			//label_requestWatched.Included = la
 		}
 
 		private void label_requestUnwatched_Click(object sender, EventArgs e)
 		{
 			IsUnwatched = !unwatchedIncluded;
 		}
+		*/
 	}
 }
