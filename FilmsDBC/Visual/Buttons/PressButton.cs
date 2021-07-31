@@ -27,14 +27,14 @@ namespace FilmsDBC.Visual.Buttons
                     this.MouseEnter -= new EventHandler(this.this_Included_mouseEnter);
                     this.MouseLeave -= new EventHandler(this.this_Included_mouseLeave);
                     this.MouseDown -= new MouseEventHandler(this.this_Included_mouseDown);
-                    this.MouseUp -= new MouseEventHandler(this.this_Included_mouseUp);
+                    this.Click -= new EventHandler(this.this_Included_mouseUp);
                 }
                 else
                 {
                     this.MouseEnter -= new EventHandler(this.this_NotIncluded_mouseEnter);
                     this.MouseLeave -= new EventHandler(this.this_NotIncluded_mouseLeave);
                     this.MouseDown -= new MouseEventHandler(this.this_NotIncluded_mouseDown);
-                    this.MouseUp -= new MouseEventHandler(this.this_NotIncluded_mouseUp);
+                    this.Click -= new EventHandler(this.this_NotIncluded_mouseUp);
                 }
 
                 included = value;
@@ -44,7 +44,7 @@ namespace FilmsDBC.Visual.Buttons
                     this.MouseEnter += new EventHandler(this.this_Included_mouseEnter);
                     this.MouseLeave += new EventHandler(this.this_Included_mouseLeave);
                     this.MouseDown += new MouseEventHandler(this.this_Included_mouseDown);
-                    this.MouseUp += new MouseEventHandler(this.this_Included_mouseUp);
+                    this.Click += new EventHandler(this.this_Included_mouseUp);
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace FilmsDBC.Visual.Buttons
                     this.MouseEnter += new EventHandler(this.this_NotIncluded_mouseEnter);
                     this.MouseLeave += new EventHandler(this.this_NotIncluded_mouseLeave);
                     this.MouseDown += new MouseEventHandler(this.this_NotIncluded_mouseDown);
-                    this.MouseUp += new MouseEventHandler(this.this_NotIncluded_mouseUp);
+                    this.Click += new EventHandler(this.this_NotIncluded_mouseUp);
                 }
             }
         }
@@ -177,6 +177,15 @@ namespace FilmsDBC.Visual.Buttons
         private void this_Click(object sender, EventArgs e)
         {
             this.Included = !this.Included;
+
+            if (Included)
+            {
+                this.BackColor = this.included_mouseEnterColor;
+            }
+            else
+            {
+                this.BackColor = this.mouseEnterColor;
+            }
         }
     }
 }
