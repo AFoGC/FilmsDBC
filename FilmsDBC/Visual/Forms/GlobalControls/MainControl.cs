@@ -102,6 +102,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 				if (film.Film.Watched)
                 {
 					tables.GetTable(typeof(PriorityFilm)).Cells.Remove(film);
+					--i;
 				}
                 else
                 {
