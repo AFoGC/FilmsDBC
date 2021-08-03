@@ -18,14 +18,19 @@ namespace FilmsDBC.Visual.Forms
 {
 	public partial class MainForm : Form
 	{
-		public MainControl MainControl
-        {
-            get { return mainControl; }
-        }
-
 		public MainForm()
         {
             InitializeComponent();
         }
-	}
+
+        public MainControl MainControl
+        {
+            get { return mainControl; }
+        }
+
+        public SettingsControl SettingsControl
+        {
+            get { return settingsControl; }
+        }
+    }
 }

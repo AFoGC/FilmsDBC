@@ -109,6 +109,12 @@
     <Compile Include="Visual\Forms\GlobalControls\MainControl.Designer.cs">
       <DependentUpon>MainControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\Navbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\Navbar.Designer.cs">
+      <DependentUpon>Navbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Forms\GlobalControls\SettingsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Forms\GlobalControls\Navbar.resx">
+      <DependentUpon>Navbar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControl.resx">
       <DependentUpon>SettingsControl.cs</DependentUpon>
