@@ -28,11 +28,13 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         private void pressButton_Main_Click(object sender, EventArgs e)
         {
             changeSelectedButton((PressButton)sender);
+            MainInformation.MainForm.MainControl.BringToFront();
         }
 
         private void pressButton_Settings_Click(object sender, EventArgs e)
         {
             changeSelectedButton((PressButton)sender);
+            MainInformation.MainForm.SettingsControl.BringToFront();
         }
 
         private void changeSelectedButton(PressButton pressButton)
