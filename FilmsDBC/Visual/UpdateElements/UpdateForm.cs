@@ -21,9 +21,23 @@ namespace FilmsDBC.Visual.UpdateElements
 			InitializeComponent();
 		}
 
-		public void Reinitialize(IControls control)
+		public void Reinitialize(IControls icontrol)
 		{
 			flowLayoutPanel_main.Controls.Clear();
+			IControls control = null;
+
+			if (icontrol.GetType() == typeof(SimpleControl))
+			{
+				SimpleControl cont = (SimpleControl)icontrol;
+				FilmControl fcont = new FilmControl(cont.FilmInfo);
+				fcont.simpleControl = (SimpleControl)icontrol;
+				control = fcont;
+			}
+            else
+            {
+				control = icontrol;
+            }
+
 			if (control.GetType() == typeof(FilmControl))
 			{
 				FilmControl filmControl = (FilmControl)control;

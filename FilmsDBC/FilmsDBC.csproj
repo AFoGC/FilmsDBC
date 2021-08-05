@@ -103,6 +103,12 @@
     <Compile Include="Visual\Forms\GenrePressButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\BooksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\BooksControl.Designer.cs">
+      <DependentUpon>BooksControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Forms\GlobalControls\MainControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Controls\SimpleControl.resx">
       <DependentUpon>SimpleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Forms\GlobalControls\BooksControl.resx">
+      <DependentUpon>BooksControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>

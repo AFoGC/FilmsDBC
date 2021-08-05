@@ -12,6 +12,10 @@ namespace FilmsDBC.Visual.MoreInfo
 	static class MoreInfoFormVisualizer
 	{
 		private static MoreInfoForm infoForm = new MoreInfoForm();
+		public static MoreInfoForm MoreInfoForm
+        {
+            get { return infoForm; }
+        }
 		public static void OpenMoreInfoForm(Film film, SimpleControl simpleControl)
 		{
 			infoForm.Reinitialize(film, simpleControl);

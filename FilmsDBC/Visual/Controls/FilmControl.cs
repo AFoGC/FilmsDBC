@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Visual.MoreInfo;
 using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements;
 using System;
@@ -70,6 +71,7 @@ namespace FilmsDBC.Visual.Controls
 		private void label_update_Click(object sender, EventArgs e)
 		{
 			UpdateFormVisualizer.OpenUpdateForm(this);
+			MoreInfoFormVisualizer.MoreInfoForm.Hide();
 		}
 
 		private void checkBox_watched_Click(object sender, EventArgs e)

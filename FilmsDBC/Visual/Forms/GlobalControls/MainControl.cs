@@ -228,9 +228,12 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 
 		private void button_AddToPriority_Click(object sender, EventArgs e)
 		{
-			tables.GetTable(typeof(PriorityFilm)).addElement();
-			PriorityFilm priorityFilm = (PriorityFilm)tables.GetTable(typeof(PriorityFilm)).GetLastElement;
-			priorityFilm.Film = controlInBuffer.FilmInfo;
+			if (controlInBuffer != null)
+			{
+				tables.GetTable(typeof(PriorityFilm)).addElement();
+				PriorityFilm priorityFilm = (PriorityFilm)tables.GetTable(typeof(PriorityFilm)).GetLastElement;
+				priorityFilm.Film = controlInBuffer.FilmInfo;
+			}
 		}
 
 		private void button_filter_Click(object sender, EventArgs e)
