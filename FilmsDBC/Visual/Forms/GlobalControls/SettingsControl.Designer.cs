@@ -29,12 +29,24 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanel_settings = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel_settings
+            // 
+            this.flowLayoutPanel_settings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.flowLayoutPanel_settings.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.flowLayoutPanel_settings.Location = new System.Drawing.Point(200, 132);
+            this.flowLayoutPanel_settings.Name = "flowLayoutPanel_settings";
+            this.flowLayoutPanel_settings.Size = new System.Drawing.Size(1035, 515);
+            this.flowLayoutPanel_settings.TabIndex = 0;
             // 
             // SettingsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowLayoutPanel_settings);
             this.Name = "SettingsControl";
             this.Size = new System.Drawing.Size(1485, 647);
             this.ResumeLayout(false);
@@ -42,5 +54,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_settings;
     }
 }

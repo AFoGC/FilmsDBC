@@ -72,7 +72,7 @@ namespace FilmsDBC.Visual.Forms
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 608);
+            this.ClientSize = new System.Drawing.Size(1469, 667);
             this.Controls.Add(this.mainControl);
             this.Controls.Add(this.settingsControl);
             this.Controls.Add(this.navbar);

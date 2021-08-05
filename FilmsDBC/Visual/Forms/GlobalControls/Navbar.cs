@@ -34,6 +34,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         private void pressButton_Settings_Click(object sender, EventArgs e)
         {
             changeSelectedButton((PressButton)sender);
+            MainInformation.MainForm.SettingsControl.RefreshControl();
             MainInformation.MainForm.SettingsControl.BringToFront();
         }
 

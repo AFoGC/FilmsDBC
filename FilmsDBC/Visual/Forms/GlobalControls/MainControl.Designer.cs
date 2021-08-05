@@ -41,8 +41,8 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.flowLayoutPanel_requestsGenres = new System.Windows.Forms.FlowLayoutPanel();
             this.button_filter = new System.Windows.Forms.Button();
             this.button_ShowPriorityFilms = new System.Windows.Forms.Button();
-            this.watchedRequestControl = new FilmsDBC.Visual.Forms.WatchedRequestControl();
             this.button_AddToPriority = new System.Windows.Forms.Button();
+            this.watchedRequestControl = new FilmsDBC.Visual.Forms.WatchedRequestControl();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_main
@@ -53,7 +53,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.flowLayoutPanel_main.Location = new System.Drawing.Point(235, 78);
             this.flowLayoutPanel_main.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel_main.Name = "flowLayoutPanel_main";
-            this.flowLayoutPanel_main.Size = new System.Drawing.Size(960, 527);
+            this.flowLayoutPanel_main.Size = new System.Drawing.Size(960, 569);
             this.flowLayoutPanel_main.TabIndex = 0;
             // 
             // button_ShowCategories
@@ -160,15 +160,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.button_ShowPriorityFilms.UseVisualStyleBackColor = true;
             this.button_ShowPriorityFilms.Click += new System.EventHandler(this.button_ShowPriorityFilms_Click);
             // 
-            // watchedRequestControl
-            // 
-            this.watchedRequestControl.IsUnwatched = true;
-            this.watchedRequestControl.IsWatched = true;
-            this.watchedRequestControl.Location = new System.Drawing.Point(1198, 368);
-            this.watchedRequestControl.Name = "watchedRequestControl";
-            this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
-            this.watchedRequestControl.TabIndex = 12;
-            // 
             // button_AddToPriority
             // 
             this.button_AddToPriority.Location = new System.Drawing.Point(1198, 154);
@@ -178,6 +169,15 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.button_AddToPriority.Text = "Add To Priority";
             this.button_AddToPriority.UseVisualStyleBackColor = true;
             this.button_AddToPriority.Click += new System.EventHandler(this.button_AddToPriority_Click);
+            // 
+            // watchedRequestControl
+            // 
+            this.watchedRequestControl.IsUnwatched = true;
+            this.watchedRequestControl.IsWatched = true;
+            this.watchedRequestControl.Location = new System.Drawing.Point(1198, 368);
+            this.watchedRequestControl.Name = "watchedRequestControl";
+            this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
+            this.watchedRequestControl.TabIndex = 12;
             // 
             // MainControl
             // 

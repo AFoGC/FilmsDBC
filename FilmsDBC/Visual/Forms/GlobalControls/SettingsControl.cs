@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 {
     public partial class SettingsControl : UserControl
     {
+        private DirectoryPathSettingControl directoryPathSettingControl;
         public SettingsControl()
         {
             InitializeComponent();
+
+            directoryPathSettingControl = new DirectoryPathSettingControl();
+
+            RefreshControl();
+            flowLayoutPanel_settings.Controls.Add(directoryPathSettingControl);
+        }
+
+        public void RefreshControl()
+        {
+            directoryPathSettingControl.RefreshControl();
         }
     }
 }

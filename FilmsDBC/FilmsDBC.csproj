@@ -121,6 +121,13 @@
     <Compile Include="Visual\Forms\GlobalControls\SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\DirectoryPathSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\DirectoryPathSettingControl.Designer.cs">
+      <DependentUpon>DirectoryPathSettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ISettingsControls.cs" />
     <Compile Include="Visual\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +224,9 @@
     <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControl.resx">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\DirectoryPathSettingControl.resx">
+      <DependentUpon>DirectoryPathSettingControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,9 +270,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Visual\Forms\GlobalControls\SettingsControlElements\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\TablesLibrary\TablesLibrary\TablesLibrary.csproj">
       <Project>{6389a55e-2582-4996-b0f4-eaa7f1078a84}</Project>
