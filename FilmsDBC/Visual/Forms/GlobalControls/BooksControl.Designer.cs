@@ -29,12 +29,25 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanel_main = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel_main
+            // 
+            this.flowLayoutPanel_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.flowLayoutPanel_main.AutoScroll = true;
+            this.flowLayoutPanel_main.Location = new System.Drawing.Point(235, 78);
+            this.flowLayoutPanel_main.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel_main.Name = "flowLayoutPanel_main";
+            this.flowLayoutPanel_main.Size = new System.Drawing.Size(960, 569);
+            this.flowLayoutPanel_main.TabIndex = 1;
             // 
             // BooksControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowLayoutPanel_main);
             this.Name = "BooksControl";
             this.Size = new System.Drawing.Size(1485, 647);
             this.ResumeLayout(false);
@@ -42,5 +55,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         }
 
         #endregion
+
+        internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
     }
 }

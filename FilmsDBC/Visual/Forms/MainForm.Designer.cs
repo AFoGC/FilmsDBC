@@ -32,6 +32,7 @@ namespace FilmsDBC.Visual.Forms
             this.mainControl = new FilmsDBC.Visual.Forms.GlobalControls.MainControl();
             this.settingsControl = new FilmsDBC.Visual.Forms.GlobalControls.SettingsControl();
             this.navbar = new FilmsDBC.Visual.Forms.GlobalControls.Navbar();
+            this.booksControl = new FilmsDBC.Visual.Forms.GlobalControls.BooksControl();
             this.SuspendLayout();
             // 
             // mainControl
@@ -68,6 +69,17 @@ namespace FilmsDBC.Visual.Forms
             this.navbar.Size = new System.Drawing.Size(1485, 20);
             this.navbar.TabIndex = 2;
             //
+            // booksControl
+            //
+            this.booksControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.booksControl.Location = new System.Drawing.Point(0, 20);
+            this.booksControl.Margin = new System.Windows.Forms.Padding(0);
+            this.booksControl.Name = "settingsControl";
+            this.booksControl.Size = new System.Drawing.Size(1485, 647);
+            this.booksControl.TabIndex = 3;
+            //
             // MainForm
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,6 +88,7 @@ namespace FilmsDBC.Visual.Forms
             this.Controls.Add(this.mainControl);
             this.Controls.Add(this.settingsControl);
             this.Controls.Add(this.navbar);
+            this.Controls.Add(this.booksControl);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
@@ -86,5 +99,6 @@ namespace FilmsDBC.Visual.Forms
         private FilmsDBC.Visual.Forms.GlobalControls.MainControl mainControl;
         private FilmsDBC.Visual.Forms.GlobalControls.SettingsControl settingsControl;
         private FilmsDBC.Visual.Forms.GlobalControls.Navbar navbar;
+        private FilmsDBC.Visual.Forms.GlobalControls.BooksControl booksControl;
     }
 }

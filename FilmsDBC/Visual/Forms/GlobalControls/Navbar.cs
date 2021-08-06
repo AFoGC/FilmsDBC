@@ -38,6 +38,12 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             MainInformation.MainForm.SettingsControl.BringToFront();
         }
 
+        private void pressButton_Books_Click(object sender, EventArgs e)
+        {
+            changeSelectedButton((PressButton)sender);
+            MainInformation.MainForm.BooksControl.BringToFront();
+        }
+
         private void changeSelectedButton(PressButton pressButton)
         {
             foreach (PressButton button in this.Controls)

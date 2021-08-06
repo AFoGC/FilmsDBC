@@ -32,5 +32,10 @@ namespace FilmsDBC.Visual.Forms
         {
             get { return settingsControl; }
         }
+
+        public BooksControl BooksControl
+        {
+            get { return booksControl; }
+        }
     }
 }
