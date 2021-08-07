@@ -68,5 +68,18 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			this.Size = controlSize;
 			commentIsOpen = !commentIsOpen;
 		}
+
+        private void checkBox_watched_Click(object sender, EventArgs e)
+        {
+            if (dateUpdateControl_watchDate.IsEmpty)
+            {
+				dateUpdateControl_watchDate.Date = DateTime.Today;
+			}
+
+			if (textBox_countOfviews.Text == "")
+			{
+				textBox_countOfviews.Text = "1";
+			}
+		}
     }
 }
