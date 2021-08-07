@@ -64,8 +64,22 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			{
 				date = value;
 				refresh();
-				
 			}
 		}
+
+		public bool IsEmpty
+        {
+            get
+            {
+                if (textBox_year.Text == "" && textBox_month.Text == "" && textBox_day.Text == "")
+                {
+					return true;
+                }
+                else
+                {
+					return false;
+                }
+            }
+        }
 	}
 }

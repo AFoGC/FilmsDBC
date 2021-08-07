@@ -106,5 +106,40 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 			this.Size = controlSize;
 			commentIsOpen = !commentIsOpen;
 		}
+
+        private void checkBox_watched_Click(object sender, EventArgs e)
+        {
+            if (dateUpdateControl_watchDate.IsEmpty)
+            {
+				dateUpdateControl_watchDate.Date = DateTime.Today;
+            }
+
+
+			int cows = 0;
+			int ts = 0;
+			bool emptyTotal = true;
+
+            if (textBox_countOfWatchedSeries.Text != "")
+            {
+				cows = Convert.ToInt32(textBox_countOfWatchedSeries.Text);
+			}
+
+            if (textBox_totalSeries.Text != "")
+            {
+				ts = Convert.ToInt32(textBox_totalSeries.Text);
+				emptyTotal = false;
+			}
+
+			if (cows < ts && emptyTotal == false)
+            {
+				textBox_countOfWatchedSeries.Text = textBox_totalSeries.Text;
+			}
+
+
+            if (textBox_countOfviews.Text == "")
+            {
+				textBox_countOfviews.Text = "1";
+            }
+        }
     }
 }

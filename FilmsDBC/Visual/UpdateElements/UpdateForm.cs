@@ -69,6 +69,7 @@ namespace FilmsDBC.Visual.UpdateElements
 		{
 			IUpdateControl control = (IUpdateControl)flowLayoutPanel_main.Controls[0];
 			control.UpdateElement();
+			MainInformation.tableCollection.saveTables();
 		}
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)

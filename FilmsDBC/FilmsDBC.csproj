@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CinemaDataTypes\Book.cs" />
     <Compile Include="CinemaDataTypes\Category.cs" />
     <Compile Include="CinemaDataTypes\CellDataClasses\Source.cs" />
     <Compile Include="CinemaDataTypes\Film.cs" />
