@@ -135,6 +135,12 @@
       <DependentUpon>DirectoryPathSettingControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ISettingsControls.cs" />
+    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.Designer.cs">
+      <DependentUpon>MarkSystemSettingControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\DirectoryPathSettingControl.resx">
       <DependentUpon>DirectoryPathSettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.resx">
+      <DependentUpon>MarkSystemSettingControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

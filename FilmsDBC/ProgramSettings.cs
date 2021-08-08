@@ -12,6 +12,12 @@ namespace FilmsDBC
 	{
 		private String tablePath;
 		public String TablePath { get { return tablePath; } }
+		private int markSystem = 0;
+		public int MarkSystem
+        {
+            get { return markSystem; }
+            set { markSystem = value; }
+        }
 
 		protected override void updateThisBody(Cell cell)
 		{
