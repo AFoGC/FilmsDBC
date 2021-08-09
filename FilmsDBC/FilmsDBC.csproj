@@ -116,6 +116,12 @@
     <Compile Include="Visual\Forms\GlobalControls\MainControl.Designer.cs">
       <DependentUpon>MainControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\MainHeaderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\Forms\GlobalControls\MainHeaderControl.Designer.cs">
+      <DependentUpon>MainHeaderControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\Forms\GlobalControls\Navbar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Forms\GlobalControls\MainHeaderControl.resx">
+      <DependentUpon>MainHeaderControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\Navbar.resx">
       <DependentUpon>Navbar.cs</DependentUpon>
