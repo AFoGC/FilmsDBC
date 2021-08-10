@@ -12,6 +12,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 {
     public partial class MainHeaderControl : UserControl
     {
+        
         public MainHeaderControl()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             clickButton_maximize.SetDefaultButtonBlink();
             clickButton_minimize.SetDefaultButtonBlink();
             clickButton_close.SetDefaultButtonBlink();
+
         }
 
         private void clickButton_close_Click(object sender, EventArgs e)
@@ -28,12 +30,35 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 
         private void clickButton_maximize_Click(object sender, EventArgs e)
         {
-            MainInformation.MainForm.MaximizeBox = !MainInformation.MainForm.MaximizeBox;
+            if (MainInformation.MainForm.WindowState != FormWindowState.Maximized)
+            {
+                MainInformation.MainForm.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                MainInformation.MainForm.WindowState = FormWindowState.Normal;
+            }
         }
 
         private void clickButton_minimize_Click(object sender, EventArgs e)
         {
-            MainInformation.MainForm.MinimizeBox = true;
+            MainInformation.MainForm.WindowState = FormWindowState.Minimized;
         }
+
+        
+        private Point lastPoint;
+        private void MainHeaderControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        private void MainHeaderControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                MainInformation.MainForm.Left += e.X - lastPoint.X;
+                MainInformation.MainForm.Top += e.Y - lastPoint.Y;
+            }
+        }
+        
     }
 }

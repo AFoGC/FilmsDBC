@@ -33,6 +33,7 @@ namespace FilmsDBC.Visual.Forms
             this.settingsControl = new FilmsDBC.Visual.Forms.GlobalControls.SettingsControl();
             this.navbar = new FilmsDBC.Visual.Forms.GlobalControls.Navbar();
             this.booksControl = new FilmsDBC.Visual.Forms.GlobalControls.BooksControl();
+            this.mainHeaderControl = new FilmsDBC.Visual.Forms.GlobalControls.MainHeaderControl();
             this.SuspendLayout();
             // 
             // mainControl
@@ -41,7 +42,7 @@ namespace FilmsDBC.Visual.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainControl.ControlInBuffer = null;
-            this.mainControl.Location = new System.Drawing.Point(0, 20);
+            this.mainControl.Location = new System.Drawing.Point(0, 50);
             this.mainControl.Margin = new System.Windows.Forms.Padding(0);
             this.mainControl.Name = "mainControl";
             this.mainControl.Size = new System.Drawing.Size(1485, 647);
@@ -52,7 +53,7 @@ namespace FilmsDBC.Visual.Forms
             this.settingsControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingsControl.Location = new System.Drawing.Point(0, 20);
+            this.settingsControl.Location = new System.Drawing.Point(0, 50);
             this.settingsControl.Margin = new System.Windows.Forms.Padding(0);
             this.settingsControl.Name = "settingsControl";
             this.settingsControl.Size = new System.Drawing.Size(1485, 647);
@@ -63,7 +64,7 @@ namespace FilmsDBC.Visual.Forms
             this.navbar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right))));
-            this.navbar.Location = new System.Drawing.Point(0, 0);
+            this.navbar.Location = new System.Drawing.Point(0, 30);
             this.navbar.Margin = new System.Windows.Forms.Padding(0);
             this.navbar.Name = "navbar";
             this.navbar.Size = new System.Drawing.Size(1485, 20);
@@ -74,21 +75,34 @@ namespace FilmsDBC.Visual.Forms
             this.booksControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.booksControl.Location = new System.Drawing.Point(0, 20);
+            this.booksControl.Location = new System.Drawing.Point(0, 50);
             this.booksControl.Margin = new System.Windows.Forms.Padding(0);
             this.booksControl.Name = "settingsControl";
             this.booksControl.Size = new System.Drawing.Size(1485, 647);
             this.booksControl.TabIndex = 3;
             //
+            // mainHeaderControl
+            //
+            this.mainHeaderControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right))));
+            this.mainHeaderControl.Location = new System.Drawing.Point(0, 0);
+            this.mainHeaderControl.Margin = new System.Windows.Forms.Padding(0);
+            this.mainHeaderControl.Name = "mainHeaderControl";
+            this.mainHeaderControl.Size = new System.Drawing.Size(1485, 30);
+            this.mainHeaderControl.TabIndex = 4;
+            //
             // MainForm
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 667);
+            this.ClientSize = new System.Drawing.Size(1485, 697);
             this.Controls.Add(this.mainControl);
             this.Controls.Add(this.settingsControl);
             this.Controls.Add(this.navbar);
             this.Controls.Add(this.booksControl);
+            this.Controls.Add(this.mainHeaderControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
@@ -100,5 +114,6 @@ namespace FilmsDBC.Visual.Forms
         private FilmsDBC.Visual.Forms.GlobalControls.SettingsControl settingsControl;
         private FilmsDBC.Visual.Forms.GlobalControls.Navbar navbar;
         private FilmsDBC.Visual.Forms.GlobalControls.BooksControl booksControl;
+        private FilmsDBC.Visual.Forms.GlobalControls.MainHeaderControl mainHeaderControl;
     }
 }
