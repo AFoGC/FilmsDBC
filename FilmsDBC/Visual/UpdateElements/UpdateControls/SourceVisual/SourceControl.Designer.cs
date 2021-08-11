@@ -38,6 +38,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
             // textBox_name
             // 
             this.textBox_name.Location = new System.Drawing.Point(0, 0);
+            this.textBox_name.MaxLength = 13;
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(100, 20);
             this.textBox_name.TabIndex = 0;

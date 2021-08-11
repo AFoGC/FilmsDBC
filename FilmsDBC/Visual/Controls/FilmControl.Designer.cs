@@ -121,9 +121,9 @@ namespace FilmsDBC.Visual.Controls
             // label_copyUrl
             // 
             this.label_copyUrl.DefaultColor = System.Drawing.SystemColors.Control;
-            this.label_copyUrl.Location = new System.Drawing.Point(750, 0);
+            this.label_copyUrl.Location = new System.Drawing.Point(740, 0);
             this.label_copyUrl.Name = "label_copyUrl";
-            this.label_copyUrl.Size = new System.Drawing.Size(80, 20);
+            this.label_copyUrl.Size = new System.Drawing.Size(105, 20);
             this.label_copyUrl.TabIndex = 30;
             this.label_copyUrl.Text = "copy url";
             this.label_copyUrl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

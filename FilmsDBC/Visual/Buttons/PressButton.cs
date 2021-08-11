@@ -167,11 +167,25 @@ namespace FilmsDBC.Visual.Buttons
 
         private void this_Included_mouseUp(object sender, EventArgs e)
         {
-            this.BackColor = this.included_mouseDownColor;
+            if (clickLocked)
+            {
+                this.BackColor = this.mouseEnterColor;
+            }
+            else
+            {
+                this.BackColor = this.included_mouseEnterColor;
+            }
         }
         private void this_NotIncluded_mouseUp(object sender, EventArgs e)
         {
-            this.BackColor = this.mouseDownColor;
+            if (clickLocked)
+            {
+                this.BackColor = this.included_mouseEnterColor;
+            }
+            else
+            {
+                this.BackColor = this.mouseEnterColor;
+            }
         }
 
         private void this_Click(object sender, EventArgs e)
