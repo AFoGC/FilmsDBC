@@ -74,6 +74,7 @@ namespace FilmsDBC.Visual.UpdateElements
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)
 		{
+			MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.Location = this.Location;
 			this.Hide();
 			SourcesVisualizer.SourcesForm.Hide();
 		}

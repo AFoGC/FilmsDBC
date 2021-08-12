@@ -188,6 +188,7 @@ namespace FilmsDBC.Visual.Buttons
             }
         }
 
+        //Тут короче надо убрать баг связаный с изменой цвета при нажатии на заблокинованную кнопку
         private void this_Click(object sender, EventArgs e)
         {
             this.Included = !this.Included;

@@ -167,6 +167,11 @@ namespace FilmsDBC.Visual.Controls
 		{
 			UpdateFormVisualizer.OpenUpdateForm(this);
 			MoreInfoFormVisualizer.MoreInfoForm.Hide();
+
+            if (simpleControl != null)
+            {
+				UpdateFormVisualizer.UpdateForm.Location = MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.Location;
+			}
 		}
 
 		private void label_copyUrl_Click(object sender, EventArgs e)
