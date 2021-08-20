@@ -36,7 +36,7 @@ namespace FilmsDBC.Visual.MoreInfo
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)
 		{
-			this.Hide();
+			MoreInfoFormVisualizer.HideMoreInfoForm();
 		}
 
 
@@ -54,5 +54,5 @@ namespace FilmsDBC.Visual.MoreInfo
 				this.Top += e.Y - lastPoint.Y;
 			}
 		}
-	}
+    }
 }

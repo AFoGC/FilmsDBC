@@ -16,10 +16,23 @@ namespace FilmsDBC.Visual.MoreInfo
         {
             get { return infoForm; }
         }
+
+		private static bool isOpen = false;
+		public static bool IsOpen
+        {
+            get { return isOpen; }
+        }
 		public static void OpenMoreInfoForm(Film film, SimpleControl simpleControl)
 		{
 			infoForm.Reinitialize(film, simpleControl);
 			infoForm.Show();
+			isOpen = true;
 		}
+
+		public static void HideMoreInfoForm()
+        {
+			isOpen = false;
+			infoForm.Hide();
+        }
 	}
 }

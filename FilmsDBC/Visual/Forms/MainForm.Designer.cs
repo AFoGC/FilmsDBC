@@ -103,6 +103,7 @@ namespace FilmsDBC.Visual.Forms
             this.Controls.Add(this.booksControl);
             this.Controls.Add(this.mainHeaderControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);

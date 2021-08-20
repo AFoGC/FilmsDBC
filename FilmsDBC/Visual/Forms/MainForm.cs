@@ -19,23 +19,38 @@ namespace FilmsDBC.Visual.Forms
 	public partial class MainForm : Form
 	{
 		public MainForm()
-        {
-            InitializeComponent();
-        }
+		{
+			InitializeComponent();
+		}
 
-        public MainControl MainControl
-        {
-            get { return mainControl; }
-        }
+		public MainControl MainControl
+		{
+			get { return mainControl; }
+		}
 
-        public SettingsControl SettingsControl
-        {
-            get { return settingsControl; }
-        }
+		public SettingsControl SettingsControl
+		{
+			get { return settingsControl; }
+		}
 
-        public BooksControl BooksControl
-        {
-            get { return booksControl; }
-        }
-    }
+		public BooksControl BooksControl
+		{
+			get { return booksControl; }
+		}
+
+		private void MainForm_Activated(object sender, EventArgs e)
+		{
+			/*
+            if (MoreInfo.MoreInfoFormVisualizer.IsOpen)
+            {
+				//MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.Activate();
+				MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.BringToFront();
+			}
+            if (UpdateElements.UpdateFormVisualizer.IsOpen)
+            {
+				//UpdateElements.UpdateFormVisualizer.UpdateForm.Activate();
+            }
+			*/
+		}
+	}
 }

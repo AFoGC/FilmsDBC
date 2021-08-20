@@ -12,11 +12,20 @@ namespace FilmsDBC.Visual.UpdateElements
 	{
 		private static UpdateForm updateForm = new UpdateForm();
 		public static UpdateForm UpdateForm { get { return updateForm; } }
+		private static bool isOpen = false;
+		public static bool IsOpen { get { return isOpen; } }
 
 		public static void OpenUpdateForm(IControls userControl)
 		{
 			updateForm.Reinitialize(userControl);
 			updateForm.Show();
+			isOpen = true;
 		}
+
+		public static void HideUpdateForm()
+        {
+			updateForm.Hide();
+			isOpen = false;
+        }
 	}
 }
