@@ -159,6 +159,12 @@
     <Compile Include="Visual\Forms\WatchedRequestControl.Designer.cs">
       <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\MoreInfo\MoreInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MoreInfo\MoreInfoControl.Designer.cs">
+      <DependentUpon>MoreInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\MoreInfo\MoreInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,12 @@
     <Compile Include="Visual\StaticVisualClasses\ControlsConverter.cs" />
     <Compile Include="Visual\MoreInfo\MoreInfoFormVisualizer.cs" />
     <Compile Include="Visual\StaticVisualClasses\VisualHelper.cs" />
+    <Compile Include="Visual\UpdateElements\UpdateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\UpdateElements\UpdateControl.Designer.cs">
+      <DependentUpon>UpdateControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -261,8 +273,14 @@
     <EmbeddedResource Include="Visual\Forms\WatchedRequestControl.resx">
       <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MoreInfo\MoreInfoControl.resx">
+      <DependentUpon>MoreInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\MoreInfo\MoreInfoForm.resx">
       <DependentUpon>MoreInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\UpdateElements\UpdateControl.resx">
+      <DependentUpon>UpdateControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.resx">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>

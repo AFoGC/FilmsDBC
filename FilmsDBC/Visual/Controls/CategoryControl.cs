@@ -123,8 +123,7 @@ namespace FilmsDBC.Visual.Controls
 
 		private void label_update_Click(object sender, EventArgs e)
 		{
-			UpdateFormVisualizer.OpenUpdateForm(this);
-			MoreInfoFormVisualizer.MoreInfoForm.Hide();
+			UpdateFormVisualizer.OpenUpdateControl(this);
 		}
 
 		public bool SetFindedElement(string search)

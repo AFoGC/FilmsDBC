@@ -1,6 +1,7 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.Controls;
 using FilmsDBC.Visual.Forms;
+using FilmsDBC.Visual.UpdateElements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,10 @@ namespace FilmsDBC.Visual.MoreInfo
 {
 	static class MoreInfoFormVisualizer
 	{
-		private static MoreInfoForm infoForm = new MoreInfoForm();
-		public static MoreInfoForm MoreInfoForm
-        {
-            get { return infoForm; }
+		private static MoreInfoControl infoControl = new MoreInfoControl();
+		public static MoreInfoControl MoreInfoControl
+		{
+            get { return infoControl; }
         }
 
 		private static bool isOpen = false;
@@ -24,15 +25,21 @@ namespace FilmsDBC.Visual.MoreInfo
         }
 		public static void OpenMoreInfoForm(Film film, SimpleControl simpleControl)
 		{
-			infoForm.Reinitialize(film, simpleControl);
-			infoForm.Show();
+			infoControl.Reinitialize(film, simpleControl);
+			MainInformation.MainForm.MainControl.InfoPanel.Controls.Add(infoControl);
+
+			if (UpdateFormVisualizer.IsOpen)
+			{
+				UpdateFormVisualizer.HideUpdateControl();
+			}
+
 			isOpen = true;
 		}
 
-		public static void HideMoreInfoForm()
+		public static void HideMoreInfoControl()
         {
 			isOpen = false;
-			infoForm.Hide();
-        }
+			MainInformation.MainForm.MainControl.InfoPanel.Controls.Remove(infoControl);
+		}
 	}
 }

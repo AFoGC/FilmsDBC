@@ -70,13 +70,7 @@ namespace FilmsDBC.Visual.Controls
 
 		private void label_update_Click(object sender, EventArgs e)
 		{
-			UpdateFormVisualizer.OpenUpdateForm(this);
-			MoreInfoFormVisualizer.MoreInfoForm.Hide();
-
-			if (simpleControl != null)
-			{
-				UpdateFormVisualizer.UpdateForm.Location = MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.Location;
-			}
+			UpdateFormVisualizer.OpenUpdateControl(this);
 		}
 
 		private void checkBox_watched_Click(object sender, EventArgs e)

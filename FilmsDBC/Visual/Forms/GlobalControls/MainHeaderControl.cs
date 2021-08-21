@@ -59,11 +59,11 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
                 MainInformation.MainForm.Left += e.X - lastPoint.X;
                 MainInformation.MainForm.Top += e.Y - lastPoint.Y;
                 
-                MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.Left += e.X - lastPoint.X;
-                MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.Top += e.Y - lastPoint.Y;
+                //MoreInfo.MoreInfoFormVisualizer.MoreInfoControl.Left += e.X - lastPoint.X;
+                //MoreInfo.MoreInfoFormVisualizer.MoreInfoControl.Top += e.Y - lastPoint.Y;
 
-                UpdateFormVisualizer.UpdateForm.Left += e.X - lastPoint.X;
-                UpdateFormVisualizer.UpdateForm.Top += e.Y - lastPoint.Y;
+                //UpdateFormVisualizer.UpdateControl.Left += e.X - lastPoint.X;
+                //UpdateFormVisualizer.UpdateControl.Top += e.Y - lastPoint.Y;
             }
         }
         

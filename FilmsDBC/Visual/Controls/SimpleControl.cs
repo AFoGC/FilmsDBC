@@ -81,7 +81,6 @@ namespace FilmsDBC.Visual.Controls
 		private void label_info_Click(object sender, EventArgs e)
 		{
 			MoreInfoFormVisualizer.OpenMoreInfoForm(FilmInfo, this);
-			//UpdateFormVisualizer.OpenUpdateForm(this);
 		}
 
 		private void checkBox_watched_Click(object sender, EventArgs e)

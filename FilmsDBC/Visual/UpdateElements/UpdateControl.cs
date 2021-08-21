@@ -1,5 +1,4 @@
 ﻿using FilmsDBC.Visual.Controls;
-using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements.UpdateControls;
 using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
@@ -14,12 +13,12 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.UpdateElements
 {
-	public partial class UpdateForm : Form
-	{
-		public UpdateForm()
-		{
-			InitializeComponent();
-		}
+    public partial class UpdateControl : UserControl
+    {
+        public UpdateControl()
+        {
+            InitializeComponent();
+        }
 
 		public void Reinitialize(IControls icontrol)
 		{
@@ -33,10 +32,10 @@ namespace FilmsDBC.Visual.UpdateElements
 				fcont.simpleControl = (SimpleControl)icontrol;
 				control = fcont;
 			}
-            else
-            {
+			else
+			{
 				control = icontrol;
-            }
+			}
 
 			if (control.GetType() == typeof(FilmControl))
 			{
@@ -74,24 +73,7 @@ namespace FilmsDBC.Visual.UpdateElements
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)
 		{
-			MoreInfo.MoreInfoFormVisualizer.MoreInfoControl.Location = this.Location;
-			UpdateFormVisualizer.HideUpdateControl();
-			SourcesVisualizer.SourcesForm.Hide();
-		}
-
-		Point lastPoint = new Point();
-		private void panel_main_MouseDown(object sender, MouseEventArgs e)
-		{
-			lastPoint = new Point(e.X, e.Y);
-		}
-
-		private void panel_main_MouseMove(object sender, MouseEventArgs e)
-		{
-			if (e.Button == System.Windows.Forms.MouseButtons.Left)
-			{
-				this.Left += e.X - lastPoint.X;
-				this.Top += e.Y - lastPoint.Y;
-			}
+			MainInformation.MainForm.MainControl.InfoPanel.Controls.Remove(this);
 		}
 	}
 }

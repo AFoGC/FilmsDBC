@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.Visual.Controls;
+using FilmsDBC.Visual.MoreInfo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +11,28 @@ namespace FilmsDBC.Visual.UpdateElements
 {
 	static class UpdateFormVisualizer
 	{
-		private static UpdateForm updateForm = new UpdateForm();
-		public static UpdateForm UpdateForm { get { return updateForm; } }
+		private static UpdateControl updateControl = new UpdateControl();
+		public static UpdateControl UpdateControl { get { return updateControl; } }
 		private static bool isOpen = false;
 		public static bool IsOpen { get { return isOpen; } }
 
-		public static void OpenUpdateForm(IControls userControl)
+		public static void OpenUpdateControl(IControls userControl)
 		{
-			updateForm.Reinitialize(userControl);
-			updateForm.Show();
+			updateControl.Reinitialize(userControl);
+			MainInformation.MainForm.MainControl.InfoPanel.Controls.Add(updateControl);
+
+            if (MoreInfoFormVisualizer.IsOpen)
+			{
+				MoreInfoFormVisualizer.HideMoreInfoControl();
+			}
+
 			isOpen = true;
 		}
 
-		public static void HideUpdateForm()
+		public static void HideUpdateControl()
         {
-			updateForm.Hide();
 			isOpen = false;
+			MainInformation.MainForm.MainControl.InfoPanel.Controls.Remove(updateControl);
         }
 	}
 }

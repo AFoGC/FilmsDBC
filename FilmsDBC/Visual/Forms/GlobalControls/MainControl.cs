@@ -31,6 +31,11 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
 			set { controlInBuffer = value; }
 		}
 
+		public Panel InfoPanel
+        {
+            get { return panel_Info; }
+        }
+
 		public void loadGenres()
 		{
 			flowLayoutPanel_requestsGenres.Controls.Clear();
