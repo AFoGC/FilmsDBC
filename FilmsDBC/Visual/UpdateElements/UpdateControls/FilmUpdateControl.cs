@@ -54,7 +54,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
 
         private void label_sources_Click(object sender, EventArgs e)
         {
-			SourcesVisualizer.OpenSourceForm(this.film);
+			SourcesVisualizer.OpenSourceControl(this.film);
 		}
 
 		private bool commentIsOpen = false;

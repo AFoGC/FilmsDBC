@@ -165,12 +165,6 @@
     <Compile Include="Visual\MoreInfo\MoreInfoControl.Designer.cs">
       <DependentUpon>MoreInfoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MoreInfo\MoreInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visual\MoreInfo\MoreInfoForm.Designer.cs">
-      <DependentUpon>MoreInfoForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Visual\StaticVisualClasses\ControlsConverter.cs" />
     <Compile Include="Visual\MoreInfo\MoreInfoFormVisualizer.cs" />
     <Compile Include="Visual\StaticVisualClasses\VisualHelper.cs" />
@@ -211,19 +205,13 @@
     <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.Designer.cs">
       <DependentUpon>SourceControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesForm.Designer.cs">
-      <DependentUpon>SourcesForm.cs</DependentUpon>
+    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesControl.Designer.cs">
+      <DependentUpon>SourcesControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesVisualizer.cs" />
-    <Compile Include="Visual\UpdateElements\UpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateForm.Designer.cs">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Visual\UpdateElements\UpdateFormVisualizer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -276,9 +264,6 @@
     <EmbeddedResource Include="Visual\MoreInfo\MoreInfoControl.resx">
       <DependentUpon>MoreInfoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MoreInfo\MoreInfoForm.resx">
-      <DependentUpon>MoreInfoForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControl.resx">
       <DependentUpon>UpdateControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,11 +282,8 @@
     <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.resx">
       <DependentUpon>SourceControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesForm.resx">
-      <DependentUpon>SourcesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateForm.resx">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
+    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesControl.resx">
+      <DependentUpon>SourcesControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -195,7 +195,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.panel_buttonInterface.Controls.Add(this.button_ShowSeries);
             this.panel_buttonInterface.Controls.Add(this.button_ShowCategories);
             this.panel_buttonInterface.Controls.Add(this.button_ShowFilms);
-            this.panel_buttonInterface.Location = new System.Drawing.Point(998, 81);
+            this.panel_buttonInterface.Location = new System.Drawing.Point(998, 99);
             this.panel_buttonInterface.Name = "panel_buttonInterface";
             this.panel_buttonInterface.Size = new System.Drawing.Size(260, 439);
             this.panel_buttonInterface.TabIndex = 15;

@@ -1,5 +1,6 @@
 ﻿using FilmsDBC.Visual.Controls;
 using FilmsDBC.Visual.MoreInfo;
+using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,10 @@ namespace FilmsDBC.Visual.UpdateElements
 			{
 				MoreInfoFormVisualizer.HideMoreInfoControl();
 			}
+            if (SourcesVisualizer.IsOpen)
+            {
+				SourcesVisualizer.HideSourceControl();
+            }
 
 			isOpen = true;
 		}
@@ -33,6 +38,11 @@ namespace FilmsDBC.Visual.UpdateElements
         {
 			isOpen = false;
 			MainInformation.MainForm.MainControl.InfoPanel.Controls.Remove(updateControl);
+
+            if (SourcesVisualizer.IsOpen)
+            {
+				SourcesVisualizer.HideSourceControl();
+			}
         }
 	}
 }
