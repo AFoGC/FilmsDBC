@@ -28,5 +28,15 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         {
             directoryPathSettingControl.RefreshControl();
         }
+
+        private void button_saveSettings_Click(object sender, EventArgs e)
+        {
+            foreach (ISettingsControls settingsControl in flowLayoutPanel_settings.Controls)
+            {
+                settingsControl.GetSetting();
+            }
+
+            //MainInformation.Settings.saveCell();
+        }
     }
 }

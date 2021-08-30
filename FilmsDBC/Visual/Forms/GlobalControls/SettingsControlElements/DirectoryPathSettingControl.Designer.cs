@@ -30,8 +30,8 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
         private void InitializeComponent()
         {
             this.textBox_filePath = new System.Windows.Forms.TextBox();
-            this.clickButton_changeDirectory = new FilmsDBC.Visual.Buttons.ClickButton();
             this.label_name = new System.Windows.Forms.Label();
+            this.clickButton_changeDirectory = new FilmsDBC.Visual.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // textBox_filePath
@@ -41,6 +41,15 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.textBox_filePath.ReadOnly = true;
             this.textBox_filePath.Size = new System.Drawing.Size(300, 20);
             this.textBox_filePath.TabIndex = 1;
+            // 
+            // label_name
+            // 
+            this.label_name.Location = new System.Drawing.Point(4, 0);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(196, 20);
+            this.label_name.TabIndex = 2;
+            this.label_name.Text = "Files directory path:";
+            this.label_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // clickButton_changeDirectory
             // 
@@ -54,15 +63,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.clickButton_changeDirectory.TabIndex = 0;
             this.clickButton_changeDirectory.Text = "Change Directory";
             this.clickButton_changeDirectory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_name
-            // 
-            this.label_name.Location = new System.Drawing.Point(4, 0);
-            this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(200, 20);
-            this.label_name.TabIndex = 2;
-            this.label_name.Text = "Files directory path:";
-            this.label_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.clickButton_changeDirectory.Click += new System.EventHandler(this.clickButton_changeDirectory_Click);
             // 
             // DirectoryPathSettingControl
             // 

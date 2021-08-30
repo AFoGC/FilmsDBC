@@ -11,7 +11,11 @@ namespace FilmsDBC
 	public class ProgramSettings : Cell
 	{
 		private String tablePath;
-		public String TablePath { get { return tablePath; } }
+		public String TablePath
+		{
+			get { return tablePath; }
+            set { tablePath = value; }
+		}
 		private int markSystem = 0;
 		public int MarkSystem
         {
