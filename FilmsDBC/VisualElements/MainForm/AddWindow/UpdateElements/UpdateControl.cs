@@ -1,6 +1,7 @@
-﻿using FilmsDBC.Visual.Controls;
-using FilmsDBC.Visual.UpdateElements.UpdateControls;
-using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
+﻿using FilmsDBC.VisualElements.FilmControls;
+using FilmsDBC.VisualElements.FilmControls.Interface;
+using FilmsDBC.VisualElements.MainForm.AddWindow.UpdateElements.UpdateControls;
+using FilmsDBC.VisualElements.MainForm.AddWindow.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

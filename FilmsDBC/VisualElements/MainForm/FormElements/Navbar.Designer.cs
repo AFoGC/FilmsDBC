@@ -29,9 +29,9 @@ namespace FilmsDBC.VisualElements.MainForm.FormElements
         /// </summary>
         private void InitializeComponent()
         {
-            this.pressButton_Books = new FilmsDBC.Visual.Buttons.PressButton();
-            this.pressButton_Settings = new FilmsDBC.Visual.Buttons.PressButton();
-            this.pressButton_Main = new FilmsDBC.Visual.Buttons.PressButton();
+            this.pressButton_Books = new FilmsDBC.VisualElements.Buttons.PressButton();
+            this.pressButton_Settings = new FilmsDBC.VisualElements.Buttons.PressButton();
+            this.pressButton_Main = new FilmsDBC.VisualElements.Buttons.PressButton();
             this.SuspendLayout();
             // 
             // pressButton_Books
@@ -106,7 +106,7 @@ namespace FilmsDBC.VisualElements.MainForm.FormElements
         }
 
         #endregion
-        private FilmsDBC.Visual.Buttons.PressButton pressButton_Main;
+        private FilmsDBC.VisualElements.Buttons.PressButton pressButton_Main;
         private Buttons.PressButton pressButton_Settings;
         private Buttons.PressButton pressButton_Books;
     }

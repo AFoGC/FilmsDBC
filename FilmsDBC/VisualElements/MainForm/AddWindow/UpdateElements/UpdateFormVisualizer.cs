@@ -1,7 +1,6 @@
-﻿//using FilmsDBC.Visual.Controls;
-using FilmsDBC.Visual.MoreInfo;
-using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
-using FilmsDBC.VisualElements.FilmControls.Interface;
+﻿using FilmsDBC.VisualElements.FilmControls.Interface;
+using FilmsDBC.VisualElements.MainForm.AddWindow.MoreInfo;
+using FilmsDBC.VisualElements.MainForm.AddWindow.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.Linq;

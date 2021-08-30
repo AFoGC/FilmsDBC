@@ -1,6 +1,4 @@
-﻿using FilmsDBC.Visual;
-using FilmsDBC.Visual.Forms;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,6 +1,6 @@
 ﻿using FilmsDBC.CinemaDataTypes;
-using FilmsDBC.Visual.Controls;
-using FilmsDBC.Visual.StaticVisualClasses;
+using FilmsDBC.VisualElements.FilmControls;
+using FilmsDBC.VisualElements.StaticVisualClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.VisualElements.MainForm.CommonElements
 {
-	public class GenrePressButton : FilmsDBC.Visual.Buttons.PressButton
+	public class GenrePressButton : FilmsDBC.VisualElements.Buttons.PressButton
 	{
 		private Genre genre = null;
 		public Genre Genre

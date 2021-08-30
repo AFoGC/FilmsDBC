@@ -34,7 +34,7 @@ namespace FilmsDBC.VisualElements.FilmControls
             this.textBox_genre = new System.Windows.Forms.TextBox();
             this.textBox_realiseYear = new System.Windows.Forms.TextBox();
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
-            this.label_info = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_info = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -121,6 +121,6 @@ namespace FilmsDBC.VisualElements.FilmControls
         internal System.Windows.Forms.TextBox textBox_genre;
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_watched;
-        private FilmsDBC.Visual.Buttons.ClickButton label_info;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_info;
     }
 }

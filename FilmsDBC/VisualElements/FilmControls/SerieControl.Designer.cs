@@ -40,9 +40,9 @@ namespace FilmsDBC.VisualElements.FilmControls
             this.textBox_totalSeries = new System.Windows.Forms.TextBox();
             this.textBox_mark = new System.Windows.Forms.TextBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
-            this.label_update = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.label_copyUrl = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_update = new FilmsDBC.VisualElements.Buttons.ClickButton();
+            this.label_copyUrl = new FilmsDBC.VisualElements.Buttons.ClickButton();
+            this.label_comment = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -227,9 +227,9 @@ namespace FilmsDBC.VisualElements.FilmControls
         internal System.Windows.Forms.TextBox textBox_totalSeries;
         internal System.Windows.Forms.TextBox textBox_mark;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
-        private FilmsDBC.Visual.Buttons.ClickButton label_update;
-        private FilmsDBC.Visual.Buttons.ClickButton label_copyUrl;
-        private FilmsDBC.Visual.Buttons.ClickButton label_comment;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_update;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_copyUrl;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_comment;
         private System.Windows.Forms.TextBox textBox_comment;
     }
 }

@@ -1,8 +1,9 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.StaticFilmClasses;
-using FilmsDBC.Visual.Controls;
-using FilmsDBC.Visual.StaticVisualClasses;
-using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
+using FilmsDBC.VisualElements.FilmControls;
+using FilmsDBC.VisualElements.FilmControls.Interface;
+using FilmsDBC.VisualElements.MainForm.AddWindow.UpdateElements.UpdateControls.SourceVisual;
+using FilmsDBC.VisualElements.StaticVisualClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

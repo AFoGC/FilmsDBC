@@ -1,4 +1,9 @@
 ﻿
+using FilmsDBC.VisualElements.MainForm.FormElements;
+using FilmsDBC.VisualElements.MainForm.Menu.Books;
+using FilmsDBC.VisualElements.MainForm.Menu.Films;
+using FilmsDBC.VisualElements.MainForm.Menu.Settings;
+
 namespace FilmsDBC.VisualElements.MainForm
 {
     partial class MainForm
@@ -29,11 +34,11 @@ namespace FilmsDBC.VisualElements.MainForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainControl = new FilmsDBC.Visual.Forms.GlobalControls.MainControl();
-            this.settingsControl = new FilmsDBC.Visual.Forms.GlobalControls.SettingsControl();
-            this.navbar = new FilmsDBC.Visual.Forms.GlobalControls.Navbar();
-            this.booksControl = new FilmsDBC.Visual.Forms.GlobalControls.BooksControl();
-            this.mainHeaderControl = new FilmsDBC.Visual.Forms.GlobalControls.MainHeaderControl();
+            this.mainControl = new MainControl();
+            this.settingsControl = new SettingsControl();
+            this.navbar = new Navbar();
+            this.booksControl = new BooksControl();
+            this.mainHeaderControl = new MainHeaderControl();
             this.SuspendLayout();
             // 
             // mainControl
@@ -111,10 +116,10 @@ namespace FilmsDBC.VisualElements.MainForm
         }
 
         #endregion
-        private FilmsDBC.Visual.Forms.GlobalControls.MainControl mainControl;
-        private FilmsDBC.Visual.Forms.GlobalControls.SettingsControl settingsControl;
-        private FilmsDBC.Visual.Forms.GlobalControls.Navbar navbar;
-        private FilmsDBC.Visual.Forms.GlobalControls.BooksControl booksControl;
-        private FilmsDBC.Visual.Forms.GlobalControls.MainHeaderControl mainHeaderControl;
+        private MainControl mainControl;
+        private SettingsControl settingsControl;
+        private Navbar navbar;
+        private BooksControl booksControl;
+        private MainHeaderControl mainHeaderControl;
     }
 }

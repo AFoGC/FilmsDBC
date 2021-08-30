@@ -31,7 +31,7 @@ namespace FilmsDBC.VisualElements.MainForm.Menu.Settings
         {
             this.label_name = new System.Windows.Forms.Label();
             this.comboBox_marksSystem = new System.Windows.Forms.ComboBox();
-            this.clickButton_changeMarkSystem = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.clickButton_changeMarkSystem = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // label_name

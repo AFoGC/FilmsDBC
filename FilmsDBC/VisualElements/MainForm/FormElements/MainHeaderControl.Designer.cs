@@ -29,9 +29,9 @@ namespace FilmsDBC.VisualElements.MainForm.FormElements
         /// </summary>
         private void InitializeComponent()
         {
-            this.clickButton_minimize = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.clickButton_maximize = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.clickButton_close = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.clickButton_minimize = new FilmsDBC.VisualElements.Buttons.ClickButton();
+            this.clickButton_maximize = new FilmsDBC.VisualElements.Buttons.ClickButton();
+            this.clickButton_close = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // clickButton_minimize

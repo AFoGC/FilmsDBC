@@ -38,10 +38,10 @@ namespace FilmsDBC.VisualElements.MainForm.AddWindow.UpdateElements.UpdateContro
             this.textBox_totalSeries = new System.Windows.Forms.TextBox();
             this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
-            this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.dateUpdateControl_watchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
-            this.dateUpdateControl_startWatchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
-            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_sources = new FilmsDBC.VisualElements.Buttons.ClickButton();
+            this.dateUpdateControl_watchDate = new DateUpdateControl();
+            this.dateUpdateControl_startWatchDate = new DateUpdateControl();
+            this.label_comment = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -209,10 +209,10 @@ namespace FilmsDBC.VisualElements.MainForm.AddWindow.UpdateElements.UpdateContro
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         internal System.Windows.Forms.ComboBox comboBox_genre;
         internal System.Windows.Forms.ComboBox comboBox_mark;
-        private FilmsDBC.Visual.Buttons.ClickButton label_sources;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_sources;
         internal DateUpdateControl dateUpdateControl_watchDate;
         internal DateUpdateControl dateUpdateControl_startWatchDate;
-        private FilmsDBC.Visual.Buttons.ClickButton label_comment;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_comment;
         internal System.Windows.Forms.TextBox textBox_comment;
     }
 }

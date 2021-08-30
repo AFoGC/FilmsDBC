@@ -36,10 +36,10 @@ namespace FilmsDBC.VisualElements.FilmControls
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
             this.textBox_watchDate = new System.Windows.Forms.TextBox();
             this.textBox_mark = new System.Windows.Forms.TextBox();
-            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.label_copyUrl = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_comment = new FilmsDBC.VisualElements.Buttons.ClickButton();
+            this.label_copyUrl = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
-            this.label_update = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_update = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.textBox_comment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -190,10 +190,10 @@ namespace FilmsDBC.VisualElements.FilmControls
         internal System.Windows.Forms.CheckBox checkBox_watched;
         internal System.Windows.Forms.TextBox textBox_watchDate;
         internal System.Windows.Forms.TextBox textBox_mark;
-        private FilmsDBC.Visual.Buttons.ClickButton label_comment;
-        private FilmsDBC.Visual.Buttons.ClickButton label_copyUrl;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_comment;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_copyUrl;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
-        private FilmsDBC.Visual.Buttons.ClickButton label_update;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_update;
         private System.Windows.Forms.TextBox textBox_comment;
     }
 }

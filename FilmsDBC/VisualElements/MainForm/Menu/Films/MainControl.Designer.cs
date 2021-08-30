@@ -1,4 +1,6 @@
 ﻿
+using FilmsDBC.VisualElements.MainForm.CommonElements;
+
 namespace FilmsDBC.VisualElements.MainForm.Menu.Films
 {
     partial class MainControl
@@ -42,7 +44,7 @@ namespace FilmsDBC.VisualElements.MainForm.Menu.Films
             this.button_filter = new System.Windows.Forms.Button();
             this.button_ShowPriorityFilms = new System.Windows.Forms.Button();
             this.button_AddToPriority = new System.Windows.Forms.Button();
-            this.watchedRequestControl = new FilmsDBC.Visual.Forms.WatchedRequestControl();
+            this.watchedRequestControl = new WatchedRequestControl();
             this.panel_buttonInterface = new System.Windows.Forms.Panel();
             this.panel_Info = new System.Windows.Forms.Panel();
             this.panel_buttonInterface.SuspendLayout();
@@ -237,7 +239,7 @@ namespace FilmsDBC.VisualElements.MainForm.Menu.Films
         internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_requestsGenres;
         private System.Windows.Forms.Button button_filter;
-        private FilmsDBC.Visual.Forms.WatchedRequestControl watchedRequestControl;
+        private WatchedRequestControl watchedRequestControl;
         private System.Windows.Forms.Button button_ShowPriorityFilms;
         private System.Windows.Forms.Button button_AddToPriority;
         private System.Windows.Forms.Panel panel_buttonInterface;

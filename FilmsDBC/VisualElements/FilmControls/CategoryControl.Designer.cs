@@ -32,7 +32,7 @@ namespace FilmsDBC.VisualElements.FilmControls
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_mark = new System.Windows.Forms.TextBox();
-            this.label_update = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_update = new FilmsDBC.VisualElements.Buttons.ClickButton();
             this.flowLayoutPanel_SimpleControls = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@ namespace FilmsDBC.VisualElements.FilmControls
         #endregion
         internal System.Windows.Forms.TextBox textBox_name;
         internal System.Windows.Forms.TextBox textBox_mark;
-        private FilmsDBC.Visual.Buttons.ClickButton label_update;
+        private FilmsDBC.VisualElements.Buttons.ClickButton label_update;
         internal System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_SimpleControls;
     }

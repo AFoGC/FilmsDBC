@@ -1,7 +1,6 @@
 ﻿using FilmsDBC.CinemaDataTypes;
-using FilmsDBC.Visual.Controls;
-using FilmsDBC.Visual.Forms;
-using FilmsDBC.Visual.UpdateElements;
+using FilmsDBC.VisualElements.FilmControls;
+using FilmsDBC.VisualElements.MainForm.AddWindow.UpdateElements;
 using System;
 using System.Collections.Generic;
 using System.Linq;

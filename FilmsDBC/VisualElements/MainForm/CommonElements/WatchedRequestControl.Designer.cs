@@ -29,8 +29,8 @@ namespace FilmsDBC.VisualElements.MainForm.CommonElements
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_requestWatched = new FilmsDBC.Visual.Buttons.PressButton();
-            this.label_requestUnwatched = new FilmsDBC.Visual.Buttons.PressButton();
+            this.label_requestWatched = new FilmsDBC.VisualElements.Buttons.PressButton();
+            this.label_requestUnwatched = new FilmsDBC.VisualElements.Buttons.PressButton();
             this.SuspendLayout();
             // 
             // label_requestWatched
@@ -83,7 +83,7 @@ namespace FilmsDBC.VisualElements.MainForm.CommonElements
 
         #endregion
 
-        private FilmsDBC.Visual.Buttons.PressButton label_requestWatched;
-        private FilmsDBC.Visual.Buttons.PressButton label_requestUnwatched;
+        private FilmsDBC.VisualElements.Buttons.PressButton label_requestWatched;
+        private FilmsDBC.VisualElements.Buttons.PressButton label_requestUnwatched;
     }
 }

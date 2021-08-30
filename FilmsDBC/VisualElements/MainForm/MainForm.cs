@@ -1,8 +1,8 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.StaticFilmClasses;
-using FilmsDBC.Visual.Controls;
-using FilmsDBC.Visual.Forms.GlobalControls;
-using FilmsDBC.Visual.StaticVisualClasses;
+using FilmsDBC.VisualElements.MainForm.Menu.Books;
+using FilmsDBC.VisualElements.MainForm.Menu.Films;
+using FilmsDBC.VisualElements.MainForm.Menu.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
