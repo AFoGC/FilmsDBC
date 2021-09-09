@@ -36,7 +36,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
                 settingsControl.GetSetting();
             }
 
-            //MainInformation.Settings.saveCell();
+            MainInformation.SaveSettings();
         }
     }
 }

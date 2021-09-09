@@ -10,11 +10,11 @@ namespace FilmsDBC
 {
 	public class ProgramSettings : Cell
 	{
-		private String tablePath;
-		public String TablePath
+		private String directoyPath;
+		public String DirectoryPath
 		{
-			get { return tablePath; }
-            set { tablePath = value; }
+			get { return directoyPath; }
+            set { directoyPath = value; }
 		}
 		private int markSystem = 0;
 		public int MarkSystem
@@ -30,15 +30,15 @@ namespace FilmsDBC
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.WriteLine(formatParam("tablePath", tablePath, 1));
+			streamWriter.Write(formatParam("directoyPath", directoyPath, 2));
 		}
 
 		protected override void loadBody(Comand comand)
 		{
 			switch (comand.Paramert)
 			{
-				case "tablePath":
-					this.tablePath = comand.Argument;
+				case "directoyPath":
+					this.directoyPath = comand.Argument;
 					break;
 
 				default:

@@ -21,12 +21,12 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 
         public void GetSetting()
         {
-            MainInformation.Settings.TablePath = textBox_filePath.Text;
+            MainInformation.Settings.DirectoryPath = textBox_filePath.Text;
         }
 
         public void RefreshControl()
         {
-            textBox_filePath.Text = MainInformation.Settings.TablePath;
+            textBox_filePath.Text = MainInformation.Settings.DirectoryPath;
         }
 
         private void clickButton_changeDirectory_Click(object sender, EventArgs e)

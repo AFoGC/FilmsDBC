@@ -31,7 +31,7 @@ namespace FilmsDBC
 			tableCollection = new TableCollection();
 			settings = loadSettings();
 
-			tableCollection.tableFilePath = settings.TablePath;
+			tableCollection.tableFilePath = settings.DirectoryPath + "\\Films.fdbc";
 
 			tableCollection.AddTable(typeof(Category));
 			tableCollection.AddTable(typeof(Genre));
@@ -65,5 +65,15 @@ namespace FilmsDBC
 
 			return settings;
         }
+
+		public static void SaveSettings()
+        {
+			String settingPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Program.properties";
+
+			using (System.IO.StreamWriter sw = new System.IO.StreamWriter(settingPath, false, System.Text.Encoding.Default))
+			{
+				settings.saveCell(sw);
+			}
+		}
 	}
 }
