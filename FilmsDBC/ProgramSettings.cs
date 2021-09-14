@@ -26,14 +26,14 @@ namespace FilmsDBC
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.WriteLine(formatParam("tablePath", tablePath, 1));
+			streamWriter.WriteLine(formatParam("directoyPath", tablePath, 1));
 		}
 
 		protected override void loadBody(Comand comand)
 		{
 			switch (comand.Paramert)
 			{
-				case "tablePath":
+				case "directoyPath":
 					this.tablePath = comand.Argument;
 					break;
 
