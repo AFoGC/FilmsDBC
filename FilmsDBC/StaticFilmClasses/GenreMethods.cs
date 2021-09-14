@@ -43,5 +43,10 @@ namespace FilmsDBC.StaticFilmClasses
 			}
 			return export;
 		}
+
+		public static String GetDefaultGenres()
+        {
+			return "<Table: Genre>\n\t<id: 2>\n\t<name: Genres>\n\t<Genre>\n\t\t<id: 1>\n\t\t<name: film>\n\t\t<isSerialGenre: False>\n\t<Genre>\n\t<Genre>\n\t\t<id: 2>\n\t\t<name: series>\n\t\t<isSerialGenre: True>\n\t<Genre>\n\t<Genre>\n\t\t<id: 3>\n\t\t<name: cartoon>\n\t\t<isSerialGenre: False>\n\t<Genre>\n\t<Genre>\n\t\t<id: 4>\n\t\t<name: animated series>\n\t\t<isSerialGenre: True>\n\t<Genre>\n<Table>\n";
+        }
 	}
 }

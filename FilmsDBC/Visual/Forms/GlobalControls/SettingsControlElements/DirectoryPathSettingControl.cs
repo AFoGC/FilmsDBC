@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.StaticFilmClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 {
@@ -21,7 +24,49 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 
 		public void GetSetting()
 		{
-			MainInformation.Settings.DirectoryPath = textBox_filePath.Text;
+            if (MainInformation.Settings.DirectoryPath != textBox_filePath.Text)
+            {
+				MainInformation.Settings.DirectoryPath = textBox_filePath.Text;
+
+				try
+				{
+					String filename = "Films.fdbc";
+					String filmPathName = textBox_filePath.Text + "\\" + filename;
+					if (!File.Exists(filmPathName))
+					{
+
+						using (FileStream sr = File.Create(filmPathName))
+						{
+							String strA = "";
+
+							strA = "<DocStart>\n";
+							foreach (Table table in MainInformation.tableCollection.Tables)
+							{
+								if (table.DataType == typeof(Genre))
+								{
+									strA += GenreMethods.GetDefaultGenres();
+								}
+								else
+								{
+									strA += table.GetVoidTableInfo();
+								}
+							}
+							strA += "<DocEnd>\n";
+
+							byte[] info = new UTF8Encoding(true).GetBytes(strA);
+							sr.Write(info, 0, info.Length);
+						}
+
+						MainInformation.tableCollection.tableFilePath = filmPathName;
+						MainInformation.LoadTables();
+						MainInformation.MainForm.MainControl.loadCategories();
+						MainInformation.MainForm.MainControl.loadGenres();
+						MainInformation.MainForm.MainControl.loadFilmTable();
+					}
+				}
+				finally { }
+			}
+			//MainInformation.Settings.DirectoryPath = textBox_filePath.Text;
 		}
 
 		public void RefreshControl()
@@ -39,33 +84,8 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 				{
 					textBox_filePath.Text = fbd.SelectedPath;
 				}
-				String filename = "Films.fdbc";
 
-				try
-				{
-					//
-					// Доделать всю эту хуйню с работой и прверкой изминения директорий.
-					//
-
-
-
-					//if (!checkForFilename(filename, Directory.GetFiles(fbd.SelectedPath)))
-					String filmPathName = fbd.SelectedPath + "\\" + filename;
-					if (File.Exists(filmPathName))
-					{
-						//File.Create(filmPathName);
-						//MainInformation.tableCollection.tableFilePath = filmPathName;
-
-						using (FileStream sr = File.Create(filmPathName))
-						{
-							String strA = MainInformation.tableCollection.GetVoidTableCollection();
-							byte[] info = new UTF8Encoding(true).GetBytes(strA);
-							sr.Write(info, 0, info.Length);
-						}
-						MainInformation.LoadTables();
-					}
-				}
-                finally { }
+				
 			}
 		}
 
