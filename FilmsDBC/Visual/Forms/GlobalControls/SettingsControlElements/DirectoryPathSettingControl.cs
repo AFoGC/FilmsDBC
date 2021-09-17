@@ -20,7 +20,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 
         public void RefreshControl()
         {
-            textBox_filePath.Text = MainInformation.Settings.TablePath;
+            //textBox_filePath.Text = MainInformation.Settings.TablePath;
         }
     }
 }

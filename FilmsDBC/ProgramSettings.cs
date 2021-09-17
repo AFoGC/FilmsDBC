@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmsDBC.Settings;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,8 +11,32 @@ namespace FilmsDBC
 {
 	public class ProgramSettings : Cell
 	{
-		private String tablePath;
-		public String TablePath { get { return tablePath; } }
+		public ProgramSettings()
+        {
+			profiles.LoadProfiles();
+        }
+
+		private Profile usedProfile = null;
+		public Profile UsedProfile
+        {
+            get
+            {
+                if (usedProfile == null)
+                {
+					usedProfile = profiles[0];
+					return usedProfile;
+                }
+				return usedProfile;
+            }
+			set { usedProfile = value; }
+        }
+
+		private ProfileCollection profiles = new ProfileCollection();
+		public ProfileCollection Profiles
+        {
+            get { return profiles; }
+        }
+
 		private int markSystem = 0;
 		public int MarkSystem
         {
@@ -26,15 +51,15 @@ namespace FilmsDBC
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.WriteLine(formatParam("directoyPath", tablePath, 1));
+			streamWriter.Write(formatParam(nameof(usedProfile), usedProfile.ToString(), 1));
 		}
 
 		protected override void loadBody(Comand comand)
 		{
 			switch (comand.Paramert)
 			{
-				case "directoyPath":
-					this.tablePath = comand.Argument;
+				case "usedProfile":
+					this.usedProfile = profiles.GetProfileToUsed(comand.Argument);
 					break;
 
 				default:

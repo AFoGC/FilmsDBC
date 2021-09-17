@@ -31,10 +31,10 @@ namespace FilmsDBC
 			tableCollection = new TableCollection();
 			settings = loadSettings();
 
-			tableCollection.tableFilePath = settings.TablePath;
+			tableCollection.tableFilePath = settings.UsedProfile.MainFilePath;
 
 			tableCollection.AddTable(typeof(Category));
-			tableCollection.AddTable(typeof(Genre));
+			tableCollection.AddTable(GenreMethods.GetDefaultGenresTable());
 			tableCollection.AddTable(typeof(Film));
 			tableCollection.AddTable(typeof(Serie));
 			tableCollection.AddTable(typeof(PriorityFilm));

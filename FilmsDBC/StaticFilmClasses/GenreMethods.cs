@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.StaticFilmClasses
 {
@@ -43,5 +44,34 @@ namespace FilmsDBC.StaticFilmClasses
 			}
 			return export;
 		}
+
+		public static Table GetDefaultGenresTable()
+        {
+			Table export = new Table(typeof(Genre));
+			export.name = "Genres";
+
+			Genre film = new Genre();
+			film.IsSerialGenre = false;
+			film.Name = "film";
+
+			Genre series = new Genre();
+			series.IsSerialGenre = true;
+			series.Name = "series";
+
+			Genre cartoon = new Genre();
+			cartoon.IsSerialGenre = false;
+			cartoon.Name = "cartoon";
+
+			Genre animated_series = new Genre();
+			animated_series.IsSerialGenre = true;
+			animated_series.Name = "animated_series";
+
+			export.addElement(film);
+			export.addElement(series);
+			export.addElement(cartoon);
+			export.addElement(animated_series);
+
+			return export;
+        }
 	}
 }
