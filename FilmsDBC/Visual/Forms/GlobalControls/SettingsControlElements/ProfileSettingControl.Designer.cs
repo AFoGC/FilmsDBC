@@ -1,7 +1,7 @@
 ﻿
 namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 {
-    partial class DirectoryPathSettingControl
+    partial class ProfileSettingControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -29,24 +29,44 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_filePath = new System.Windows.Forms.TextBox();
-            this.clickButton_changeDirectory = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.textBox_profileName = new System.Windows.Forms.TextBox();
             this.label_name = new System.Windows.Forms.Label();
+            this.comboBox_Profiles = new System.Windows.Forms.ComboBox();
+            this.clickButton_changeDirectory = new FilmsDBC.Visual.Buttons.ClickButton();
             this.SuspendLayout();
             // 
-            // textBox_filePath
+            // textBox_profileName
             // 
-            this.textBox_filePath.Location = new System.Drawing.Point(200, 0);
-            this.textBox_filePath.Name = "textBox_filePath";
-            this.textBox_filePath.ReadOnly = true;
-            this.textBox_filePath.Size = new System.Drawing.Size(300, 20);
-            this.textBox_filePath.TabIndex = 1;
+            this.textBox_profileName.Location = new System.Drawing.Point(210, 0);
+            this.textBox_profileName.Name = "textBox_profileName";
+            this.textBox_profileName.ReadOnly = true;
+            this.textBox_profileName.Size = new System.Drawing.Size(290, 20);
+            this.textBox_profileName.TabIndex = 1;
+            // 
+            // label_name
+            // 
+            this.label_name.Location = new System.Drawing.Point(0, 0);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(204, 20);
+            this.label_name.TabIndex = 2;
+            this.label_name.Text = "Files directory path:";
+            this.label_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // comboBox_Profiles
+            // 
+            this.comboBox_Profiles.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBox_Profiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Profiles.FormattingEnabled = true;
+            this.comboBox_Profiles.Location = new System.Drawing.Point(500, -1);
+            this.comboBox_Profiles.Name = "comboBox_Profiles";
+            this.comboBox_Profiles.Size = new System.Drawing.Size(120, 21);
+            this.comboBox_Profiles.TabIndex = 3;
             // 
             // clickButton_changeDirectory
             // 
             this.clickButton_changeDirectory.BackColor = System.Drawing.SystemColors.Control;
             this.clickButton_changeDirectory.DefaultColor = System.Drawing.SystemColors.Control;
-            this.clickButton_changeDirectory.Location = new System.Drawing.Point(500, 0);
+            this.clickButton_changeDirectory.Location = new System.Drawing.Point(625, 0);
             this.clickButton_changeDirectory.MouseDownColor = System.Drawing.Color.Empty;
             this.clickButton_changeDirectory.MouseEnterColor = System.Drawing.Color.Empty;
             this.clickButton_changeDirectory.Name = "clickButton_changeDirectory";
@@ -54,25 +74,18 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.clickButton_changeDirectory.TabIndex = 0;
             this.clickButton_changeDirectory.Text = "Change Directory";
             this.clickButton_changeDirectory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clickButton_changeDirectory.Click += new System.EventHandler(this.clickButton_changeDirectory_Click);
             // 
-            // label_name
-            // 
-            this.label_name.Location = new System.Drawing.Point(4, 0);
-            this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(200, 20);
-            this.label_name.TabIndex = 2;
-            this.label_name.Text = "Files directory path:";
-            this.label_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // DirectoryPathSettingControl
+            // ProfileSettingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox_Profiles);
             this.Controls.Add(this.label_name);
-            this.Controls.Add(this.textBox_filePath);
+            this.Controls.Add(this.textBox_profileName);
             this.Controls.Add(this.clickButton_changeDirectory);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "DirectoryPathSettingControl";
+            this.Name = "ProfileSettingControl";
             this.Size = new System.Drawing.Size(1035, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -81,8 +94,9 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_filePath;
+        private System.Windows.Forms.TextBox textBox_profileName;
         private FilmsDBC.Visual.Buttons.ClickButton clickButton_changeDirectory;
         private System.Windows.Forms.Label label_name;
+        private System.Windows.Forms.ComboBox comboBox_Profiles;
     }
 }

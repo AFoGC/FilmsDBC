@@ -136,11 +136,11 @@
     <Compile Include="Visual\Forms\GlobalControls\SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\DirectoryPathSettingControl.cs">
+    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ProfileSettingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\DirectoryPathSettingControl.Designer.cs">
-      <DependentUpon>DirectoryPathSettingControl.cs</DependentUpon>
+    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ProfileSettingControl.Designer.cs">
+      <DependentUpon>ProfileSettingControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ISettingsControls.cs" />
     <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.cs">
@@ -251,8 +251,8 @@
     <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControl.resx">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\DirectoryPathSettingControl.resx">
-      <DependentUpon>DirectoryPathSettingControl.cs</DependentUpon>
+    <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\ProfileSettingControl.resx">
+      <DependentUpon>ProfileSettingControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.resx">
       <DependentUpon>MarkSystemSettingControl.cs</DependentUpon>

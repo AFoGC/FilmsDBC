@@ -33,7 +33,25 @@ namespace FilmsDBC.Settings
 
 		public String MainFilePath
 		{
-			get { return ProfilePath + "\\Films.fdbc"; }
+            //get { return ProfilePath + "\\Films.fdbc"; }
+            get
+            {
+				String filePath = ProfilePath + "\\Films.fdbc";
+				if (File.Exists(filePath))
+                {
+					// Тут нужно сделать проверку первой строки файла
+					//
+                }
+                else
+                {
+					using (FileStream fs = File.Create(filePath)) { }
+
+					MainInformation.tableCollection.tableFilePath = filePath;
+					MainInformation.tableCollection.saveTables();
+                }
+
+				return filePath;
+			}
 		}
 
 		public static Profile[] GetAllProfiles
@@ -70,11 +88,11 @@ namespace FilmsDBC.Settings
             {
                 if (import[i] == '\\')
                 {
-					return import.Substring(i);
+					return import.Substring(++i);
                 }
             }
 
-			return "";
+			return import;
         }
 
         public override string ToString()

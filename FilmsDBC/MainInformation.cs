@@ -29,15 +29,15 @@ namespace FilmsDBC
 		static MainInformation()
 		{
 			tableCollection = new TableCollection();
-			settings = loadSettings();
-
-			tableCollection.tableFilePath = settings.UsedProfile.MainFilePath;
 
 			tableCollection.AddTable(typeof(Category));
 			tableCollection.AddTable(GenreMethods.GetDefaultGenresTable());
 			tableCollection.AddTable(typeof(Film));
 			tableCollection.AddTable(typeof(Serie));
 			tableCollection.AddTable(typeof(PriorityFilm));
+
+			settings = loadSettings();
+			tableCollection.tableFilePath = settings.UsedProfile.MainFilePath;
 
 			mainForm = new MainForm();
 		}

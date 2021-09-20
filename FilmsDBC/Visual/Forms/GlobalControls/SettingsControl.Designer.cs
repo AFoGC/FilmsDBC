@@ -30,6 +30,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         private void InitializeComponent()
         {
             this.flowLayoutPanel_settings = new System.Windows.Forms.FlowLayoutPanel();
+            this.clickButton_embraceSettings = new FilmsDBC.Visual.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_settings
@@ -42,10 +43,26 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.flowLayoutPanel_settings.Size = new System.Drawing.Size(1035, 515);
             this.flowLayoutPanel_settings.TabIndex = 0;
             // 
+            // clickButton_embraceSettings
+            // 
+            this.clickButton_embraceSettings.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.clickButton_embraceSettings.DefaultColor = System.Drawing.SystemColors.ButtonShadow;
+            this.clickButton_embraceSettings.Location = new System.Drawing.Point(1275, 132);
+            this.clickButton_embraceSettings.MouseDownColor = System.Drawing.Color.Empty;
+            this.clickButton_embraceSettings.MouseEnterColor = System.Drawing.Color.Empty;
+            this.clickButton_embraceSettings.Name = "clickButton_embraceSettings";
+            this.clickButton_embraceSettings.Size = new System.Drawing.Size(100, 20);
+            this.clickButton_embraceSettings.TabIndex = 1;
+            this.clickButton_embraceSettings.Text = "Embrace Settings";
+            this.clickButton_embraceSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clickButton_embraceSettings.Click += new System.EventHandler(this.clickButton_embraceSettings_Click);
+            // 
             // SettingsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.clickButton_embraceSettings);
             this.Controls.Add(this.flowLayoutPanel_settings);
             this.Name = "SettingsControl";
             this.Size = new System.Drawing.Size(1485, 647);
@@ -56,5 +73,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_settings;
+        private Buttons.ClickButton clickButton_embraceSettings;
     }
 }

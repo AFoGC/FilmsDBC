@@ -9,5 +9,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
     interface ISettingsControls
     {
         void RefreshControl();
+        void GetSettings();
     }
 }
