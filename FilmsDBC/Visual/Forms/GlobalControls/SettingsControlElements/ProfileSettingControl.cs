@@ -61,7 +61,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 					{
 						usedProfile = prof;
 
-						textBox_profileName.Text = comboBox_Profiles.Text;
+						textBox_profileName.Text = usedProfile.Name;
 					}
 				}
 			}
