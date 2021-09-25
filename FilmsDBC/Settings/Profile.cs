@@ -33,7 +33,6 @@ namespace FilmsDBC.Settings
 
 		public String MainFilePath
 		{
-            //get { return ProfilePath + "\\Films.fdbc"; }
             get
             {
 				String filePath = ProfilePath + "\\Films.fdbc";

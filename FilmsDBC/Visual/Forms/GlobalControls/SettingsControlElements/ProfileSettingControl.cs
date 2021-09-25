@@ -22,6 +22,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 		{
 			InitializeComponent();
 			clickButton_changeDirectory.SetDefaultButtonBlink();
+			clickButton_expand_reduce.SetDefaultButtonBlink();
 		}
 
 		public void GetSettings()
@@ -66,5 +67,5 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 				}
 			}
 		}
-	}
+    }
 }
