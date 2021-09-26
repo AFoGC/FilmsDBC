@@ -32,18 +32,18 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.textBox_profileName = new System.Windows.Forms.TextBox();
             this.label_name = new System.Windows.Forms.Label();
             this.comboBox_Profiles = new System.Windows.Forms.ComboBox();
-            this.clickButton_changeDirectory = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.clickButton_expand_reduce = new FilmsDBC.Visual.Buttons.ClickButton();
             this.label_rename = new System.Windows.Forms.Label();
             this.label_add = new System.Windows.Forms.Label();
             this.label_remove = new System.Windows.Forms.Label();
             this.textBox_rename = new System.Windows.Forms.TextBox();
             this.comboBox_rename = new System.Windows.Forms.ComboBox();
-            this.clickButton_rename = new FilmsDBC.Visual.Buttons.ClickButton();
             this.comboBox_remove = new System.Windows.Forms.ComboBox();
-            this.clickButton_remove = new FilmsDBC.Visual.Buttons.ClickButton();
             this.textBox_add = new System.Windows.Forms.TextBox();
             this.clickButton_add = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.clickButton_remove = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.clickButton_rename = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.clickButton_expand_reduce = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.clickButton_changeDirectory = new FilmsDBC.Visual.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // textBox_profileName
@@ -74,34 +74,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.comboBox_Profiles.Name = "comboBox_Profiles";
             this.comboBox_Profiles.Size = new System.Drawing.Size(120, 21);
             this.comboBox_Profiles.TabIndex = 3;
-            // 
-            // clickButton_changeDirectory
-            // 
-            this.clickButton_changeDirectory.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_changeDirectory.DefaultColor = System.Drawing.SystemColors.Control;
-            this.clickButton_changeDirectory.Location = new System.Drawing.Point(620, 0);
-            this.clickButton_changeDirectory.Margin = new System.Windows.Forms.Padding(0);
-            this.clickButton_changeDirectory.MouseDownColor = System.Drawing.Color.Empty;
-            this.clickButton_changeDirectory.MouseEnterColor = System.Drawing.Color.Empty;
-            this.clickButton_changeDirectory.Name = "clickButton_changeDirectory";
-            this.clickButton_changeDirectory.Size = new System.Drawing.Size(100, 20);
-            this.clickButton_changeDirectory.TabIndex = 0;
-            this.clickButton_changeDirectory.Text = "Change Profile";
-            this.clickButton_changeDirectory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.clickButton_changeDirectory.Click += new System.EventHandler(this.clickButton_changeDirectory_Click);
-            // 
-            // clickButton_expand_reduce
-            // 
-            this.clickButton_expand_reduce.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_expand_reduce.DefaultColor = System.Drawing.SystemColors.Control;
-            this.clickButton_expand_reduce.Location = new System.Drawing.Point(935, 0);
-            this.clickButton_expand_reduce.MouseDownColor = System.Drawing.Color.Empty;
-            this.clickButton_expand_reduce.MouseEnterColor = System.Drawing.Color.Empty;
-            this.clickButton_expand_reduce.Name = "clickButton_expand_reduce";
-            this.clickButton_expand_reduce.Size = new System.Drawing.Size(100, 20);
-            this.clickButton_expand_reduce.TabIndex = 4;
-            this.clickButton_expand_reduce.Text = "Expand";
-            this.clickButton_expand_reduce.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_rename
             // 
@@ -149,20 +121,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.comboBox_rename.Size = new System.Drawing.Size(120, 21);
             this.comboBox_rename.TabIndex = 9;
             // 
-            // clickButton_rename
-            // 
-            this.clickButton_rename.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_rename.DefaultColor = System.Drawing.SystemColors.Control;
-            this.clickButton_rename.Location = new System.Drawing.Point(481, 20);
-            this.clickButton_rename.Margin = new System.Windows.Forms.Padding(0);
-            this.clickButton_rename.MouseDownColor = System.Drawing.Color.Empty;
-            this.clickButton_rename.MouseEnterColor = System.Drawing.Color.Empty;
-            this.clickButton_rename.Name = "clickButton_rename";
-            this.clickButton_rename.Size = new System.Drawing.Size(100, 20);
-            this.clickButton_rename.TabIndex = 10;
-            this.clickButton_rename.Text = "Rename Profile";
-            this.clickButton_rename.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // comboBox_remove
             // 
             this.comboBox_remove.BackColor = System.Drawing.SystemColors.Control;
@@ -173,20 +131,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.comboBox_remove.Name = "comboBox_remove";
             this.comboBox_remove.Size = new System.Drawing.Size(120, 21);
             this.comboBox_remove.TabIndex = 11;
-            // 
-            // clickButton_remove
-            // 
-            this.clickButton_remove.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_remove.DefaultColor = System.Drawing.SystemColors.Control;
-            this.clickButton_remove.Location = new System.Drawing.Point(331, 40);
-            this.clickButton_remove.Margin = new System.Windows.Forms.Padding(0);
-            this.clickButton_remove.MouseDownColor = System.Drawing.Color.Empty;
-            this.clickButton_remove.MouseEnterColor = System.Drawing.Color.Empty;
-            this.clickButton_remove.Name = "clickButton_remove";
-            this.clickButton_remove.Size = new System.Drawing.Size(100, 20);
-            this.clickButton_remove.TabIndex = 12;
-            this.clickButton_remove.Text = "Remove Profile";
-            this.clickButton_remove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox_add
             // 
@@ -209,6 +153,66 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.clickButton_add.TabIndex = 14;
             this.clickButton_add.Text = "Add Profile";
             this.clickButton_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clickButton_add.Click += new System.EventHandler(this.clickButton_add_Click);
+            // 
+            // clickButton_remove
+            // 
+            this.clickButton_remove.BackColor = System.Drawing.SystemColors.Control;
+            this.clickButton_remove.DefaultColor = System.Drawing.SystemColors.Control;
+            this.clickButton_remove.Location = new System.Drawing.Point(331, 40);
+            this.clickButton_remove.Margin = new System.Windows.Forms.Padding(0);
+            this.clickButton_remove.MouseDownColor = System.Drawing.Color.Empty;
+            this.clickButton_remove.MouseEnterColor = System.Drawing.Color.Empty;
+            this.clickButton_remove.Name = "clickButton_remove";
+            this.clickButton_remove.Size = new System.Drawing.Size(100, 20);
+            this.clickButton_remove.TabIndex = 12;
+            this.clickButton_remove.Text = "Remove Profile";
+            this.clickButton_remove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clickButton_remove.Click += new System.EventHandler(this.clickButton_remove_Click);
+            // 
+            // clickButton_rename
+            // 
+            this.clickButton_rename.BackColor = System.Drawing.SystemColors.Control;
+            this.clickButton_rename.DefaultColor = System.Drawing.SystemColors.Control;
+            this.clickButton_rename.Location = new System.Drawing.Point(481, 20);
+            this.clickButton_rename.Margin = new System.Windows.Forms.Padding(0);
+            this.clickButton_rename.MouseDownColor = System.Drawing.Color.Empty;
+            this.clickButton_rename.MouseEnterColor = System.Drawing.Color.Empty;
+            this.clickButton_rename.Name = "clickButton_rename";
+            this.clickButton_rename.Size = new System.Drawing.Size(100, 20);
+            this.clickButton_rename.TabIndex = 10;
+            this.clickButton_rename.Text = "Rename Profile";
+            this.clickButton_rename.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clickButton_rename.Click += new System.EventHandler(this.clickButton_rename_Click);
+            // 
+            // clickButton_expand_reduce
+            // 
+            this.clickButton_expand_reduce.BackColor = System.Drawing.SystemColors.Control;
+            this.clickButton_expand_reduce.DefaultColor = System.Drawing.SystemColors.Control;
+            this.clickButton_expand_reduce.Location = new System.Drawing.Point(935, 0);
+            this.clickButton_expand_reduce.MouseDownColor = System.Drawing.Color.Empty;
+            this.clickButton_expand_reduce.MouseEnterColor = System.Drawing.Color.Empty;
+            this.clickButton_expand_reduce.Name = "clickButton_expand_reduce";
+            this.clickButton_expand_reduce.Size = new System.Drawing.Size(100, 20);
+            this.clickButton_expand_reduce.TabIndex = 4;
+            this.clickButton_expand_reduce.Text = "Expand";
+            this.clickButton_expand_reduce.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clickButton_expand_reduce.Click += new System.EventHandler(this.clickButton_expand_reduce_Click);
+            // 
+            // clickButton_changeDirectory
+            // 
+            this.clickButton_changeDirectory.BackColor = System.Drawing.SystemColors.Control;
+            this.clickButton_changeDirectory.DefaultColor = System.Drawing.SystemColors.Control;
+            this.clickButton_changeDirectory.Location = new System.Drawing.Point(620, 0);
+            this.clickButton_changeDirectory.Margin = new System.Windows.Forms.Padding(0);
+            this.clickButton_changeDirectory.MouseDownColor = System.Drawing.Color.Empty;
+            this.clickButton_changeDirectory.MouseEnterColor = System.Drawing.Color.Empty;
+            this.clickButton_changeDirectory.Name = "clickButton_changeDirectory";
+            this.clickButton_changeDirectory.Size = new System.Drawing.Size(100, 20);
+            this.clickButton_changeDirectory.TabIndex = 0;
+            this.clickButton_changeDirectory.Text = "Change Profile";
+            this.clickButton_changeDirectory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clickButton_changeDirectory.Click += new System.EventHandler(this.clickButton_changeDirectory_Click);
             // 
             // ProfileSettingControl
             // 
@@ -231,7 +235,7 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
             this.Controls.Add(this.clickButton_changeDirectory);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ProfileSettingControl";
-            this.Size = new System.Drawing.Size(1035, 80);
+            this.Size = new System.Drawing.Size(1035, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 

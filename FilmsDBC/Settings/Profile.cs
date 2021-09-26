@@ -94,6 +94,25 @@ namespace FilmsDBC.Settings
 			return import;
         }
 
+		public bool RenameProfile(String newName)
+        {
+			bool export = true;
+
+            foreach (Profile prof in GetAllProfiles)
+            {
+				if (prof.Name == newName) export = false;
+            }
+
+            if (export)
+            {
+				Profile np = new Profile(newName);
+				Directory.Move(this.ProfilePath, np.ProfilePath);
+				this.name = newName;
+			}
+
+			return export;
+		}
+
         public override string ToString()
         {
 			return name;

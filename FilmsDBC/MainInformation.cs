@@ -28,19 +28,26 @@ namespace FilmsDBC
 
 		static MainInformation()
 		{
-			tableCollection = new TableCollection();
-
-			tableCollection.AddTable(typeof(Category));
-			tableCollection.AddTable(GenreMethods.GetDefaultGenresTable());
-			tableCollection.AddTable(typeof(Film));
-			tableCollection.AddTable(typeof(Serie));
-			tableCollection.AddTable(typeof(PriorityFilm));
+			tableCollection = GetDefaultTableCollection();
 
 			settings = loadSettings();
 			tableCollection.tableFilePath = settings.UsedProfile.MainFilePath;
 
 			mainForm = new MainForm();
 		}
+
+		public static TableCollection GetDefaultTableCollection()
+        {
+			TableCollection export = new TableCollection();
+
+			export.AddTable(typeof(Category));
+			export.AddTable(GenreMethods.GetDefaultGenresTable());
+			export.AddTable(typeof(Film));
+			export.AddTable(typeof(Serie));
+			export.AddTable(typeof(PriorityFilm));
+
+			return export;
+        }
 
 		public static void LoadTables()
 		{

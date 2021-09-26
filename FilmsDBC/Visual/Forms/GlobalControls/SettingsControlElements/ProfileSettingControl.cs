@@ -1,13 +1,16 @@
-﻿using FilmsDBC.Settings;
+﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 {
@@ -39,33 +42,118 @@ namespace FilmsDBC.Visual.Forms.GlobalControls.SettingsControlElements
 			textBox_profileName.Text = usedProfile.Name;
 
 			comboBox_Profiles.Items.Clear();
+			comboBox_rename.Items.Clear();
+			comboBox_remove.Items.Clear();
 
 			foreach (Profile prof in profileCollection.Profiles)
 			{
-				comboBox_Profiles.Items.Add(prof.Name);
+				comboBox_Profiles.Items.Add(prof);
+				comboBox_rename.Items.Add(prof);
+				comboBox_remove.Items.Add(prof);
 
 				if (prof == usedProfile)
 				{
-					comboBox_Profiles.SelectedItem = prof.Name;
+					comboBox_Profiles.SelectedItem = prof;
 				}
 			}
 
 		}
 
+
+		//В CRUD методах нужно ещё добавить проверок
 		private void clickButton_changeDirectory_Click(object sender, EventArgs e)
 		{
-			if (textBox_profileName.Text != comboBox_Profiles.Text)
-			{
-				foreach (Profile prof in profileCollection.Profiles)
-				{
-					if (comboBox_Profiles.Text == prof.Name)
-					{
-						usedProfile = prof;
+			usedProfile = (Profile)comboBox_Profiles.SelectedItem;
+			textBox_profileName.Text = usedProfile.Name;
+		}
 
-						textBox_profileName.Text = usedProfile.Name;
-					}
-				}
+		private void clickButton_rename_Click(object sender, EventArgs e)
+		{
+            if (textBox_rename.Text != "")
+            {
+				Profile profileFrom = (Profile)comboBox_rename.SelectedItem;
+				profileFrom.RenameProfile(textBox_rename.Text);
+
+				this.RefreshControl();
+
+				comboBox_rename.SelectedItem = profileFrom;
 			}
 		}
+
+		private void clickButton_remove_Click(object sender, EventArgs e)
+		{
+            if (comboBox_remove.Text != "")
+            {
+				Profile prof = (Profile)comboBox_remove.SelectedItem;
+				Directory.Delete(prof.ProfilePath, true);
+
+				profileCollection.RemoveProfile(prof);
+
+				this.RefreshControl();
+			}
+		}
+
+		private void clickButton_add_Click(object sender, EventArgs e)
+		{
+            if (textBox_add.Text != "")
+            {
+				bool exclusive = true;
+				Profile newProfile = new Profile(textBox_add.Text);
+
+				foreach (Profile prof in profileCollection.Profiles)
+				{
+					if (prof.Name == newProfile.Name) exclusive = false;
+				}
+
+				if (exclusive)
+				{
+					Directory.CreateDirectory(newProfile.ProfilePath);
+					using (FileStream fs = File.Create(newProfile.MainFilePath)) { }
+
+					TableCollection tc = MainInformation.GetDefaultTableCollection();
+					tc.tableFilePath = newProfile.MainFilePath;
+
+					Table genreTable = tc.GetTable(typeof(Genre));
+					genreTable.RemoveAll();
+
+					foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
+					{
+						genreTable.addWithoutReindexation(genre);
+					}
+
+					tc.saveTables();
+
+					profileCollection.AddProfile(newProfile);
+				}
+
+				this.RefreshControl();
+			}
+		}
+
+		private bool expanded = false;
+		public bool Expanded
+        {
+            get
+            {
+				return expanded;
+            }
+            set
+            {
+                if (value)
+                {
+					this.Size = new Size(this.Size.Width, 80);
+                }
+                else
+                {
+					this.Size = new Size(this.Size.Width, 20);
+				}
+
+				expanded = value;
+            }
+        }
+        private void clickButton_expand_reduce_Click(object sender, EventArgs e)
+        {
+			Expanded = !Expanded;
+        }
     }
 }
