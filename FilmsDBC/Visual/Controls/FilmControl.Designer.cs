@@ -29,6 +29,7 @@ namespace FilmsDBC.Visual.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_genre = new System.Windows.Forms.TextBox();
@@ -41,6 +42,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.label_update = new FilmsDBC.Visual.Buttons.ClickButton();
             this.textBox_comment = new System.Windows.Forms.TextBox();
+            this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBox_id
@@ -50,6 +52,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 0;
+            this.toolTip_description.SetToolTip(this.textBox_id, "id");
             this.textBox_id.Click += new System.EventHandler(this.textBox_id_Click);
             // 
             // textBox_name
@@ -60,6 +63,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name.ReadOnly = true;
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 14;
+            this.toolTip_description.SetToolTip(this.textBox_name, "name");
             // 
             // textBox_genre
             // 
@@ -69,6 +73,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_genre.ReadOnly = true;
             this.textBox_genre.Size = new System.Drawing.Size(100, 20);
             this.textBox_genre.TabIndex = 24;
+            this.toolTip_description.SetToolTip(this.textBox_genre, "genre");
             // 
             // textBox_realiseYear
             // 
@@ -78,6 +83,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_realiseYear.ReadOnly = true;
             this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
             this.textBox_realiseYear.TabIndex = 25;
+            this.toolTip_description.SetToolTip(this.textBox_realiseYear, "realise year");
             // 
             // checkBox_watched
             // 
@@ -86,6 +92,7 @@ namespace FilmsDBC.Visual.Controls
             this.checkBox_watched.Name = "checkBox_watched";
             this.checkBox_watched.Size = new System.Drawing.Size(15, 14);
             this.checkBox_watched.TabIndex = 26;
+            this.toolTip_description.SetToolTip(this.checkBox_watched, "is watched");
             this.checkBox_watched.UseVisualStyleBackColor = true;
             this.checkBox_watched.Click += new System.EventHandler(this.checkBox_watched_Click);
             // 
@@ -97,6 +104,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_watchDate.ReadOnly = true;
             this.textBox_watchDate.Size = new System.Drawing.Size(60, 20);
             this.textBox_watchDate.TabIndex = 27;
+            this.toolTip_description.SetToolTip(this.textBox_watchDate, "watch date");
             // 
             // textBox_mark
             // 
@@ -106,22 +114,30 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_mark.ReadOnly = true;
             this.textBox_mark.Size = new System.Drawing.Size(45, 20);
             this.textBox_mark.TabIndex = 28;
+            this.toolTip_description.SetToolTip(this.textBox_mark, "mark");
             // 
             // label_comment
             // 
+            this.label_comment.BackColor = System.Drawing.SystemColors.Control;
             this.label_comment.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_comment.Location = new System.Drawing.Point(660, 0);
+            this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_comment.Name = "label_comment";
             this.label_comment.Size = new System.Drawing.Size(80, 20);
             this.label_comment.TabIndex = 29;
             this.label_comment.Text = "comment";
             this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip_description.SetToolTip(this.label_comment, "open comment section");
             this.label_comment.Click += new System.EventHandler(this.label_comment_Click);
             // 
             // label_copyUrl
             // 
+            this.label_copyUrl.BackColor = System.Drawing.SystemColors.Control;
             this.label_copyUrl.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_copyUrl.Location = new System.Drawing.Point(740, 0);
+            this.label_copyUrl.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_copyUrl.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_copyUrl.Name = "label_copyUrl";
             this.label_copyUrl.Size = new System.Drawing.Size(105, 20);
             this.label_copyUrl.TabIndex = 30;
@@ -137,16 +153,21 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_countOfviews.ReadOnly = true;
             this.textBox_countOfviews.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfviews.TabIndex = 31;
+            this.toolTip_description.SetToolTip(this.textBox_countOfviews, "count of views");
             // 
             // label_update
             // 
+            this.label_update.BackColor = System.Drawing.SystemColors.Control;
             this.label_update.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_update.Location = new System.Drawing.Point(845, 0);
+            this.label_update.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_update.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_update.Name = "label_update";
             this.label_update.Size = new System.Drawing.Size(80, 20);
             this.label_update.TabIndex = 32;
             this.label_update.Text = "update";
             this.label_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip_description.SetToolTip(this.label_update, "open update menu");
             this.label_update.Click += new System.EventHandler(this.label_update_Click);
             // 
             // textBox_comment
@@ -195,5 +216,6 @@ namespace FilmsDBC.Visual.Controls
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         private FilmsDBC.Visual.Buttons.ClickButton label_update;
         private System.Windows.Forms.TextBox textBox_comment;
+        private System.Windows.Forms.ToolTip toolTip_description;
     }
 }

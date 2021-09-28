@@ -29,12 +29,14 @@ namespace FilmsDBC.Visual.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_genre = new System.Windows.Forms.TextBox();
             this.textBox_realiseYear = new System.Windows.Forms.TextBox();
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
             this.label_info = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBox_id
@@ -44,6 +46,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 2;
+            this.toolTip_description.SetToolTip(this.textBox_id, "id");
             this.textBox_id.Click += new System.EventHandler(this.textBox_id_Click);
             // 
             // textBox_name
@@ -54,6 +57,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name.ReadOnly = true;
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 16;
+            this.toolTip_description.SetToolTip(this.textBox_name, "name");
             // 
             // textBox_genre
             // 
@@ -63,6 +67,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_genre.ReadOnly = true;
             this.textBox_genre.Size = new System.Drawing.Size(100, 20);
             this.textBox_genre.TabIndex = 26;
+            this.toolTip_description.SetToolTip(this.textBox_genre, "genre");
             // 
             // textBox_realiseYear
             // 
@@ -72,6 +77,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_realiseYear.ReadOnly = true;
             this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
             this.textBox_realiseYear.TabIndex = 27;
+            this.toolTip_description.SetToolTip(this.textBox_realiseYear, "realise year");
             // 
             // checkBox_watched
             // 
@@ -80,11 +86,13 @@ namespace FilmsDBC.Visual.Controls
             this.checkBox_watched.Name = "checkBox_watched";
             this.checkBox_watched.Size = new System.Drawing.Size(15, 14);
             this.checkBox_watched.TabIndex = 28;
+            this.toolTip_description.SetToolTip(this.checkBox_watched, "is watched");
             this.checkBox_watched.UseVisualStyleBackColor = true;
             this.checkBox_watched.Click += new System.EventHandler(this.checkBox_watched_Click);
             // 
             // label_info
             // 
+            this.label_info.BackColor = System.Drawing.SystemColors.Control;
             this.label_info.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_info.Location = new System.Drawing.Point(395, 0);
             this.label_info.MouseDownColor = System.Drawing.Color.Empty;
@@ -94,6 +102,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_info.TabIndex = 40;
             this.label_info.Text = "More Info";
             this.label_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip_description.SetToolTip(this.label_info, "open more info menu");
             this.label_info.Click += new System.EventHandler(this.label_info_Click);
             // 
             // SimpleControl
@@ -122,5 +131,6 @@ namespace FilmsDBC.Visual.Controls
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_watched;
         private FilmsDBC.Visual.Buttons.ClickButton label_info;
+        private System.Windows.Forms.ToolTip toolTip_description;
     }
 }

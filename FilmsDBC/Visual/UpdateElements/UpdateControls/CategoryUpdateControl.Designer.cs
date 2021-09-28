@@ -29,10 +29,12 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.button_addElement = new System.Windows.Forms.Button();
             this.button_removeElement = new System.Windows.Forms.Button();
+            this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBox_id
@@ -41,6 +43,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 3;
+            this.toolTip_description.SetToolTip(this.textBox_id, "id");
             // 
             // textBox_name
             // 
@@ -49,6 +52,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 17;
+            this.toolTip_description.SetToolTip(this.textBox_name, "name");
             // 
             // button_addElement
             // 
@@ -91,5 +95,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Button button_addElement;
         private System.Windows.Forms.Button button_removeElement;
+        private System.Windows.Forms.ToolTip toolTip_description;
     }
 }

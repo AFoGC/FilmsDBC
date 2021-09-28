@@ -29,6 +29,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.comboBox_genre = new System.Windows.Forms.ComboBox();
@@ -43,6 +44,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.dateUpdateControl_startWatchDate = new FilmsDBC.Visual.UpdateElements.UpdateControls.DateUpdateControl();
             this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.textBox_comment = new System.Windows.Forms.TextBox();
+            this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBox_id
@@ -51,6 +53,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 2;
+            this.toolTip_description.SetToolTip(this.textBox_id, "id");
             // 
             // textBox_name
             // 
@@ -59,6 +62,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 16;
+            this.toolTip_description.SetToolTip(this.textBox_name, "name");
             // 
             // comboBox_genre
             // 
@@ -67,6 +71,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.comboBox_genre.Name = "comboBox_genre";
             this.comboBox_genre.Size = new System.Drawing.Size(100, 21);
             this.comboBox_genre.TabIndex = 17;
+            this.toolTip_description.SetToolTip(this.comboBox_genre, "genre");
             // 
             // textBox_realiseYear
             // 
@@ -75,6 +80,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_realiseYear.Name = "textBox_realiseYear";
             this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
             this.textBox_realiseYear.TabIndex = 27;
+            this.toolTip_description.SetToolTip(this.textBox_realiseYear, "realise year");
             // 
             // checkBox_watched
             // 
@@ -83,6 +89,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.checkBox_watched.Name = "checkBox_watched";
             this.checkBox_watched.Size = new System.Drawing.Size(15, 14);
             this.checkBox_watched.TabIndex = 28;
+            this.toolTip_description.SetToolTip(this.checkBox_watched, "is watched");
             this.checkBox_watched.UseVisualStyleBackColor = true;
             this.checkBox_watched.Click += new System.EventHandler(this.checkBox_watched_Click);
             // 
@@ -93,6 +100,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_countOfWatchedSeries.Name = "textBox_countOfWatchedSeries";
             this.textBox_countOfWatchedSeries.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfWatchedSeries.TabIndex = 33;
+            this.toolTip_description.SetToolTip(this.textBox_countOfWatchedSeries, "count of watched series");
             // 
             // textBox_totalSeries
             // 
@@ -101,6 +109,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_totalSeries.Name = "textBox_totalSeries";
             this.textBox_totalSeries.Size = new System.Drawing.Size(30, 20);
             this.textBox_totalSeries.TabIndex = 35;
+            this.toolTip_description.SetToolTip(this.textBox_totalSeries, "total series");
             // 
             // comboBox_mark
             // 
@@ -109,6 +118,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.comboBox_mark.Name = "comboBox_mark";
             this.comboBox_mark.Size = new System.Drawing.Size(45, 21);
             this.comboBox_mark.TabIndex = 36;
+            this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
             // 
             // textBox_countOfviews
             // 
@@ -117,6 +127,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.textBox_countOfviews.Name = "textBox_countOfviews";
             this.textBox_countOfviews.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfviews.TabIndex = 37;
+            this.toolTip_description.SetToolTip(this.textBox_countOfviews, "count of views");
             // 
             // label_sources
             // 
@@ -130,6 +141,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.label_sources.TabIndex = 38;
             this.label_sources.Text = "update source";
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip_description.SetToolTip(this.label_sources, "open source menu");
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
             // dateUpdateControl_watchDate
@@ -141,6 +153,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.dateUpdateControl_watchDate.Name = "dateUpdateControl_watchDate";
             this.dateUpdateControl_watchDate.Size = new System.Drawing.Size(60, 20);
             this.dateUpdateControl_watchDate.TabIndex = 39;
+            this.toolTip_description.SetToolTip(this.dateUpdateControl_watchDate, "final watch date");
             // 
             // dateUpdateControl_startWatchDate
             // 
@@ -151,6 +164,7 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
             this.dateUpdateControl_startWatchDate.Name = "dateUpdateControl_startWatchDate";
             this.dateUpdateControl_startWatchDate.Size = new System.Drawing.Size(60, 20);
             this.dateUpdateControl_startWatchDate.TabIndex = 40;
+            this.toolTip_description.SetToolTip(this.dateUpdateControl_startWatchDate, "start watch date");
             // 
             // label_comment
             // 
@@ -214,5 +228,6 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls
         internal DateUpdateControl dateUpdateControl_startWatchDate;
         private FilmsDBC.Visual.Buttons.ClickButton label_comment;
         internal System.Windows.Forms.TextBox textBox_comment;
+        private System.Windows.Forms.ToolTip toolTip_description;
     }
 }

@@ -230,6 +230,9 @@
     <EmbeddedResource Include="Visual\Controls\FilmControl.resx">
       <DependentUpon>FilmControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\Controls\Interface\AElementControl.resx">
+      <DependentUpon>AElementControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\Controls\SerieControl.resx">
       <DependentUpon>SerieControl.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,11 +29,13 @@ namespace FilmsDBC.Visual.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_mark = new System.Windows.Forms.TextBox();
             this.label_update = new FilmsDBC.Visual.Buttons.ClickButton();
             this.flowLayoutPanel_SimpleControls = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBox_id
@@ -43,6 +45,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(30, 20);
             this.textBox_id.TabIndex = 2;
+            this.toolTip_description.SetToolTip(this.textBox_id, "id");
             // 
             // textBox_name
             // 
@@ -52,6 +55,7 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_name.ReadOnly = true;
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
             this.textBox_name.TabIndex = 16;
+            this.toolTip_description.SetToolTip(this.textBox_name, "name");
             // 
             // textBox_mark
             // 
@@ -61,9 +65,11 @@ namespace FilmsDBC.Visual.Controls
             this.textBox_mark.ReadOnly = true;
             this.textBox_mark.Size = new System.Drawing.Size(45, 20);
             this.textBox_mark.TabIndex = 36;
+            this.toolTip_description.SetToolTip(this.textBox_mark, "mark");
             // 
             // label_update
             // 
+            this.label_update.BackColor = System.Drawing.SystemColors.Control;
             this.label_update.DefaultColor = System.Drawing.SystemColors.Control;
             this.label_update.Location = new System.Drawing.Point(750, 0);
             this.label_update.MouseDownColor = System.Drawing.Color.Empty;
@@ -73,6 +79,7 @@ namespace FilmsDBC.Visual.Controls
             this.label_update.TabIndex = 42;
             this.label_update.Text = "update";
             this.label_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toolTip_description.SetToolTip(this.label_update, "open update menu");
             this.label_update.Click += new System.EventHandler(this.label_update_Click);
             // 
             // flowLayoutPanel_SimpleControls
@@ -105,5 +112,6 @@ namespace FilmsDBC.Visual.Controls
         private FilmsDBC.Visual.Buttons.ClickButton label_update;
         internal System.Windows.Forms.TextBox textBox_id;
         internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_SimpleControls;
+        private System.Windows.Forms.ToolTip toolTip_description;
     }
 }
