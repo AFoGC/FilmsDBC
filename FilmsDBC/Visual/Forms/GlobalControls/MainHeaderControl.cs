@@ -45,27 +45,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
         {
             MainInformation.MainForm.WindowState = FormWindowState.Minimized;
         }
-
-        
-        private Point lastPoint;
-        private void MainHeaderControl_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
-        private void MainHeaderControl_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                MainInformation.MainForm.Left += e.X - lastPoint.X;
-                MainInformation.MainForm.Top += e.Y - lastPoint.Y;
-                
-                //MoreInfo.MoreInfoFormVisualizer.MoreInfoControl.Left += e.X - lastPoint.X;
-                //MoreInfo.MoreInfoFormVisualizer.MoreInfoControl.Top += e.Y - lastPoint.Y;
-
-                //UpdateFormVisualizer.UpdateControl.Left += e.X - lastPoint.X;
-                //UpdateFormVisualizer.UpdateControl.Top += e.Y - lastPoint.Y;
-            }
-        }
         
     }
 }

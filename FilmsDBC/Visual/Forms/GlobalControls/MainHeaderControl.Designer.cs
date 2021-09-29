@@ -92,8 +92,6 @@ namespace FilmsDBC.Visual.Forms.GlobalControls
             this.Controls.Add(this.clickButton_close);
             this.Name = "MainHeaderControl";
             this.Size = new System.Drawing.Size(500, 30);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainHeaderControl_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainHeaderControl_MouseMove);
             this.ResumeLayout(false);
 
         }

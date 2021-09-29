@@ -91,6 +91,7 @@ namespace FilmsDBC.Visual.Forms
             this.mainHeaderControl.Name = "mainHeaderControl";
             this.mainHeaderControl.Size = new System.Drawing.Size(1485, 30);
             this.mainHeaderControl.TabIndex = 4;
+            this.mainHeaderControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainHeaderControl_MouseDown);
             //
             // MainForm
             //
