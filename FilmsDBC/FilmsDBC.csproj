@@ -67,7 +67,7 @@
     <Compile Include="Visual\Buttons\ClickButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Visual\Buttons\ClickButton.Designer.cs">
+    <Compile Include="Visual\Buttons\ClickButton.designer.cs">
       <DependentUpon>ClickButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\Buttons\PressButton.cs">
@@ -76,147 +76,147 @@
     <Compile Include="Visual\Buttons\PressButton.Designer.cs">
       <DependentUpon>PressButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Controls\CategoryControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\MainHeaderControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\Controls\CategoryControl.Designer.cs">
-      <DependentUpon>CategoryControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Controls\FilmControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Controls\FilmControl.Designer.cs">
-      <DependentUpon>FilmControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Controls\Interface\AbstractControlDescriptionProvider.cs" />
-    <Compile Include="Visual\Controls\Interface\AElementControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Controls\Interface\IControls.cs" />
-    <Compile Include="Visual\Controls\SerieControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Controls\SerieControl.Designer.cs">
-      <DependentUpon>SerieControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Controls\SimpleControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Controls\SimpleControl.Designer.cs">
-      <DependentUpon>SimpleControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\GenrePressButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\BooksControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\BooksControl.Designer.cs">
-      <DependentUpon>BooksControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\MainControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\MainControl.Designer.cs">
-      <DependentUpon>MainControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\MainHeaderControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\MainHeaderControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\MainHeaderControl.designer.cs">
       <DependentUpon>MainHeaderControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\Navbar.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\GenrePressButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\WatchedRequestControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\Navbar.Designer.cs">
-      <DependentUpon>Navbar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControl.Designer.cs">
-      <DependentUpon>SettingsControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ProfileSettingControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ProfileSettingControl.Designer.cs">
-      <DependentUpon>ProfileSettingControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\ISettingsControls.cs" />
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.Designer.cs">
-      <DependentUpon>MarkSystemSettingControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\Forms\WatchedRequestControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\Forms\WatchedRequestControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\WatchedRequestControl.designer.cs">
       <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MoreInfo\MoreInfoControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MoreInfo\MoreInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\MoreInfo\MoreInfoControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MoreInfo\MoreInfoControl.Designer.cs">
       <DependentUpon>MoreInfoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MoreInfo\MoreInfoFormVisualizer.cs" />
-    <Compile Include="Visual\StaticVisualClasses\ControlsConverter.cs" />
-    <Compile Include="Visual\StaticVisualClasses\VisualHelper.cs" />
-    <Compile Include="Visual\UpdateElements\UpdateControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MoreInfo\MoreInfoFormVisualizer.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\UpdateInfo\UpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\UpdateInfo\UpdateControl.Designer.cs">
       <DependentUpon>UpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CategoryUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CategoryUpdateControl.Designer.cs">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\DateUpdateControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\DateUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\DateUpdateControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\DateUpdateControl.Designer.cs">
       <DependentUpon>DateUpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\FilmUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\FilmUpdateControl.Designer.cs">
       <DependentUpon>FilmUpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\IUpdateControl.cs" />
-    <Compile Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\IUpdateControl.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SerieUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SerieUpdateControl.Designer.cs">
       <DependentUpon>SerieUpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourceControl.Designer.cs">
       <DependentUpon>SourceControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesControl.Designer.cs">
       <DependentUpon>SourcesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesVisualizer.cs" />
-    <Compile Include="Visual\UpdateElements\UpdateFormVisualizer.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesVisualizer.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\UpdateInfo\UpdateFormVisualizer.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\BooksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\BooksControl.designer.cs">
+      <DependentUpon>BooksControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\CategoryControl.designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\FilmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\FilmControl.designer.cs">
+      <DependentUpon>FilmControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\AbstractControlDescriptionProvider.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\AElementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\IControls.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\SerieControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\SerieControl.designer.cs">
+      <DependentUpon>SerieControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\SimpleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\SimpleControl.designer.cs">
+      <DependentUpon>SimpleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\MainControl.designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\FormElements\ISettingsControls.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\FormElements\MarkSystemSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\FormElements\MarkSystemSettingControl.designer.cs">
+      <DependentUpon>MarkSystemSettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\FormElements\ProfileSettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\FormElements\ProfileSettingControl.designer.cs">
+      <DependentUpon>ProfileSettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\SettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\SettingsControl.designer.cs">
+      <DependentUpon>SettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Navbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Navbar.Designer.cs">
+      <DependentUpon>Navbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\MainForm\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visual\StaticVisualClasses\ControlsConverter.cs" />
+    <Compile Include="Visual\StaticVisualClasses\VisualHelper.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -226,71 +226,71 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Visual\Controls\CategoryControl.resx">
-      <DependentUpon>CategoryControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Controls\FilmControl.resx">
-      <DependentUpon>FilmControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Controls\Interface\AElementControl.resx">
-      <DependentUpon>AElementControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Controls\SerieControl.resx">
-      <DependentUpon>SerieControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Controls\SimpleControl.resx">
-      <DependentUpon>SimpleControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\BooksControl.resx">
-      <DependentUpon>BooksControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\MainControl.resx">
-      <DependentUpon>MainControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\MainHeaderControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\MainHeaderControl.resx">
       <DependentUpon>MainHeaderControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\Navbar.resx">
-      <DependentUpon>Navbar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControl.resx">
-      <DependentUpon>SettingsControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\ProfileSettingControl.resx">
-      <DependentUpon>ProfileSettingControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\GlobalControls\SettingsControlElements\MarkSystemSettingControl.resx">
-      <DependentUpon>MarkSystemSettingControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\Forms\WatchedRequestControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\WatchedRequestControl.resx">
       <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MoreInfo\MoreInfoControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MoreInfo\MoreInfoControl.resx">
       <DependentUpon>MoreInfoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\UpdateInfo\UpdateControl.resx">
       <DependentUpon>UpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\CategoryUpdateControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CategoryUpdateControl.resx">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\DateUpdateControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\DateUpdateControl.resx">
       <DependentUpon>DateUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\FilmUpdateControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\FilmUpdateControl.resx">
       <DependentUpon>FilmUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SerieUpdateControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SerieUpdateControl.resx">
       <DependentUpon>SerieUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourceControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourceControl.resx">
       <DependentUpon>SourceControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\UpdateElements\UpdateControls\SourceVisual\SourcesControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesControl.resx">
       <DependentUpon>SourcesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\BooksControl.resx">
+      <DependentUpon>BooksControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\FilmControl.resx">
+      <DependentUpon>FilmControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\AElementControl.resx">
+      <DependentUpon>AElementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\SerieControl.resx">
+      <DependentUpon>SerieControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\SimpleControl.resx">
+      <DependentUpon>SimpleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\FormElements\MarkSystemSettingControl.resx">
+      <DependentUpon>MarkSystemSettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\FormElements\ProfileSettingControl.resx">
+      <DependentUpon>ProfileSettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\SettingsMenu\SettingsControl.resx">
+      <DependentUpon>SettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Navbar.resx">
+      <DependentUpon>Navbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -305,7 +305,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\TablesLibrary\TablesLibrary\TablesLibrary.csproj">
       <Project>{6389a55e-2582-4996-b0f4-eaa7f1078a84}</Project>

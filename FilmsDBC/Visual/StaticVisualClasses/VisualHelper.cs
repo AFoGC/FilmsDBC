@@ -1,5 +1,4 @@
 ﻿using FilmsDBC.CinemaDataTypes;
-using FilmsDBC.Visual.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
