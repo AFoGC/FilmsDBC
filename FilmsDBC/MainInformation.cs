@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
 using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.Forms;
+using FilmsDBC.Settings;
 
 namespace FilmsDBC
 {

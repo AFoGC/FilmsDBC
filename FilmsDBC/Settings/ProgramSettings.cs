@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
 
-namespace FilmsDBC
+namespace FilmsDBC.Settings
 {
 	public class ProgramSettings : Cell
 	{
