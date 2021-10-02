@@ -82,6 +82,7 @@
     <Compile Include="Visual\MainForm\GlobalElements\MainHeaderControl.designer.cs">
       <DependentUpon>MainHeaderControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\ISimpleControl.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\GenrePressButton.cs">
       <SubType>Component</SubType>
     </Compile>

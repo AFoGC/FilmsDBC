@@ -39,6 +39,27 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			RefreshData();
 		}
 
+		public SerieControl(SimpleControl simpleControl)
+        {
+			InitializeComponent();
+			this.filmInfo = simpleControl.filmInfo;
+
+			foreach (Serie serie in MainInformation.tableCollection.GetTable(typeof(Serie)).Cells)
+			{
+				if (serie.FilmId == filmInfo.ID)
+				{
+					this.serieInfo = serie;
+				}
+			}
+
+
+			this.label_comment.SetDefaultButtonBlink();
+			this.label_copyUrl.SetDefaultButtonBlink();
+			this.label_update.SetDefaultButtonBlink();
+
+			RefreshData();
+		}
+
 		public override void RefreshData()
 		{
 			this.textBox_id.Text = filmInfo.ID.ToString();

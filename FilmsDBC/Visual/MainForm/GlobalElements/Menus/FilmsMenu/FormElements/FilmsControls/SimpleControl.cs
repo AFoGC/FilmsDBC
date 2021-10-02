@@ -1,6 +1,7 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo;
+using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls
 {
-	public partial class SimpleControl : AElementControl
+	public partial class SimpleControl : AElementControl, ISimpleControl
 	{
 
 		public SimpleControl(Film film)
@@ -81,7 +82,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		private void label_info_Click(object sender, EventArgs e)
 		{
-			MoreInfoFormVisualizer.OpenMoreInfoForm(FilmInfo, this);
+			MoreInfoFormVisualizer.OpenMoreInfoForm(this);
 		}
 
 		private void checkBox_watched_Click(object sender, EventArgs e)
@@ -93,5 +94,17 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 		{
 			SetSelectedElement(MainInformation.MainForm.MainControl.ControlInBuffer);
 		}
+
+		public Control ToMoreInfo()
+        {
+            if (filmInfo.Genre.IsSerialGenre)
+            {
+				return new SerieControl(this);
+            }
+            else
+            {
+				return new FilmControl(this);
+            }
+        }
 	}
 }

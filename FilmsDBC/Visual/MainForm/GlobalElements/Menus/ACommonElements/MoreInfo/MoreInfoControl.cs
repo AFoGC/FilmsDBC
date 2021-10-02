@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
 using FilmsDBC.Visual.StaticVisualClasses;
 using System;
@@ -20,17 +21,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo
             InitializeComponent();
         }
 
-		public void Reinitialize(Film film, SimpleControl simpleContol)
+		public void Reinitialize(ISimpleControl simpleControl)
 		{
 			flowLayoutPanel_main.Controls.Clear();
-			if (film.Genre.IsSerialGenre)
-			{
-				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToSerieControl(film, simpleContol));
-			}
-			else
-			{
-				flowLayoutPanel_main.Controls.Add(ControlsConverter.ToFilmControl(film, simpleContol));
-			}
+			flowLayoutPanel_main.Controls.Add(simpleControl.ToMoreInfo());
 		}
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)

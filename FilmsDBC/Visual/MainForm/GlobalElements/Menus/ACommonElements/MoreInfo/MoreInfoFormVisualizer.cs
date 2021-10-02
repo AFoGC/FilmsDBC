@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateInfo;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
 using FilmsDBC.Visual.UpdateElements;
@@ -23,9 +24,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo
         {
             get { return isOpen; }
         }
-		public static void OpenMoreInfoForm(Film film, SimpleControl simpleControl)
+		public static void OpenMoreInfoForm(ISimpleControl simpleControl)
 		{
-			infoControl.Reinitialize(film, simpleControl);
+			infoControl.Reinitialize(simpleControl);
 			MainInformation.MainForm.MainControl.InfoPanel.Controls.Add(infoControl);
 
 			if (UpdateFormVisualizer.IsOpen)
@@ -34,6 +35,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo
 			}
 
 			isOpen = true;
+			
 		}
 
 		public static void HideMoreInfoControl()
