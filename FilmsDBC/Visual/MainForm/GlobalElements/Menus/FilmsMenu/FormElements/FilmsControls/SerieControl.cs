@@ -29,36 +29,55 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		public SerieControl(Film film, Serie serie)
 		{
-			InitializeComponent();
+			initialise();
 			this.serieInfo = serie;
 			this.filmInfo = film;
 
-			this.label_comment.SetDefaultButtonBlink();
-			this.label_copyUrl.SetDefaultButtonBlink();
-			this.label_update.SetDefaultButtonBlink();
+			RefreshData();
+		}
+
+		public SerieControl(Film film)
+        {
+			initialise();
+			this.filmInfo = film;
+			this.serieInfo = findSerie();
 
 			RefreshData();
 		}
 
 		public SerieControl(SimpleControl simpleControl)
         {
-			InitializeComponent();
+			initialise();
 			this.filmInfo = simpleControl.filmInfo;
+			this.serieInfo = findSerie();
+			this.simpleControl = simpleControl;
 
+			RefreshData();
+		}
+
+		private Serie findSerie()
+        {
 			foreach (Serie serie in MainInformation.tableCollection.GetTable(typeof(Serie)).Cells)
 			{
 				if (serie.FilmId == filmInfo.ID)
 				{
-					this.serieInfo = serie;
+					return serie;
 				}
 			}
 
+			Serie ser = new Serie();
+			ser.FilmId = filmInfo.ID;
+
+			return ser;
+        }
+
+		private void initialise()
+        {
+			InitializeComponent();
 
 			this.label_comment.SetDefaultButtonBlink();
 			this.label_copyUrl.SetDefaultButtonBlink();
 			this.label_update.SetDefaultButtonBlink();
-
-			RefreshData();
 		}
 
 		public override void RefreshData()

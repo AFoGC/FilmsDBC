@@ -216,7 +216,6 @@
     <Compile Include="Visual\MainForm\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\StaticVisualClasses\ControlsConverter.cs" />
     <Compile Include="Visual\StaticVisualClasses\VisualHelper.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

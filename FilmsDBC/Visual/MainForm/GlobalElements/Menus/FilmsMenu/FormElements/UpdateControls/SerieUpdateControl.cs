@@ -86,8 +86,19 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 		public void UpdateElement()
 		{
-			ControlsConverter.SetFilmValues(this, film);
-			ControlsConverter.SetSerieValues(this, serie);
+			film.Name = this.textBox_name.Text;
+			film.Genre = GenreMethods.GetByName(this.comboBox_genre.Text);
+			film.RealiseYear = VisualHelper.TextToInt32(this.textBox_realiseYear.Text);
+			film.Watched = this.checkBox_watched.Checked;
+			film.DateOfWatch = this.dateUpdateControl_watchDate.Date;
+			film.Mark = VisualHelper.TextToMark(this.comboBox_mark.Text);
+			film.CountOfViews = VisualHelper.TextToInt32(this.textBox_countOfviews.Text);
+			film.Comment = this.textBox_comment.Text;
+
+			serie.StartWatchDate = this.dateUpdateControl_startWatchDate.Date;
+			serie.CountOfWatchedSeries = VisualHelper.TextToInt32(this.textBox_countOfWatchedSeries.Text);
+			serie.TotalSeries = VisualHelper.TextToInt32(this.textBox_totalSeries.Text);
+
 			control.RefreshData();
 		}
 

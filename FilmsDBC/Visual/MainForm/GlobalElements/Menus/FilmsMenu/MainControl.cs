@@ -70,7 +70,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 			{
 				if (film.Genre.IsSerialGenre)
 				{
-					tableControls.Add(ControlsConverter.ToSerieControl(film));
+					tableControls.Add(new SerieControl(film));
 				}
 			}
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
@@ -223,7 +223,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 					break;
 				case 3:
 					film.Genre = (Genre)tables.GetTable(typeof(Genre)).GetElement(2);
-					control = ControlsConverter.ToSerieControl(film);
+					control = new SerieControl(film);
 					break;
 				default:
 					return;

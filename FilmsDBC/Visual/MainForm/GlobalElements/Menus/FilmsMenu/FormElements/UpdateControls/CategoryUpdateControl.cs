@@ -36,7 +36,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 		public void UpdateElement()
 		{
-			ControlsConverter.SetCategoryValues(this, category);
+			category.Name = this.textBox_name.Text;
 			categoryControl.RefreshData();
 		}
 
