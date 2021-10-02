@@ -197,7 +197,14 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
         public override Control ToUpdateControl()
         {
-			return new FilmUpdateControl(this);
+			if (filmInfo.Genre.IsSerialGenre)
+			{
+				return new SerieUpdateControl(this);
+			}
+			else
+			{
+				return new FilmUpdateControl(this);
+			}
         }
     }
 }
