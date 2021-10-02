@@ -163,7 +163,7 @@
       <DependentUpon>FilmControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\AbstractControlDescriptionProvider.cs" />
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\AElementControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\AElementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\IControls.cs" />
@@ -265,7 +265,7 @@
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\FilmControl.resx">
       <DependentUpon>FilmControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\ControlsInterface\AElementControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\AElementControl.resx">
       <DependentUpon>AElementControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\SerieControl.resx">
