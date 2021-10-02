@@ -1,6 +1,7 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls;
 using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements;
 using System;
@@ -106,5 +107,17 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 				return new FilmControl(this);
             }
         }
-	}
+
+        public override Control ToUpdateControl()
+        {
+			if (filmInfo.Genre.IsSerialGenre)
+			{
+				return new SerieUpdateControl(new SerieControl(this));
+			}
+			else
+			{
+				return new FilmUpdateControl(new FilmControl(this));
+			}
+		}
+    }
 }

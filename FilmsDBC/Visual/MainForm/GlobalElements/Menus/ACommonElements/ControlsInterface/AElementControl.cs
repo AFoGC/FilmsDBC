@@ -67,5 +67,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.Controls
 				return false;
 			}
 		}
-	}
+
+        public abstract Control ToUpdateControl();
+    }
 }

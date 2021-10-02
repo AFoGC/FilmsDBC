@@ -1,6 +1,7 @@
 ﻿using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateInfo;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls;
 using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements;
 using System;
@@ -193,5 +194,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 			return false;
 		}
-	}
+
+        public Control ToUpdateControl()
+        {
+			return new CategoryUpdateControl(this);
+        }
+    }
 }

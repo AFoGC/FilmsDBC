@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface
 {
@@ -14,5 +15,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.Controls
         void RefreshData();
         bool HasSelectedGenre(Genre[] selectedGenres);
         bool HasWatchedProperty(bool isWached);
+        Control ToUpdateControl();
     }
 }
