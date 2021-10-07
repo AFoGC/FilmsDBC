@@ -1,4 +1,4 @@
-﻿using FilmsDBC.CinemaDataTypes;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Settings;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElements
 {
-	public partial class ProfileSettingControl : UserControl, ISettingsControls
+    public partial class ProfileSettingControl : UserControl, ISettingsControls
 	{
 		private ProfileCollection profileCollection = null;
 		private Profile usedProfile = null;

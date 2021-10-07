@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
 using BenchmarkDotNet.Running;
 using BenchmarkDotNet.Attributes;
-using FilmsDBC.CinemaDataTypes;
+using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 
 namespace Benchmark.Interpreter
 {

@@ -1,4 +1,4 @@
-﻿using FilmsDBC.CinemaDataTypes.CellDataClasses;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes.CellDataClasses;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
 using TablesLibrary.Interpreter.Attributes;
 
-namespace FilmsDBC.CinemaDataTypes
+namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 {
 	[TableCell("Book")]
 	public class Book : Cell

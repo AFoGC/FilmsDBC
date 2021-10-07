@@ -1,5 +1,5 @@
-﻿using FilmsDBC.CinemaDataTypes;
-using FilmsDBC.CinemaDataTypes.CellDataClasses;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
+using FilmsDBC.DataAccessLayer.CinemaDataTypes.CellDataClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

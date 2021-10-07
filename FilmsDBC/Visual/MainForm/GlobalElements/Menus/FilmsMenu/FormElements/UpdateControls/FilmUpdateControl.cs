@@ -1,4 +1,4 @@
-﻿using FilmsDBC.CinemaDataTypes;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
 using FilmsDBC.Visual.StaticVisualClasses;
@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls
 {
-	public partial class FilmUpdateControl : UserControl, IUpdateControl
+    public partial class FilmUpdateControl : UserControl, IUpdateControl
 	{
 		private FilmControl filmControl = null;
 		private Film film = null;

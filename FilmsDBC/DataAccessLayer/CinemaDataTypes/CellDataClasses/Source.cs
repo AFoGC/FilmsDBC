@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FilmsDBC.CinemaDataTypes.CellDataClasses
+namespace FilmsDBC.DataAccessLayer.CinemaDataTypes.CellDataClasses
 {
 	public class Source
 	{

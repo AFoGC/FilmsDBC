@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes.CellDataClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FilmsDBC.CinemaDataTypes.CellDataClasses;
 
 namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
 {

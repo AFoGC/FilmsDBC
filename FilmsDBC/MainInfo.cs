@@ -1,5 +1,4 @@
-﻿using FilmsDBC.CinemaDataTypes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +7,12 @@ using TablesLibrary.Interpreter;
 using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.MainForm;
 using FilmsDBC.Settings;
-using FilmsDBC.CinemaDataTables;
+using FilmsDBC.DataAccessLayer.CinemaDataTables;
+using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 
 namespace FilmsDBC
 {
-	public static class MainInfo
+    public static class MainInfo
 	{
 		public static TableCollection tableCollection = null;
 		public static TableCollection TableCollection

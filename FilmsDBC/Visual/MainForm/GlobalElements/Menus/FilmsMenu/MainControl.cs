@@ -1,5 +1,5 @@
-﻿using FilmsDBC.CinemaDataTables;
-using FilmsDBC.CinemaDataTypes;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTables;
+using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
@@ -17,7 +17,7 @@ using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 {
-	public partial class MainControl : UserControl
+    public partial class MainControl : UserControl
 	{
 		public MainControl()
 		{

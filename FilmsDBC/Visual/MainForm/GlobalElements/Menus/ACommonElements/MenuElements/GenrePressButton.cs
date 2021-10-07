@@ -1,4 +1,4 @@
-﻿using FilmsDBC.CinemaDataTypes;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements
 {
-	public class GenrePressButton : FilmsDBC.Visual.Buttons.PressButton
+    public class GenrePressButton : FilmsDBC.Visual.Buttons.PressButton
 	{
 		private Genre genre = null;
 		public Genre Genre

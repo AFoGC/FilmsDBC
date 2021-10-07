@@ -1,5 +1,4 @@
-﻿using FilmsDBC.CinemaDataTypes;
-using FilmsDBC.StaticFilmClasses;
+﻿using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.MainForm.GlobalElements;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu;

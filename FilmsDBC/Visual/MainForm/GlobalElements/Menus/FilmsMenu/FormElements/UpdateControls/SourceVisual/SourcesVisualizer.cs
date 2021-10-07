@@ -1,4 +1,4 @@
-﻿using FilmsDBC.CinemaDataTypes;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
 {
-	public static class SourcesVisualizer
+    public static class SourcesVisualizer
 	{
 		private static SourcesControl sourcesControl = new SourcesControl();
 		public static SourcesControl SourcesControl
