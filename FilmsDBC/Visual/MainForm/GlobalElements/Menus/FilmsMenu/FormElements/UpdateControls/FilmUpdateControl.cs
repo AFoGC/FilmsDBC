@@ -25,7 +25,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			this.filmControl = filmControl;
 			this.film = filmControl.FilmInfo;
 
-			comboBox_genre.Items.AddRange(MainInformation.Tables.GenresTable.GetAllGenresNames());
+			comboBox_genre.Items.AddRange(MainInfo.Tables.GenresTable.GetAllGenresNames());
 			comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
 			refresh();
 
@@ -35,7 +35,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 		private void refresh()
 		{
-			Film defFilm = MainInformation.Tables.FilmsTable.DefaultCell;
+			Film defFilm = MainInfo.Tables.FilmsTable.DefaultCell;
 
 			this.textBox_id.Text = film.ID.ToString();
 			this.textBox_name.Text = film.Name;
@@ -51,7 +51,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 		public void UpdateElement()
 		{
 			film.Name = this.textBox_name.Text;
-			film.Genre = MainInformation.Tables.GenresTable.GetByName(this.comboBox_genre.Text);
+			film.Genre = MainInfo.Tables.GenresTable.GetByName(this.comboBox_genre.Text);
 			film.RealiseYear = VisualHelper.TextToInt32(this.textBox_realiseYear.Text);
 			film.Watched = this.checkBox_watched.Checked;
 			film.Mark = VisualHelper.TextToMark(this.comboBox_mark.Text);

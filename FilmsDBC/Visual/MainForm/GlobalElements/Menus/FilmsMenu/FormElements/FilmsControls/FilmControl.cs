@@ -48,7 +48,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		public override void RefreshData()
 		{
-			Film defFilm = MainInformation.Tables.FilmsTable.DefaultCell; 
+			Film defFilm = MainInfo.Tables.FilmsTable.DefaultCell; 
 
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
@@ -181,7 +181,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		private void textBox_id_Click(object sender, EventArgs e)
 		{
-			SetSelectedElement(MainInformation.MainForm.MainControl.ControlInBuffer);
+			SetSelectedElement(MainInfo.MainForm.MainControl.ControlInBuffer);
 		}
 
 		private bool commentIsOpen = false;

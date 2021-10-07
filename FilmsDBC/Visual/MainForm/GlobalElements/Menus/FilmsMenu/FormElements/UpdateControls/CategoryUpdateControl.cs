@@ -42,19 +42,19 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 		private void button_addElement_Click(object sender, EventArgs e)
 		{
-			if (MainInformation.MainForm.MainControl.ControlInBuffer != null)
+			if (MainInfo.MainForm.MainControl.ControlInBuffer != null)
 			{
-				if (MainInformation.MainForm.MainControl.ControlInBuffer.GetType() == typeof(SimpleControl))
+				if (MainInfo.MainForm.MainControl.ControlInBuffer.GetType() == typeof(SimpleControl))
 				{
-					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.MainControl.ControlInBuffer;
+					SimpleControl simpleControl = (SimpleControl)MainInfo.MainForm.MainControl.ControlInBuffer;
 					Film film = simpleControl.FilmInfo;
 					if (film.FranshiseId == 0)
 					{
 						film.FranshiseId = category.ID;
 						category.Films.Add(film);
 						categoryControl.AddSimpleCotrol(film);
-						MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls.Remove(simpleControl);
-						MainInformation.MainForm.MainControl.ControlInBuffer = null;
+						MainInfo.MainForm.MainControl.flowLayoutPanel_main.Controls.Remove(simpleControl);
+						MainInfo.MainForm.MainControl.ControlInBuffer = null;
 					}
 				}
 			}
@@ -62,11 +62,11 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 		private void button_removeElement_Click(object sender, EventArgs e)
 		{
-			if (MainInformation.MainForm.MainControl.ControlInBuffer != null)
+			if (MainInfo.MainForm.MainControl.ControlInBuffer != null)
 			{
-				if (MainInformation.MainForm.MainControl.ControlInBuffer.GetType() == typeof(SimpleControl))
+				if (MainInfo.MainForm.MainControl.ControlInBuffer.GetType() == typeof(SimpleControl))
 				{
-					SimpleControl simpleControl = (SimpleControl)MainInformation.MainForm.MainControl.ControlInBuffer;
+					SimpleControl simpleControl = (SimpleControl)MainInfo.MainForm.MainControl.ControlInBuffer;
 					Film film = simpleControl.FilmInfo;
 
 					if (categoryControl.RemoveFilmFromCategory(simpleControl))
@@ -74,18 +74,18 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 						//this.categoryControl.flowLayoutPanel_SimpleControls.Controls.Remove(simpleControl);
 						//this.categoryControl.RemoveSimpleControl();
 
-						if (MainInformation.MainForm.MainControl.ControlsCondition == 1)
+						if (MainInfo.MainForm.MainControl.ControlsCondition == 1)
 						{
 							int i = 0;
-							foreach (UserControl userControl in MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls)
+							foreach (UserControl userControl in MainInfo.MainForm.MainControl.flowLayoutPanel_main.Controls)
 							{
 								if (userControl.GetType() == typeof(SimpleControl))
 								{
 									SimpleControl sControl = (SimpleControl)userControl;
 									if (sControl.FilmInfo.ID > film.ID)
 									{
-										MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls.Add(simpleControl);
-										MainInformation.MainForm.MainControl.flowLayoutPanel_main.Controls.SetChildIndex(simpleControl, i);
+										MainInfo.MainForm.MainControl.flowLayoutPanel_main.Controls.Add(simpleControl);
+										MainInfo.MainForm.MainControl.flowLayoutPanel_main.Controls.SetChildIndex(simpleControl, i);
 										break;
 									}
 								}

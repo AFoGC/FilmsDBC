@@ -20,7 +20,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateIn
 		public static void OpenUpdateControl(IControls userControl)
 		{
 			updateControl.Reinitialize(userControl);
-			MainInformation.MainForm.MainControl.InfoPanel.Controls.Add(updateControl);
+			MainInfo.MainForm.MainControl.InfoPanel.Controls.Add(updateControl);
 
             if (MoreInfoFormVisualizer.IsOpen)
 			{
@@ -37,7 +37,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateIn
 		public static void HideUpdateControl()
         {
 			isOpen = false;
-			MainInformation.MainForm.MainControl.InfoPanel.Controls.Remove(updateControl);
+			MainInfo.MainForm.MainControl.InfoPanel.Controls.Remove(updateControl);
 
             if (SourcesVisualizer.IsOpen)
             {

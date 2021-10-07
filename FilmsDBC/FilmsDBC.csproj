@@ -60,7 +60,7 @@
     <Compile Include="CinemaDataTypes\Genre.cs" />
     <Compile Include="CinemaDataTypes\PriorityFilm.cs" />
     <Compile Include="CinemaDataTypes\Serie.cs" />
-    <Compile Include="MainInformation.cs" />
+    <Compile Include="MainInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Settings\ProgramSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

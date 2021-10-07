@@ -38,9 +38,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu
             }
 
 
-            MainInformation.LoadTables();
-            MainInformation.MainForm.MainControl.loadCategories();
-            MainInformation.MainForm.MainControl.loadGenres();
+            MainInfo.LoadTables();
+            MainInfo.MainForm.MainControl.loadCategories();
+            MainInfo.MainForm.MainControl.loadGenres();
         }
     }
 }

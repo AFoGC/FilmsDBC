@@ -25,24 +25,24 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
 
         private void clickButton_close_Click(object sender, EventArgs e)
         {
-            MainInformation.MainForm.Close();
+            MainInfo.MainForm.Close();
         }
 
         private void clickButton_maximize_Click(object sender, EventArgs e)
         {
-            if (MainInformation.MainForm.WindowState != FormWindowState.Maximized)
+            if (MainInfo.MainForm.WindowState != FormWindowState.Maximized)
             {
-                MainInformation.MainForm.WindowState = FormWindowState.Maximized;
+                MainInfo.MainForm.WindowState = FormWindowState.Maximized;
             }
             else
             {
-                MainInformation.MainForm.WindowState = FormWindowState.Normal;
+                MainInfo.MainForm.WindowState = FormWindowState.Normal;
             }
         }
 
         private void clickButton_minimize_Click(object sender, EventArgs e)
         {
-            MainInformation.MainForm.WindowState = FormWindowState.Minimized;
+            MainInfo.MainForm.WindowState = FormWindowState.Minimized;
         }
         
     }

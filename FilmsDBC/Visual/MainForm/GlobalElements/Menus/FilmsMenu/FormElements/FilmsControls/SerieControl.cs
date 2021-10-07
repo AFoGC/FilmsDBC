@@ -57,7 +57,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		private Serie findSerie()
         {
-			foreach (Serie serie in MainInformation.Tables.SeriesTable)
+			foreach (Serie serie in MainInfo.Tables.SeriesTable)
 			{
 				if (serie.FilmId == filmInfo.ID)
 				{
@@ -82,7 +82,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		public override void RefreshData()
 		{
-			Film defFilm = MainInformation.Tables.FilmsTable.DefaultCell;
+			Film defFilm = MainInfo.Tables.FilmsTable.DefaultCell;
 
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
@@ -93,7 +93,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			this.textBox_mark.Text = VisualHelper.markToText(Film.FormatToString(filmInfo.Mark, defFilm.Mark));
 			this.textBox_countOfviews.Text = Film.FormatToString(filmInfo.CountOfViews, defFilm.CountOfViews);
 
-			Serie defSerie = MainInformation.Tables.SeriesTable.DefaultCell;
+			Serie defSerie = MainInfo.Tables.SeriesTable.DefaultCell;
 
 			this.textBox_startWatchDate.Text = Serie.FormatToString(serieInfo.StartWatchDate, defSerie.StartWatchDate);
 			this.textBox_countOfWatchedSeries.Text = Serie.FormatToString(serieInfo.CountOfWatchedSeries, defSerie.CountOfWatchedSeries);
@@ -229,7 +229,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		private void textBox_id_Click(object sender, EventArgs e)
 		{
-			SetSelectedElement(MainInformation.MainForm.MainControl.ControlInBuffer);
+			SetSelectedElement(MainInfo.MainForm.MainControl.ControlInBuffer);
 		}
 
 		private bool commentIsOpen = false;

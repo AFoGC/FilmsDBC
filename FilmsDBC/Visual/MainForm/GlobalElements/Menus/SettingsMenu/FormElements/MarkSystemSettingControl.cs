@@ -16,7 +16,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
         {
             InitializeComponent();
 
-            switch (MainInformation.Settings.MarkSystem)
+            switch (MainInfo.Settings.MarkSystem)
             {
                 case 3:
                     comboBox_marksSystem.Text = "3/3";

@@ -29,7 +29,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)
 		{
-			MainInformation.MainForm.MainControl.InfoPanel.Controls.Remove(this);
+			MainInfo.MainForm.MainControl.InfoPanel.Controls.Remove(this);
 		}
 	}
 }

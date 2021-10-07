@@ -30,7 +30,7 @@ namespace FilmsDBC.CinemaDataTypes
 				case "film":
 					int i = Convert.ToInt32(comand.Value);
 					//this.film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetElement(i);
-					this.film = MainInformation.Tables.FilmsTable.GetElementByIndex(i);
+					this.film = MainInfo.Tables.FilmsTable.GetElementByIndex(i);
 					break;
 
 

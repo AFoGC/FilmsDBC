@@ -12,9 +12,13 @@ using FilmsDBC.CinemaDataTables;
 
 namespace FilmsDBC
 {
-	public static class MainInformation
+	public static class MainInfo
 	{
 		public static TableCollection tableCollection = null;
+		public static TableCollection TableCollection
+        {
+            get { return tableCollection; }
+        }
 
 		private static MainForm mainForm = null;
 		public static MainForm MainForm
@@ -28,12 +32,12 @@ namespace FilmsDBC
 			get { return settings; }
 		}
 
-		static MainInformation()
+		static MainInfo()
 		{
 			Tables.SetDefaultMainTableCollection();
 
 			settings = loadSettings();
-			tableCollection.TableFilePath = settings.UsedProfile.MainFilePath;
+			TableCollection.TableFilePath = settings.UsedProfile.MainFilePath;
 
 			mainForm = new MainForm();
 		}
@@ -53,7 +57,7 @@ namespace FilmsDBC
 
 		public static void LoadTables()
 		{
-			tableCollection.LoadTables();
+			TableCollection.LoadTables();
 			Tables.CategoriesTable.CategorySubload(Tables.FilmsTable);
 		}
 
@@ -93,13 +97,13 @@ namespace FilmsDBC
 				seriesTable = new SeriesTable();
 				priorityFilmsTable = new PriorityFilmsTable();
 
-				tableCollection.RemoveAllTables(true);
+				TableCollection.RemoveAllTables(true);
 
-				tableCollection.AddTable(categoriesTable);
-				tableCollection.AddTable(genresTable);
-				tableCollection.AddTable(filmsTable);
-				tableCollection.AddTable(seriesTable);
-				tableCollection.AddTable(priorityFilmsTable);
+				TableCollection.AddTable(categoriesTable);
+				TableCollection.AddTable(genresTable);
+				TableCollection.AddTable(filmsTable);
+				TableCollection.AddTable(seriesTable);
+				TableCollection.AddTable(priorityFilmsTable);
 
 
 			}

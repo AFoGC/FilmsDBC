@@ -29,13 +29,13 @@ namespace FilmsDBC
 
             if (args.Length != 0)
             {
-				MainInformation.tableCollection.TableFilePath = args[0];
+				MainInfo.tableCollection.TableFilePath = args[0];
             }
 
-			MainInformation.LoadTables();
-			MainInformation.MainForm.MainControl.loadCategories();
-			MainInformation.MainForm.MainControl.loadGenres();
-			Application.Run(MainInformation.MainForm);
+			MainInfo.LoadTables();
+			MainInfo.MainForm.MainControl.loadCategories();
+			MainInfo.MainForm.MainControl.loadGenres();
+			Application.Run(MainInfo.MainForm);
 		}
 
 		public static bool IsAssociated()

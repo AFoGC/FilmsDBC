@@ -30,14 +30,14 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
 
 		public void GetSettings()
 		{
-			MainInformation.Settings.UsedProfile = usedProfile;
-			MainInformation.tableCollection.TableFilePath = usedProfile.MainFilePath;
+			MainInfo.Settings.UsedProfile = usedProfile;
+			MainInfo.tableCollection.TableFilePath = usedProfile.MainFilePath;
 		}
 
 		public void RefreshControl()
 		{
-			profileCollection = MainInformation.Settings.Profiles;
-			usedProfile = MainInformation.Settings.UsedProfile;
+			profileCollection = MainInfo.Settings.Profiles;
+			usedProfile = MainInfo.Settings.UsedProfile;
 
 			textBox_profileName.Text = usedProfile.Name;
 
@@ -110,13 +110,13 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
 					Directory.CreateDirectory(newProfile.ProfilePath);
 					using (FileStream fs = File.Create(newProfile.MainFilePath)) { }
 
-					TableCollection tc = MainInformation.GetDefaultTableCollectionData();
+					TableCollection tc = MainInfo.GetDefaultTableCollectionData();
 					tc.TableFilePath = newProfile.MainFilePath;
 
 					Table<Genre> genreTable = tc.GetTable<Genre>();
 					genreTable.RemoveAll(true);
 
-					foreach (Genre genre in MainInformation.Tables.GenresTable)
+					foreach (Genre genre in MainInfo.Tables.GenresTable)
 					{
 						genreTable.AddWithoutReindexation(genre);
 					}

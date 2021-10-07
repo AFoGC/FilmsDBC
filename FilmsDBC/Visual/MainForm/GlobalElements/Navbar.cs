@@ -30,20 +30,20 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
         private void pressButton_Main_Click(object sender, EventArgs e)
         {
             changeSelectedButton((PressButton)sender);
-            MainInformation.MainForm.MainControl.BringToFront();
+            MainInfo.MainForm.MainControl.BringToFront();
         }
 
         private void pressButton_Settings_Click(object sender, EventArgs e)
         {
             changeSelectedButton((PressButton)sender);
-            MainInformation.MainForm.SettingsControl.RefreshControl();
-            MainInformation.MainForm.SettingsControl.BringToFront();
+            MainInfo.MainForm.SettingsControl.RefreshControl();
+            MainInfo.MainForm.SettingsControl.BringToFront();
         }
 
         private void pressButton_Books_Click(object sender, EventArgs e)
         {
             changeSelectedButton((PressButton)sender);
-            MainInformation.MainForm.BooksControl.BringToFront();
+            MainInfo.MainForm.BooksControl.BringToFront();
         }
 
         private void changeSelectedButton(PressButton pressButton)

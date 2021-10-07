@@ -26,7 +26,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 				controlInBuffer.SetVisualDefault();
 			}
 
-			MainInformation.MainForm.MainControl.ControlInBuffer = this;
+			MainInfo.MainForm.MainControl.ControlInBuffer = this;
 			setVisualSelected();
 		}
 

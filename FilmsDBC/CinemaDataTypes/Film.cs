@@ -78,7 +78,7 @@ namespace FilmsDBC.CinemaDataTypes
 					break;
 				case "genre":
 					//this.genre = (Genre)MainInformation.tableCollection.GetTable(typeof(Genre)).GetElement(Convert.ToInt32(comand.Value));
-					this.genre = MainInformation.Tables.GenresTable.GetElementByIndex(Convert.ToInt32(comand.Value));
+					this.genre = MainInfo.Tables.GenresTable.GetElementByIndex(Convert.ToInt32(comand.Value));
 					break;
 				case "realiseYear":
 					this.realiseYear = Convert.ToInt32(comand.Value);
