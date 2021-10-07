@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CinemaDataTables\CategoriesTable.cs" />
+    <Compile Include="CinemaDataTables\FilmsTable.cs" />
+    <Compile Include="CinemaDataTables\GenresTable.cs" />
+    <Compile Include="CinemaDataTables\PriorityFilmsTable.cs" />
+    <Compile Include="CinemaDataTables\SeriesTable.cs" />
     <Compile Include="CinemaDataTypes\Book.cs" />
     <Compile Include="CinemaDataTypes\BookCategory.cs" />
     <Compile Include="CinemaDataTypes\BookGenre.cs" />
@@ -111,10 +116,10 @@
     <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CategoryUpdateControl.Designer.cs">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\DateUpdateControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CommonElements\DateUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\DateUpdateControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CommonElements\DateUpdateControl.Designer.cs">
       <DependentUpon>DateUpdateControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\FilmUpdateControl.cs">
@@ -241,7 +246,7 @@
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CategoryUpdateControl.resx">
       <DependentUpon>CategoryUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\DateUpdateControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CommonElements\DateUpdateControl.resx">
       <DependentUpon>DateUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\FilmUpdateControl.resx">

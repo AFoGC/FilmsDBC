@@ -57,7 +57,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		private Serie findSerie()
         {
-			foreach (Serie serie in MainInformation.tableCollection.GetTable(typeof(Serie)).Cells)
+			foreach (Serie serie in MainInformation.Tables.SeriesTable)
 			{
 				if (serie.FilmId == filmInfo.ID)
 				{
@@ -82,18 +82,22 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		public override void RefreshData()
 		{
+			Film defFilm = MainInformation.Tables.FilmsTable.DefaultCell;
+
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
 			this.textBox_genre.Text = filmInfo.Genre.Name;
-			this.textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
+			this.textBox_realiseYear.Text = Film.FormatToString(filmInfo.RealiseYear, defFilm.RealiseYear);
 			this.checkBox_watched.Checked = filmInfo.Watched;
-			this.textBox_watchDate.Text = Film.formatToString(filmInfo.DateOfWatch);
-			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
-			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
+			this.textBox_watchDate.Text = Film.FormatToString(filmInfo.DateOfWatch, defFilm.DateOfWatch);
+			this.textBox_mark.Text = VisualHelper.markToText(Film.FormatToString(filmInfo.Mark, defFilm.Mark));
+			this.textBox_countOfviews.Text = Film.FormatToString(filmInfo.CountOfViews, defFilm.CountOfViews);
 
-			this.textBox_startWatchDate.Text = Serie.formatToString(serieInfo.StartWatchDate);
-			this.textBox_countOfWatchedSeries.Text = Serie.formatToString(serieInfo.CountOfWatchedSeries);
-			this.textBox_totalSeries.Text = Serie.formatToString(serieInfo.TotalSeries);
+			Serie defSerie = MainInformation.Tables.SeriesTable.DefaultCell;
+
+			this.textBox_startWatchDate.Text = Serie.FormatToString(serieInfo.StartWatchDate, defSerie.StartWatchDate);
+			this.textBox_countOfWatchedSeries.Text = Serie.FormatToString(serieInfo.CountOfWatchedSeries, defSerie.CountOfWatchedSeries);
+			this.textBox_totalSeries.Text = Serie.FormatToString(serieInfo.TotalSeries, defSerie.TotalSeries);
 			this.refreshSourceLabel();
 
 			if (simpleControl != null)

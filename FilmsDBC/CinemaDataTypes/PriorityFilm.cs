@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
+using TablesLibrary.Interpreter.Attributes;
 
 namespace FilmsDBC.CinemaDataTypes
 {
+	[TableCell("PriorityFilm")]
 	public class PriorityFilm : Cell
 	{
 		private Film film;
@@ -25,12 +27,10 @@ namespace FilmsDBC.CinemaDataTypes
 		{
 			switch (comand.Paramert)
 			{
-				case "id":
-					this.id = Convert.ToInt32(comand.Argument);
-					break;
 				case "film":
-					int i = Convert.ToInt32(comand.Argument);
-					this.film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetElement(i);
+					int i = Convert.ToInt32(comand.Value);
+					//this.film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetElement(i);
+					this.film = MainInformation.Tables.FilmsTable.GetElementByIndex(i);
 					break;
 
 
@@ -41,8 +41,7 @@ namespace FilmsDBC.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(formatParam(nameof(id), id, 2));
-			streamWriter.Write(formatParam(nameof(film), film.ID, 2));
+			streamWriter.Write(FormatParam(nameof(film), film.ID, 0, 2));
 		}
 
 		protected override void updateThisBody(Cell cell)

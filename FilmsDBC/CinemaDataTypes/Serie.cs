@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
+using TablesLibrary.Interpreter.Attributes;
 
 namespace FilmsDBC.CinemaDataTypes
 {
+	[TableCell("Serie")]
 	public class Serie : Cell
 	{
 		private int filmId = 0;
@@ -30,31 +32,27 @@ namespace FilmsDBC.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(formatParam(nameof(id), id, 2));
-			streamWriter.Write(formatParam(nameof(filmId), filmId, 2));
-			streamWriter.Write(formatParam(nameof(startWatchDate), startWatchDate, 2));
-			streamWriter.Write(formatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 2));
-			streamWriter.Write(formatParam(nameof(totalSeries), totalSeries, 2));
+			streamWriter.Write(FormatParam(nameof(filmId), filmId, 0, 2));
+			streamWriter.Write(FormatParam(nameof(startWatchDate), startWatchDate, new DateTime(), 2));
+			streamWriter.Write(FormatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 0, 2));
+			streamWriter.Write(FormatParam(nameof(totalSeries), totalSeries, 0, 2));
 		}
 
 		protected override void loadBody(Comand comand)
 		{
 			switch (comand.Paramert)
 			{
-				case "id":
-					this.id = Convert.ToInt32(comand.Argument);
-					break;
 				case "filmId":
-					this.filmId = Convert.ToInt32(comand.Argument);
+					this.filmId = Convert.ToInt32(comand.Value);
 					break;
 				case "startWatchDate":
-					this.startWatchDate = readDate(comand.Argument);
+					this.startWatchDate = readDate(comand.Value);
 					break;
 				case "countOfWatchedSeries":
-					this.countOfWatchedSeries = Convert.ToInt32(comand.Argument);
+					this.countOfWatchedSeries = Convert.ToInt32(comand.Value);
 					break;
 				case "totalSeries":
-					this.totalSeries = Convert.ToInt32(comand.Argument);
+					this.totalSeries = Convert.ToInt32(comand.Value);
 					break;
 
 				default:

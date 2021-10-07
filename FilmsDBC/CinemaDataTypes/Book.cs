@@ -6,9 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
+using TablesLibrary.Interpreter.Attributes;
 
 namespace FilmsDBC.CinemaDataTypes
 {
+	[TableCell("Book")]
 	public class Book : Cell
 	{
 		private String name = "";
@@ -26,42 +28,38 @@ namespace FilmsDBC.CinemaDataTypes
 		{
             switch (comand.Paramert)
             {
-				case "id":
-					this.id = Convert.ToInt32(comand.Argument);
-					break;
 				case "name":
-					this.name = comand.Argument;
+					this.name = comand.Value;
 					break;
 				case "author":
-					this.author = comand.Argument;
+					this.author = comand.Value;
 					break;
 				case "publicationYear":
-					this.publicationYear = Convert.ToInt32(comand.Argument);
+					this.publicationYear = Convert.ToInt32(comand.Value);
 					break;
 				case "readed":
-					this.readed = Convert.ToBoolean(comand.Argument);
+					this.readed = Convert.ToBoolean(comand.Value);
 					break;
 				case "fullReadDate":
-					this.fullReadDate = readDate(comand.Argument);
+					this.fullReadDate = readDate(comand.Value);
 					break;
 				case "mark":
-					this.mark = Convert.ToSByte(comand.Argument);
+					this.mark = Convert.ToSByte(comand.Value);
 					break;
 				case "sourceUrl":
-					this.sources.Add(Source.ToSource(comand.Argument));
+					this.sources.Add(Source.ToSource(comand.Value));
 					break;
 			}
 		}
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(formatParam(nameof(id), id, 2));
-			streamWriter.Write(formatParam(nameof(name), name, 2));
-			streamWriter.Write(formatParam(nameof(author), author, 2));
-			streamWriter.Write(formatParam(nameof(publicationYear), publicationYear, 2));
-			streamWriter.Write(formatParam(nameof(readed), readed, 2));
-			streamWriter.Write(formatParam(nameof(fullReadDate), fullReadDate, 2));
-			streamWriter.Write(formatParam(nameof(mark), mark, 2));
+			streamWriter.Write(FormatParam(nameof(name), name, "", 2));
+			streamWriter.Write(FormatParam(nameof(author), author, "", 2));
+			streamWriter.Write(FormatParam(nameof(publicationYear), publicationYear, 0, 2));
+			streamWriter.Write(FormatParam(nameof(readed), readed, false, 2));
+			streamWriter.Write(FormatParam(nameof(fullReadDate), fullReadDate, new DateTime(), 2));
+			streamWriter.Write(FormatParam(nameof(mark), mark, -1, 2));
 
 			foreach (Source source in sources)
 			{

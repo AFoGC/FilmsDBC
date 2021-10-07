@@ -8,6 +8,7 @@ using TablesLibrary.Interpreter;
 using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.MainForm;
 using FilmsDBC.Settings;
+using FilmsDBC.CinemaDataTables;
 
 namespace FilmsDBC
 {
@@ -17,47 +18,47 @@ namespace FilmsDBC
 
 		private static MainForm mainForm = null;
 		public static MainForm MainForm
-        {
-            get { return mainForm; }
-        }
+		{
+			get { return mainForm; }
+		}
 
 		private static ProgramSettings settings = null;
 		public static ProgramSettings Settings
-        {
+		{
 			get { return settings; }
-        }
+		}
 
 		static MainInformation()
 		{
-			tableCollection = GetDefaultTableCollection();
+			Tables.SetDefaultMainTableCollection();
 
 			settings = loadSettings();
-			tableCollection.tableFilePath = settings.UsedProfile.MainFilePath;
+			tableCollection.TableFilePath = settings.UsedProfile.MainFilePath;
 
 			mainForm = new MainForm();
 		}
 
-		public static TableCollection GetDefaultTableCollection()
-        {
+		public static TableCollection GetDefaultTableCollectionData()
+		{
 			TableCollection export = new TableCollection();
 
 			export.AddTable(typeof(Category));
-			export.AddTable(GenreMethods.GetDefaultGenresTable());
+			export.AddTable(GenresTable.GetDefaultGenresTable());
 			export.AddTable(typeof(Film));
 			export.AddTable(typeof(Serie));
 			export.AddTable(typeof(PriorityFilm));
 
 			return export;
-        }
+		}
 
 		public static void LoadTables()
 		{
-			tableCollection.loadTables();
-			tableCollection.CategorySubload();
+			tableCollection.LoadTables();
+			Tables.CategoriesTable.CategorySubload(Tables.FilmsTable);
 		}
 
 		private static ProgramSettings loadSettings()
-        {
+		{
 			ProgramSettings settings = new ProgramSettings();
 			String settingPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Program.properties";
 
@@ -66,12 +67,49 @@ namespace FilmsDBC
 			{
 				comand.getComand(sr.ReadLine());
 				if (comand.Paramert == "ProgramSettings")
-                {
+				{
 					settings.loadCell(sr, comand);
-                }
+				}
 			}
 
 			return settings;
-        }
+		}
+
+		public static class Tables
+		{
+			private static CategoriesTable categoriesTable;
+			private static GenresTable genresTable;
+			private static FilmsTable filmsTable;
+			private static SeriesTable seriesTable;
+			private static PriorityFilmsTable priorityFilmsTable;
+
+			public static void SetDefaultMainTableCollection()
+            {
+				tableCollection = new TableCollection();
+
+				categoriesTable = new CategoriesTable();
+				genresTable = GenresTable.GetDefaultGenresTable();
+				filmsTable = new FilmsTable();
+				seriesTable = new SeriesTable();
+				priorityFilmsTable = new PriorityFilmsTable();
+
+				tableCollection.RemoveAllTables(true);
+
+				tableCollection.AddTable(categoriesTable);
+				tableCollection.AddTable(genresTable);
+				tableCollection.AddTable(filmsTable);
+				tableCollection.AddTable(seriesTable);
+				tableCollection.AddTable(priorityFilmsTable);
+
+
+			}
+
+			public static CategoriesTable CategoriesTable { get { return categoriesTable; } }
+			public static GenresTable GenresTable { get { return genresTable; } }
+			public static FilmsTable FilmsTable { get { return filmsTable; } }
+			public static SeriesTable SeriesTable { get { return seriesTable; } }
+			public static PriorityFilmsTable PriorityFilmsTable { get { return priorityFilmsTable; } }
+
+		}
 	}
 }

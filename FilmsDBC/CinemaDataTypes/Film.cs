@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
+using TablesLibrary.Interpreter.Attributes;
 
 namespace FilmsDBC.CinemaDataTypes
 {
+	[TableCell("Film")]
 	public class Film : Cell
 	{
 		private String name = "";
@@ -49,64 +51,61 @@ namespace FilmsDBC.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(formatParam(nameof(id), id, 2));
-			streamWriter.Write(formatParam(nameof(name), name, 2));
-			streamWriter.Write(formatParam(nameof(genre), genre.ID, 2));
-			streamWriter.Write(formatParam(nameof(realiseYear), realiseYear, 2));
-			streamWriter.Write(formatParam(nameof(watched), watched, 2));
-			streamWriter.Write(formatParam(nameof(mark), mark, 2));
-			streamWriter.Write(formatParam(nameof(dateOfWatch), dateOfWatch, 2));
-			streamWriter.Write(formatParam(nameof(comment), comment, 2));
+			streamWriter.Write(FormatParam(nameof(name), name, "", 2));
+			streamWriter.Write(FormatParam(nameof(genre), genre.ID , 0, 2));
+			streamWriter.Write(FormatParam(nameof(realiseYear), realiseYear, 0, 2));
+			streamWriter.Write(FormatParam(nameof(watched), watched, false, 2));
+			streamWriter.Write(FormatParam(nameof(mark), mark, -1, 2));
+			streamWriter.Write(FormatParam(nameof(dateOfWatch), dateOfWatch, new DateTime(), 2));
+			streamWriter.Write(FormatParam(nameof(comment), comment, "", 2));
 
 			foreach (Source source in sources)
 			{
 				streamWriter.Write(formatParam(nameof(source.sourceUrl), source, 2));
 			}
 			
-			streamWriter.Write(formatParam(nameof(countOfviews), countOfviews, 2));
-			streamWriter.Write(formatParam(nameof(franshiseId), franshiseId, 2));
-			streamWriter.Write(formatParam(nameof(franshiseListIndex), franshiseListIndex, 2));
+			streamWriter.Write(FormatParam(nameof(countOfviews), countOfviews, 0, 2));
+			streamWriter.Write(FormatParam(nameof(franshiseId), franshiseId, 0, 2));
+			streamWriter.Write(FormatParam(nameof(franshiseListIndex), franshiseListIndex, -1, 2));
 		}
 
 		protected override void loadBody(Comand comand)
 		{
 			switch (comand.Paramert)
 			{
-				case "id":
-					this.id = Convert.ToInt32(comand.Argument);
-					break;
 				case "name":
-					this.name = comand.Argument;
+					this.name = comand.Value;
 					break;
 				case "genre":
-					this.genre = (Genre)MainInformation.tableCollection.GetTable(typeof(Genre)).GetElement(Convert.ToInt32(comand.Argument));
+					//this.genre = (Genre)MainInformation.tableCollection.GetTable(typeof(Genre)).GetElement(Convert.ToInt32(comand.Value));
+					this.genre = MainInformation.Tables.GenresTable.GetElementByIndex(Convert.ToInt32(comand.Value));
 					break;
 				case "realiseYear":
-					this.realiseYear = Convert.ToInt32(comand.Argument);
+					this.realiseYear = Convert.ToInt32(comand.Value);
 					break;
 				case "watched":
-					this.watched = Convert.ToBoolean(comand.Argument);
+					this.watched = Convert.ToBoolean(comand.Value);
 					break;
 				case "mark":
-					this.mark = Convert.ToSByte(comand.Argument);
+					this.mark = Convert.ToSByte(comand.Value);
 					break;
 				case "dateOfWatch":
-					this.dateOfWatch = readDate(comand.Argument);
+					this.dateOfWatch = readDate(comand.Value);
 					break;
 				case "comment":
-					this.comment = comand.Argument;
+					this.comment = comand.Value;
 					break;
 				case "sourceUrl":
-					this.sources.Add(Source.ToSource(comand.Argument));
+					this.sources.Add(Source.ToSource(comand.Value));
 					break;
 				case "countOfviews":
-					this.countOfviews = Convert.ToInt32(comand.Argument);
+					this.countOfviews = Convert.ToInt32(comand.Value);
 					break;
 				case "franshiseId":
-					this.franshiseId = Convert.ToInt32(comand.Argument);
+					this.franshiseId = Convert.ToInt32(comand.Value);
 					break;
 				case "franshiseListIndex":
-					this.franshiseListIndex = Convert.ToSByte(comand.Argument);
+					this.franshiseListIndex = Convert.ToSByte(comand.Value);
 					break;
 
 				default:

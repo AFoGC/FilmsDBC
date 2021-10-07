@@ -43,7 +43,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 		{
 			this.textBox_id.Text = categoryInfo.ID.ToString();
 			this.textBox_name.Text = categoryInfo.Name;
-			this.textBox_mark.Text = VisualHelper.markToText(Category.formatToString(categoryInfo.Mark));
+			this.textBox_mark.Text = VisualHelper.markToText(Category.FormatToString(categoryInfo.Mark, -1));
 
 			categoryFilms();
 		}

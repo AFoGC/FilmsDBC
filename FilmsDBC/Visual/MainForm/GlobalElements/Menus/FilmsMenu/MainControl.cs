@@ -1,4 +1,5 @@
-﻿using FilmsDBC.CinemaDataTypes;
+﻿using FilmsDBC.CinemaDataTables;
+using FilmsDBC.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
@@ -41,7 +42,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		public void loadGenres()
 		{
 			flowLayoutPanel_requestsGenres.Controls.Clear();
-			foreach (Genre genre in tables.GetTable(typeof(Genre)).Cells)
+			foreach (Genre genre in MainInformation.Tables.GenresTable)
 			{
 				flowLayoutPanel_requestsGenres.Controls.Add(new GenrePressButton(genre));
 			}
@@ -56,7 +57,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		public void loadFilmTable()
 		{
 			clearControls();
-			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
+			foreach (Film film in MainInformation.Tables.FilmsTable)
 			{
 				tableControls.Add(new FilmControl(film));
 			}
@@ -66,7 +67,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		public void loadSerieTable()
 		{
 			clearControls();
-			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
+			foreach (Film film in MainInformation.Tables.FilmsTable)
 			{
 				if (film.Genre.IsSerialGenre)
 				{
@@ -80,12 +81,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		{
 			clearControls();
 
-			foreach (Category category in tables.GetTable(typeof(Category)).Cells)
+			foreach (Category category in MainInformation.Tables.CategoriesTable)
 			{
 				tableControls.Add(new CategoryControl(category));
 			}
 
-			foreach (Film film in tables.GetTable(typeof(Film)).Cells)
+			foreach (Film film in MainInformation.Tables.FilmsTable)
 			{
 				if (film.FranshiseId == 0)
 				{
@@ -100,15 +101,16 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		{
 			clearControls();
 
-			Table priTable = tables.GetTable(typeof(PriorityFilm));
+			PriorityFilmsTable priTable = MainInformation.Tables.PriorityFilmsTable;
+
 			PriorityFilm film;
-			for (int i = 0; i < tables.GetTable(typeof(PriorityFilm)).Cells.Count; i++)
+			for (int i = 0; i < MainInformation.Tables.PriorityFilmsTable.Count; i++)
 			{
-				film = (PriorityFilm)priTable.Cells[i];
+				film = priTable[i];
 
 				if (film.Film.Watched)
                 {
-					tables.GetTable(typeof(PriorityFilm)).Cells.Remove(film);
+					MainInformation.Tables.PriorityFilmsTable.Remove(film);
 					--i;
 				}
                 else
@@ -194,25 +196,25 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 
 		private void button_save_Click(object sender, EventArgs e)
 		{
-			MainInformation.tableCollection.saveTables();
+			MainInformation.tableCollection.SaveTables();
 		}
 
 		private void button_addCategory_Click(object sender, EventArgs e)
 		{
 			if (controlsCondition == 1)
 			{
-				Table categoryTable = tables.GetTable(typeof(Category));
-				categoryTable.addElement();
+				CategoriesTable categoryTable = MainInformation.Tables.CategoriesTable;
+				categoryTable.AddElement();
 				CategoryControl categoryControl = new CategoryControl((Category)categoryTable.GetLastElement);
 				flowLayoutPanel_main.Controls.Add(categoryControl);
-				flowLayoutPanel_main.Controls.SetChildIndex(categoryControl, categoryTable.Cells.Count - 1);
+				flowLayoutPanel_main.Controls.SetChildIndex(categoryControl, categoryTable.Count - 1);
 			}
 		}
 
 		private void button_addFilm_Click(object sender, EventArgs e)
 		{
-			tables.GetTable(typeof(Film)).addElement();
-			Film film = (Film)tables.GetTable(typeof(Film)).GetLastElement;
+			MainInformation.Tables.FilmsTable.AddElement();
+			Film film = MainInformation.Tables.FilmsTable.GetLastElement;
 			IControls control = new SimpleControl(film);
 			switch (controlsCondition)
 			{
@@ -222,7 +224,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 					control = new FilmControl(film);
 					break;
 				case 3:
-					film.Genre = (Genre)tables.GetTable(typeof(Genre)).GetElement(2);
+					film.Genre =  MainInformation.Tables.GenresTable.GetFirstSeriealGenre(); //(Genre)tables.GetTable(typeof(Genre)).GetElement(2);
 					control = new SerieControl(film);
 					break;
 				default:
@@ -237,8 +239,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		{
 			if (controlInBuffer != null)
 			{
-				tables.GetTable(typeof(PriorityFilm)).addElement();
-				PriorityFilm priorityFilm = (PriorityFilm)tables.GetTable(typeof(PriorityFilm)).GetLastElement;
+				MainInformation.Tables.PriorityFilmsTable.AddElement();
+				PriorityFilm priorityFilm = MainInformation.Tables.PriorityFilmsTable.GetLastElement; //(PriorityFilm)tables.GetTable(typeof(PriorityFilm)).GetLastElement;
 				priorityFilm.Film = controlInBuffer.FilmInfo;
 			}
 		}

@@ -48,14 +48,16 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		public override void RefreshData()
 		{
+			Film defFilm = MainInformation.Tables.FilmsTable.DefaultCell; 
+
 			this.textBox_id.Text = filmInfo.ID.ToString();
 			this.textBox_name.Text = filmInfo.Name;
 			this.textBox_genre.Text = filmInfo.Genre.Name;
-			this.textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
+			this.textBox_realiseYear.Text = Film.FormatToString(filmInfo.RealiseYear, defFilm.RealiseYear);
 			this.checkBox_watched.Checked = filmInfo.Watched;
-			this.textBox_watchDate.Text = Film.formatToString(filmInfo.DateOfWatch);
-			this.textBox_mark.Text = VisualHelper.markToText(Film.formatToString(filmInfo.Mark));
-			this.textBox_countOfviews.Text = Film.formatToString(filmInfo.CountOfViews);
+			this.textBox_watchDate.Text = Film.FormatToString(filmInfo.DateOfWatch, defFilm.DateOfWatch);
+			this.textBox_mark.Text = VisualHelper.markToText(Film.FormatToString(filmInfo.Mark, defFilm.Mark));
+			this.textBox_countOfviews.Text = Film.FormatToString(filmInfo.CountOfViews, defFilm.CountOfViews);
 			this.textBox_comment.Text = filmInfo.Comment;
 			this.refreshSourceLabel();
 

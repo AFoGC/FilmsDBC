@@ -51,7 +51,7 @@ namespace FilmsDBC.Settings
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(formatParam(nameof(usedProfile), usedProfile.ToString(), 1));
+			streamWriter.Write(FormatParam(nameof(usedProfile), usedProfile.ToString(), "", 1));
 		}
 
 		protected override void loadBody(Comand comand)
@@ -59,7 +59,7 @@ namespace FilmsDBC.Settings
 			switch (comand.Paramert)
 			{
 				case "usedProfile":
-					this.usedProfile = profiles.GetProfileToUsed(comand.Argument);
+					this.usedProfile = profiles.GetProfileToUsed(comand.Value);
 					break;
 
 				default:

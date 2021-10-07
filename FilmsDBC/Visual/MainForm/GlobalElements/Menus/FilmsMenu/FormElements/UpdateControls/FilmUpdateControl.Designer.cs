@@ -1,4 +1,6 @@
 ﻿
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls.CommonElements;
+
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls
 {
     partial class FilmUpdateControl

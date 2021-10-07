@@ -29,7 +29,7 @@ namespace FilmsDBC
 
             if (args.Length != 0)
             {
-				MainInformation.tableCollection.tableFilePath = args[0];
+				MainInformation.tableCollection.TableFilePath = args[0];
             }
 
 			MainInformation.LoadTables();

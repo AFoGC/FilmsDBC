@@ -10,6 +10,7 @@ namespace FilmsDBC.StaticFilmClasses
 {
 	public static class Subloads
 	{
+		/*
 		public static void CategorySubload(this TableCollection tableCollection)
 		{
 			foreach (Category category in tableCollection.GetTable(typeof(Category)).Cells)
@@ -17,5 +18,6 @@ namespace FilmsDBC.StaticFilmClasses
 				category.FilmsSubload(MainInformation.tableCollection.GetTable(typeof(Film)));
 			}
 		}
+		*/
 	}
 }

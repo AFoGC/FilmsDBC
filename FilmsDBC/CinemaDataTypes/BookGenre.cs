@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
+using TablesLibrary.Interpreter.Attributes;
 
 namespace FilmsDBC.CinemaDataTypes
 {
-    class BookGenre : Cell
+	[TableCell("BookGenre")]
+	class BookGenre : Cell
     {
 		private String name = "";
 
@@ -24,19 +26,15 @@ namespace FilmsDBC.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(formatParam(nameof(id), id, 2));
-			streamWriter.Write(formatParam(nameof(name), name, 2));
+			streamWriter.Write(FormatParam(nameof(name), name, "", 2));
 		}
 		protected override void loadBody(Comand comand)
 		{
 
 			switch (comand.Paramert)
 			{
-				case "id":
-					this.id = Convert.ToInt32(comand.Argument);
-					break;
 				case "name":
-					this.name = comand.Argument;
+					this.name = comand.Value;
 					break;
 
 				default:

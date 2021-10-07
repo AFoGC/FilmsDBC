@@ -5,10 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TablesLibrary.Interpreter;
+using TablesLibrary.Interpreter.Attributes;
 
 namespace FilmsDBC.CinemaDataTypes
 {
-    class BookCategory : Cell
+	[TableCell("BookCategory")]
+	class BookCategory : Cell
     {
 		private String name = "";
 		private sbyte mark = -1;
@@ -31,27 +33,23 @@ namespace FilmsDBC.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(formatParam(nameof(id), id, 2));
-			streamWriter.Write(formatParam(nameof(name), name, 2));
-			streamWriter.Write(formatParam(nameof(mark), mark, 2));
-			streamWriter.Write(formatParam(nameof(priority), priority, 2));
+			streamWriter.Write(FormatParam(nameof(name), name, "", 2));
+			streamWriter.Write(FormatParam(nameof(mark), mark, -1 ,2));
+			streamWriter.Write(FormatParam(nameof(priority), priority, 0, 2));
 		}
 
 		protected override void loadBody(Comand comand)
 		{
 			switch (comand.Paramert)
 			{
-				case "id":
-					this.id = Convert.ToInt32(comand.Argument);
-					break;
 				case "name":
-					this.name = comand.Argument;
+					this.name = comand.Value;
 					break;
 				case "mark":
-					this.mark = Convert.ToSByte(comand.Argument);
+					this.mark = Convert.ToSByte(comand.Value);
 					break;
 				case "priority":
-					this.priority = Convert.ToInt32(comand.Argument);
+					this.priority = Convert.ToInt32(comand.Value);
 					break;
 
 				default:

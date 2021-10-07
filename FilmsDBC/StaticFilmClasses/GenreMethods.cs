@@ -10,19 +10,9 @@ namespace FilmsDBC.StaticFilmClasses
 {
 	public static class GenreMethods
 	{
-		public static bool IsSerialGenre(String genreName)
-		{
-			foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
-			{
-				if (genreName == genre.Name)
-				{
-					return genre.IsSerialGenre;
-				}
-			}
 
-			return false;
-		}
-
+		
+		/*
 		public static Genre GetByName(String name)
 		{
 			foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
@@ -34,7 +24,9 @@ namespace FilmsDBC.StaticFilmClasses
 			}
 			return null;
 		}
+		*/
 
+		/*
 		public static List<String> GetAllGenresNames()
 		{
 			List<String> export = new List<String>();
@@ -44,7 +36,9 @@ namespace FilmsDBC.StaticFilmClasses
 			}
 			return export;
 		}
+		*/
 
+		/*
 		public static Table GetDefaultGenresTable()
         {
 			Table export = new Table(typeof(Genre));
@@ -73,5 +67,6 @@ namespace FilmsDBC.StaticFilmClasses
 
 			return export;
         }
+		*/
 	}
 }

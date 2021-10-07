@@ -30,10 +30,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		public override void RefreshData()
 		{
+			Film defFilm = MainInformation.Tables.FilmsTable.DefaultCell;
+
 			textBox_id.Text = filmInfo.ID.ToString();
 			textBox_name.Text = filmInfo.Name;
 			textBox_genre.Text = filmInfo.Genre.Name;
-			textBox_realiseYear.Text = Film.formatToString(filmInfo.RealiseYear);
+			textBox_realiseYear.Text = Film.FormatToString(filmInfo.RealiseYear, defFilm.RealiseYear);
 			checkBox_watched.Checked = filmInfo.Watched;
 		}
 

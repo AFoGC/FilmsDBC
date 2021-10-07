@@ -31,7 +31,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
 		public void GetSettings()
 		{
 			MainInformation.Settings.UsedProfile = usedProfile;
-			MainInformation.tableCollection.tableFilePath = usedProfile.MainFilePath;
+			MainInformation.tableCollection.TableFilePath = usedProfile.MainFilePath;
 		}
 
 		public void RefreshControl()
@@ -110,18 +110,18 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
 					Directory.CreateDirectory(newProfile.ProfilePath);
 					using (FileStream fs = File.Create(newProfile.MainFilePath)) { }
 
-					TableCollection tc = MainInformation.GetDefaultTableCollection();
-					tc.tableFilePath = newProfile.MainFilePath;
+					TableCollection tc = MainInformation.GetDefaultTableCollectionData();
+					tc.TableFilePath = newProfile.MainFilePath;
 
-					Table genreTable = tc.GetTable(typeof(Genre));
-					genreTable.RemoveAll();
+					Table<Genre> genreTable = tc.GetTable<Genre>();
+					genreTable.RemoveAll(true);
 
-					foreach (Genre genre in MainInformation.tableCollection.GetTable(typeof(Genre)).Cells)
+					foreach (Genre genre in MainInformation.Tables.GenresTable)
 					{
-						genreTable.addWithoutReindexation(genre);
+						genreTable.AddWithoutReindexation(genre);
 					}
 
-					tc.saveTables();
+					tc.SaveTables();
 
 					profileCollection.AddProfile(newProfile);
 				}
