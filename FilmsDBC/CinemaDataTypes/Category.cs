@@ -58,19 +58,6 @@ namespace FilmsDBC.CinemaDataTypes
 			}
 		}
 
-		
-		public void FilmsSubload(FilmsTable table)
-		{
-			foreach (Film film in table)
-			{
-				if (film.FranshiseId == this.ID)
-				{
-					this.films.Add(film);
-				}
-			}
-		}
-		
-
 		public String Name
 		{
 			get { return name; }

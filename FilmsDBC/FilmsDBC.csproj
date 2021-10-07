@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CinemaDataTables\BookCategoriesTable.cs" />
+    <Compile Include="CinemaDataTables\BookGenresTable.cs" />
+    <Compile Include="CinemaDataTables\BooksTable.cs" />
     <Compile Include="CinemaDataTables\CategoriesTable.cs" />
     <Compile Include="CinemaDataTables\FilmsTable.cs" />
     <Compile Include="CinemaDataTables\GenresTable.cs" />

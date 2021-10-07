@@ -51,6 +51,8 @@ namespace FilmsDBC
 			export.AddTable(typeof(Film));
 			export.AddTable(typeof(Serie));
 			export.AddTable(typeof(PriorityFilm));
+			export.AddTable(typeof(BookGenre));
+			export.AddTable(typeof(Book));
 
 			return export;
 		}
@@ -86,6 +88,8 @@ namespace FilmsDBC
 			private static FilmsTable filmsTable;
 			private static SeriesTable seriesTable;
 			private static PriorityFilmsTable priorityFilmsTable;
+			private static BookGenresTable bookGenresTable;
+			private static BooksTable booksTable;
 
 			public static void SetDefaultMainTableCollection()
             {
@@ -96,6 +100,8 @@ namespace FilmsDBC
 				filmsTable = new FilmsTable();
 				seriesTable = new SeriesTable();
 				priorityFilmsTable = new PriorityFilmsTable();
+				bookGenresTable = new BookGenresTable();
+				booksTable = new BooksTable();
 
 				TableCollection.RemoveAllTables(true);
 
@@ -104,8 +110,8 @@ namespace FilmsDBC
 				TableCollection.AddTable(filmsTable);
 				TableCollection.AddTable(seriesTable);
 				TableCollection.AddTable(priorityFilmsTable);
-
-
+				TableCollection.AddTable(bookGenresTable);
+				TableCollection.AddTable(booksTable);
 			}
 
 			public static CategoriesTable CategoriesTable { get { return categoriesTable; } }
@@ -113,7 +119,8 @@ namespace FilmsDBC
 			public static FilmsTable FilmsTable { get { return filmsTable; } }
 			public static SeriesTable SeriesTable { get { return seriesTable; } }
 			public static PriorityFilmsTable PriorityFilmsTable { get { return priorityFilmsTable; } }
-
+			public static BookGenresTable BookGenresTable { get { return bookGenresTable; } }
+			public static BooksTable BooksTable { get { return booksTable; } }
 		}
 	}
 }

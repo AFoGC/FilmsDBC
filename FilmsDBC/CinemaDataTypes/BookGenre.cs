@@ -10,7 +10,7 @@ using TablesLibrary.Interpreter.Attributes;
 namespace FilmsDBC.CinemaDataTypes
 {
 	[TableCell("BookGenre")]
-	class BookGenre : Cell
+	public class BookGenre : Cell
     {
 		private String name = "";
 

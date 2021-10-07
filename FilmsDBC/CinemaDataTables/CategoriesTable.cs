@@ -16,10 +16,27 @@ namespace FilmsDBC.CinemaDataTables
 
 		public void CategorySubload(FilmsTable filmsTable)
 		{
-			foreach (Category category in this)
-			{
-				category.FilmsSubload(filmsTable);
-			}
+            foreach (Category category in this)
+            {
+                while (category.Films.Count != 0)
+                {
+                    category.Films.Remove(category.Films[0]);
+                }
+            }
+
+            foreach (Film film in filmsTable)
+            {
+                if (film.FranshiseId != 0)
+                {
+                    foreach (Category category in this)
+                    {
+                        if (film.FranshiseId == category.ID)
+                        {
+                            category.Films.Add(film);
+                        }
+                    }
+                }
+            }
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmsDBC.CinemaDataTables;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,7 +11,7 @@ using TablesLibrary.Interpreter.Attributes;
 namespace FilmsDBC.CinemaDataTypes
 {
 	[TableCell("BookCategory")]
-	class BookCategory : Cell
+	public class BookCategory : Cell
     {
 		private String name = "";
 		private sbyte mark = -1;
@@ -57,25 +58,10 @@ namespace FilmsDBC.CinemaDataTypes
 			}
 		}
 
-		/*
-		public void BooksSubload(Table table)
+		public void BooksSubload(BooksTable table)
 		{
-			if (table.DataType == typeof(Book))
-			{
-				foreach (Book book in table.Cells)
-				{
-					if (book.FranshiseId == this.ID)
-					{
-						this.books.Add(book);
-					}
-				}
-			}
-			else
-			{
-				throw new Exception("Wrong table DataType");
-			}
+			
 		}
-		*/
 
 		public String Name
 		{
