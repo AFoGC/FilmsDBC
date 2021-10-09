@@ -13,6 +13,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
     public class Serie : Cell
     {
         private int filmId = 0;
+        private Film film = null;
         private DateTime startWatchDate = new DateTime();
         private int countOfWatchedSeries = 0;
         private int totalSeries = 0;
@@ -64,6 +65,16 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
         {
             get { return filmId; }
             set { filmId = value; }
+        }
+
+        public Film Film
+        {
+            get { return film; }
+            set
+            {
+                film = value;
+                filmId = film.ID;
+            }
         }
 
         public DateTime StartWatchDate

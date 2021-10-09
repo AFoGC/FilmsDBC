@@ -60,7 +60,7 @@ namespace FilmsDBC
 		public static void LoadTables()
 		{
 			TableCollection.LoadTables();
-			Tables.CategoriesTable.CategorySubload(Tables.FilmsTable);
+			TableCollection.ConnectionsSubload();
 		}
 
 		private static ProgramSettings loadSettings()

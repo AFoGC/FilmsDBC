@@ -14,8 +14,10 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTables
         public CategoriesTable(int id) : base(id) { }
         public CategoriesTable(int id, string name) : base(id, name) { }
 
-        public void CategorySubload(FilmsTable filmsTable)
+        public override void ConnectionsSubload(TableCollection tablesCollection)
         {
+            Table<Film> filmsTable = tablesCollection.GetTable<Film>();
+
             foreach (Category category in this)
             {
                 while (category.Films.Count != 0)

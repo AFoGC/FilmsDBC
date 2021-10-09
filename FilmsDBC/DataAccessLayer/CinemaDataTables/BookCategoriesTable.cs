@@ -8,15 +8,16 @@ using TablesLibrary.Interpreter;
 
 namespace FilmsDBC.DataAccessLayer.CinemaDataTables
 {
-    public class BookCategoriesTable : Table<BookCategory>
-    {
-        public BookCategoriesTable() : base() { }
-        public BookCategoriesTable(int id) : base(id) { }
-        public BookCategoriesTable(int id, string name) : base(id, name) { }
+	public class BookCategoriesTable : Table<BookCategory>
+	{
+		public BookCategoriesTable() : base() { }
+		public BookCategoriesTable(int id) : base(id) { }
+		public BookCategoriesTable(int id, string name) : base(id, name) { }
 
-        public void CategorySubload(BooksTable booksTable)
-        {
-            throw new NotImplementedException();
-        }
-    }
+
+		public override void ConnectionsSubload(TableCollection tablesCollection)
+		{
+			
+		}
+	}
 }

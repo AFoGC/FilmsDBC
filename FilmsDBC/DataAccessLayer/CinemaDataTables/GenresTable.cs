@@ -14,6 +14,11 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTables
         public GenresTable(int id) : base(id) { }
         public GenresTable(int id, string name) : base(id, name) { }
 
+        public override void ConnectionsSubload(TableCollection tablesCollection)
+        {
+            
+        }
+
         public Genre GetByName(string name)
         {
             foreach (Genre genre in this)

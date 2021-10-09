@@ -70,8 +70,6 @@
     <Compile Include="Settings\Profile.cs" />
     <Compile Include="Settings\ProfileCollection.cs" />
     <Compile Include="StaticFilmClasses\FilmMethods.cs" />
-    <Compile Include="StaticFilmClasses\GenreMethods.cs" />
-    <Compile Include="StaticFilmClasses\Subloads.cs" />
     <Compile Include="Visual\Buttons\ClickButton.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -9,46 +9,53 @@ using TablesLibrary.Interpreter.Attributes;
 
 namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 {
-    [TableCell("PriorityFilm")]
-    public class PriorityFilm : Cell
-    {
-        private Film film;
+	[TableCell("PriorityFilm")]
+	public class PriorityFilm : Cell
+	{
+		private Film film;
+		private int filmId = 0;
 
-        public Film Film
-        {
-            get { return film; }
-            set { film = value; }
-        }
+		public PriorityFilm() : base() { }
+		public PriorityFilm(int id) : base(id) { }
 
-        public PriorityFilm() : base() { }
-        public PriorityFilm(int id) : base(id) { }
+		protected override void loadBody(Comand comand)
+		{
+			switch (comand.Paramert)
+			{
+				case "film":
+					filmId = Convert.ToInt32(comand.Value);
+					break;
 
-        protected override void loadBody(Comand comand)
-        {
-            switch (comand.Paramert)
-            {
-                case "film":
-                    int i = Convert.ToInt32(comand.Value);
-                    //this.film = (Film)MainInformation.tableCollection.GetTable(typeof(Film)).GetElement(i);
-                    film = MainInfo.Tables.FilmsTable.GetElementByIndex(i);
-                    break;
+				default:
+					break;
+			}
+		}
 
+		protected override void saveBody(StreamWriter streamWriter)
+		{
+			streamWriter.Write(FormatParam(nameof(film), film.ID, 0, 2));
+		}
 
-                default:
-                    break;
-            }
-        }
+		protected override void updateThisBody(Cell cell)
+		{
+			PriorityFilm priorityFilm = (PriorityFilm)cell;
 
-        protected override void saveBody(StreamWriter streamWriter)
-        {
-            streamWriter.Write(FormatParam(nameof(film), film.ID, 0, 2));
-        }
+			film = priorityFilm.film;
+		}
 
-        protected override void updateThisBody(Cell cell)
-        {
-            PriorityFilm priorityFilm = (PriorityFilm)cell;
+		public Film Film
+		{
+			get { return film; }
+			set
+			{
+				film = value;
+				filmId = film.ID;
+			}
+		}
 
-            film = priorityFilm.film;
-        }
-    }
+		public int FilmId
+		{
+			get { return filmId; }
+		}
+	}
 }

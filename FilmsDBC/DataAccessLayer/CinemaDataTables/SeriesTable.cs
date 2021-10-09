@@ -13,5 +13,10 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTables
         public SeriesTable() : base() { }
         public SeriesTable(int id) : base(id) { }
         public SeriesTable(int id, string name) : base(id, name) { }
+
+        public override void ConnectionsSubload(TableCollection tablesCollection)
+        {
+            
+        }
     }
 }
