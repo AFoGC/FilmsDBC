@@ -30,7 +30,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			this.serie = serieControl.SerieInfo;
 
 
-			comboBox_genre.Items.AddRange(MainInfo.Tables.GenresTable.GetAllGenresNames());
+			comboBox_genre.Items.AddRange(MainInfo.Tables.GenresTable.ToArray());
 			comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
 
 			label_comment.SetDefaultButtonBlink();
@@ -61,7 +61,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			MainInfo.Tables.SeriesTable.AddElement(ser);
 
 			cont:
-			comboBox_genre.Items.AddRange(MainInfo.Tables.GenresTable.GetAllGenresNames());
+			comboBox_genre.Items.AddRange(MainInfo.Tables.GenresTable.ToArray());
 			comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
 
 			refresh();
@@ -73,7 +73,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 			this.textBox_id.Text = serie.Film.ID.ToString();
 			this.textBox_name.Text = serie.Film.Name;
-			this.comboBox_genre.Text = serie.Film.Genre.Name;
+			this.comboBox_genre.SelectedItem = serie.Film.Genre;
 			this.textBox_realiseYear.Text = Film.FormatToString(serie.Film.RealiseYear, defFilm.RealiseYear);
 			this.checkBox_watched.Checked = serie.Film.Watched;
 			this.dateUpdateControl_watchDate.Date = serie.Film.DateOfWatch;
@@ -91,7 +91,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 		public void UpdateElement()
 		{
 			serie.Film.Name = this.textBox_name.Text;
-			serie.Film.Genre = MainInfo.Tables.GenresTable.GetByName(this.comboBox_genre.Text);
+			serie.Film.Genre = (Genre)comboBox_genre.SelectedItem;
 			serie.Film.RealiseYear = VisualHelper.TextToInt32(this.textBox_realiseYear.Text);
 			serie.Film.Watched = this.checkBox_watched.Checked;
 			serie.Film.DateOfWatch = this.dateUpdateControl_watchDate.Date;

@@ -59,5 +59,10 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
             get { return isSerialGenre; }
             set { isSerialGenre = value; }
         }
+
+        public override string ToString()
+        {
+            return this.name;
+        }
     }
 }
