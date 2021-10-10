@@ -1,7 +1,7 @@
 ﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
-using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateInfo;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateInfo;
 using FilmsDBC.Visual.StaticVisualClasses;
 using FilmsDBC.Visual.UpdateElements;
 using System;

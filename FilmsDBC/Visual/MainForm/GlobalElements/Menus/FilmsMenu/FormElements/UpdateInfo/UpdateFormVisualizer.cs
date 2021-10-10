@@ -1,5 +1,5 @@
 ﻿using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
-using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.MoreInfo;
 using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
