@@ -18,14 +18,7 @@ namespace Benchmark.Interpreter
         [Benchmark]
         public void loadTableCollection()
         {
-            TableCollection tableCollection = new TableCollection(@"F:\filmsDirectory\Films.fdbc");
-
-            tableCollection.AddTable(typeof(Category));
-            tableCollection.AddTable(typeof(Film));
-            tableCollection.AddTable(typeof(Serie));
-
-
-            tableCollection.loadTables();
+            
         }
     }
 }
