@@ -28,7 +28,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTables
                     return genre;
                 }
             }
-            return null;
+            return DefaultCell;
         }
 
         public string[] GetAllGenresNames()

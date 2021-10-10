@@ -45,6 +45,15 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			RefreshData();
 		}
 
+		public SerieControl(Serie serie)
+        {
+			initialise();
+			this.filmInfo = serie.Film;
+			this.serieInfo = serie;
+
+			RefreshData();
+        }
+
 		public SerieControl(SimpleControl simpleControl)
         {
 			initialise();

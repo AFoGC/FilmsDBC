@@ -20,7 +20,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 	{
 		private AElementControl control = null;
 		private Serie serie = null;
-		private Film film = null;
+		//private Film film = null;
 
 		public SerieUpdateControl(SerieControl serieControl)
 		{
@@ -28,7 +28,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			this.control = serieControl;
 
 			this.serie = serieControl.SerieInfo;
-			this.film = serieControl.FilmInfo;
+
 
 			comboBox_genre.Items.AddRange(MainInfo.Tables.GenresTable.GetAllGenresNames());
 			comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
@@ -44,7 +44,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			InitializeComponent();
 			this.control = filmControl;
 
-			this.film = filmControl.FilmInfo;
+			Film film = filmControl.FilmInfo;
 
 			foreach (Serie serie in MainInfo.Tables.SeriesTable)
 			{
@@ -71,15 +71,15 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 		{
 			Film defFilm = MainInfo.Tables.FilmsTable.DefaultCell;
 
-			this.textBox_id.Text = film.ID.ToString();
-			this.textBox_name.Text = film.Name;
-			this.comboBox_genre.Text = film.Genre.Name;
-			this.textBox_realiseYear.Text = Film.FormatToString(film.RealiseYear, defFilm.RealiseYear);
-			this.checkBox_watched.Checked = film.Watched;
-			this.dateUpdateControl_watchDate.Date = film.DateOfWatch;
-			this.comboBox_mark.Text = VisualHelper.markToText(Film.FormatToString(film.Mark, defFilm.Mark));
-			this.textBox_countOfviews.Text = Film.FormatToString(film.CountOfViews, defFilm.CountOfViews);
-			this.textBox_comment.Text = film.Comment;
+			this.textBox_id.Text = serie.Film.ID.ToString();
+			this.textBox_name.Text = serie.Film.Name;
+			this.comboBox_genre.Text = serie.Film.Genre.Name;
+			this.textBox_realiseYear.Text = Film.FormatToString(serie.Film.RealiseYear, defFilm.RealiseYear);
+			this.checkBox_watched.Checked = serie.Film.Watched;
+			this.dateUpdateControl_watchDate.Date = serie.Film.DateOfWatch;
+			this.comboBox_mark.Text = VisualHelper.markToText(Film.FormatToString(serie.Film.Mark, defFilm.Mark));
+			this.textBox_countOfviews.Text = Film.FormatToString(serie.Film.CountOfViews, defFilm.CountOfViews);
+			this.textBox_comment.Text = serie.Film.Comment;
 
 			Serie defSerie = MainInfo.Tables.SeriesTable.DefaultCell;
 
@@ -90,14 +90,14 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 		public void UpdateElement()
 		{
-			film.Name = this.textBox_name.Text;
-			film.Genre = MainInfo.Tables.GenresTable.GetByName(this.comboBox_genre.Text);
-			film.RealiseYear = VisualHelper.TextToInt32(this.textBox_realiseYear.Text);
-			film.Watched = this.checkBox_watched.Checked;
-			film.DateOfWatch = this.dateUpdateControl_watchDate.Date;
-			film.Mark = VisualHelper.TextToMark(this.comboBox_mark.Text);
-			film.CountOfViews = VisualHelper.TextToInt32(this.textBox_countOfviews.Text);
-			film.Comment = this.textBox_comment.Text;
+			serie.Film.Name = this.textBox_name.Text;
+			serie.Film.Genre = MainInfo.Tables.GenresTable.GetByName(this.comboBox_genre.Text);
+			serie.Film.RealiseYear = VisualHelper.TextToInt32(this.textBox_realiseYear.Text);
+			serie.Film.Watched = this.checkBox_watched.Checked;
+			serie.Film.DateOfWatch = this.dateUpdateControl_watchDate.Date;
+			serie.Film.Mark = VisualHelper.TextToMark(this.comboBox_mark.Text);
+			serie.Film.CountOfViews = VisualHelper.TextToInt32(this.textBox_countOfviews.Text);
+			serie.Film.Comment = this.textBox_comment.Text;
 
 			serie.StartWatchDate = this.dateUpdateControl_startWatchDate.Date;
 			serie.CountOfWatchedSeries = VisualHelper.TextToInt32(this.textBox_countOfWatchedSeries.Text);
@@ -108,7 +108,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
 		private void label_sources_Click(object sender, EventArgs e)
 		{
-			SourcesVisualizer.OpenSourceControl(this.film);
+			SourcesVisualizer.OpenSourceControl(this.serie.Film);
 		}
 
 		private bool commentIsOpen = false;
