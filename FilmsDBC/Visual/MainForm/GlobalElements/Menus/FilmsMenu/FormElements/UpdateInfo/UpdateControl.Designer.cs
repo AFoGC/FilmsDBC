@@ -1,5 +1,5 @@
 ﻿
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateInfo
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateInfo
 {
     partial class UpdateControl
     {

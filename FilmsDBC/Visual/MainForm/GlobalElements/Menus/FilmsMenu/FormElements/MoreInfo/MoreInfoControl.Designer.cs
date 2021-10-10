@@ -1,5 +1,5 @@
 ﻿
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.MoreInfo
 {
     partial class MoreInfoControl
     {

@@ -1,6 +1,6 @@
 ﻿using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
-using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateInfo;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateInfo;
 using FilmsDBC.Visual.UpdateElements;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.MoreInfo
 {
 	static class MoreInfoFormVisualizer
 	{

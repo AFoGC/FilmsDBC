@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MoreInfo
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.MoreInfo
 {
     public partial class MoreInfoControl : UserControl
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.UpdateInfo
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateInfo
 {
 	static class UpdateFormVisualizer
 	{
