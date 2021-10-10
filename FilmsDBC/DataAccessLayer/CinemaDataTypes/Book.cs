@@ -15,6 +15,8 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 	{
 		private String name = "";
 		private String author = "";
+		private BookGenre bookGenre;
+		private int bookGenreId = 0;
 		private int publicationYear = 0;
 		private bool readed = false;
 		private DateTime fullReadDate = new DateTime();
@@ -33,6 +35,9 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 					break;
 				case "author":
 					this.author = comand.Value;
+					break;
+				case "bookGenreId":
+					this.bookGenreId = Convert.ToInt32(comand.Value);
 					break;
 				case "publicationYear":
 					this.publicationYear = Convert.ToInt32(comand.Value);
@@ -56,6 +61,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 		{
 			streamWriter.Write(FormatParam(nameof(name), name, "", 2));
 			streamWriter.Write(FormatParam(nameof(author), author, "", 2));
+			streamWriter.Write(FormatParam("bookGenreId", bookGenreId, 0, 2));
 			streamWriter.Write(FormatParam(nameof(publicationYear), publicationYear, 0, 2));
 			streamWriter.Write(FormatParam(nameof(readed), readed, false, 2));
 			streamWriter.Write(FormatParam(nameof(fullReadDate), fullReadDate, new DateTime(), 2));
@@ -90,6 +96,19 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
         {
             get { return author; }
             set { author = value; }
+        }
+		public BookGenre BookGenre
+        {
+            get { return bookGenre; }
+            set
+            {
+				bookGenre = value;
+				bookGenreId = bookGenre.ID;
+            }
+        }
+		public int BookGenreId
+        {
+            get { return bookGenreId; }
         }
 		public int PublicationYear
         {

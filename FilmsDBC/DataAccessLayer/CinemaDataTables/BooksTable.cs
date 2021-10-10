@@ -16,7 +16,26 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTables
 
 		public override void ConnectionsSubload(TableCollection tablesCollection)
 		{
-			
+			Table<BookGenre> genresTable = tablesCollection.GetTable<BookGenre>();
+
+            foreach (Book book in this)
+            {
+                if (book.BookGenreId != 0)
+                {
+                    foreach (BookGenre genre in genresTable)
+                    {
+						if (book.BookGenreId == genre.ID)
+						{
+							book.BookGenre = genre;
+							break;
+						}
+					}
+                }
+                else
+                {
+					book.BookGenre = genresTable.DefaultCell;
+                }
+            }
 		}
 	}
 }
