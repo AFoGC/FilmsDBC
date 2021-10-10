@@ -64,7 +64,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
         public int FilmId
         {
             get { return filmId; }
-            set { filmId = value; }
+            //set { filmId = value; }
         }
 
         public Film Film

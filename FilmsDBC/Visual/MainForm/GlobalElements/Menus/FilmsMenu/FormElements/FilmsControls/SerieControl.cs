@@ -66,7 +66,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			}
 
 			Serie ser = new Serie();
-			ser.FilmId = filmInfo.ID;
+			ser.Film = filmInfo;
 
 			return ser;
         }

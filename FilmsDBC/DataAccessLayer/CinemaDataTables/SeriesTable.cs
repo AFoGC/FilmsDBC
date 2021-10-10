@@ -16,7 +16,12 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTables
 
         public override void ConnectionsSubload(TableCollection tablesCollection)
         {
-            
+            Table<Film> filmsTable = tablesCollection.GetTable<Film>();
+
+            foreach (Serie serie in this)
+            {
+                serie.Film = filmsTable.GetElementByIndex(serie.FilmId);
+            }
         }
     }
 }

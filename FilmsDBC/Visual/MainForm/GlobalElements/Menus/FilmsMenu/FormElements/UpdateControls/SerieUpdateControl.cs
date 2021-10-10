@@ -56,7 +56,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			}
 
 			Serie ser = new Serie();
-			ser.FilmId = film.ID;
+			ser.Film = film;
 
 			MainInfo.Tables.SeriesTable.AddElement(ser);
 
