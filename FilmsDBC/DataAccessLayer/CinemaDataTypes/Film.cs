@@ -38,7 +38,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 			Film film = (Film)cell;
 
 			name = film.name;
-			genre = film.genre;
+			Genre = film.genre;
 			realiseYear = film.realiseYear;
 			watched = film.watched;
 			mark = film.mark;
@@ -52,22 +52,22 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(FormatParam(nameof(name), name, "", 2));
-			streamWriter.Write(FormatParam(nameof(genre), genre.ID, 0, 2));
-			streamWriter.Write(FormatParam(nameof(realiseYear), realiseYear, 0, 2));
-			streamWriter.Write(FormatParam(nameof(watched), watched, false, 2));
-			streamWriter.Write(FormatParam(nameof(mark), mark, -1, 2));
-			streamWriter.Write(FormatParam(nameof(dateOfWatch), dateOfWatch, new DateTime(), 2));
-			streamWriter.Write(FormatParam(nameof(comment), comment, "", 2));
+			streamWriter.Write(FormatParam("name", name, "", 2));
+			streamWriter.Write(FormatParam("genre", genre.ID, 0, 2));
+			streamWriter.Write(FormatParam("realiseYear", realiseYear, 0, 2));
+			streamWriter.Write(FormatParam("watched", watched, false, 2));
+			streamWriter.Write(FormatParam("mark", mark, -1, 2));
+			streamWriter.Write(FormatParam("dateOfWatch", dateOfWatch, new DateTime(), 2));
+			streamWriter.Write(FormatParam("comment", comment, "", 2));
 
 			foreach (Source source in sources)
 			{
-				streamWriter.Write(formatParam(nameof(source.sourceUrl), source, 2));
+				streamWriter.Write(formatParam("sourceUrl", source, 2));
 			}
 
-			streamWriter.Write(FormatParam(nameof(countOfviews), countOfviews, 0, 2));
-			streamWriter.Write(FormatParam(nameof(franshiseId), franshiseId, 0, 2));
-			streamWriter.Write(FormatParam(nameof(franshiseListIndex), franshiseListIndex, -1, 2));
+			streamWriter.Write(FormatParam("countOfviews", countOfviews, 0, 2));
+			streamWriter.Write(FormatParam("franshiseId", franshiseId, 0, 2));
+			streamWriter.Write(FormatParam("franshiseListIndex", franshiseListIndex, -1, 2));
 		}
 
 		protected override void loadBody(Comand comand)

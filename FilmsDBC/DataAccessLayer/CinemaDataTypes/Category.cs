@@ -33,9 +33,9 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 
         protected override void saveBody(StreamWriter streamWriter)
         {
-            streamWriter.Write(FormatParam(nameof(name), name, "", 2));
-            streamWriter.Write(FormatParam(nameof(mark), mark, -1, 2));
-            streamWriter.Write(FormatParam(nameof(priority), priority, 0, 2));
+            streamWriter.Write(FormatParam("name", name, "", 2));
+            streamWriter.Write(FormatParam("mark", mark, -1, 2));
+            streamWriter.Write(FormatParam("priority", priority, 0, 2));
         }
 
         protected override void loadBody(Comand comand)

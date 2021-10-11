@@ -33,14 +33,14 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(FormatParam(nameof(film), film.ID, 0, 2));
+			streamWriter.Write(FormatParam("film", filmId, 0, 2));
 		}
 
 		protected override void updateThisBody(Cell cell)
 		{
 			PriorityFilm priorityFilm = (PriorityFilm)cell;
 
-			film = priorityFilm.film;
+			Film = priorityFilm.Film;
 		}
 
 		public Film Film

@@ -28,8 +28,8 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 
         protected override void saveBody(StreamWriter streamWriter)
         {
-            streamWriter.Write(FormatParam(nameof(name), name, "", 2));
-            streamWriter.Write(FormatParam(nameof(isSerialGenre), isSerialGenre, false, 2));
+            streamWriter.Write(FormatParam("name", name, "", 2));
+            streamWriter.Write(FormatParam("isSerialGenre", isSerialGenre, false, 2));
         }
         protected override void loadBody(Comand comand)
         {

@@ -25,7 +25,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
         {
             Serie serie = (Serie)cell;
 
-            filmId = serie.filmId;
+            Film = serie.Film;
             startWatchDate = serie.startWatchDate;
             countOfWatchedSeries = serie.countOfWatchedSeries;
             totalSeries = serie.totalSeries;
@@ -33,10 +33,10 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 
         protected override void saveBody(StreamWriter streamWriter)
         {
-            streamWriter.Write(FormatParam(nameof(filmId), filmId, 0, 2));
-            streamWriter.Write(FormatParam(nameof(startWatchDate), startWatchDate, new DateTime(), 2));
-            streamWriter.Write(FormatParam(nameof(countOfWatchedSeries), countOfWatchedSeries, 0, 2));
-            streamWriter.Write(FormatParam(nameof(totalSeries), totalSeries, 0, 2));
+            streamWriter.Write(FormatParam("filmId", filmId, 0, 2));
+            streamWriter.Write(FormatParam("startWatchDate", startWatchDate, new DateTime(), 2));
+            streamWriter.Write(FormatParam("countOfWatchedSeries", countOfWatchedSeries, 0, 2));
+            streamWriter.Write(FormatParam("totalSeries", totalSeries, 0, 2));
         }
 
         protected override void loadBody(Comand comand)
@@ -64,7 +64,6 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
         public int FilmId
         {
             get { return filmId; }
-            //set { filmId = value; }
         }
 
         public Film Film

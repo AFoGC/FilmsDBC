@@ -63,13 +63,13 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 
 		protected override void saveBody(StreamWriter streamWriter)
 		{
-			streamWriter.Write(FormatParam(nameof(name), name, "", 2));
-			streamWriter.Write(FormatParam(nameof(author), author, "", 2));
+			streamWriter.Write(FormatParam("name", name, "", 2));
+			streamWriter.Write(FormatParam("author", author, "", 2));
 			streamWriter.Write(FormatParam("bookGenreId", bookGenreId, 0, 2));
-			streamWriter.Write(FormatParam(nameof(publicationYear), publicationYear, 0, 2));
-			streamWriter.Write(FormatParam(nameof(readed), readed, false, 2));
-			streamWriter.Write(FormatParam(nameof(fullReadDate), fullReadDate, new DateTime(), 2));
-			streamWriter.Write(FormatParam(nameof(mark), mark, -1, 2));
+			streamWriter.Write(FormatParam("publicationYear", publicationYear, 0, 2));
+			streamWriter.Write(FormatParam("readed", readed, false, 2));
+			streamWriter.Write(FormatParam("fullReadDate", fullReadDate, new DateTime(), 2));
+			streamWriter.Write(FormatParam("mark", mark, -1, 2));
 
 			foreach (Source source in sources)
 			{
@@ -83,6 +83,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 
 			this.name = book.name;
 			this.author = book.author;
+			this.BookGenre = book.BookGenre;
 			this.publicationYear = book.publicationYear;
 			this.readed = book.readed;
 			this.fullReadDate = book.fullReadDate;
