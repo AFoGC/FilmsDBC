@@ -17,7 +17,29 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTables
 
 		public override void ConnectionsSubload(TableCollection tablesCollection)
 		{
-			
+			Table<Book> booksTable = tablesCollection.GetTable<Book>();
+
+			foreach (BookCategory category in this)
+			{
+				while (category.Books.Count != 0)
+				{
+					category.Books.Remove(category.Books[0]);
+				}
+			}
+
+			foreach (Book book in booksTable)
+			{
+				if (book.FranshiseId != 0)
+				{
+					foreach (BookCategory category in this)
+					{
+						if (book.FranshiseId == category.ID)
+						{
+							category.Books.Add(book);
+						}
+					}
+				}
+			}
 		}
 	}
 }

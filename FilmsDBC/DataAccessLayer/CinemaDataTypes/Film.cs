@@ -16,6 +16,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 	{
 		private string name = "";
 		private Genre genre = null;
+		private int genreId = 0;
 		private int realiseYear = 0;
 		private bool watched = false;
 		private sbyte mark = -1;
@@ -27,8 +28,6 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 		private int countOfviews = 0;
 		private int franshiseId = 0;
 		private sbyte franshiseListIndex = -1;
-
-		private int genreId = 0;
 
 
 		public Film() : base() { }

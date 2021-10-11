@@ -98,6 +98,7 @@
     <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\WatchedRequestControl.designer.cs">
       <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControl\ABookElementControl.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\MoreInfo\MoreInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,9 +312,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\TablesLibrary\TablesLibrary\TablesLibrary.csproj">
       <Project>{6389a55e-2582-4996-b0f4-eaa7f1078a84}</Project>

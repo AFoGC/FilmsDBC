@@ -58,11 +58,6 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
             }
         }
 
-        public void BooksSubload(BooksTable table)
-        {
-
-        }
-
         public string Name
         {
             get { return name; }

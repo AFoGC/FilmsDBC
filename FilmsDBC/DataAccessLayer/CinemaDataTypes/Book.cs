@@ -23,6 +23,10 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 		private sbyte mark = -1;
 		private List<Source> sources = new List<Source>();
 
+		private int countOfReadings = 0;
+		private int franshiseId = 0;
+		private sbyte franshiseListIndex = -1;
+
 		public Book() : base() { }
 		public Book(int id) : base(id) { }
 
@@ -134,6 +138,24 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
         {
             get { return sources; }
 			set { sources = value; }
+		}
+
+		public int CountOfReadings
+		{
+			get { return countOfReadings; }
+			set { countOfReadings = value; }
+		}
+
+		public int FranshiseId
+		{
+			get { return franshiseId; }
+			set { franshiseId = value; }
+		}
+
+		public sbyte FranshiseListIndex
+		{
+			get { return franshiseListIndex; }
+			set { franshiseListIndex = value; }
 		}
 
 
