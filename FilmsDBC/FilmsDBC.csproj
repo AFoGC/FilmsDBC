@@ -98,6 +98,8 @@
     <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\WatchedRequestControl.designer.cs">
       <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\MoreInfo\MoreInfoFormVisualizer.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\UpdateFormVisualizer.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\ABookElementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,17 +138,16 @@
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\BookUpdateFormVisualizer.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\SourceVisual\BookSourcesVisualizer.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\IFilmsControls.cs" />
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\MoreInfo\MoreInfoControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\MoreInfo\MoreInfoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\MoreInfo\MoreInfoControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\MoreInfo\MoreInfoControl.Designer.cs">
       <DependentUpon>MoreInfoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\MoreInfo\MoreInfoFormVisualizer.cs" />
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateInfo\UpdateControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\UpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateInfo\UpdateControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\UpdateControl.Designer.cs">
       <DependentUpon>UpdateControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CategoryUpdateControl.cs">
@@ -174,20 +175,19 @@
     <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SerieUpdateControl.Designer.cs">
       <DependentUpon>SerieUpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourceControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\SourceVisual\SourceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourceControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\SourceVisual\SourceControl.Designer.cs">
       <DependentUpon>SourceControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesControl.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\SourceVisual\SourcesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesControl.Designer.cs">
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\SourceVisual\SourcesControl.Designer.cs">
       <DependentUpon>SourcesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesVisualizer.cs" />
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateInfo\UpdateFormVisualizer.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\SourceVisual\SourcesVisualizer.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\BooksControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -291,10 +291,10 @@
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\BooksUpdateControl.resx">
       <DependentUpon>BooksUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\MoreInfo\MoreInfoControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\MoreInfo\MoreInfoControl.resx">
       <DependentUpon>MoreInfoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateInfo\UpdateControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\UpdateControl.resx">
       <DependentUpon>UpdateControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CategoryUpdateControl.resx">
@@ -309,10 +309,10 @@
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SerieUpdateControl.resx">
       <DependentUpon>SerieUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourceControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\SourceVisual\SourceControl.resx">
       <DependentUpon>SourceControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\SourceVisual\SourcesControl.resx">
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\UpdateInfo\SourceVisual\SourcesControl.resx">
       <DependentUpon>SourcesControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\BooksControl.resx">
@@ -365,7 +365,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\MoreInfo\" />
     <Folder Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CommonElements\" />
+    <Folder Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateInfo\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\TablesLibrary\TablesLibrary\TablesLibrary.csproj">

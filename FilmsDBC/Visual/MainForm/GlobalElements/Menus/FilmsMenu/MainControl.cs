@@ -1,6 +1,8 @@
 ﻿using FilmsDBC.DataAccessLayer.CinemaDataTables;
 using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.MoreInfo;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.UpdateInfo;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
 using FilmsDBC.Visual.StaticVisualClasses;
@@ -22,7 +24,21 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		public MainControl()
 		{
 			InitializeComponent();
+			moreInfoVisualizer = new MoreInfoFormVisualizer(panel_Info);
+			updateVisualizer = new UpdateFormVisualizer(panel_Info);
 		}
+
+		private MoreInfoFormVisualizer moreInfoVisualizer;
+		public MoreInfoFormVisualizer MoreInfoVisualizer
+        {
+            get { return moreInfoVisualizer; }
+        }
+		private UpdateFormVisualizer updateVisualizer;
+		public UpdateFormVisualizer UpdateVisualizer
+        {
+            get { return updateVisualizer; }
+        }
+
 
 		private List<UserControl> tableControls = new List<UserControl>();
 

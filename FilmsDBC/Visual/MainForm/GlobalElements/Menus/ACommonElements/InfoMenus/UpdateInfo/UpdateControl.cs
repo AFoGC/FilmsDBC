@@ -1,8 +1,6 @@
 ﻿using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls;
-using FilmsDBC.Visual.UpdateElements.UpdateControls;
-using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateInfo
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.UpdateInfo
 {
     public partial class UpdateControl : UserControl
     {
-        public UpdateControl()
+		UpdateFormVisualizer visualizer;
+		public UpdateControl(UpdateFormVisualizer visualizer)
         {
             InitializeComponent();
+			this.visualizer = visualizer;
         }
 
 		public void Reinitialize(IControls icontrol)
@@ -32,13 +32,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 		{
 			IUpdateControl control = (IUpdateControl)flowLayoutPanel_main.Controls[0];
 			control.UpdateElement();
-			//MainInformation.tableCollection.saveTables();
 		}
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)
 		{
-			MainInfo.MainForm.MainControl.InfoPanel.Controls.Remove(this);
-			SourcesVisualizer.HideSourceControl();
+			this.Parent.Controls.Remove(this);
+			visualizer.SourcesVisualizer.HideSourceControl();
 		}
 	}
 }

@@ -10,14 +10,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.UpdateInfo.SourceVisual
 {
     public partial class SourcesControl : UserControl
     {
-        private Film film = null;
-        public Film FilmInfo
+        private List<Source> sources = null;
+        public List<Source> Sources
         {
-            get { return film; }
+            get { return sources; }
         }
 
         public SourcesControl()
@@ -26,12 +26,12 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
             this.Location = new Point(940, 0);
         }
 
-        public void Reinitialize(Film film)
+        public void Reinitialize(List<Source> sources)
         {
-            this.film = film;
+            this.sources = sources;
 
             flowLayoutPanel_sources.Controls.Clear();
-            foreach (Source source in film.Sources)
+            foreach (Source source in sources)
             {
                 addElement(source);
             }
@@ -39,16 +39,19 @@ namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
 
         private void addElement(Source source)
         {
-            flowLayoutPanel_sources.Controls.Add(new SourceControl(source));
+            flowLayoutPanel_sources.Controls.Add(new SourceControl(source, this));
         }
 
         private void button_update_Click(object sender, EventArgs e)
         {
-            film.Sources = new List<Source>();
+            while (sources.Count != 0)
+            {
+                sources.Remove(sources[0]);
+            }
 
             foreach (SourceControl sourceControl in flowLayoutPanel_sources.Controls)
             {
-                film.Sources.Add(sourceControl.Source);
+                sources.Add(sourceControl.Source);
             }
         }
 

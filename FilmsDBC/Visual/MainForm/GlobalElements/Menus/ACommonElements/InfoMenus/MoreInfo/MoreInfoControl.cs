@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.MoreInfo
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.MoreInfo
 {
     public partial class MoreInfoControl : UserControl
     {
@@ -28,7 +28,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.M
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)
 		{
-			MainInfo.MainForm.MainControl.InfoPanel.Controls.Remove(this);
+			this.Parent.Controls.Remove(this);
 		}
 	}
 }

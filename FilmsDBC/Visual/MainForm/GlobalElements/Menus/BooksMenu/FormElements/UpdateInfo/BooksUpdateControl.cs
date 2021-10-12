@@ -1,5 +1,4 @@
 ﻿using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
-using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +31,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
 
         private void pictureBox_Close_Click(object sender, EventArgs e)
         {
-            MainInfo.MainForm.BooksControl.InfoPanel.Controls.Remove(this);
-            SourcesVisualizer.HideSourceControl();
+            //MainInfo.MainForm.BooksControl.InfoPanel.Controls.Remove(this);
+            //SourcesVisualizer.HideSourceControl();
         }
     }
 }

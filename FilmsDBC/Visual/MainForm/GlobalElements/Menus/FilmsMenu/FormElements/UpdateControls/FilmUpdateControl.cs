@@ -3,7 +3,6 @@ using FilmsDBC.StaticFilmClasses;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls;
 using FilmsDBC.Visual.StaticVisualClasses;
-using FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,7 +64,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 
         private void label_sources_Click(object sender, EventArgs e)
         {
-			SourcesVisualizer.OpenSourceControl(this.film);
+			MainInfo.MainForm.MainControl.UpdateVisualizer.SourcesVisualizer.OpenSourceControl(this.film.Sources);
 		}
 
 		private bool commentIsOpen = false;

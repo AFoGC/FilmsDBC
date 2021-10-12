@@ -1,9 +1,7 @@
 ﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls;
-using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateInfo;
 using FilmsDBC.Visual.StaticVisualClasses;
-using FilmsDBC.Visual.UpdateElements;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -124,7 +122,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		private void label_update_Click(object sender, EventArgs e)
 		{
-			UpdateFormVisualizer.OpenUpdateControl(this);
+			MainInfo.MainForm.MainControl.UpdateVisualizer.OpenUpdateControl(this, MainInfo.MainForm.MainControl.MoreInfoVisualizer);
 		}
 
 		public bool SetFindedElement(string search)

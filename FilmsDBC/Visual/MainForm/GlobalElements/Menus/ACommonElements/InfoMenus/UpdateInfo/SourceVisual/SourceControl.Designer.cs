@@ -1,5 +1,5 @@
 ﻿
-namespace FilmsDBC.Visual.UpdateElements.UpdateControls.SourceVisual
+namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.UpdateInfo.SourceVisual
 {
     partial class SourceControl
     {
