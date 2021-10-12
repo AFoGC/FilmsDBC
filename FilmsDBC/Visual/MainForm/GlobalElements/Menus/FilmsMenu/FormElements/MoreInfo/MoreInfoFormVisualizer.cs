@@ -26,7 +26,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.M
 		public static void OpenMoreInfoForm(ISimpleControl simpleControl)
 		{
 			infoControl.Reinitialize(simpleControl);
-			MainInfo.MainForm.MainControl.InfoPanel.Controls.Add(infoControl);
+			MainInfo.MainForm.BooksControl.InfoPanel.Controls.Add(infoControl);
 
 			if (UpdateFormVisualizer.IsOpen)
 			{
@@ -40,7 +40,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.M
 		public static void HideMoreInfoControl()
         {
 			isOpen = false;
-			MainInfo.MainForm.MainControl.InfoPanel.Controls.Remove(infoControl);
+			MainInfo.MainForm.BooksControl.InfoPanel.Controls.Remove(infoControl);
 		}
 	}
 }

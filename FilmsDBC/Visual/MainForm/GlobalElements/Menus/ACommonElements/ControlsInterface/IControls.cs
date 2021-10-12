@@ -13,8 +13,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.Controls
         bool SetFindedElement(String search);
         void SetVisualDefault();
         void RefreshData();
-        bool HasSelectedGenre(Genre[] selectedGenres);
-        bool HasWatchedProperty(bool isWached);
         Control ToUpdateControl();
     }
 }

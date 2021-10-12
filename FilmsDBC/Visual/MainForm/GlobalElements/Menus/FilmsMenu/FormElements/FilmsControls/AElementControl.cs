@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls
 {
     [TypeDescriptionProvider(typeof(AbstractControlDescriptionProvider<AElementControl, UserControl>))]
-	public abstract class AElementControl : UserControl, IControls
+	public abstract class AElementControl : UserControl, IFilmsControls
 	{
 		internal Film filmInfo = null;
 		public Film FilmInfo
@@ -42,9 +42,11 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 		}
 
 		public abstract void SetVisualDefault();
+		public abstract void RefreshData();
+		public abstract Control ToUpdateControl();
 		internal abstract void setVisualSelected();
 		internal abstract void setVisualFinded();
-		public abstract void RefreshData();
+
 		public bool HasSelectedGenre(Genre[] selectedGenres)
 		{
 			foreach (Genre genre in selectedGenres)
@@ -68,7 +70,5 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 				return false;
 			}
 		}
-
-        public abstract Control ToUpdateControl();
     }
 }

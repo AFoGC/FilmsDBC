@@ -31,7 +31,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
 		public void GetSettings()
 		{
 			MainInfo.Settings.UsedProfile = usedProfile;
-			MainInfo.tableCollection.TableFilePath = usedProfile.MainFilePath;
+			MainInfo.TableCollection.TableFilePath = usedProfile.MainFilePath;
 		}
 
 		public void RefreshControl()

@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.FilmsControls
 {
-    public partial class CategoryControl : UserControl, IControls
+    public partial class CategoryControl : UserControl, IFilmsControls
 	{
 		private Category categoryInfo = null;
 

@@ -59,7 +59,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			this.textBox_mark.Text = VisualHelper.markToText(Film.FormatToString(filmInfo.Mark, defFilm.Mark));
 			this.textBox_countOfviews.Text = Film.FormatToString(filmInfo.CountOfViews, defFilm.CountOfViews);
 			this.textBox_comment.Text = filmInfo.Comment;
-			this.refreshSourceLabel();
+			this.RefreshSourceLabel();
 
 			if (simpleControl != null)
 			{
@@ -67,7 +67,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			}
 		}
 
-		public void refreshSourceLabel()
+		public void RefreshSourceLabel()
 		{
 			if (filmInfo.Sources.Count == 0)
 			{

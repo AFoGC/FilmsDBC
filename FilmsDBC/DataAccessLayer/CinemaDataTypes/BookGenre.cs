@@ -48,5 +48,9 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
             set { name = value; }
         }
 
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

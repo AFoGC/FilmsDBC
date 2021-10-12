@@ -104,8 +104,18 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
         }
 		public BookGenre BookGenre
         {
-            get { return bookGenre; }
-            set
+			get
+			{
+				if (bookGenre != null)
+				{
+					return bookGenre;
+				}
+				else
+				{
+					return new BookGenre(0);
+				}
+			}
+			set
             {
 				bookGenre = value;
 				bookGenreId = bookGenre.ID;

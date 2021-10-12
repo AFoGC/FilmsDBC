@@ -45,8 +45,8 @@ namespace FilmsDBC.Settings
                 {
 					using (FileStream fs = File.Create(filePath)) { }
 
-					MainInfo.tableCollection.TableFilePath = filePath;
-					MainInfo.tableCollection.SaveTables();
+					MainInfo.TableCollection.TableFilePath = filePath;
+					MainInfo.TableCollection.SaveTables();
                 }
 
 				return filePath;

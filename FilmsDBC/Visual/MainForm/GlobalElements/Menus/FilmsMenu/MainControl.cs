@@ -24,8 +24,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 			InitializeComponent();
 		}
 
-		TableCollection tables = MainInfo.tableCollection;
-		List<UserControl> tableControls = new List<UserControl>();
+		private List<UserControl> tableControls = new List<UserControl>();
 
 		private AElementControl controlInBuffer = null;
 		public AElementControl ControlInBuffer
@@ -196,7 +195,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 
 		private void button_save_Click(object sender, EventArgs e)
 		{
-			MainInfo.tableCollection.SaveTables();
+			MainInfo.TableCollection.SaveTables();
 		}
 
 		private void button_addCategory_Click(object sender, EventArgs e)
@@ -250,7 +249,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 			flowLayoutPanel_main.Controls.Clear();
 			Genre[] genres = getSelectedGenres();
 
-			foreach (IControls control in tableControls)
+			foreach (IFilmsControls control in tableControls)
 			{
 				if (watchedRequestControl.IsAllIncluded)
 				{

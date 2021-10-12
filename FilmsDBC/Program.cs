@@ -29,12 +29,13 @@ namespace FilmsDBC
 
             if (args.Length != 0)
             {
-				MainInfo.tableCollection.TableFilePath = args[0];
+				MainInfo.TableCollection.TableFilePath = args[0];
             }
 
 			MainInfo.LoadTables();
 			MainInfo.MainForm.MainControl.loadCategories();
 			MainInfo.MainForm.MainControl.loadGenres();
+			MainInfo.MainForm.BooksControl.LoadCategories();
 			Application.Run(MainInfo.MainForm);
 		}
 

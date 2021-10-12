@@ -1,5 +1,5 @@
 ﻿
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls.CommonElements
+namespace FilmsDBC.Visual.Buttons
 {
     partial class DateUpdateControl
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.UpdateControls.CommonElements
+namespace FilmsDBC.Visual.Buttons
 {
 	public partial class DateUpdateControl : UserControl
 	{

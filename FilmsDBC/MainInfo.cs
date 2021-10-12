@@ -14,7 +14,7 @@ namespace FilmsDBC
 {
     public static class MainInfo
 	{
-		public static TableCollection tableCollection = null;
+		private static TableCollection tableCollection = null;
 		public static TableCollection TableCollection
         {
             get { return tableCollection; }
