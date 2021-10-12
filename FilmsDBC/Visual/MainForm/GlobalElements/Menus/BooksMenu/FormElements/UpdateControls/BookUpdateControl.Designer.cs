@@ -152,6 +152,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.label_sources.TabIndex = 43;
             this.label_sources.Text = "update source";
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
             // BookUpdateControl
             // 
@@ -168,6 +169,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.Controls.Add(this.comboBox_genre);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "BookUpdateControl";
             this.Size = new System.Drawing.Size(940, 20);
             this.ResumeLayout(false);

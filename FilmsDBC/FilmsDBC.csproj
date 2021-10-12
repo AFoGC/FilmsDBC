@@ -116,27 +116,12 @@
       <DependentUpon>BookSimpleControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\IBooksControls.cs" />
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\MoreInfo\BookMoreInfoControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\MoreInfo\BookMoreInfoControl.Designer.cs">
-      <DependentUpon>BookMoreInfoControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\MoreInfo\BookMoreInfoVisualizer.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookUpdateControl.Designer.cs">
       <DependentUpon>BookUpdateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\BooksUpdateControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\BooksUpdateControl.Designer.cs">
-      <DependentUpon>BooksUpdateControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\BookUpdateFormVisualizer.cs" />
-    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\SourceVisual\BookSourcesVisualizer.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\FilmsControls\IFilmsControls.cs" />
     <Compile Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\MoreInfo\MoreInfoControl.cs">
       <SubType>UserControl</SubType>
@@ -282,14 +267,8 @@
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\BookSimpleControl.resx">
       <DependentUpon>BookSimpleControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\MoreInfo\BookMoreInfoControl.resx">
-      <DependentUpon>BookMoreInfoControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookUpdateControl.resx">
       <DependentUpon>BookUpdateControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateInfo\BooksUpdateControl.resx">
-      <DependentUpon>BooksUpdateControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\InfoMenus\MoreInfo\MoreInfoControl.resx">
       <DependentUpon>MoreInfoControl.cs</DependentUpon>
@@ -364,11 +343,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\MoreInfo\" />
-    <Folder Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateControls\CommonElements\" />
-    <Folder Include="Visual\MainForm\GlobalElements\Menus\FilmsMenu\FormElements\UpdateInfo\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\TablesLibrary\TablesLibrary\TablesLibrary.csproj">
       <Project>{6389a55e-2582-4996-b0f4-eaa7f1078a84}</Project>

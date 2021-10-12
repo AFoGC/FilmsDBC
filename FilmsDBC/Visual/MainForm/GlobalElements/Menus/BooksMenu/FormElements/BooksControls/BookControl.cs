@@ -1,6 +1,5 @@
 ﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.UpdateControls;
-using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.UpdateInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -97,7 +96,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
 
         private void clickButton_update_Click(object sender, EventArgs e)
         {
-            BookUpdateFormVisualizer.OpenUpdateControl(this);
+            MainInfo.MainForm.BooksControl.UpdateVisualizer.OpenUpdateControl(this, MainInfo.MainForm.BooksControl.MoreInfoVisualizer);
         }
     }
 }

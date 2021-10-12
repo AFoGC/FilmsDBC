@@ -116,6 +116,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.Controls.Add(this.textBox_genre);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "BookSimpleControl";
             this.Size = new System.Drawing.Size(505, 20);
             this.ResumeLayout(false);

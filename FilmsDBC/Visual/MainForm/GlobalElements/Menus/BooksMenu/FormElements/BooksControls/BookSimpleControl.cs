@@ -1,7 +1,5 @@
 ﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
-using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.MoreInfo;
-using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.UpdateInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +61,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
 
         private void clickButton_info_Click(object sender, EventArgs e)
         {
-            BookMoreInfoVisualizer.OpenMoreInfoForm(this);
+            MainInfo.MainForm.BooksControl.MoreInfoVisualizer.OpenMoreInfoForm(this, MainInfo.MainForm.BooksControl.UpdateVisualizer);
         }
 
         private void checkBox_readed_Click(object sender, EventArgs e)

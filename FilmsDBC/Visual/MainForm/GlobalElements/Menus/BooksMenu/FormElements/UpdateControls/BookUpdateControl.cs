@@ -58,5 +58,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
 
             bookControl.RefreshData();
         }
+
+        private void label_sources_Click(object sender, EventArgs e)
+        {
+            MainInfo.MainForm.BooksControl.UpdateVisualizer.SourcesVisualizer.OpenSourceControl(this.book.Sources);
+        }
     }
 }

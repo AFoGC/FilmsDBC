@@ -1,5 +1,7 @@
 ﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.MoreInfo;
+using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.UpdateInfo;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.BooksControls;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,21 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
         public BooksControl()
         {
             InitializeComponent();
+            moreInfoVisualizer = new MoreInfoFormVisualizer(panel_Info);
+            updateVisualizer = new UpdateFormVisualizer(panel_Info);
         }
+
+        private MoreInfoFormVisualizer moreInfoVisualizer;
+        public MoreInfoFormVisualizer MoreInfoVisualizer
+        {
+            get { return moreInfoVisualizer; }
+        }
+        private UpdateFormVisualizer updateVisualizer;
+        public UpdateFormVisualizer UpdateVisualizer
+        {
+            get { return updateVisualizer; }
+        }
+
         public Panel InfoPanel
         {
             get { return panel_Info; }
