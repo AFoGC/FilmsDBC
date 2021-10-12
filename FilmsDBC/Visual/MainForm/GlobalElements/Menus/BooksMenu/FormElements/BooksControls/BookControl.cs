@@ -1,5 +1,6 @@
 ﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.UpdateControls;
+using FilmsDBC.Visual.StaticVisualClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,7 +46,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_realiseYear.Text = Book.FormatToString(bookInfo.PublicationYear, defBook.PublicationYear);
             this.checkBox_readed.Checked = bookInfo.Readed;
             this.textBox_fullReadDate.Text = Book.FormatToString(bookInfo.FullReadDate, defBook.FullReadDate);
-            this.textBox_mark.Text = Book.FormatToString(bookInfo.Mark, defBook.Mark);
+            this.textBox_mark.Text = VisualHelper.markToText(Book.FormatToString(bookInfo.Mark, defBook.Mark));
             this.textBox_countOfReadings.Text = Book.FormatToString(bookInfo.CountOfReadings, defBook.CountOfReadings);
             this.RefreshSourceLabel();
 
