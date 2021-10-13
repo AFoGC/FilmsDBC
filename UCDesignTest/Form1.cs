@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UCDesignTest.FilmsControls;
 
 namespace UCDesignTest
 {
@@ -15,6 +16,12 @@ namespace UCDesignTest
         public Form1()
         {
             InitializeComponent();
+
+            flowLayoutPanel1.Controls.Add(new FilmControl());
+            flowLayoutPanel1.Controls.Add(new FilmControl());
+            flowLayoutPanel1.Controls.Add(new FilmControl());
+            flowLayoutPanel1.Controls.Add(new FilmControl());
+            flowLayoutPanel1.Controls.Add(new FilmControl());
         }
     }
 }

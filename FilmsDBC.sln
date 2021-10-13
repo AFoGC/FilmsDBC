@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark", "Benchmark\Benchmark.csproj", "{B6B35E2A-1C67-489F-A9D9-538EBA9F5E67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCDesignTest", "UCDesignTest\UCDesignTest.csproj", "{451A17AA-FB94-4419-949A-F42C04E2A44C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A851B4B-9C9C-432B-ABD8-B77F7914FBF6} = {9A851B4B-9C9C-432B-ABD8-B77F7914FBF6}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
