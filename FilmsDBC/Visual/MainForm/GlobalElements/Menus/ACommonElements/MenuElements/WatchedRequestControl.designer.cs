@@ -35,11 +35,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElem
             // 
             // label_requestWatched
             // 
-            this.label_requestWatched.BackColor = System.Drawing.SystemColors.Control;
+            this.label_requestWatched.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.label_requestWatched.ClickLocked = false;
-            this.label_requestWatched.DefaultColor = System.Drawing.SystemColors.Control;
+            this.label_requestWatched.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label_requestWatched.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label_requestWatched.Included = false;
-            this.label_requestWatched.Included_DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.label_requestWatched.Included_DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.label_requestWatched.Included_MouseDownColor = System.Drawing.Color.Empty;
             this.label_requestWatched.Included_MouseEnterColor = System.Drawing.Color.Empty;
             this.label_requestWatched.Location = new System.Drawing.Point(0, 0);
@@ -53,11 +54,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElem
             // 
             // label_requestUnwatched
             // 
-            this.label_requestUnwatched.BackColor = System.Drawing.SystemColors.Control;
+            this.label_requestUnwatched.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.label_requestUnwatched.ClickLocked = false;
-            this.label_requestUnwatched.DefaultColor = System.Drawing.SystemColors.Control;
+            this.label_requestUnwatched.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.label_requestUnwatched.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label_requestUnwatched.Included = false;
-            this.label_requestUnwatched.Included_DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.label_requestUnwatched.Included_DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.label_requestUnwatched.Included_MouseDownColor = System.Drawing.Color.Empty;
             this.label_requestUnwatched.Included_MouseEnterColor = System.Drawing.Color.Empty;
             this.label_requestUnwatched.Location = new System.Drawing.Point(130, 0);

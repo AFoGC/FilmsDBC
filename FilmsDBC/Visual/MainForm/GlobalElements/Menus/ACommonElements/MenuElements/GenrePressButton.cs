@@ -20,8 +20,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElem
 			InitializeComponent();
 			this.genre = genre;
 			this.Text = genre.Name;
-			this.DefaultColor = SystemColors.Control;
-			this.Included_DefaultColor = SystemColors.ControlDark;
+			this.DefaultColor = Color.FromArgb(18, 18, 18);//SystemColors.Control;
+			this.Included_DefaultColor = Color.FromArgb(31, 31, 31);
+			this.ForeColor = Color.WhiteSmoke;
 			this.ClickLocked = false;
 			this.Included = true;
 			this.Size = new Size(129, 20);
