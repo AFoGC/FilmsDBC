@@ -34,10 +34,10 @@ namespace UCDesignTest
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 87);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(960, 362);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(940, 362);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // Form1

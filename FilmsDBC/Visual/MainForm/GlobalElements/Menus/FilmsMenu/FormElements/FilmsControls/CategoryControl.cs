@@ -46,7 +46,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			categoryFilms();
 		}
 
-		private Point controlPoint = new Point(830, 25);
+		private Point controlPoint = new Point(830, 18);
 		private Point panelPoint = new Point(800, 5);
 
 		private void categoryFilms()
@@ -61,8 +61,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 			foreach (Film film in categoryInfo.Films)
 			{
-				panelSize.Height += 20;
-				controlSize.Height += 20;
+				panelSize.Height += 15;
+				controlSize.Height += 15;
 				this.Size = controlSize;
 				flowLayoutPanel_SimpleControls.Size = panelSize;
 				flowLayoutPanel_SimpleControls.Controls.Add(new SimpleControl(film));
@@ -78,8 +78,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 		{
 			Size controlSize = this.Size;
 			Size panelSize = this.flowLayoutPanel_SimpleControls.Size;
-			panelSize.Height += 20;
-			controlSize.Height += 20;
+			panelSize.Height += 15;
+			controlSize.Height += 15;
 			this.Size = controlSize;
 			flowLayoutPanel_SimpleControls.Size = panelSize;
 
@@ -96,8 +96,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 				Size controlSize = this.Size;
 				Size panelSize = this.flowLayoutPanel_SimpleControls.Size;
-				panelSize.Height -= 20;
-				controlSize.Height -= 20;
+				panelSize.Height -= 15;
+				controlSize.Height -= 15;
 				this.Size = controlSize;
 				flowLayoutPanel_SimpleControls.Size = panelSize;
 
@@ -145,21 +145,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 		{
 			Color color = Color.FromArgb(0, 0 , 220);
 
-			this.BackColor = color;
-			this.label_update.DefaultColor = color;
-
-			this.label_update.MouseEnterColor = Color.FromArgb(0, 0, 255);
-			this.label_update.MouseDownColor = Color.FromArgb(0, 0, 200);
-
-			this.flowLayoutPanel_SimpleControls.BackColor = SystemColors.Control;
+			textBox_id.BackColor = color;
 		}
 
 		public void SetVisualDefault()
 		{
-			this.BackColor = SystemColors.Control;
-
-			this.label_update.DefaultColor = SystemColors.Control;
-			this.label_update.SetDefaultButtonBlink();
+			textBox_id.BackColor = Color.FromArgb(53, 53, 53);
 
 			foreach (IControls control in flowLayoutPanel_SimpleControls.Controls)
 			{

@@ -95,6 +95,8 @@ namespace FilmsDBC.Visual.Buttons
             this.Controls.Add(this.label2);
             this.Name = "DateUpdateControl";
             this.Size = new System.Drawing.Size(58, 18);
+            this.BackColorChanged += new System.EventHandler(this.DateUpdateControl_BackColorChanged);
+            this.ForeColorChanged += new System.EventHandler(this.DateUpdateControl_ForeColorChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

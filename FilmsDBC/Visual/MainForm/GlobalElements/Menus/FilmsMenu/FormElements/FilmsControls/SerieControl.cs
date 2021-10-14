@@ -135,85 +135,19 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 		internal override void setVisualFinded()
 		{
 			Color color = Color.FromArgb(0, 0, 220);
-			this.BackColor = color;
-			this.label_comment.DefaultColor = color;
-			this.label_copyUrl.DefaultColor = color;
-			this.label_update.DefaultColor = color;
 			this.textBox_id.BackColor = color;
-			this.textBox_name.BackColor = color;
-			this.textBox_genre.BackColor = color;
-			this.textBox_realiseYear.BackColor = color;
-			this.textBox_startWatchDate.BackColor = color;
-			this.textBox_countOfWatchedSeries.BackColor = color;
-			this.textBox_watchDate.BackColor = color;
-			this.textBox_totalSeries.BackColor = color;
-			this.textBox_mark.BackColor = color;
-			this.textBox_countOfviews.BackColor = color;
-			this.textBox_comment.BackColor = color;
-
-			Color colorMouseEnter = Color.FromArgb(0, 0, 255);
-			this.label_comment.MouseEnterColor = colorMouseEnter;
-			this.label_copyUrl.MouseEnterColor = colorMouseEnter;
-			this.label_update.MouseEnterColor = colorMouseEnter;
-
-			Color colorMouseDown = Color.FromArgb(0, 0, 200);
-			this.label_comment.MouseDownColor = colorMouseDown;
-			this.label_copyUrl.MouseDownColor = colorMouseDown;
-			this.label_update.MouseDownColor = colorMouseDown;
 		}
 
 		public override void SetVisualDefault()
 		{
-			Color color = SystemColors.Control;
-			this.BackColor = color;
-			this.label_comment.DefaultColor = color;
-			this.label_copyUrl.DefaultColor = color;
-			this.label_update.DefaultColor = color;
+			Color color = Color.FromArgb(53, 53, 53);
 			this.textBox_id.BackColor = color;
-			this.textBox_name.BackColor = color;
-			this.textBox_genre.BackColor = color;
-			this.textBox_realiseYear.BackColor = color;
-			this.textBox_startWatchDate.BackColor = color;
-			this.textBox_countOfWatchedSeries.BackColor = color;
-			this.textBox_watchDate.BackColor = color;
-			this.textBox_totalSeries.BackColor = color;
-			this.textBox_mark.BackColor = color;
-			this.textBox_countOfviews.BackColor = color;
-			this.textBox_comment.BackColor = color;
-
-			this.label_comment.SetDefaultButtonBlink();
-			this.label_copyUrl.SetDefaultButtonBlink();
-			this.label_update.SetDefaultButtonBlink();
 		}
 
 		internal override void setVisualSelected()
 		{
 			Color color = Color.FromArgb(0, 220, 0);
-			this.BackColor = color;
-			this.label_comment.DefaultColor = color;
-			this.label_copyUrl.DefaultColor = color;
-			this.label_update.DefaultColor = color;
 			this.textBox_id.BackColor = color;
-			this.textBox_name.BackColor = color;
-			this.textBox_genre.BackColor = color;
-			this.textBox_realiseYear.BackColor = color;
-			this.textBox_startWatchDate.BackColor = color;
-			this.textBox_countOfWatchedSeries.BackColor = color;
-			this.textBox_watchDate.BackColor = color;
-			this.textBox_totalSeries.BackColor = color;
-			this.textBox_mark.BackColor = color;
-			this.textBox_countOfviews.BackColor = color;
-			this.textBox_comment.BackColor = color;
-
-			Color colorMouseEnter = Color.FromArgb(0, 255, 0);
-			this.label_comment.MouseEnterColor = colorMouseEnter;
-			this.label_copyUrl.MouseEnterColor = colorMouseEnter;
-			this.label_update.MouseEnterColor = colorMouseEnter;
-
-			Color colorMouseDown = Color.FromArgb(0, 200, 0);
-			this.label_comment.MouseDownColor = colorMouseDown;
-			this.label_copyUrl.MouseDownColor = colorMouseDown;
-			this.label_update.MouseDownColor = colorMouseDown;
 		}
 
 		private void label_update_Click(object sender, EventArgs e)

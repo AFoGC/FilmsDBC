@@ -42,9 +42,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             this.button_filter = new System.Windows.Forms.Button();
             this.button_ShowPriorityFilms = new System.Windows.Forms.Button();
             this.button_AddToPriority = new System.Windows.Forms.Button();
-            this.watchedRequestControl = new FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements.WatchedRequestControl();
             this.panel_buttonInterface = new System.Windows.Forms.Panel();
             this.panel_Info = new System.Windows.Forms.Panel();
+            this.watchedRequestControl = new FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements.WatchedRequestControl();
             this.panel_buttonInterface.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,36 +61,57 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             // 
             // button_ShowCategories
             // 
+            this.button_ShowCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_ShowCategories.FlatAppearance.BorderSize = 0;
+            this.button_ShowCategories.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_ShowCategories.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_ShowCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ShowCategories.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_ShowCategories.Location = new System.Drawing.Point(149, 41);
             this.button_ShowCategories.Name = "button_ShowCategories";
             this.button_ShowCategories.Size = new System.Drawing.Size(111, 23);
             this.button_ShowCategories.TabIndex = 1;
             this.button_ShowCategories.Text = "Show Categories";
-            this.button_ShowCategories.UseVisualStyleBackColor = true;
+            this.button_ShowCategories.UseVisualStyleBackColor = false;
             this.button_ShowCategories.Click += new System.EventHandler(this.button_ShowCategories_Click);
             // 
             // button_ShowFilms
             // 
+            this.button_ShowFilms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_ShowFilms.FlatAppearance.BorderSize = 0;
+            this.button_ShowFilms.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_ShowFilms.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_ShowFilms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ShowFilms.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_ShowFilms.Location = new System.Drawing.Point(149, 70);
             this.button_ShowFilms.Name = "button_ShowFilms";
             this.button_ShowFilms.Size = new System.Drawing.Size(111, 23);
             this.button_ShowFilms.TabIndex = 2;
             this.button_ShowFilms.Text = "Show Films";
-            this.button_ShowFilms.UseVisualStyleBackColor = true;
+            this.button_ShowFilms.UseVisualStyleBackColor = false;
             this.button_ShowFilms.Click += new System.EventHandler(this.button_ShowFilms_Click);
             // 
             // button_ShowSeries
             // 
+            this.button_ShowSeries.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_ShowSeries.FlatAppearance.BorderSize = 0;
+            this.button_ShowSeries.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_ShowSeries.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_ShowSeries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ShowSeries.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_ShowSeries.Location = new System.Drawing.Point(149, 99);
             this.button_ShowSeries.Name = "button_ShowSeries";
             this.button_ShowSeries.Size = new System.Drawing.Size(111, 23);
             this.button_ShowSeries.TabIndex = 3;
             this.button_ShowSeries.Text = "Show Series";
-            this.button_ShowSeries.UseVisualStyleBackColor = true;
+            this.button_ShowSeries.UseVisualStyleBackColor = false;
             this.button_ShowSeries.Click += new System.EventHandler(this.button_ShowSeries_Click);
             // 
             // textBox_Search
             // 
+            this.textBox_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_Search.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_Search.Location = new System.Drawing.Point(35, 99);
             this.textBox_Search.Name = "textBox_Search";
             this.textBox_Search.Size = new System.Drawing.Size(154, 20);
@@ -98,42 +119,67 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             // 
             // button_Search
             // 
+            this.button_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_Search.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_Search.Location = new System.Drawing.Point(195, 99);
             this.button_Search.Name = "button_Search";
             this.button_Search.Size = new System.Drawing.Size(75, 20);
             this.button_Search.TabIndex = 5;
             this.button_Search.Text = "Search";
-            this.button_Search.UseVisualStyleBackColor = true;
+            this.button_Search.UseVisualStyleBackColor = false;
             this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // button_save
             // 
+            this.button_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_save.FlatAppearance.BorderSize = 0;
+            this.button_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_save.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_save.Location = new System.Drawing.Point(149, 0);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(111, 23);
             this.button_save.TabIndex = 6;
             this.button_save.Text = "Save Tables";
-            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.UseVisualStyleBackColor = false;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_addCategory
             // 
+            this.button_addCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_addCategory.FlatAppearance.BorderSize = 0;
+            this.button_addCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_addCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_addCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_addCategory.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_addCategory.Location = new System.Drawing.Point(0, 41);
             this.button_addCategory.Name = "button_addCategory";
             this.button_addCategory.Size = new System.Drawing.Size(111, 23);
             this.button_addCategory.TabIndex = 7;
             this.button_addCategory.Text = "Add Category";
-            this.button_addCategory.UseVisualStyleBackColor = true;
+            this.button_addCategory.UseVisualStyleBackColor = false;
             this.button_addCategory.Click += new System.EventHandler(this.button_addCategory_Click);
             // 
             // button_addFilm
             // 
+            this.button_addFilm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_addFilm.FlatAppearance.BorderSize = 0;
+            this.button_addFilm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_addFilm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_addFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_addFilm.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_addFilm.Location = new System.Drawing.Point(0, 70);
             this.button_addFilm.Name = "button_addFilm";
             this.button_addFilm.Size = new System.Drawing.Size(111, 23);
             this.button_addFilm.TabIndex = 8;
             this.button_addFilm.Text = "Add Film";
-            this.button_addFilm.UseVisualStyleBackColor = true;
+            this.button_addFilm.UseVisualStyleBackColor = false;
             this.button_addFilm.Click += new System.EventHandler(this.button_addFilm_Click);
             // 
             // flowLayoutPanel_requestsGenres
@@ -145,45 +191,55 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             // 
             // button_filter
             // 
+            this.button_filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_filter.FlatAppearance.BorderSize = 0;
+            this.button_filter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_filter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_filter.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_filter.Location = new System.Drawing.Point(149, 284);
             this.button_filter.Name = "button_filter";
             this.button_filter.Size = new System.Drawing.Size(111, 23);
             this.button_filter.TabIndex = 11;
             this.button_filter.Text = "Search";
-            this.button_filter.UseVisualStyleBackColor = true;
+            this.button_filter.UseVisualStyleBackColor = false;
             this.button_filter.Click += new System.EventHandler(this.button_filter_Click);
             // 
             // button_ShowPriorityFilms
             // 
+            this.button_ShowPriorityFilms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_ShowPriorityFilms.FlatAppearance.BorderSize = 0;
+            this.button_ShowPriorityFilms.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_ShowPriorityFilms.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_ShowPriorityFilms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ShowPriorityFilms.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_ShowPriorityFilms.Location = new System.Drawing.Point(149, 128);
             this.button_ShowPriorityFilms.Name = "button_ShowPriorityFilms";
             this.button_ShowPriorityFilms.Size = new System.Drawing.Size(111, 23);
             this.button_ShowPriorityFilms.TabIndex = 13;
             this.button_ShowPriorityFilms.Text = "Show Priority Films";
-            this.button_ShowPriorityFilms.UseVisualStyleBackColor = true;
+            this.button_ShowPriorityFilms.UseVisualStyleBackColor = false;
             this.button_ShowPriorityFilms.Click += new System.EventHandler(this.button_ShowPriorityFilms_Click);
             // 
             // button_AddToPriority
             // 
+            this.button_AddToPriority.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_AddToPriority.FlatAppearance.BorderSize = 0;
+            this.button_AddToPriority.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_AddToPriority.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_AddToPriority.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AddToPriority.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_AddToPriority.Location = new System.Drawing.Point(0, 99);
             this.button_AddToPriority.Name = "button_AddToPriority";
             this.button_AddToPriority.Size = new System.Drawing.Size(111, 23);
             this.button_AddToPriority.TabIndex = 14;
             this.button_AddToPriority.Text = "Add To Priority";
-            this.button_AddToPriority.UseVisualStyleBackColor = true;
+            this.button_AddToPriority.UseVisualStyleBackColor = false;
             this.button_AddToPriority.Click += new System.EventHandler(this.button_AddToPriority_Click);
-            // 
-            // watchedRequestControl
-            // 
-            this.watchedRequestControl.IsUnwatched = true;
-            this.watchedRequestControl.IsWatched = true;
-            this.watchedRequestControl.Location = new System.Drawing.Point(0, 313);
-            this.watchedRequestControl.Name = "watchedRequestControl";
-            this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
-            this.watchedRequestControl.TabIndex = 12;
             // 
             // panel_buttonInterface
             // 
+            this.panel_buttonInterface.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_buttonInterface.Controls.Add(this.flowLayoutPanel_requestsGenres);
             this.panel_buttonInterface.Controls.Add(this.button_filter);
             this.panel_buttonInterface.Controls.Add(this.button_ShowPriorityFilms);
@@ -197,21 +253,32 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             this.panel_buttonInterface.Controls.Add(this.button_ShowFilms);
             this.panel_buttonInterface.Location = new System.Drawing.Point(998, 99);
             this.panel_buttonInterface.Name = "panel_buttonInterface";
-            this.panel_buttonInterface.Size = new System.Drawing.Size(260, 439);
+            this.panel_buttonInterface.Size = new System.Drawing.Size(262, 439);
             this.panel_buttonInterface.TabIndex = 15;
             // 
             // panel_Info
             // 
+            this.panel_Info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panel_Info.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Info.Location = new System.Drawing.Point(35, 3);
             this.panel_Info.Name = "panel_Info";
             this.panel_Info.Size = new System.Drawing.Size(940, 90);
             this.panel_Info.TabIndex = 16;
             // 
+            // watchedRequestControl
+            // 
+            this.watchedRequestControl.IsUnwatched = true;
+            this.watchedRequestControl.IsWatched = true;
+            this.watchedRequestControl.Location = new System.Drawing.Point(0, 313);
+            this.watchedRequestControl.Name = "watchedRequestControl";
+            this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
+            this.watchedRequestControl.TabIndex = 12;
+            // 
             // MainControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.panel_Info);
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.textBox_Search);

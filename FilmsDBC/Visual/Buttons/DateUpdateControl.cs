@@ -81,5 +81,22 @@ namespace FilmsDBC.Visual.Buttons
                 }
             }
         }
-	}
+
+        private void DateUpdateControl_BackColorChanged(object sender, EventArgs e)
+        {
+			textBox_day.BackColor = this.BackColor;
+			textBox_month.BackColor = this.BackColor;
+			textBox_year.BackColor = this.BackColor;
+        }
+
+        private void DateUpdateControl_ForeColorChanged(object sender, EventArgs e)
+        {
+			label1.ForeColor = this.ForeColor;
+			label2.ForeColor = this.ForeColor;
+
+			textBox_day.ForeColor = this.ForeColor;
+			textBox_month.ForeColor = this.ForeColor;
+			textBox_year.ForeColor = this.ForeColor;
+        }
+    }
 }

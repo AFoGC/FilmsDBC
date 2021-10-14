@@ -39,46 +39,23 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 
 		public override void SetVisualDefault()
 		{
-			Color color = SystemColors.Control;
+			Color color = Color.FromArgb(53, 53, 53);
 
-			this.BackColor = color;
-			this.label_info.DefaultColor = color;
 			this.textBox_id.BackColor = color;
-			this.textBox_name.BackColor = color;
-			this.textBox_genre.BackColor = color;
-			this.textBox_realiseYear.BackColor = color;
-
-			this.label_info.SetDefaultButtonBlink();
 		}
 
 		internal override void setVisualSelected()
 		{
 			Color color = Color.FromArgb(0, 220, 0);
 
-			this.BackColor = color;
-			this.label_info.DefaultColor = color;
 			this.textBox_id.BackColor = color;
-			this.textBox_name.BackColor = color;
-			this.textBox_genre.BackColor = color;
-			this.textBox_realiseYear.BackColor = color;
-
-			this.label_info.MouseEnterColor = Color.FromArgb(0, 255, 0);
-			this.label_info.MouseDownColor = Color.FromArgb(0, 200, 0);
 		}
 
 		internal override void setVisualFinded()
 		{
 			Color color = Color.FromArgb(0, 0, 220);
 
-			this.BackColor = color;
-			this.label_info.DefaultColor = color;
 			this.textBox_id.BackColor = color;
-			this.textBox_name.BackColor = color;
-			this.textBox_genre.BackColor = color;
-			this.textBox_realiseYear.BackColor = color;
-
-			this.label_info.MouseEnterColor = Color.FromArgb(0, 0, 255);
-			this.label_info.MouseDownColor = Color.FromArgb(0, 0, 200);
 		}
 
 		private void label_info_Click(object sender, EventArgs e)
