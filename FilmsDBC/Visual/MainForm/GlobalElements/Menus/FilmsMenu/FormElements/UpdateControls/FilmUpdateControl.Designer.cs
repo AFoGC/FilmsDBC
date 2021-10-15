@@ -38,9 +38,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.textBox_comment = new System.Windows.Forms.TextBox();
             this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
+            this.dateUpdateControl_watchDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
             this.comboBox_genre = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.dateUpdateControl_watchDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
             this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
             this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.SuspendLayout();
@@ -110,6 +110,18 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.textBox_comment.Size = new System.Drawing.Size(500, 20);
             this.textBox_comment.TabIndex = 43;
             // 
+            // dateUpdateControl_watchDate
+            // 
+            this.dateUpdateControl_watchDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.dateUpdateControl_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dateUpdateControl_watchDate.Date = new System.DateTime(((long)(0)));
+            this.dateUpdateControl_watchDate.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dateUpdateControl_watchDate.Location = new System.Drawing.Point(395, 0);
+            this.dateUpdateControl_watchDate.Name = "dateUpdateControl_watchDate";
+            this.dateUpdateControl_watchDate.Size = new System.Drawing.Size(60, 20);
+            this.dateUpdateControl_watchDate.TabIndex = 34;
+            this.toolTip_description.SetToolTip(this.dateUpdateControl_watchDate, "watch date");
+            // 
             // comboBox_genre
             // 
             this.comboBox_genre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
@@ -125,10 +137,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.comboBox_genre.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox_genre.MinimumSize = new System.Drawing.Size(100, 20);
             this.comboBox_genre.Name = "comboBox_genre";
-            this.comboBox_genre.Padding = new System.Windows.Forms.Padding(1);
             this.comboBox_genre.Size = new System.Drawing.Size(100, 20);
             this.comboBox_genre.TabIndex = 44;
             this.comboBox_genre.Texts = "";
+            this.toolTip_description.SetToolTip(this.comboBox_genre, "genre");
             // 
             // label_comment
             // 
@@ -144,18 +156,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.label_comment.Text = "comment";
             this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_comment.Click += new System.EventHandler(this.label_comment_Click);
-            // 
-            // dateUpdateControl_watchDate
-            // 
-            this.dateUpdateControl_watchDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.dateUpdateControl_watchDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dateUpdateControl_watchDate.Date = new System.DateTime(((long)(0)));
-            this.dateUpdateControl_watchDate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dateUpdateControl_watchDate.Location = new System.Drawing.Point(395, 0);
-            this.dateUpdateControl_watchDate.Name = "dateUpdateControl_watchDate";
-            this.dateUpdateControl_watchDate.Size = new System.Drawing.Size(60, 20);
-            this.dateUpdateControl_watchDate.TabIndex = 34;
-            this.toolTip_description.SetToolTip(this.dateUpdateControl_watchDate, "watch date");
             // 
             // label_sources
             // 
@@ -187,10 +187,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.comboBox_mark.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox_mark.MinimumSize = new System.Drawing.Size(10, 20);
             this.comboBox_mark.Name = "comboBox_mark";
-            this.comboBox_mark.Padding = new System.Windows.Forms.Padding(1);
             this.comboBox_mark.Size = new System.Drawing.Size(45, 20);
             this.comboBox_mark.TabIndex = 45;
             this.comboBox_mark.Texts = "";
+            this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
             // 
             // FilmUpdateControl
             // 

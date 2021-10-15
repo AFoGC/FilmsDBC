@@ -44,7 +44,6 @@ namespace FilmsDBC.Visual.Buttons
             cmbList.ForeColor = listTextColor;
             cmbList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged);
             cmbList.TextChanged += new EventHandler(ComboBox_TextChanged);
-            cmbList.Location = new Point(0, 10);
             cmbList.FlatStyle = FlatStyle.Flat;
 
             //Button: Icon
@@ -52,7 +51,7 @@ namespace FilmsDBC.Visual.Buttons
             btnIcon.FlatStyle = FlatStyle.Flat;
             btnIcon.FlatAppearance.BorderSize = 0;
             btnIcon.BackColor = backColor;
-            btnIcon.Size = new Size(20, 20);
+            btnIcon.Size = new Size(18, 20);
             btnIcon.Cursor = Cursors.Hand;
             btnIcon.Click += new EventHandler(Icon_Click);//Open dropdown list
             btnIcon.Paint += new PaintEventHandler(Icon_Paint);//Draw icon
@@ -62,7 +61,7 @@ namespace FilmsDBC.Visual.Buttons
             lblText.AutoSize = false;
             lblText.BackColor = backColor;
             lblText.TextAlign = ContentAlignment.MiddleLeft;
-            lblText.Padding = new Padding(4, 0, 0, 0);
+            lblText.Padding = new Padding(0, 0, 0, 0);
             lblText.Font = new Font(this.Font.Name, 10F);
             //->Attach label events to user control event
             lblText.Click += new EventHandler(Surface_Click);//Select combo box
@@ -73,10 +72,10 @@ namespace FilmsDBC.Visual.Buttons
             this.Controls.Add(lblText);//2
             this.Controls.Add(btnIcon);//1
             this.Controls.Add(cmbList);//0
-            this.MinimumSize = new Size(200, 30);
+            this.MinimumSize = new Size(50, 30);
             this.Size = new Size(200, 30);
             this.ForeColor = Color.DimGray;
-            this.Padding = new Padding(borderSize);//Border Size
+            this.Padding = new Padding(borderSize + 2);//Border Size
             this.Font = new Font(this.Font.Name, 8F);
             base.BackColor = borderColor; //Border Color
             this.ResumeLayout();
@@ -110,7 +109,7 @@ namespace FilmsDBC.Visual.Buttons
             cmbList.Location = new Point()
             {
                 X = this.Width - this.Padding.Right - cmbList.Width,
-                Y = lblText.Bottom - cmbList.Height + 1
+                Y = lblText.Bottom - cmbList.Height
             };
         }
 
