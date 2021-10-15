@@ -22,6 +22,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
             InitializeComponent();
             moreInfoVisualizer = new MoreInfoFormVisualizer(panel_Info);
             updateVisualizer = new UpdateFormVisualizer(panel_Info);
+            MainInfo.TableCollection.TableLoad += new EventHandler(this.TableCollection_TablesLoad);
+        }
+
+        private void TableCollection_TablesLoad(object sender, EventArgs e)
+        {
+            LoadCategories();
         }
 
         private MoreInfoFormVisualizer moreInfoVisualizer;

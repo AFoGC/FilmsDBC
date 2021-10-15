@@ -75,7 +75,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 						//this.categoryControl.flowLayoutPanel_SimpleControls.Controls.Remove(simpleControl);
 						//this.categoryControl.RemoveSimpleControl();
 
-						if (MainInfo.MainForm.MainControl.ControlsCondition == 1)
+						if (MainInfo.MainForm.MainControl.ControlsCondition == MainControl.MenuCondition.Category)
 						{
 							int i = 0;
 							foreach (UserControl userControl in MainInfo.MainForm.MainControl.flowLayoutPanel_main.Controls)

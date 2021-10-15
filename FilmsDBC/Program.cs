@@ -33,9 +33,6 @@ namespace FilmsDBC
             }
 
 			MainInfo.LoadTables();
-			MainInfo.MainForm.MainControl.loadCategories();
-			MainInfo.MainForm.MainControl.loadGenres();
-			MainInfo.MainForm.BooksControl.LoadCategories();
 			Application.Run(MainInfo.MainForm);
 		}
 

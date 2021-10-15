@@ -75,7 +75,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			this.textBox_realiseYear.Text = Film.FormatToString(serie.Film.RealiseYear, defFilm.RealiseYear);
 			this.checkBox_watched.Checked = serie.Film.Watched;
 			this.dateUpdateControl_watchDate.Date = serie.Film.DateOfWatch;
-			this.comboBox_mark.Text = VisualHelper.markToText(Film.FormatToString(serie.Film.Mark, defFilm.Mark));
+			this.comboBox_mark.Texts = VisualHelper.markToText(Film.FormatToString(serie.Film.Mark, defFilm.Mark));
 			this.textBox_countOfviews.Text = Film.FormatToString(serie.Film.CountOfViews, defFilm.CountOfViews);
 			this.textBox_comment.Text = serie.Film.Comment;
 

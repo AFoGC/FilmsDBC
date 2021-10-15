@@ -21,12 +21,28 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 {
     public partial class MainControl : UserControl
 	{
+		public enum MenuCondition
+		{
+			Category = 1,
+			Film = 2,
+			Serie = 3,
+			PriorityFilm = 4
+		}
+
+
 		public MainControl()
 		{
 			InitializeComponent();
 			moreInfoVisualizer = new MoreInfoFormVisualizer(panel_Info);
 			updateVisualizer = new UpdateFormVisualizer(panel_Info);
+			MainInfo.TableCollection.TableLoad += new EventHandler(this.TableCollection_TablesLoad);
 		}
+
+		private void TableCollection_TablesLoad(object sender, EventArgs e)
+        {
+			loadCategories();
+			loadGenres();
+        }
 
 		private MoreInfoFormVisualizer moreInfoVisualizer;
 		public MoreInfoFormVisualizer MoreInfoVisualizer
@@ -72,16 +88,24 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 		public void loadFilmTable()
 		{
 			clearControls();
+			controlsCondition = MenuCondition.Film;
+			controlInBuffer = null;
+
 			foreach (Film film in MainInfo.Tables.FilmsTable)
 			{
 				tableControls.Add(new FilmControl(film));
 			}
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
+
+			unLockGenreButtons();
 		}
 
 		public void loadSerieTable()
 		{
 			clearControls();
+			controlsCondition = MenuCondition.Serie;
+			controlInBuffer = null;
+
 			foreach (Film film in MainInfo.Tables.FilmsTable)
 			{
 				if (film.Genre.IsSerialGenre)
@@ -90,11 +114,14 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 				}
 			}
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
+			lockNotSerialGenreButtons();
 		}
 
 		public void loadCategories()
 		{
 			clearControls();
+			controlsCondition = MenuCondition.Category;
+			controlInBuffer = null;
 
 			foreach (Category category in MainInfo.Tables.CategoriesTable)
 			{
@@ -110,11 +137,14 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 			}
 
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
+			unLockGenreButtons();
 		}
 
 		public void loadPriorityTable()
 		{
 			clearControls();
+			controlsCondition = MenuCondition.PriorityFilm;
+			controlInBuffer = null;
 
 			PriorityFilmsTable priTable = MainInfo.Tables.PriorityFilmsTable;
 
@@ -135,40 +165,29 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 			}
 
 			flowLayoutPanel_main.Controls.AddRange(tableControls.ToArray());
+			unLockGenreButtons();
 		}
 
-		private int controlsCondition = 1;
-		public int ControlsCondition { get { return controlsCondition; } }
+		private MenuCondition controlsCondition = MenuCondition.Category;
+		public MenuCondition ControlsCondition { get { return controlsCondition; } }
 		private void button_ShowCategories_Click(object sender, EventArgs e)
 		{
-			controlsCondition = 1;
 			loadCategories();
-			controlInBuffer = null;
-			unLockGenreButtons();
 		}
 
 		private void button_ShowFilms_Click(object sender, EventArgs e)
 		{
-			controlsCondition = 2;
 			loadFilmTable();
-			controlInBuffer = null;
-			unLockGenreButtons();
 		}
 
 		private void button_ShowSeries_Click(object sender, EventArgs e)
 		{
-			controlsCondition = 3;
 			loadSerieTable();
-			controlInBuffer = null;
-			lockNotSerialGenreButtons();
 		}
 
 		private void button_ShowPriorityFilms_Click(object sender, EventArgs e)
 		{
-			controlsCondition = 4;
 			loadPriorityTable();
-			controlInBuffer = null;
-			unLockGenreButtons();
 		}
 
 		private void lockNotSerialGenreButtons()
@@ -216,7 +235,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 
 		private void button_addCategory_Click(object sender, EventArgs e)
 		{
-			if (controlsCondition == 1)
+			if (controlsCondition == MenuCondition.Category)
 			{
 				CategoriesTable categoryTable = MainInfo.Tables.CategoriesTable;
 				categoryTable.AddElement();
@@ -233,13 +252,13 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 			IControls control = new SimpleControl(film);
 			switch (controlsCondition)
 			{
-				case 1:
+				case MenuCondition.Category:
 					break;
-				case 2:
+				case MenuCondition.Film:
 					control = new FilmControl(film);
 					break;
-				case 3:
-					film.Genre =  MainInfo.Tables.GenresTable.GetFirstSeriealGenre(); //(Genre)tables.GetTable(typeof(Genre)).GetElement(2);
+				case MenuCondition.Serie:
+					film.Genre =  MainInfo.Tables.GenresTable.GetFirstSeriealGenre();
 					control = new SerieControl(film);
 					break;
 				default:
@@ -255,7 +274,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
 			if (controlInBuffer != null)
 			{
 				MainInfo.Tables.PriorityFilmsTable.AddElement();
-				PriorityFilm priorityFilm = MainInfo.Tables.PriorityFilmsTable.GetLastElement; //(PriorityFilm)tables.GetTable(typeof(PriorityFilm)).GetLastElement;
+				PriorityFilm priorityFilm = MainInfo.Tables.PriorityFilmsTable.GetLastElement;
 				priorityFilm.Film = controlInBuffer.FilmInfo;
 			}
 		}
