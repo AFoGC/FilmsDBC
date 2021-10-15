@@ -39,11 +39,11 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
             this.button_ShowPriorityFilms = new System.Windows.Forms.Button();
             this.button_AddToPriority = new System.Windows.Forms.Button();
             this.button_save = new System.Windows.Forms.Button();
-            this.watchedRequestControl = new FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements.WatchedRequestControl();
             this.button_addCategory = new System.Windows.Forms.Button();
             this.button_addBook = new System.Windows.Forms.Button();
             this.button_ShowCategories = new System.Windows.Forms.Button();
             this.button_ShowBooks = new System.Windows.Forms.Button();
+            this.watchedRequestControl = new FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements.WatchedRequestControl();
             this.panel_buttonInterface.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,15 +142,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
             this.button_save.Text = "Save Tables";
             this.button_save.UseVisualStyleBackColor = true;
             // 
-            // watchedRequestControl
-            // 
-            this.watchedRequestControl.IsUnwatched = true;
-            this.watchedRequestControl.IsWatched = true;
-            this.watchedRequestControl.Location = new System.Drawing.Point(0, 313);
-            this.watchedRequestControl.Name = "watchedRequestControl";
-            this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
-            this.watchedRequestControl.TabIndex = 12;
-            // 
             // button_addCategory
             // 
             this.button_addCategory.Location = new System.Drawing.Point(0, 41);
@@ -187,6 +178,15 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
             this.button_ShowBooks.TabIndex = 2;
             this.button_ShowBooks.Text = "Show Books";
             this.button_ShowBooks.UseVisualStyleBackColor = true;
+            // 
+            // watchedRequestControl
+            // 
+            this.watchedRequestControl.IsUnwatched = true;
+            this.watchedRequestControl.IsWatched = true;
+            this.watchedRequestControl.Location = new System.Drawing.Point(0, 313);
+            this.watchedRequestControl.Name = "watchedRequestControl";
+            this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
+            this.watchedRequestControl.TabIndex = 12;
             // 
             // BooksControl
             // 

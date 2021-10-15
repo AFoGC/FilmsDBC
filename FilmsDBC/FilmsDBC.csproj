@@ -76,6 +76,9 @@
     <Compile Include="Visual\Buttons\ClickButton.designer.cs">
       <DependentUpon>ClickButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visual\Buttons\DarkComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Visual\Buttons\PressButton.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -33,16 +33,16 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.components = new System.ComponentModel.Container();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
-            this.comboBox_genre = new System.Windows.Forms.ComboBox();
             this.textBox_realiseYear = new System.Windows.Forms.TextBox();
             this.checkBox_watched = new System.Windows.Forms.CheckBox();
-            this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfviews = new System.Windows.Forms.TextBox();
             this.textBox_comment = new System.Windows.Forms.TextBox();
             this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
+            this.comboBox_genre = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.dateUpdateControl_watchDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
             this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -67,19 +67,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.textBox_name.TabIndex = 15;
             this.toolTip_description.SetToolTip(this.textBox_name, "name");
             // 
-            // comboBox_genre
-            // 
-            this.comboBox_genre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.comboBox_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_genre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_genre.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_genre.FormattingEnabled = true;
-            this.comboBox_genre.Location = new System.Drawing.Point(210, 0);
-            this.comboBox_genre.Name = "comboBox_genre";
-            this.comboBox_genre.Size = new System.Drawing.Size(100, 21);
-            this.comboBox_genre.TabIndex = 16;
-            this.toolTip_description.SetToolTip(this.comboBox_genre, "genre");
-            // 
             // textBox_realiseYear
             // 
             this.textBox_realiseYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
@@ -102,17 +89,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.checkBox_watched.UseVisualStyleBackColor = true;
             this.checkBox_watched.Click += new System.EventHandler(this.checkBox_watched_Click);
             // 
-            // comboBox_mark
-            // 
-            this.comboBox_mark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.comboBox_mark.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_mark.FormattingEnabled = true;
-            this.comboBox_mark.Location = new System.Drawing.Point(455, 0);
-            this.comboBox_mark.Name = "comboBox_mark";
-            this.comboBox_mark.Size = new System.Drawing.Size(45, 21);
-            this.comboBox_mark.TabIndex = 29;
-            this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
-            // 
             // textBox_countOfviews
             // 
             this.textBox_countOfviews.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
@@ -133,6 +109,26 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.textBox_comment.Name = "textBox_comment";
             this.textBox_comment.Size = new System.Drawing.Size(500, 20);
             this.textBox_comment.TabIndex = 43;
+            // 
+            // comboBox_genre
+            // 
+            this.comboBox_genre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_genre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
+            this.comboBox_genre.BorderSize = 1;
+            this.comboBox_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_genre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_genre.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_genre.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_genre.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_genre.Location = new System.Drawing.Point(210, 0);
+            this.comboBox_genre.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox_genre.MinimumSize = new System.Drawing.Size(100, 20);
+            this.comboBox_genre.Name = "comboBox_genre";
+            this.comboBox_genre.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBox_genre.Size = new System.Drawing.Size(100, 20);
+            this.comboBox_genre.TabIndex = 44;
+            this.comboBox_genre.Texts = "";
             // 
             // label_comment
             // 
@@ -176,20 +172,40 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
+            // comboBox_mark
+            // 
+            this.comboBox_mark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_mark.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
+            this.comboBox_mark.BorderSize = 1;
+            this.comboBox_mark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_mark.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_mark.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.Location = new System.Drawing.Point(455, 0);
+            this.comboBox_mark.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox_mark.MinimumSize = new System.Drawing.Size(10, 20);
+            this.comboBox_mark.Name = "comboBox_mark";
+            this.comboBox_mark.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBox_mark.Size = new System.Drawing.Size(45, 20);
+            this.comboBox_mark.TabIndex = 45;
+            this.comboBox_mark.Texts = "";
+            // 
             // FilmUpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.comboBox_mark);
+            this.Controls.Add(this.comboBox_genre);
             this.Controls.Add(this.textBox_comment);
             this.Controls.Add(this.label_comment);
             this.Controls.Add(this.dateUpdateControl_watchDate);
             this.Controls.Add(this.label_sources);
             this.Controls.Add(this.textBox_countOfviews);
-            this.Controls.Add(this.comboBox_mark);
             this.Controls.Add(this.checkBox_watched);
             this.Controls.Add(this.textBox_realiseYear);
-            this.Controls.Add(this.comboBox_genre);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
             this.Name = "FilmUpdateControl";
@@ -205,12 +221,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
         internal System.Windows.Forms.CheckBox checkBox_watched;
         internal System.Windows.Forms.TextBox textBox_countOfviews;
         internal System.Windows.Forms.TextBox textBox_id;
-        internal System.Windows.Forms.ComboBox comboBox_genre;
-        internal System.Windows.Forms.ComboBox comboBox_mark;
         private FilmsDBC.Visual.Buttons.ClickButton label_sources;
         internal DateUpdateControl dateUpdateControl_watchDate;
         private FilmsDBC.Visual.Buttons.ClickButton label_comment;
         internal System.Windows.Forms.TextBox textBox_comment;
         private System.Windows.Forms.ToolTip toolTip_description;
+        private DarkComboBox comboBox_genre;
+        private DarkComboBox comboBox_mark;
     }
 }

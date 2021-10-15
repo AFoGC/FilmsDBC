@@ -142,6 +142,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.clickButton_copyUrl.Text = "copy url";
             this.clickButton_copyUrl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip_description.SetToolTip(this.clickButton_copyUrl, "copy url");
+            this.clickButton_copyUrl.Click += new System.EventHandler(this.clickButton_copyUrl_Click);
             // 
             // clickButton_update
             // 

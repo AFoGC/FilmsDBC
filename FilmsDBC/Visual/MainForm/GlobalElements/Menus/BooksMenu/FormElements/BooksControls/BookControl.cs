@@ -99,5 +99,13 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
         {
             MainInfo.MainForm.BooksControl.UpdateVisualizer.OpenUpdateControl(this, MainInfo.MainForm.BooksControl.MoreInfoVisualizer);
         }
+
+        private void clickButton_copyUrl_Click(object sender, EventArgs e)
+        {
+            if (bookInfo.Sources.Count != 0)
+            {
+                Clipboard.SetText(bookInfo.Sources[0].sourceUrl);
+            }
+        }
     }
 }
