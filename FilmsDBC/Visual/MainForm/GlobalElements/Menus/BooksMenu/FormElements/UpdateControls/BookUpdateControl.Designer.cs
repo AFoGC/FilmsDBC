@@ -37,16 +37,18 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.checkBox_readed = new System.Windows.Forms.CheckBox();
             this.textBox_author = new System.Windows.Forms.TextBox();
             this.dateUpdateControl_fullReadDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
-            this.comboBox_mark = new System.Windows.Forms.ComboBox();
             this.textBox_countOfReadings = new System.Windows.Forms.TextBox();
-            this.comboBox_genre = new System.Windows.Forms.ComboBox();
             this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.comboBox_genre = new FilmsDBC.Visual.Buttons.DarkComboBox();
+            this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.SuspendLayout();
             // 
             // textBox_name
             // 
+            this.textBox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_name.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_name.Location = new System.Drawing.Point(30, 0);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(180, 20);
@@ -55,6 +57,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             // 
             // textBox_id
             // 
+            this.textBox_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_id.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_id.Location = new System.Drawing.Point(0, 0);
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.ReadOnly = true;
@@ -64,7 +69,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             // 
             // textBox_realiseYear
             // 
+            this.textBox_realiseYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.textBox_realiseYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_realiseYear.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_realiseYear.Location = new System.Drawing.Point(310, 0);
             this.textBox_realiseYear.Name = "textBox_realiseYear";
             this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
@@ -83,7 +90,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             // 
             // textBox_author
             // 
+            this.textBox_author.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.textBox_author.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_author.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_author.Location = new System.Drawing.Point(395, 0);
             this.textBox_author.Name = "textBox_author";
             this.textBox_author.Size = new System.Drawing.Size(100, 20);
@@ -92,45 +101,32 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             // 
             // dateUpdateControl_fullReadDate
             // 
-            this.dateUpdateControl_fullReadDate.BackColor = System.Drawing.SystemColors.Window;
+            this.dateUpdateControl_fullReadDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.dateUpdateControl_fullReadDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dateUpdateControl_fullReadDate.Date = new System.DateTime(((long)(0)));
+            this.dateUpdateControl_fullReadDate.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.dateUpdateControl_fullReadDate.Location = new System.Drawing.Point(495, 0);
             this.dateUpdateControl_fullReadDate.Name = "dateUpdateControl_fullReadDate";
             this.dateUpdateControl_fullReadDate.Size = new System.Drawing.Size(60, 20);
             this.dateUpdateControl_fullReadDate.TabIndex = 37;
             this.toolTip_description.SetToolTip(this.dateUpdateControl_fullReadDate, "full read date");
             // 
-            // comboBox_mark
-            // 
-            this.comboBox_mark.FormattingEnabled = true;
-            this.comboBox_mark.Location = new System.Drawing.Point(555, 0);
-            this.comboBox_mark.Name = "comboBox_mark";
-            this.comboBox_mark.Size = new System.Drawing.Size(45, 21);
-            this.comboBox_mark.TabIndex = 38;
-            this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
-            // 
             // textBox_countOfReadings
             // 
+            this.textBox_countOfReadings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_countOfReadings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_countOfReadings.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_countOfReadings.Location = new System.Drawing.Point(600, 0);
             this.textBox_countOfReadings.Name = "textBox_countOfReadings";
             this.textBox_countOfReadings.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfReadings.TabIndex = 39;
             this.toolTip_description.SetToolTip(this.textBox_countOfReadings, "count of readings");
             // 
-            // comboBox_genre
-            // 
-            this.comboBox_genre.FormattingEnabled = true;
-            this.comboBox_genre.Location = new System.Drawing.Point(210, 0);
-            this.comboBox_genre.Name = "comboBox_genre";
-            this.comboBox_genre.Size = new System.Drawing.Size(100, 21);
-            this.comboBox_genre.TabIndex = 33;
-            this.toolTip_description.SetToolTip(this.comboBox_genre, "genre");
-            // 
             // label_comment
             // 
-            this.label_comment.BackColor = System.Drawing.SystemColors.Control;
-            this.label_comment.DefaultColor = System.Drawing.SystemColors.Control;
+            this.label_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_comment.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_comment.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label_comment.Location = new System.Drawing.Point(670, 0);
             this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
             this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
@@ -142,8 +138,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             // 
             // label_sources
             // 
-            this.label_sources.BackColor = System.Drawing.SystemColors.Control;
-            this.label_sources.DefaultColor = System.Drawing.SystemColors.Control;
+            this.label_sources.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_sources.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_sources.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label_sources.Location = new System.Drawing.Point(770, 0);
             this.label_sources.MouseDownColor = System.Drawing.Color.Empty;
             this.label_sources.MouseEnterColor = System.Drawing.Color.Empty;
@@ -154,19 +151,62 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
+            // comboBox_genre
+            // 
+            this.comboBox_genre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_genre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
+            this.comboBox_genre.BorderSize = 1;
+            this.comboBox_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_genre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_genre.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_genre.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_genre.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_genre.Location = new System.Drawing.Point(210, 0);
+            this.comboBox_genre.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox_genre.MinimumSize = new System.Drawing.Size(100, 20);
+            this.comboBox_genre.Name = "comboBox_genre";
+            this.comboBox_genre.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBox_genre.Size = new System.Drawing.Size(100, 20);
+            this.comboBox_genre.TabIndex = 45;
+            this.comboBox_genre.Texts = "";
+            this.toolTip_description.SetToolTip(this.comboBox_genre, "genre");
+            // 
+            // comboBox_mark
+            // 
+            this.comboBox_mark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_mark.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
+            this.comboBox_mark.BorderSize = 1;
+            this.comboBox_mark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_mark.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_mark.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.Location = new System.Drawing.Point(555, 0);
+            this.comboBox_mark.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox_mark.MinimumSize = new System.Drawing.Size(10, 20);
+            this.comboBox_mark.Name = "comboBox_mark";
+            this.comboBox_mark.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBox_mark.Size = new System.Drawing.Size(45, 20);
+            this.comboBox_mark.TabIndex = 46;
+            this.comboBox_mark.Texts = "";
+            this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
+            // 
             // BookUpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.comboBox_mark);
+            this.Controls.Add(this.comboBox_genre);
             this.Controls.Add(this.label_comment);
             this.Controls.Add(this.label_sources);
             this.Controls.Add(this.textBox_countOfReadings);
-            this.Controls.Add(this.comboBox_mark);
             this.Controls.Add(this.dateUpdateControl_fullReadDate);
             this.Controls.Add(this.textBox_author);
             this.Controls.Add(this.checkBox_readed);
             this.Controls.Add(this.textBox_realiseYear);
-            this.Controls.Add(this.comboBox_genre);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
             this.Margin = new System.Windows.Forms.Padding(0);
@@ -182,14 +222,14 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
         private System.Windows.Forms.ToolTip toolTip_description;
         internal System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.TextBox textBox_id;
-        private System.Windows.Forms.ComboBox comboBox_genre;
         internal System.Windows.Forms.TextBox textBox_realiseYear;
         internal System.Windows.Forms.CheckBox checkBox_readed;
         internal System.Windows.Forms.TextBox textBox_author;
         internal Buttons.DateUpdateControl dateUpdateControl_fullReadDate;
-        internal System.Windows.Forms.ComboBox comboBox_mark;
         private System.Windows.Forms.TextBox textBox_countOfReadings;
         private Buttons.ClickButton label_comment;
         private Buttons.ClickButton label_sources;
+        private Buttons.DarkComboBox comboBox_genre;
+        private Buttons.DarkComboBox comboBox_mark;
     }
 }

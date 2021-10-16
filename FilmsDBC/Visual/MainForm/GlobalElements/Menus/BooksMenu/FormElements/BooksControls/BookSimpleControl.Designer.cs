@@ -43,63 +43,73 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             // 
             // textBox_id
             // 
-            this.textBox_id.Location = new System.Drawing.Point(0, 0);
+            this.textBox_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_id.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_id.Location = new System.Drawing.Point(2, 1);
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.ReadOnly = true;
-            this.textBox_id.Size = new System.Drawing.Size(30, 20);
+            this.textBox_id.Size = new System.Drawing.Size(27, 13);
             this.textBox_id.TabIndex = 2;
             this.toolTip_description.SetToolTip(this.textBox_id, "id");
             // 
             // textBox_name
             // 
-            this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_name.Location = new System.Drawing.Point(30, 0);
+            this.textBox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_name.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_name.Location = new System.Drawing.Point(31, 1);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.ReadOnly = true;
-            this.textBox_name.Size = new System.Drawing.Size(180, 20);
+            this.textBox_name.Size = new System.Drawing.Size(178, 13);
             this.textBox_name.TabIndex = 16;
             this.toolTip_description.SetToolTip(this.textBox_name, "name");
             // 
             // textBox_genre
             // 
-            this.textBox_genre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_genre.Location = new System.Drawing.Point(210, 0);
+            this.textBox_genre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_genre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_genre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_genre.Location = new System.Drawing.Point(211, 1);
             this.textBox_genre.Name = "textBox_genre";
             this.textBox_genre.ReadOnly = true;
-            this.textBox_genre.Size = new System.Drawing.Size(100, 20);
+            this.textBox_genre.Size = new System.Drawing.Size(98, 13);
             this.textBox_genre.TabIndex = 26;
             this.toolTip_description.SetToolTip(this.textBox_genre, "genre");
             // 
             // textBox_realiseYear
             // 
-            this.textBox_realiseYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_realiseYear.Location = new System.Drawing.Point(310, 0);
+            this.textBox_realiseYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_realiseYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_realiseYear.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_realiseYear.Location = new System.Drawing.Point(311, 1);
             this.textBox_realiseYear.Name = "textBox_realiseYear";
             this.textBox_realiseYear.ReadOnly = true;
-            this.textBox_realiseYear.Size = new System.Drawing.Size(30, 20);
+            this.textBox_realiseYear.Size = new System.Drawing.Size(28, 13);
             this.textBox_realiseYear.TabIndex = 27;
             this.toolTip_description.SetToolTip(this.textBox_realiseYear, "realise year");
             // 
             // checkBox_readed
             // 
             this.checkBox_readed.AutoSize = true;
-            this.checkBox_readed.Location = new System.Drawing.Point(360, 3);
-            this.checkBox_readed.Name = "checkBox_watched";
+            this.checkBox_readed.Location = new System.Drawing.Point(360, 1);
+            this.checkBox_readed.Name = "checkBox_readed";
             this.checkBox_readed.Size = new System.Drawing.Size(15, 14);
             this.checkBox_readed.TabIndex = 28;
             this.toolTip_description.SetToolTip(this.checkBox_readed, "is watched");
             this.checkBox_readed.UseVisualStyleBackColor = true;
             this.checkBox_readed.Click += new System.EventHandler(this.checkBox_readed_Click);
             // 
-            // label_info
+            // clickButton_info
             // 
-            this.clickButton_info.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_info.DefaultColor = System.Drawing.SystemColors.Control;
-            this.clickButton_info.Location = new System.Drawing.Point(395, 0);
+            this.clickButton_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_info.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_info.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.clickButton_info.Location = new System.Drawing.Point(395, 1);
             this.clickButton_info.MouseDownColor = System.Drawing.Color.Empty;
             this.clickButton_info.MouseEnterColor = System.Drawing.Color.Empty;
-            this.clickButton_info.Name = "label_info";
-            this.clickButton_info.Size = new System.Drawing.Size(110, 20);
+            this.clickButton_info.Name = "clickButton_info";
+            this.clickButton_info.Size = new System.Drawing.Size(110, 13);
             this.clickButton_info.TabIndex = 40;
             this.clickButton_info.Text = "More Info";
             this.clickButton_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -110,6 +120,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.clickButton_info);
             this.Controls.Add(this.checkBox_readed);
             this.Controls.Add(this.textBox_realiseYear);
@@ -118,8 +129,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.Controls.Add(this.textBox_id);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "BookSimpleControl";
-            this.Size = new System.Drawing.Size(505, 20);
+            this.Size = new System.Drawing.Size(505, 15);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

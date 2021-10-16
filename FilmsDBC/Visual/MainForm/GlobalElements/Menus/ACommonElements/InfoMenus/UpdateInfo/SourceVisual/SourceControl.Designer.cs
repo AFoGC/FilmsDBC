@@ -37,6 +37,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             // 
             // textBox_name
             // 
+            this.textBox_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_name.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_name.Location = new System.Drawing.Point(0, 0);
             this.textBox_name.MaxLength = 13;
             this.textBox_name.Name = "textBox_name";
@@ -45,6 +48,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             // 
             // textBox_url
             // 
+            this.textBox_url.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_url.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_url.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_url.Location = new System.Drawing.Point(100, 0);
             this.textBox_url.Name = "textBox_url";
             this.textBox_url.Size = new System.Drawing.Size(250, 20);
@@ -52,7 +58,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             // 
             // pictureBox_prioritize
             // 
-            this.pictureBox_prioritize.BackColor = System.Drawing.SystemColors.Info;
+            this.pictureBox_prioritize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.pictureBox_prioritize.Location = new System.Drawing.Point(365, 0);
             this.pictureBox_prioritize.Name = "pictureBox_prioritize";
             this.pictureBox_prioritize.Size = new System.Drawing.Size(20, 20);
@@ -64,6 +70,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.pictureBox_prioritize);
             this.Controls.Add(this.textBox_url);
             this.Controls.Add(this.textBox_name);

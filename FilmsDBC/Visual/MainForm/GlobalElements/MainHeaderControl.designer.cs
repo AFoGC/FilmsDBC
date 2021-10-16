@@ -37,8 +37,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // clickButton_minimize
             // 
             this.clickButton_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clickButton_minimize.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_minimize.DefaultColor = System.Drawing.SystemColors.Control;
+            this.clickButton_minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_minimize.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_minimize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.clickButton_minimize.Location = new System.Drawing.Point(380, 0);
             this.clickButton_minimize.Margin = new System.Windows.Forms.Padding(0);
             this.clickButton_minimize.MouseDownColor = System.Drawing.Color.Empty;
@@ -53,8 +54,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // clickButton_maximize
             // 
             this.clickButton_maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clickButton_maximize.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_maximize.DefaultColor = System.Drawing.SystemColors.Control;
+            this.clickButton_maximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_maximize.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_maximize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.clickButton_maximize.Location = new System.Drawing.Point(420, 0);
             this.clickButton_maximize.Margin = new System.Windows.Forms.Padding(0);
             this.clickButton_maximize.MouseDownColor = System.Drawing.Color.Empty;
@@ -69,8 +71,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // clickButton_close
             // 
             this.clickButton_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clickButton_close.BackColor = System.Drawing.SystemColors.Control;
-            this.clickButton_close.DefaultColor = System.Drawing.SystemColors.Control;
+            this.clickButton_close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_close.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_close.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.clickButton_close.Location = new System.Drawing.Point(460, 0);
             this.clickButton_close.Margin = new System.Windows.Forms.Padding(0);
             this.clickButton_close.MouseDownColor = System.Drawing.Color.Empty;
@@ -86,7 +89,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.clickButton_minimize);
             this.Controls.Add(this.clickButton_maximize);
             this.Controls.Add(this.clickButton_close);

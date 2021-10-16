@@ -43,8 +43,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             this.button_ShowPriorityFilms = new System.Windows.Forms.Button();
             this.button_AddToPriority = new System.Windows.Forms.Button();
             this.panel_buttonInterface = new System.Windows.Forms.Panel();
-            this.panel_Info = new System.Windows.Forms.Panel();
             this.watchedRequestControl = new FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.MenuElements.WatchedRequestControl();
+            this.panel_Info = new System.Windows.Forms.Panel();
             this.panel_buttonInterface.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,15 +256,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             this.panel_buttonInterface.Size = new System.Drawing.Size(262, 439);
             this.panel_buttonInterface.TabIndex = 15;
             // 
-            // panel_Info
-            // 
-            this.panel_Info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.panel_Info.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Info.Location = new System.Drawing.Point(35, 3);
-            this.panel_Info.Name = "panel_Info";
-            this.panel_Info.Size = new System.Drawing.Size(940, 90);
-            this.panel_Info.TabIndex = 16;
-            // 
             // watchedRequestControl
             // 
             this.watchedRequestControl.IsUnwatched = true;
@@ -273,6 +264,15 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu
             this.watchedRequestControl.Name = "watchedRequestControl";
             this.watchedRequestControl.Size = new System.Drawing.Size(259, 20);
             this.watchedRequestControl.TabIndex = 12;
+            // 
+            // panel_Info
+            // 
+            this.panel_Info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.panel_Info.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Info.Location = new System.Drawing.Point(35, 3);
+            this.panel_Info.Name = "panel_Info";
+            this.panel_Info.Size = new System.Drawing.Size(940, 90);
+            this.panel_Info.TabIndex = 16;
             // 
             // MainControl
             // 

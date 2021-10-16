@@ -36,22 +36,34 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             // 
             // button_update
             // 
+            this.button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_update.FlatAppearance.BorderSize = 0;
+            this.button_update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_update.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_update.Location = new System.Drawing.Point(0, 0);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(85, 20);
             this.button_update.TabIndex = 2;
             this.button_update.Text = "Подтвердить";
-            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.UseVisualStyleBackColor = false;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // button_addElement
             // 
+            this.button_addElement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_addElement.FlatAppearance.BorderSize = 0;
+            this.button_addElement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_addElement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_addElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_addElement.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_addElement.Location = new System.Drawing.Point(85, 0);
             this.button_addElement.Name = "button_addElement";
             this.button_addElement.Size = new System.Drawing.Size(85, 20);
             this.button_addElement.TabIndex = 3;
             this.button_addElement.Text = "Добавить";
-            this.button_addElement.UseVisualStyleBackColor = true;
+            this.button_addElement.UseVisualStyleBackColor = false;
             this.button_addElement.Click += new System.EventHandler(this.button_addElement_Click);
             // 
             // flowLayoutPanel_sources
@@ -66,6 +78,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.flowLayoutPanel_sources);
             this.Controls.Add(this.button_addElement);
             this.Controls.Add(this.button_update);

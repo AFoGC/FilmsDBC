@@ -36,11 +36,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // 
             // pressButton_Books
             // 
-            this.pressButton_Books.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pressButton_Books.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.pressButton_Books.ClickLocked = false;
-            this.pressButton_Books.DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.pressButton_Books.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.pressButton_Books.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.pressButton_Books.Included = false;
-            this.pressButton_Books.Included_DefaultColor = System.Drawing.SystemColors.Control;
+            this.pressButton_Books.Included_DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.pressButton_Books.Included_MouseDownColor = System.Drawing.Color.Empty;
             this.pressButton_Books.Included_MouseEnterColor = System.Drawing.Color.Empty;
             this.pressButton_Books.Location = new System.Drawing.Point(120, 0);
@@ -55,11 +56,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // 
             // pressButton_Settings
             // 
-            this.pressButton_Settings.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pressButton_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.pressButton_Settings.ClickLocked = false;
-            this.pressButton_Settings.DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.pressButton_Settings.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.pressButton_Settings.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.pressButton_Settings.Included = false;
-            this.pressButton_Settings.Included_DefaultColor = System.Drawing.SystemColors.Control;
+            this.pressButton_Settings.Included_DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.pressButton_Settings.Included_MouseDownColor = System.Drawing.Color.Empty;
             this.pressButton_Settings.Included_MouseEnterColor = System.Drawing.Color.Empty;
             this.pressButton_Settings.Location = new System.Drawing.Point(220, 0);
@@ -74,11 +76,12 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // 
             // pressButton_Main
             // 
-            this.pressButton_Main.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pressButton_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.pressButton_Main.ClickLocked = false;
-            this.pressButton_Main.DefaultColor = System.Drawing.SystemColors.ControlDark;
+            this.pressButton_Main.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.pressButton_Main.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.pressButton_Main.Included = false;
-            this.pressButton_Main.Included_DefaultColor = System.Drawing.SystemColors.Control;
+            this.pressButton_Main.Included_DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.pressButton_Main.Included_MouseDownColor = System.Drawing.Color.Empty;
             this.pressButton_Main.Included_MouseEnterColor = System.Drawing.Color.Empty;
             this.pressButton_Main.Location = new System.Drawing.Point(20, 0);
@@ -95,7 +98,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.Controls.Add(this.pressButton_Books);
             this.Controls.Add(this.pressButton_Settings);
             this.Controls.Add(this.pressButton_Main);

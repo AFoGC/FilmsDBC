@@ -45,12 +45,18 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             // 
             // button_update
             // 
+            this.button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button_update.FlatAppearance.BorderSize = 0;
+            this.button_update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.button_update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_update.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button_update.Location = new System.Drawing.Point(3, 3);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(90, 20);
             this.button_update.TabIndex = 3;
             this.button_update.Text = "Подтвердить";
-            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.UseVisualStyleBackColor = false;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // pictureBox_Close
@@ -65,14 +71,15 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             this.pictureBox_Close.TabStop = false;
             this.pictureBox_Close.Click += new System.EventHandler(this.pictureBox_Close_Click);
             // 
-            // UpadateControl
+            // UpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.pictureBox_Close);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.flowLayoutPanel_main);
-            this.Name = "UpadateControl";
+            this.Name = "UpdateControl";
             this.Size = new System.Drawing.Size(940, 90);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             this.ResumeLayout(false);
