@@ -56,6 +56,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
 					comboBox_Profiles.SelectedItem = prof;
 				}
 			}
+			comboBox_remove.Texts = "";
 
 		}
 
@@ -82,7 +83,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu.FormElement
 
 		private void clickButton_remove_Click(object sender, EventArgs e)
 		{
-            if (comboBox_remove.Text != "")
+            if (comboBox_remove.Texts != "")
             {
 				Profile prof = (Profile)comboBox_remove.SelectedItem;
 				Directory.Delete(prof.ProfilePath, true);

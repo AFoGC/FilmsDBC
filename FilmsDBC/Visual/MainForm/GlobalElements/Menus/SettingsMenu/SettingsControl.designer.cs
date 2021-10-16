@@ -37,7 +37,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu
             // 
             this.flowLayoutPanel_settings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.flowLayoutPanel_settings.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.flowLayoutPanel_settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.flowLayoutPanel_settings.Location = new System.Drawing.Point(200, 132);
             this.flowLayoutPanel_settings.Name = "flowLayoutPanel_settings";
             this.flowLayoutPanel_settings.Size = new System.Drawing.Size(1035, 515);
@@ -45,8 +45,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu
             // 
             // clickButton_embraceSettings
             // 
-            this.clickButton_embraceSettings.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.clickButton_embraceSettings.DefaultColor = System.Drawing.SystemColors.ButtonShadow;
+            this.clickButton_embraceSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_embraceSettings.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.clickButton_embraceSettings.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.clickButton_embraceSettings.Location = new System.Drawing.Point(1275, 132);
             this.clickButton_embraceSettings.MouseDownColor = System.Drawing.Color.Empty;
             this.clickButton_embraceSettings.MouseEnterColor = System.Drawing.Color.Empty;
@@ -61,7 +62,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.SettingsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Controls.Add(this.clickButton_embraceSettings);
             this.Controls.Add(this.flowLayoutPanel_settings);
             this.Name = "SettingsControl";

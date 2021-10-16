@@ -46,13 +46,13 @@ namespace FilmsDBC
 		{
 			TableCollection export = new TableCollection();
 
-			export.AddTable(typeof(Category));
+			export.AddTable(new DefaultTable<Category>());
 			export.AddTable(GenresTable.GetDefaultGenresTable());
-			export.AddTable(typeof(Film));
-			export.AddTable(typeof(Serie));
-			export.AddTable(typeof(PriorityFilm));
-			export.AddTable(typeof(BookGenre));
-			export.AddTable(typeof(Book));
+			export.AddTable(new DefaultTable<Film>());
+			export.AddTable(new DefaultTable<Serie>());
+			export.AddTable(new DefaultTable<PriorityFilm>());
+			export.AddTable(new DefaultTable<BookGenre>());
+			export.AddTable(new DefaultTable<Book>());
 
 			return export;
 		}
@@ -120,6 +120,17 @@ namespace FilmsDBC
 			public static PriorityFilmsTable PriorityFilmsTable { get { return priorityFilmsTable; } }
 			public static BookGenresTable BookGenresTable { get { return bookGenresTable; } }
 			public static BooksTable BooksTable { get { return booksTable; } }
+        }
+
+		private class DefaultTable<Te> : Table<Te> where Te : Cell, new()
+		{
+			public DefaultTable() : base() { }
+			public DefaultTable(int id) : base(id) { }
+			public DefaultTable(int id, string name) : base(id, name) { }
+			public override void ConnectionsSubload(TableCollection tablesCollection)
+			{
+				throw new NotImplementedException();
+			}
 		}
 	}
 }
