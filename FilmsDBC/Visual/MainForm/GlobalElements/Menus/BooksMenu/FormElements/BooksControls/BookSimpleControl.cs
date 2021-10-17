@@ -19,6 +19,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             InitializeComponent();
             this.bookInfo = book;
 
+            clickButton_info.SetDefaultButtonBlink();
+
             RefreshData();
         }
 

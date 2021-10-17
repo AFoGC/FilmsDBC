@@ -38,10 +38,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.textBox_author = new System.Windows.Forms.TextBox();
             this.dateUpdateControl_fullReadDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
             this.textBox_countOfReadings = new System.Windows.Forms.TextBox();
-            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
             this.comboBox_genre = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
+            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // textBox_name
@@ -122,35 +122,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.textBox_countOfReadings.TabIndex = 39;
             this.toolTip_description.SetToolTip(this.textBox_countOfReadings, "count of readings");
             // 
-            // label_comment
-            // 
-            this.label_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label_comment.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label_comment.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label_comment.Location = new System.Drawing.Point(670, 0);
-            this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
-            this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
-            this.label_comment.Name = "label_comment";
-            this.label_comment.Size = new System.Drawing.Size(100, 20);
-            this.label_comment.TabIndex = 44;
-            this.label_comment.Text = "comment";
-            this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_sources
-            // 
-            this.label_sources.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label_sources.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label_sources.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label_sources.Location = new System.Drawing.Point(770, 0);
-            this.label_sources.MouseDownColor = System.Drawing.Color.Empty;
-            this.label_sources.MouseEnterColor = System.Drawing.Color.Empty;
-            this.label_sources.Name = "label_sources";
-            this.label_sources.Size = new System.Drawing.Size(100, 20);
-            this.label_sources.TabIndex = 43;
-            this.label_sources.Text = "update source";
-            this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
-            // 
             // comboBox_genre
             // 
             this.comboBox_genre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
@@ -192,6 +163,35 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.comboBox_mark.TabIndex = 46;
             this.comboBox_mark.Texts = "";
             this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
+            // 
+            // label_comment
+            // 
+            this.label_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_comment.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_comment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label_comment.Location = new System.Drawing.Point(670, 0);
+            this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
+            this.label_comment.Name = "label_comment";
+            this.label_comment.Size = new System.Drawing.Size(100, 20);
+            this.label_comment.TabIndex = 44;
+            this.label_comment.Text = "comment";
+            this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_sources
+            // 
+            this.label_sources.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_sources.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_sources.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label_sources.Location = new System.Drawing.Point(770, 0);
+            this.label_sources.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_sources.MouseEnterColor = System.Drawing.Color.Empty;
+            this.label_sources.Name = "label_sources";
+            this.label_sources.Size = new System.Drawing.Size(100, 20);
+            this.label_sources.TabIndex = 43;
+            this.label_sources.Text = "update source";
+            this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
             // BookUpdateControl
             // 

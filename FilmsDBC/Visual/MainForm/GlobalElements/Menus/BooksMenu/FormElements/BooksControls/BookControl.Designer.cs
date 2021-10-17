@@ -153,7 +153,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             // clickButton_copyUrl
             // 
             this.clickButton_copyUrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.clickButton_copyUrl.DefaultColor = System.Drawing.Color.Empty;
+            this.clickButton_copyUrl.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.clickButton_copyUrl.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.clickButton_copyUrl.Location = new System.Drawing.Point(650, 1);
             this.clickButton_copyUrl.MouseDownColor = System.Drawing.Color.Empty;
@@ -169,9 +169,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             // clickButton_update
             // 
             this.clickButton_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.clickButton_update.DefaultColor = System.Drawing.Color.Empty;
+            this.clickButton_update.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.clickButton_update.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clickButton_update.Location = new System.Drawing.Point(781, 1);
+            this.clickButton_update.Location = new System.Drawing.Point(761, 1);
             this.clickButton_update.MouseDownColor = System.Drawing.Color.Empty;
             this.clickButton_update.MouseEnterColor = System.Drawing.Color.Empty;
             this.clickButton_update.Name = "clickButton_update";

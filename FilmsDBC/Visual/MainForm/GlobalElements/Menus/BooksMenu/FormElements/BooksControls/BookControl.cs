@@ -33,6 +33,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.bookInfo = simpleControl.bookInfo;
             this.simpleControl = simpleControl;
 
+            clickButton_copyUrl.SetDefaultButtonBlink();
+            clickButton_update.SetDefaultButtonBlink();
+
             RefreshData();
         }
 

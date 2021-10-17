@@ -27,6 +27,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
 
             comboBox_genre.Items.AddRange(MainInfo.Tables.BookGenresTable.ToArray());
             comboBox_mark.Items.AddRange(FilmMethods.GetAllMarks().ToArray());
+
+            label_comment.SetDefaultButtonBlink();
+            label_sources.SetDefaultButtonBlink();
+
             refresh();
         }
 

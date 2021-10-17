@@ -1,4 +1,5 @@
 ﻿using FilmsDBC.StaticFilmClasses;
+using FilmsDBC.Visual.HelpForms.ExitForm;
 using FilmsDBC.Visual.MainForm.GlobalElements;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu;
@@ -23,7 +24,24 @@ namespace FilmsDBC.Visual.MainForm
 		public MainForm()
 		{
 			InitializeComponent();
+			this.FormClosing += new FormClosingEventHandler(openExitForm);
 		}
+
+		private void openExitForm(object sender, FormClosingEventArgs e)
+        {
+			using (ExitForm exitForm = new ExitForm())
+            {
+                if (exitForm.ShowDialog() == DialogResult.OK)
+                {
+                    if (exitForm.Save == true)
+                    {
+						MainInfo.TableCollection.SaveTables();
+                    }
+
+					e.Cancel = !exitForm.CloseProg;
+                }
+            }
+        }
 
 		public MainControl MainControl
 		{
