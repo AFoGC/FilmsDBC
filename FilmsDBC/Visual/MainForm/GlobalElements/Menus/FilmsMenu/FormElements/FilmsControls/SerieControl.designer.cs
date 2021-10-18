@@ -227,10 +227,13 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
             // 
             // textBox_comment
             // 
-            this.textBox_comment.Location = new System.Drawing.Point(30, 20);
+            this.textBox_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_comment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_comment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_comment.Location = new System.Drawing.Point(31, 16);
             this.textBox_comment.Name = "textBox_comment";
             this.textBox_comment.ReadOnly = true;
-            this.textBox_comment.Size = new System.Drawing.Size(620, 20);
+            this.textBox_comment.Size = new System.Drawing.Size(618, 13);
             this.textBox_comment.TabIndex = 40;
             // 
             // SerieControl

@@ -40,9 +40,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
             this.dateUpdateControl_watchDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
             this.comboBox_genre = new FilmsDBC.Visual.Buttons.DarkComboBox();
+            this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
-            this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -137,10 +137,32 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.comboBox_genre.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox_genre.MinimumSize = new System.Drawing.Size(100, 20);
             this.comboBox_genre.Name = "comboBox_genre";
+            this.comboBox_genre.Padding = new System.Windows.Forms.Padding(1);
             this.comboBox_genre.Size = new System.Drawing.Size(100, 20);
             this.comboBox_genre.TabIndex = 44;
             this.comboBox_genre.Texts = "";
             this.toolTip_description.SetToolTip(this.comboBox_genre, "genre");
+            // 
+            // comboBox_mark
+            // 
+            this.comboBox_mark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_mark.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
+            this.comboBox_mark.BorderSize = 1;
+            this.comboBox_mark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox_mark.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.comboBox_mark.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox_mark.Location = new System.Drawing.Point(455, 0);
+            this.comboBox_mark.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox_mark.MinimumSize = new System.Drawing.Size(10, 20);
+            this.comboBox_mark.Name = "comboBox_mark";
+            this.comboBox_mark.Padding = new System.Windows.Forms.Padding(1);
+            this.comboBox_mark.Size = new System.Drawing.Size(45, 20);
+            this.comboBox_mark.TabIndex = 45;
+            this.comboBox_mark.Texts = "";
+            this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
             // 
             // label_comment
             // 
@@ -171,26 +193,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.label_sources.Text = "update source";
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
-            // 
-            // comboBox_mark
-            // 
-            this.comboBox_mark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.comboBox_mark.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(122)))), ((int)(((byte)(122)))));
-            this.comboBox_mark.BorderSize = 1;
-            this.comboBox_mark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_mark.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox_mark.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_mark.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_mark.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.comboBox_mark.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_mark.Location = new System.Drawing.Point(455, 0);
-            this.comboBox_mark.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox_mark.MinimumSize = new System.Drawing.Size(10, 20);
-            this.comboBox_mark.Name = "comboBox_mark";
-            this.comboBox_mark.Size = new System.Drawing.Size(45, 20);
-            this.comboBox_mark.TabIndex = 45;
-            this.comboBox_mark.Texts = "";
-            this.toolTip_description.SetToolTip(this.comboBox_mark, "mark");
             // 
             // FilmUpdateControl
             // 

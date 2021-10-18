@@ -93,7 +93,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			serie.Film.RealiseYear = VisualHelper.TextToInt32(this.textBox_realiseYear.Text);
 			serie.Film.Watched = this.checkBox_watched.Checked;
 			serie.Film.DateOfWatch = this.dateUpdateControl_watchDate.Date;
-			serie.Film.Mark = VisualHelper.TextToMark(this.comboBox_mark.Text);
+			serie.Film.Mark = VisualHelper.TextToMark(this.comboBox_mark.Texts);
 			serie.Film.CountOfViews = VisualHelper.TextToInt32(this.textBox_countOfviews.Text);
 			serie.Film.Comment = this.textBox_comment.Text;
 

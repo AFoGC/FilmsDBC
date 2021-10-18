@@ -179,8 +179,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.F
 			textBox_comment.Text = filmInfo.Comment;
 			Size controlSize = this.Size;
 
-			if (commentIsOpen) { controlSize.Height -= 20; }
-			else { controlSize.Height += 20; }
+			if (commentIsOpen) { controlSize.Height -= 15; }
+			else { controlSize.Height += 15; }
 
 			this.Size = controlSize;
 			commentIsOpen = !commentIsOpen;

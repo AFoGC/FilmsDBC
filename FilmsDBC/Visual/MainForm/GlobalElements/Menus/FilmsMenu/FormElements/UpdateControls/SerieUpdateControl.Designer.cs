@@ -42,10 +42,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.toolTip_description = new System.Windows.Forms.ToolTip(this.components);
             this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.comboBox_genre = new FilmsDBC.Visual.Buttons.DarkComboBox();
-            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.dateUpdateControl_startWatchDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
             this.dateUpdateControl_watchDate = new FilmsDBC.Visual.Buttons.DateUpdateControl();
             this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.SuspendLayout();
             // 
             // textBox_id
@@ -127,6 +127,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             // 
             // textBox_comment
             // 
+            this.textBox_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_comment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_comment.Location = new System.Drawing.Point(30, 20);
             this.textBox_comment.Name = "textBox_comment";
             this.textBox_comment.Size = new System.Drawing.Size(620, 20);
@@ -174,21 +176,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.comboBox_genre.Texts = "";
             this.toolTip_description.SetToolTip(this.comboBox_genre, "genre");
             // 
-            // label_comment
-            // 
-            this.label_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label_comment.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.label_comment.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label_comment.Location = new System.Drawing.Point(670, 0);
-            this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
-            this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
-            this.label_comment.Name = "label_comment";
-            this.label_comment.Size = new System.Drawing.Size(100, 20);
-            this.label_comment.TabIndex = 41;
-            this.label_comment.Text = "comment";
-            this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_comment.Click += new System.EventHandler(this.label_comment_Click);
-            // 
             // dateUpdateControl_startWatchDate
             // 
             this.dateUpdateControl_startWatchDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
@@ -228,6 +215,21 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTip_description.SetToolTip(this.label_sources, "open source menu");
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
+            // 
+            // label_comment
+            // 
+            this.label_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_comment.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.label_comment.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label_comment.Location = new System.Drawing.Point(670, 0);
+            this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
+            this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
+            this.label_comment.Name = "label_comment";
+            this.label_comment.Size = new System.Drawing.Size(100, 20);
+            this.label_comment.TabIndex = 41;
+            this.label_comment.Text = "comment";
+            this.label_comment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_comment.Click += new System.EventHandler(this.label_comment_Click);
             // 
             // SerieUpdateControl
             // 
