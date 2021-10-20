@@ -42,7 +42,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.FilmsMenu.FormElements.U
 			this.comboBox_genre.SelectedItem = film.Genre;
 			this.textBox_realiseYear.Text = Film.FormatToString(film.RealiseYear, defFilm.RealiseYear);
 			this.checkBox_watched.Checked = film.Watched;
-			//this.comboBox_mark.Text = VisualHelper.markToText(Film.FormatToString(film.Mark, defFilm.Mark));
 			this.comboBox_mark.SelectedItem = VisualHelper.markToText(Film.FormatToString(film.Mark, defFilm.Mark));
 			this.textBox_countOfviews.Text = Film.FormatToString(film.CountOfViews, defFilm.CountOfViews);
 			this.dateUpdateControl_watchDate.Date = film.DateOfWatch;

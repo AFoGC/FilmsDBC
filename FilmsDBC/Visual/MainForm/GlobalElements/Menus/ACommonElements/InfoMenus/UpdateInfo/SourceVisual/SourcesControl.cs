@@ -19,20 +19,31 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
         {
             get { return sources; }
         }
+        private List<Source> exportSources = null;
+        public List<Source> ExportSources
+        {
+            get { return exportSources; }
+        }
 
         public SourcesControl()
         {
             InitializeComponent();
             this.Location = new Point(940, 0);
+            sources = new List<Source>();
         }
 
-        public void Reinitialize(List<Source> sources)
+        public void Reinitialize(List<Source> exportSources)
         {
-            this.sources = sources;
-
+            this.exportSources = exportSources;
             flowLayoutPanel_sources.Controls.Clear();
-            foreach (Source source in sources)
+            while (sources.Count != 0)
             {
+                sources.Remove(this.sources[0]);
+            }
+
+            foreach (Source source in exportSources)
+            {
+                sources.Add(source);
                 addElement(source);
             }
         }
@@ -42,16 +53,16 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
             flowLayoutPanel_sources.Controls.Add(new SourceControl(source, this));
         }
 
-        private void button_update_Click(object sender, EventArgs e)
+        public void button_update_Click(object sender, EventArgs e)
         {
-            while (sources.Count != 0)
+            while (exportSources.Count != 0)
             {
                 sources.Remove(sources[0]);
             }
 
             foreach (SourceControl sourceControl in flowLayoutPanel_sources.Controls)
             {
-                sources.Add(sourceControl.Source);
+                exportSources.Add(sourceControl.Source);
             }
         }
 

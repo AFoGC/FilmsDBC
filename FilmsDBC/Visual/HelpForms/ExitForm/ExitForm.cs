@@ -31,7 +31,7 @@ namespace FilmsDBC.Visual.HelpForms.ExitForm
             using (GraphicsPath path = new GraphicsPath())
             using (Pen pen = new Pen(Color.WhiteSmoke, 1))
             {
-                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                graph.SmoothingMode = SmoothingMode.None;
                 path.AddRectangle(rectIcon);
                 graph.DrawPath(pen, path);
             }

@@ -89,7 +89,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_main;
-        private System.Windows.Forms.Button button_update;
         private System.Windows.Forms.PictureBox pictureBox_Close;
+        internal System.Windows.Forms.Button button_update;
     }
 }

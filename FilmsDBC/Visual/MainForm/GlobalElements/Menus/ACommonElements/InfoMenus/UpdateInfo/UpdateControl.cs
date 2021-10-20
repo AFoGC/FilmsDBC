@@ -32,6 +32,13 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
 		{
 			IUpdateControl control = (IUpdateControl)flowLayoutPanel_main.Controls[0];
 			control.UpdateElement();
+
+            if (visualizer.SourcesVisualizer.IsOpen)
+            {
+				visualizer.SourcesVisualizer.SourcesControl.button_update_Click(sender, e);
+			}
+			
+			MainInfo.MainForm.InfoUnsaved = true;
 		}
 
 		private void pictureBox_Close_Click(object sender, EventArgs e)

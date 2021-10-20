@@ -103,10 +103,11 @@
             this.Controls.Add(this.booksControl);
             this.Controls.Add(this.mainHeaderControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.KeyPreview = true;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.ResumeLayout(false);
 
         }

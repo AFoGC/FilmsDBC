@@ -25,9 +25,15 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenu
 		public SourcesVisualizer(UpdateFormVisualizer updateVisualizer)
 		{
 			this.updateVisualizer = updateVisualizer;
+			//updateVisualizer.UpdateControl.button_update.Click += new EventHandler(saveSources);
 		}
 
-		public void OpenSourceControl(List<Source> sources)
+        private void saveSources(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OpenSourceControl(List<Source> sources)
         {
 			sourcesControl.Reinitialize(sources);
 			updateVisualizer.ParentControl.Controls.Add(sourcesControl);

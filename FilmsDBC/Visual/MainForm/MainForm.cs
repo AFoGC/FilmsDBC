@@ -25,22 +25,31 @@ namespace FilmsDBC.Visual.MainForm
 		{
 			InitializeComponent();
 			this.FormClosing += new FormClosingEventHandler(openExitForm);
+			MainInfo.TableCollection.TableSave += new EventHandler(boolSaved);
 		}
+		public Boolean InfoUnsaved { get; set; } = false;
+		private void boolSaved(object sender, EventArgs e)
+        {
+			InfoUnsaved = false;
+        }
 
 		private void openExitForm(object sender, FormClosingEventArgs e)
         {
-			using (ExitForm exitForm = new ExitForm())
+            if (InfoUnsaved)
             {
-                if (exitForm.ShowDialog() == DialogResult.OK)
-                {
-                    if (exitForm.Save == true)
-                    {
-						MainInfo.TableCollection.SaveTables();
-                    }
+				using (ExitForm exitForm = new ExitForm())
+				{
+					if (exitForm.ShowDialog() == DialogResult.OK)
+					{
+						if (exitForm.Save == true)
+						{
+							MainInfo.TableCollection.SaveTables();
+						}
 
-					e.Cancel = !exitForm.CloseProg;
-                }
-            }
+						e.Cancel = !exitForm.CloseProg;
+					}
+				}
+			}
         }
 
 		public MainControl MainControl
@@ -58,20 +67,13 @@ namespace FilmsDBC.Visual.MainForm
 			get { return booksControl; }
 		}
 
-		private void MainForm_Activated(object sender, EventArgs e)
-		{
-			/*
-            if (MoreInfo.MoreInfoFormVisualizer.IsOpen)
+		private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
             {
-				//MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.Activate();
-				MoreInfo.MoreInfoFormVisualizer.MoreInfoForm.BringToFront();
-			}
-            if (UpdateElements.UpdateFormVisualizer.IsOpen)
-            {
-				//UpdateElements.UpdateFormVisualizer.UpdateForm.Activate();
+				MainInfo.TableCollection.SaveTables();
             }
-			*/
-		}
+        }
 
 
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
