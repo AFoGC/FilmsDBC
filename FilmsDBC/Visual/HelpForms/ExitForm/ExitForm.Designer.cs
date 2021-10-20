@@ -32,6 +32,7 @@ namespace FilmsDBC.Visual.HelpForms.ExitForm
             this.button_DontSave = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button_DontSave
@@ -43,11 +44,11 @@ namespace FilmsDBC.Visual.HelpForms.ExitForm
             this.button_DontSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.button_DontSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DontSave.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button_DontSave.Location = new System.Drawing.Point(88, 163);
+            this.button_DontSave.Location = new System.Drawing.Point(73, 163);
             this.button_DontSave.Name = "button_DontSave";
-            this.button_DontSave.Size = new System.Drawing.Size(75, 20);
+            this.button_DontSave.Size = new System.Drawing.Size(104, 20);
             this.button_DontSave.TabIndex = 21;
-            this.button_DontSave.Text = "Dont save";
+            this.button_DontSave.Text = "Exit without Save";
             this.button_DontSave.UseVisualStyleBackColor = false;
             this.button_DontSave.Click += new System.EventHandler(this.button_DontSave_Click);
             // 
@@ -60,11 +61,11 @@ namespace FilmsDBC.Visual.HelpForms.ExitForm
             this.button_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Save.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button_Save.Location = new System.Drawing.Point(272, 163);
+            this.button_Save.Location = new System.Drawing.Point(259, 163);
             this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(75, 20);
+            this.button_Save.Size = new System.Drawing.Size(104, 20);
             this.button_Save.TabIndex = 22;
-            this.button_Save.Text = "Save";
+            this.button_Save.Text = "Save and Exit";
             this.button_Save.UseVisualStyleBackColor = false;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
@@ -85,12 +86,23 @@ namespace FilmsDBC.Visual.HelpForms.ExitForm
             this.button_close.UseVisualStyleBackColor = false;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(158, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Are you sure want to exit?";
+            // 
             // ExitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(452, 254);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_DontSave);
@@ -101,6 +113,7 @@ namespace FilmsDBC.Visual.HelpForms.ExitForm
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.ExitForm_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ExitForm_MouseDown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +122,6 @@ namespace FilmsDBC.Visual.HelpForms.ExitForm
         private System.Windows.Forms.Button button_DontSave;
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Button button_close;
+        private System.Windows.Forms.Label label1;
     }
 }
