@@ -24,6 +24,8 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 		private List<Source> sources = new List<Source>();
 
 		private int countOfReadings = 0;
+		private String bookmark = "";
+
 		private int franshiseId = 0;
 		private sbyte franshiseListIndex = -1;
 
@@ -58,6 +60,9 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 				case "sourceUrl":
 					this.sources.Add(Source.ToSource(comand.Value));
 					break;
+				case "bookmark":
+					this.bookmark = comand.Value;
+					break;
 			}
 		}
 
@@ -70,6 +75,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 			streamWriter.Write(FormatParam("readed", readed, false, 2));
 			streamWriter.Write(FormatParam("fullReadDate", fullReadDate, new DateTime(), 2));
 			streamWriter.Write(FormatParam("mark", mark, -1, 2));
+			streamWriter.Write(FormatParam("bookmark", bookmark, "", 2));
 
 			foreach (Source source in sources)
 			{
@@ -89,6 +95,7 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 			this.fullReadDate = book.fullReadDate;
 			this.mark = book.mark;
 			this.sources = book.sources;
+			this.bookmark = book.bookmark;
 		}
 
 
@@ -168,6 +175,12 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 			get { return franshiseListIndex; }
 			set { franshiseListIndex = value; }
 		}
+
+		public String Bookmark
+        {
+            get { return bookmark; }
+			set { bookmark = value; }
+        }
 
 
 		private String formatParam(String variableName, Source item, int countOfTabulations)

@@ -42,6 +42,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_countOfReadings = new System.Windows.Forms.TextBox();
             this.clickButton_copyUrl = new FilmsDBC.Visual.Buttons.ClickButton();
             this.clickButton_update = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.textBox_bookmark = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // checkBox_readed
@@ -108,6 +109,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_author.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_author.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBox_author.Location = new System.Drawing.Point(396, 1);
+            this.textBox_author.Margin = new System.Windows.Forms.Padding(1);
             this.textBox_author.Name = "textBox_author";
             this.textBox_author.ReadOnly = true;
             this.textBox_author.Size = new System.Drawing.Size(98, 13);
@@ -119,7 +121,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_fullReadDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.textBox_fullReadDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_fullReadDate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_fullReadDate.Location = new System.Drawing.Point(496, 1);
+            this.textBox_fullReadDate.Location = new System.Drawing.Point(582, 1);
+            this.textBox_fullReadDate.Margin = new System.Windows.Forms.Padding(1);
             this.textBox_fullReadDate.Name = "textBox_fullReadDate";
             this.textBox_fullReadDate.ReadOnly = true;
             this.textBox_fullReadDate.Size = new System.Drawing.Size(58, 13);
@@ -131,7 +134,8 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_mark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.textBox_mark.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_mark.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_mark.Location = new System.Drawing.Point(556, 1);
+            this.textBox_mark.Location = new System.Drawing.Point(642, 1);
+            this.textBox_mark.Margin = new System.Windows.Forms.Padding(1);
             this.textBox_mark.Name = "textBox_mark";
             this.textBox_mark.ReadOnly = true;
             this.textBox_mark.Size = new System.Drawing.Size(43, 13);
@@ -143,7 +147,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_countOfReadings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.textBox_countOfReadings.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_countOfReadings.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_countOfReadings.Location = new System.Drawing.Point(601, 1);
+            this.textBox_countOfReadings.Location = new System.Drawing.Point(687, 1);
             this.textBox_countOfReadings.Name = "textBox_countOfReadings";
             this.textBox_countOfReadings.ReadOnly = true;
             this.textBox_countOfReadings.Size = new System.Drawing.Size(28, 13);
@@ -155,7 +159,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.clickButton_copyUrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.clickButton_copyUrl.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.clickButton_copyUrl.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clickButton_copyUrl.Location = new System.Drawing.Point(650, 1);
+            this.clickButton_copyUrl.Location = new System.Drawing.Point(720, 1);
             this.clickButton_copyUrl.MouseDownColor = System.Drawing.Color.Empty;
             this.clickButton_copyUrl.MouseEnterColor = System.Drawing.Color.Empty;
             this.clickButton_copyUrl.Name = "clickButton_copyUrl";
@@ -171,7 +175,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.clickButton_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.clickButton_update.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.clickButton_update.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clickButton_update.Location = new System.Drawing.Point(761, 1);
+            this.clickButton_update.Location = new System.Drawing.Point(831, 1);
             this.clickButton_update.MouseDownColor = System.Drawing.Color.Empty;
             this.clickButton_update.MouseEnterColor = System.Drawing.Color.Empty;
             this.clickButton_update.Name = "clickButton_update";
@@ -182,11 +186,25 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.toolTip_description.SetToolTip(this.clickButton_update, "open update menu");
             this.clickButton_update.Click += new System.EventHandler(this.clickButton_update_Click);
             // 
+            // textBox_bookmark
+            // 
+            this.textBox_bookmark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_bookmark.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_bookmark.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_bookmark.Location = new System.Drawing.Point(496, 1);
+            this.textBox_bookmark.Margin = new System.Windows.Forms.Padding(1);
+            this.textBox_bookmark.Name = "textBox_bookmark";
+            this.textBox_bookmark.ReadOnly = true;
+            this.textBox_bookmark.Size = new System.Drawing.Size(84, 13);
+            this.textBox_bookmark.TabIndex = 40;
+            this.toolTip_description.SetToolTip(this.textBox_bookmark, "bookmark");
+            // 
             // BookControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.textBox_bookmark);
             this.Controls.Add(this.clickButton_update);
             this.Controls.Add(this.textBox_countOfReadings);
             this.Controls.Add(this.textBox_mark);
@@ -220,5 +238,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
         private System.Windows.Forms.TextBox textBox_countOfReadings;
         private FilmsDBC.Visual.Buttons.ClickButton clickButton_copyUrl;
         private Buttons.ClickButton clickButton_update;
+        internal System.Windows.Forms.TextBox textBox_bookmark;
     }
 }

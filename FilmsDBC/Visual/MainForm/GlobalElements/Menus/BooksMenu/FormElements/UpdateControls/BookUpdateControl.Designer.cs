@@ -42,6 +42,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.comboBox_mark = new FilmsDBC.Visual.Buttons.DarkComboBox();
             this.label_comment = new FilmsDBC.Visual.Buttons.ClickButton();
             this.label_sources = new FilmsDBC.Visual.Buttons.ClickButton();
+            this.textBox_bookmark = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_name
@@ -105,7 +106,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.dateUpdateControl_fullReadDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dateUpdateControl_fullReadDate.Date = new System.DateTime(((long)(0)));
             this.dateUpdateControl_fullReadDate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.dateUpdateControl_fullReadDate.Location = new System.Drawing.Point(495, 0);
+            this.dateUpdateControl_fullReadDate.Location = new System.Drawing.Point(596, 0);
             this.dateUpdateControl_fullReadDate.Name = "dateUpdateControl_fullReadDate";
             this.dateUpdateControl_fullReadDate.Size = new System.Drawing.Size(60, 20);
             this.dateUpdateControl_fullReadDate.TabIndex = 37;
@@ -116,7 +117,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.textBox_countOfReadings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.textBox_countOfReadings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_countOfReadings.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox_countOfReadings.Location = new System.Drawing.Point(600, 0);
+            this.textBox_countOfReadings.Location = new System.Drawing.Point(701, 0);
             this.textBox_countOfReadings.Name = "textBox_countOfReadings";
             this.textBox_countOfReadings.Size = new System.Drawing.Size(30, 20);
             this.textBox_countOfReadings.TabIndex = 39;
@@ -154,7 +155,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.comboBox_mark.IconColor = System.Drawing.Color.WhiteSmoke;
             this.comboBox_mark.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.comboBox_mark.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox_mark.Location = new System.Drawing.Point(555, 0);
+            this.comboBox_mark.Location = new System.Drawing.Point(656, 0);
             this.comboBox_mark.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox_mark.MinimumSize = new System.Drawing.Size(10, 20);
             this.comboBox_mark.Name = "comboBox_mark";
@@ -169,7 +170,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.label_comment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.label_comment.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.label_comment.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label_comment.Location = new System.Drawing.Point(670, 0);
+            this.label_comment.Location = new System.Drawing.Point(737, 0);
             this.label_comment.MouseDownColor = System.Drawing.Color.Empty;
             this.label_comment.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_comment.Name = "label_comment";
@@ -183,7 +184,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.label_sources.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.label_sources.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.label_sources.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label_sources.Location = new System.Drawing.Point(770, 0);
+            this.label_sources.Location = new System.Drawing.Point(837, 0);
             this.label_sources.MouseDownColor = System.Drawing.Color.Empty;
             this.label_sources.MouseEnterColor = System.Drawing.Color.Empty;
             this.label_sources.Name = "label_sources";
@@ -193,11 +194,23 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             this.label_sources.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_sources.Click += new System.EventHandler(this.label_sources_Click);
             // 
+            // textBox_bookmark
+            // 
+            this.textBox_bookmark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.textBox_bookmark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_bookmark.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox_bookmark.Location = new System.Drawing.Point(495, 0);
+            this.textBox_bookmark.Name = "textBox_bookmark";
+            this.textBox_bookmark.Size = new System.Drawing.Size(101, 20);
+            this.textBox_bookmark.TabIndex = 47;
+            this.toolTip_description.SetToolTip(this.textBox_bookmark, "bookmark");
+            // 
             // BookUpdateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.Controls.Add(this.textBox_bookmark);
             this.Controls.Add(this.comboBox_mark);
             this.Controls.Add(this.comboBox_genre);
             this.Controls.Add(this.label_comment);
@@ -231,5 +244,6 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
         private Buttons.ClickButton label_sources;
         private Buttons.DarkComboBox comboBox_genre;
         private Buttons.DarkComboBox comboBox_mark;
+        private System.Windows.Forms.TextBox textBox_bookmark;
     }
 }

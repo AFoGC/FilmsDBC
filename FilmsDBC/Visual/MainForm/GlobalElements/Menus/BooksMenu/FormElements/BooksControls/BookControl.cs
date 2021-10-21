@@ -51,6 +51,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_fullReadDate.Text = Book.FormatToString(bookInfo.FullReadDate, defBook.FullReadDate);
             this.textBox_mark.Text = VisualHelper.markToText(Book.FormatToString(bookInfo.Mark, defBook.Mark));
             this.textBox_countOfReadings.Text = Book.FormatToString(bookInfo.CountOfReadings, defBook.CountOfReadings);
+            this.textBox_bookmark.Text = bookInfo.Bookmark;
             this.RefreshSourceLabel();
 
             if (simpleControl != null)

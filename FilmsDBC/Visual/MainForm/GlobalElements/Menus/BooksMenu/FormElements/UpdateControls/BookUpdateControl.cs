@@ -47,6 +47,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             dateUpdateControl_fullReadDate.Date = book.FullReadDate;
             comboBox_mark.Text = VisualHelper.markToText(Book.FormatToString(book.Mark, defBook.Mark));
             textBox_countOfReadings.Text = Book.FormatToString(book.CountOfReadings, defBook.CountOfReadings);
+            textBox_bookmark.Text = book.Bookmark;
         }
 
         public void UpdateElement()
@@ -59,6 +60,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.U
             book.FullReadDate = dateUpdateControl_fullReadDate.Date;
             book.Mark = VisualHelper.TextToMark(this.comboBox_mark.Text);
             book.CountOfReadings = VisualHelper.TextToInt32(textBox_countOfReadings.Text);
+            book.Bookmark = textBox_bookmark.Text;
 
             bookControl.RefreshData();
         }
