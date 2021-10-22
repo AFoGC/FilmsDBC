@@ -174,6 +174,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
             this.button_addCategory.TabIndex = 7;
             this.button_addCategory.Text = "Add Category";
             this.button_addCategory.UseVisualStyleBackColor = false;
+            this.button_addCategory.Click += new System.EventHandler(this.button_addCategory_Click);
             // 
             // button_addBook
             // 

@@ -37,7 +37,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
 
         public override void SetVisualDefault()
         {
-            throw new System.NotImplementedException();
+            Color color = Color.FromArgb(53, 53, 53);
+
+            this.textBox_id.BackColor = color;
         }
 
         internal override void setVisualFinded()
@@ -47,7 +49,9 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
 
         internal override void setVisualSelected()
         {
-            throw new System.NotImplementedException();
+            Color color = Color.FromArgb(0, 0, 220);
+
+            textBox_id.BackColor = color;
         }
 
         public Control ToMoreInfo()
@@ -59,6 +63,11 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
         {
             //return new BookUpdateControl(new BookControl(this));
             throw new NotImplementedException();
+        }
+
+        private void textBox_id_Click(object sender, EventArgs e)
+        {
+            SetSelectedElement(MainInfo.MainForm.BooksControl.ControlInBuffer);
         }
 
         private void clickButton_info_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using FilmsDBC.DataAccessLayer.CinemaDataTypes;
+﻿using FilmsDBC.DataAccessLayer.CinemaDataTables;
+using FilmsDBC.DataAccessLayer.CinemaDataTypes;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.ControlsInterface;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.MoreInfo;
 using FilmsDBC.Visual.MainForm.GlobalElements.Menus.ACommonElements.InfoMenus.UpdateInfo;
@@ -41,6 +42,13 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
             get { return updateVisualizer; }
         }
 
+        private ABookElementControl controlInBuffer = null;
+        public ABookElementControl ControlInBuffer
+        {
+            get { return controlInBuffer; }
+            set { controlInBuffer = value; }
+        }
+
         public Panel InfoPanel
         {
             get { return panel_Info; }
@@ -57,6 +65,13 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
         public void LoadCategories()
         {
             clearControls();
+            controlInBuffer = null;
+
+            foreach (BookCategory category in MainInfo.Tables.BookCategoriesTable)
+            {
+                tableControls.Add(new BookCategoryControl(category));
+            }
+
             foreach (Book book in MainInfo.Tables.BooksTable)
             {
                 tableControls.Add(new BookSimpleControl(book));
@@ -73,6 +88,18 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu
 
             tableControls.Add((UserControl)control);
             flowLayoutPanel_main.Controls.Add((UserControl)control);
+        }
+
+        private void button_addCategory_Click(object sender, EventArgs e)
+        {
+            //if (controlsCondition == MenuCondition.Category)
+            {
+                BookCategoriesTable categoryTable = MainInfo.Tables.BookCategoriesTable;
+                categoryTable.AddElement();
+                BookCategoryControl categoryControl = new BookCategoryControl(categoryTable.GetLastElement);
+                flowLayoutPanel_main.Controls.Add(categoryControl);
+                flowLayoutPanel_main.Controls.SetChildIndex(categoryControl, categoryTable.Count - 1);
+            }
         }
     }
 }

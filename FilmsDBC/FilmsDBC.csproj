@@ -112,6 +112,12 @@
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\ABookElementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\BookCategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\BookCategoryControl.Designer.cs">
+      <DependentUpon>BookCategoryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\BookControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,12 @@
       <DependentUpon>BookSimpleControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\IBooksControls.cs" />
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookCategoryUpdateContol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookCategoryUpdateContol.Designer.cs">
+      <DependentUpon>BookCategoryUpdateContol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookUpdateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -273,11 +285,17 @@
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\ACommonElements\MenuElements\WatchedRequestControl.resx">
       <DependentUpon>WatchedRequestControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\BookCategoryControl.resx">
+      <DependentUpon>BookCategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\BookControl.resx">
       <DependentUpon>BookControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\BooksControls\BookSimpleControl.resx">
       <DependentUpon>BookSimpleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookCategoryUpdateContol.resx">
+      <DependentUpon>BookCategoryUpdateContol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Visual\MainForm\GlobalElements\Menus\BooksMenu\FormElements\UpdateControls\BookUpdateControl.resx">
       <DependentUpon>BookUpdateControl.cs</DependentUpon>

@@ -51,6 +51,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
             this.textBox_id.ReadOnly = true;
             this.textBox_id.Size = new System.Drawing.Size(27, 13);
             this.textBox_id.TabIndex = 2;
+            this.textBox_id.Click += new EventHandler(this.textBox_id_Click);
             this.toolTip_description.SetToolTip(this.textBox_id, "id");
             // 
             // textBox_name

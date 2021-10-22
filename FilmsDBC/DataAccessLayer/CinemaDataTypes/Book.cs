@@ -63,6 +63,12 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 				case "bookmark":
 					this.bookmark = comand.Value;
 					break;
+				case "franshiseId":
+					this.franshiseId = Convert.ToInt32(comand.Value);
+					break;
+				case "franshiseListIndex":
+					this.franshiseListIndex = Convert.ToSByte(comand.Value);
+					break;
 			}
 		}
 
@@ -76,6 +82,8 @@ namespace FilmsDBC.DataAccessLayer.CinemaDataTypes
 			streamWriter.Write(FormatParam("fullReadDate", fullReadDate, new DateTime(), 2));
 			streamWriter.Write(FormatParam("mark", mark, -1, 2));
 			streamWriter.Write(FormatParam("bookmark", bookmark, "", 2));
+			streamWriter.Write(FormatParam("franshiseId", franshiseId, 0, 2));
+			streamWriter.Write(FormatParam("franshiseListIndex", franshiseListIndex, -1, 2));
 
 			foreach (Source source in sources)
 			{

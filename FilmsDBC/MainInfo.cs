@@ -53,6 +53,7 @@ namespace FilmsDBC
 			export.AddTable(new DefaultTable<PriorityFilm>());
 			export.AddTable(new DefaultTable<BookGenre>());
 			export.AddTable(new DefaultTable<Book>());
+			export.AddTable(new DefaultTable<BookCategory>());
 
 			return export;
 		}
@@ -89,6 +90,7 @@ namespace FilmsDBC
 			private static PriorityFilmsTable priorityFilmsTable;
 			private static BookGenresTable bookGenresTable;
 			private static BooksTable booksTable;
+			private static BookCategoriesTable bookCategoriesTable;
 
 			public static void SetDefaultMainTableCollection()
             {
@@ -101,6 +103,7 @@ namespace FilmsDBC
 				priorityFilmsTable = new PriorityFilmsTable();
 				bookGenresTable = new BookGenresTable();
 				booksTable = new BooksTable();
+				bookCategoriesTable = new BookCategoriesTable();
 
 				TableCollection.RemoveAllTables(true);
 
@@ -111,6 +114,7 @@ namespace FilmsDBC
 				TableCollection.AddTable(priorityFilmsTable);
 				TableCollection.AddTable(bookGenresTable);
 				TableCollection.AddTable(booksTable);
+				TableCollection.AddTable(bookCategoriesTable);
 			}
 
 			public static CategoriesTable CategoriesTable { get { return categoriesTable; } }
@@ -120,6 +124,7 @@ namespace FilmsDBC
 			public static PriorityFilmsTable PriorityFilmsTable { get { return priorityFilmsTable; } }
 			public static BookGenresTable BookGenresTable { get { return bookGenresTable; } }
 			public static BooksTable BooksTable { get { return booksTable; } }
+			public static BookCategoriesTable BookCategoriesTable { get { return bookCategoriesTable; } }
         }
 
 		private class DefaultTable<Te> : Table<Te> where Te : Cell, new()

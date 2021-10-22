@@ -18,7 +18,7 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
         {
             get { return bookInfo; }
         }
-		/*
+		
 		internal void SetSelectedElement(ABookElementControl controlInBuffer)
 		{
 			if (controlInBuffer != null)
@@ -26,10 +26,10 @@ namespace FilmsDBC.Visual.MainForm.GlobalElements.Menus.BooksMenu.FormElements.B
 				controlInBuffer.SetVisualDefault();
 			}
 
-			MainInfo.MainForm.MainControl.ControlInBuffer = this;
+			MainInfo.MainForm.BooksControl.ControlInBuffer = this;
 			setVisualSelected();
 		}
-		*/
+		
 
 		public bool SetFindedElement(string search)
 		{
